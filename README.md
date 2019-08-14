@@ -1,3 +1,5 @@
+[![Documentation Status](https://readthedocs.org/projects/cryptomator/badge/?version=latest)](https://docs.cryptomator.org/en/latest/?badge=latest)
+
 # Cryptomator Documentation
 
 This is the English Cryptomator documentation.
