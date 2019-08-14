@@ -3,8 +3,5 @@ site_url: https://docs.cryptomator.org
 repo_url: https://github.com/cryptomator/docs/
 theme: readthedocs
 strict: true
-plugins:
-    - search:
-      lang: en
 nav:
     - Home: index.md
