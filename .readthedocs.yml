@@ -10,4 +10,6 @@ mkdocs:
   configuration: mkdocs.yml
 
 # Build all formats
-formats: all
+formats:
+  - epub
+  - pdf
