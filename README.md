@@ -6,6 +6,6 @@ If you want to contribute documentation in different languages, please let us kn
 
 ## Contributing
 
-- View the [MkDocs documentation][https://www.mkdocs.org].
+- View the [MkDocs documentation](https://www.mkdocs.org).
 - Fork this repo
 - Send us a pull request
