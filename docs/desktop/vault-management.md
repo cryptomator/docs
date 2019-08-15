@@ -18,3 +18,9 @@ If you want a specific vault to stop being displayed in Cryptomator, you can sel
 To delete a vault permanently navigate to the storage location of the vault. The storage location is displayed in Cryptomator below the vault name or when hovering the vault. The symbol `~` stands for your user directory.
 
 You can now delete the folder that contains the `masterkey.cryptomator` file as you would do with other files and folders.
+
+# Reordering Vaults
+
+You can change the order of your vaults by dragging them to the desired position.
+
+![How to reorder vaults](../img/move-vaults.gif)
