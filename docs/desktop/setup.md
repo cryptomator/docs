@@ -32,13 +32,13 @@ Launch the downloaded `.exe` file and follow the setup as usual. We recommend al
 Open the downloaded `.dmg` file, accept the license, and drag & drop Cryptomator onto the applications folder. We recommend also installing _FUSE for macOS_, which is linked from inside the `.dmg` file.
 
 !!! note
-    In case the application is blocked by Gatekeeper, you need to change your [Gatekeeper settings](https://support.apple.com/HT202491){: target="_blank"}.
+    In case the application is blocked by Gatekeeper, you need to change your [Gatekeeper settings](https://support.apple.com/HT202491){: rel="external"}.
 
 ## Linux
-The primary option of using Cryptomator on Linux is via the AppImage. After you've downloaded the `.appimage` file, you simple need to [make it executable](https://docs.appimage.org/user-guide/run-appimages.html#running-appimages){: target="_blank"} and you can then run it.
+The primary option of using Cryptomator on Linux is via the AppImage. After you've downloaded the `.appimage` file, you simple need to [make it executable](https://docs.appimage.org/user-guide/run-appimages.html#running-appimages){: rel="external"} and you can then run it.
 
 If you are familiar with `PPA` or `AUR`, you can choose one of these options to install Cryptomator. The coordinates are available on our download page.
 
 # Getting Started
 
-[![Cryptomator Tutorial: Get Started](https://img.youtube.com/vi/g9A0zihHZ14/0.jpg)](https://www.youtube.com/watch?v=g9A0zihHZ14){: target="_blank"}
+[![Cryptomator Tutorial: Get Started](https://img.youtube.com/vi/g9A0zihHZ14/0.jpg)](https://www.youtube.com/watch?v=g9A0zihHZ14){: rel="external"}

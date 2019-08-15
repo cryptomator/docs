@@ -17,6 +17,8 @@ plugins:
       lang: en
 extra_css:
   - css/extra.css
+extra_javascript:
+  - js/extra.js
 nav:
   - Home: index.md
   - Desktop Application:
