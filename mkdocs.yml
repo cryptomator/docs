@@ -6,6 +6,17 @@ repo_url: https://github.com/cryptomator/docs/
 theme: readthedocs
 strict: true
 copyright: Copyright &copy; 2019 <a href="https://cryptomator.org/impressum">Skymatic GmbH</a> and <a href="https://github.com/cryptomator/docs/graphs/contributors">contributers</a>.
+markdown_extensions:
+  - smarty
+  - attr_list
+  - admonition
+  - toc:
+      permalink: True
+plugins:
+  - search:
+      lang: en
+extra_css:
+  - css/extra.css
 nav:
   - Home: index.md
   - Desktop Application:

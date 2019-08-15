@@ -1,0 +1,4 @@
+/* hide level4 subnavigation */
+li.toctree-l3 + ul {
+    display: none !important;
+}
