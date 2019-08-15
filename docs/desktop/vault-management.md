@@ -2,7 +2,7 @@
 
 To create a new vault click on the plus sign (`1`) and choose `Create vault` (`2`). You can now select the storage location. Navigate to the desired location, enter the name for your vault and click `Save`.
 
-![How to create a new vault](img/create-new-vault.png)
+![How to create a new vault](../img/create-new-vault.png)
 
 After choosing the storage location you will be prompted for a password (`3`). You have to remember this password at all times because there is no way to access your data if you forget your password. Choose a good password to make your data secure. We recommend to use at least 10 characters, ideally [use sentences instead of words](https://xkcd.com/936/).
 
