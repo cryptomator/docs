@@ -4,7 +4,10 @@ To create a new vault click on the plus sign (`1`) and choose `Create vault` (`2
 
 ![How to create a new vault](../img/create-new-vault.png)
 
-After choosing the storage location you will be prompted for a password (`3`). You have to remember this password at all times because there is no way to access your data if you forget your password. Choose a good password to make your data secure. We recommend to use at least 10 characters, ideally [use sentences instead of words](https://xkcd.com/936/).
+After choosing the storage location you will be prompted for a password (`3`).
+
+!!! warning
+    You have to remember this password at all times because there is **no way to access your data if you forget your password**. Choose a good password to make your data secure. We recommend to use at least 10 characters, ideally [use sentences instead of words](https://xkcd.com/936/).
 
 After you’ve created the vault (`4`), you can access your data.
 
