@@ -1,15 +1,15 @@
 # Create a new vault
 
-To create a new vault click on the plus sign (`1`) and choose `Create vault` (`2`). You can now select the storage location. Navigate to the desired location, enter the name for your vault and click `Save`.
+To create a new vault click on the plus sign ① and choose _Create New Vault_ ②. You will now be prompted to select the storage location of your vault. This can be somewhere inside your Dropbox or Google Drive or anywhere on your hard disk. The storage location doesn't need to be a cloud-synced directory.
 
 ![How to create a new vault](../img/create-new-vault.png)
 
-After choosing the storage location you will be prompted for a password (`3`).
+After choosing the storage location you will be prompted for a password ③.
 
 !!! warning
     You have to remember this password at all times because there is **no way to access your data if you forget your password**. Choose a good password to make your data secure. We recommend to use at least 10 characters, ideally [use sentences instead of words](https://xkcd.com/936/).
 
-After you’ve created the vault (`4`), you can access your data.
+Finish by clicking ④ _Create Vault_, then you can [access your data](access-vault.md).
 
 # Add Existing Vaults
 You have to open vaults you created on another device, e.g your iPhone, to have them displayed in Cryptomator. To do this click on the plus sign and choose `Open vault`. Navigate to the storage location of your vault and choose the file `masterkey.cryptomator` and click on `Open`.
