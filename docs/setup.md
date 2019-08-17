@@ -1,5 +1,0 @@
-# Requirements
-
-# Download
-
-# Installation
