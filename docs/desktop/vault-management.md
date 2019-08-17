@@ -27,3 +27,9 @@ You can now delete the folder that contains the `masterkey.cryptomator` file as 
 You can change the order of your vaults by dragging them to the desired position.
 
 ![How to reorder vaults](../img/move-vaults.gif)
+
+# Change Vault Password
+
+The password can be changed by right-clicking on a vault while it is locked. Currently, it’s not possible to change the password while the vault is unlocked.
+
+![How to change vault password](../img/change-password-desktop.png)
