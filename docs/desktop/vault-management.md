@@ -33,3 +33,7 @@ You can change the order of your vaults by dragging them to the desired position
 The password can be changed by right-clicking on a vault while it is locked. Currently, it’s not possible to change the password while the vault is unlocked.
 
 ![How to change vault password](../img/change-password-desktop.png)
+
+!!! note
+    The password is used to derive a [KEK 97](https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys){: rel="external"}, which is then used to encrypt futher keys. The KEK changes, but the keys encrypted with the KEK will stay the same. The actual files will not get re-encrypted, meaning you can not upgrade a weak passphrase to a stronger one once the data has been synced to a service that allows recovery of older versions of the masterkey file.
+    If you like to encrypt your vault files with a new, stronger password you need to create a new vault and drag the data from the old to the new one. Make sure to wipe all backups of the old vault afterwards.
