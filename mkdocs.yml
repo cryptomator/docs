@@ -30,6 +30,7 @@ nav:
   - iOS App:
     - Setup: ios/setup.md
   - Sanitizer:
+    - Introduction: sanitizer/introduction.md
     - Setup: sanitizer/setup.md
     - Run: sanitizer/run.md 
     - Advanced Usage: sanitizer/advanced_usage.md
