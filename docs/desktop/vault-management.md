@@ -12,7 +12,8 @@ After choosing the storage location you will be prompted for a password ③.
 Finish by clicking ④ _Create Vault_, then you can [access your data](access-vault.md).
 
 # Add Existing Vaults
-You have to open vaults you created on another device, e.g your iPhone, to have them displayed in Cryptomator. To do this click on the plus sign and choose `Open vault`. Navigate to the storage location of your vault and choose the file `masterkey.cryptomator` and click on `Open`.
+It is possible to access already existing vaults by adding them to the vault list.
+To do this click on the plus sign and choose `Open vault`. Navigate to the storage location of your vault and choose the file `masterkey.cryptomator` and click on `Open`.
 
 !!! note
     If you created the vault on another device and cannot find it or its masterkey file, make sure that the directory containing the vault is accessible and properly synchronized.
