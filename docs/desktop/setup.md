@@ -28,6 +28,9 @@ You can find older releases as well as detailed changelogs in the [Github releas
 ## Windows
 Launch the downloaded `.exe` file and follow the setup as usual. We recommend also installing _Dokany_, which is included in the installer.
 
+!!! note
+    If you are updating Cryptomator by installing a new version and additionally want to update Dokany, you need to remove the old Dokany version first, restart the PC and the execute the Cryptomator installer.
+
 ## macOS
 Open the downloaded `.dmg` file, accept the license, and drag & drop Cryptomator onto the applications folder. We recommend also installing _FUSE for macOS_, which is linked from inside the `.dmg` file.
 
