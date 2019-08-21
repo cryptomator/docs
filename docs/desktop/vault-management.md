@@ -14,6 +14,9 @@ Finish by clicking ④ _Create Vault_, then you can [access your data](access-va
 # Add Existing Vaults
 You have to open vaults you created on another device, e.g your iPhone, to have them displayed in Cryptomator. To do this click on the plus sign and choose `Open vault`. Navigate to the storage location of your vault and choose the file `masterkey.cryptomator` and click on `Open`.
 
+!!! note
+    If you created the vault on another device and cannot find it or its masterkey file, make sure that the directory containing the vault is accessible and properly synchronized.
+
 # Remove Vaults
 If you want a specific vault to stop being displayed in Cryptomator, you can select it and remove it using the minus sign or by right-clicking on it. This is only possible while the vault is locked. By removing a vault, it is only removed from the list but not deleted from your filesystem. You can re-add the vault afterwards.
 
