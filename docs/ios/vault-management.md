@@ -6,7 +6,6 @@ To create a new vault click on the plus sign ① and in the next screen choose _
 !!! note
     If you already have a vault created with the desktop app and just want to ad this vault to your mobile app, please select _Add existing Vault_ and proceed (documentation will follow) 
 
-
  You will now be prompted to select the cloud provider where you want to store your vault.  
  Choose between _iCloud Drive_, _Dropbox_, _Google Drive_ or _OneDrive_ (works also with _OneDrive for Business_).  
  if your desired provider is not listed and offers WebDAV access, please select _WebDAV_ as the storage location of your vault.  
