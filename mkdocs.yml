@@ -21,6 +21,7 @@ extra_javascript:
   - js/extra.js
 nav:
   - Home: index.md
+  - Contribute: contribute.md
   - Security:
     - Advice: security/advice.md
     - Architecture: security/architecture.md
@@ -36,7 +37,4 @@ nav:
   - Sanitizer:
     - Introduction: sanitizer/introduction.md
     - Setup: sanitizer/setup.md
-    - Run: sanitizer/run.md 
-    - Advanced Usage: sanitizer/advanced_usage.md
-  - Contributing:
-    - Introduction: contributing/introduction.md
+    - Usage: sanitizer/usage.md 
