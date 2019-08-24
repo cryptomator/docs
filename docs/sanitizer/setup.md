@@ -8,4 +8,4 @@ To verify you meet the minimum required Java version, you can simply invoke the 
 
 # Download
 
-And here's the link to [download the Sanitizer jar file](https://github.com/cryptomator/sanitizer/releases){: rel="external"}.
+And here's the link to [download the Sanitizer JAR file](https://github.com/cryptomator/sanitizer/releases){: rel="external"}.

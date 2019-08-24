@@ -1,17 +1,18 @@
-# How can you help us?
+# How Can You Help Us?
 
-Cryptomator is an Open Source project and wouldn't be possible without contributions from users who support the idea.
+Cryptomator is an open source project and wouldn't be possible without contributions from users who support the idea.
 
 There are several ways you can help us:
 
-* By reporting bugs or feature requests on [GitHub](https://github.com/cryptomator/cryptomator/issues/new/choose)
-* By discussing solutions in our [forum](https://community.cryptomator.org)
-* By contributing patches or features via pull requests
-* By helping us with the localization of Cryptomator
-* By improving this documentation
-* Or by donating to the maintainers
+- By reporting bugs or feature requests on [GitHub](https://github.com/cryptomator/cryptomator/issues/new/choose),
+- By discussing solutions in our [community](https://community.cryptomator.org),
+- By contributing patches or features via pull requests,
+- By helping us with the [localization](https://poeditor.com/join/project/bHwbvJmx0E) of Cryptomator,
+- By improving this documentation,
+- By becoming a [sponsor](https://cryptomator.org/sponsors/),
+- Or by [donating](https://cryptomator.org/#donate) to the maintainers.
 
-# Before you start
+# Before You Start
 
 If you plan to help, please stick to our [Code of Conduct](https://github.com/cryptomator/cryptomator/blob/develop/.github/CODE_OF_CONDUCT.md).
 
