@@ -5,7 +5,7 @@ site_author: Cryptomator Team
 repo_url: https://github.com/cryptomator/docs/
 theme: readthedocs
 strict: true
-copyright: Copyright &copy; 2019 <a href="https://cryptomator.org/impressum">Skymatic GmbH</a> and <a href="https://github.com/cryptomator/docs/graphs/contributors">contributers</a>.
+copyright: Copyright &copy; 2019 <a href="https://cryptomator.org/impressum">Skymatic GmbH</a> and <a href="https://github.com/cryptomator/docs/graphs/contributors">contributors</a>.
 markdown_extensions:
   - smarty
   - attr_list
@@ -21,6 +21,9 @@ extra_javascript:
   - js/extra.js
 nav:
   - Home: index.md
+  - Security:
+    - Advice: security/advice.md
+    - Architecture: security/architecture.md
   - Desktop Application:
     - Setup: desktop/setup.md
     - Vault Management: desktop/vault-management.md

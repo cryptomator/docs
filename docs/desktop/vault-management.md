@@ -2,12 +2,12 @@
 
 To create a new vault, click on the plus sign ① and choose _Create New Vault_ ②. You will now be prompted to select the storage location of your vault. This can be somewhere inside your Dropbox or Google Drive or anywhere on your hard disk. The storage location doesn't need to be a cloud-synced directory.
 
-![How to create a new vault](../img/create-new-vault.png)
+![How to create a new vault](/img/desktop/create-new-vault.png)
 
 After choosing the storage location you will be prompted for a password ③.
 
 !!! warning
-    You have to remember this password at all times because there is **no way to access your data if you forget your password**. Choose a good password to make your data secure. We recommend to use at least 10 characters, ideally [use sentences instead of words](https://xkcd.com/936/).
+    You have to remember this password at all times because there is **no way to access your data if you forget your password**. Choose a [good password](/security/advice/#good-passwords) to make your data secure.
 
 Finish by clicking _Create Vault_ ④, then you can [access your data](access-vault.md).
 
@@ -32,13 +32,13 @@ You can now delete the folder that contains the `masterkey.cryptomator` file as 
 
 You can change the order of your vaults by dragging them to the desired position.
 
-![How to reorder vaults](../img/move-vaults.gif)
+![How to reorder vaults](/img/desktop/move-vaults.gif)
 
 # Change Vault Password
 
 The password can be changed by right-clicking on a vault while it is locked. Currently, it's not possible to change the password while the vault is unlocked.
 
-![How to change vault password](../img/change-password-desktop.png)
+![How to change vault password](/img/desktop/change-password-desktop.png)
 
 !!! note
     The password is used to derive a [KEK](https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys){: rel="external"}, which is then used to encrypt futher keys. The KEK changes, but the keys encrypted with the KEK will stay the same. The actual files will not get re-encrypted, meaning you can not upgrade a weak passphrase to a stronger one once the data has been synced to a service that allows recovery of older versions of the masterkey file.
