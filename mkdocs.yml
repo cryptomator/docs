@@ -29,7 +29,7 @@ nav:
     - Setup: android/setup.md
   - iOS App:
     - Setup: ios/setup.md
-    - Vault Management: desktop/vault-management.md
+    - Vault Management: ios/vault-management.md
   - Sanitizer:
     - Introduction: sanitizer/introduction.md
     - Setup: sanitizer/setup.md
