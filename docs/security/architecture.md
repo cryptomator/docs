@@ -24,7 +24,7 @@ wrappedEncryptionMasterKey := aesKeyWrap(encryptionMasterKey, kek)
 wrappedMacMasterKey := aesKeyWrap(macMasterKey, kek)
 ```
 
-<img class="center" src="../img/security/key-derivation.png" srcset="../img/security/key-derivation.png 1x, /img/security/key-derivation@2x.png 2x" alt="KEK Derivation" />
+<img class="center" src="../../img/security/key-derivation.png" srcset="../../img/security/key-derivation.png 1x, /img/security/key-derivation@2x.png 2x" alt="KEK Derivation" />
 
 The wrapped keys and the parameters needed to derive the KEK are then stored as integers or Base64 strings in a JSON file named `masterkey.cryptomator`, which is located in the root directory of the vault.
 
@@ -42,7 +42,7 @@ The wrapped keys and the parameters needed to derive the KEK are then stored as 
 
 When unlocking a vault the KEK is used to unwrap (i.e. decrypt) the stored masterkeys.
 
-<img class="center" src="../img/security/masterkey-decryption.png" srcset="../img/security/masterkey-decryption.png 1x, /img/security/masterkey-decryption@2x.png 2x" alt="Masterkey Decryption" />
+<img class="center" src="../../img/security/masterkey-decryption.png" srcset="../../img/security/masterkey-decryption.png 1x, /img/security/masterkey-decryption@2x.png 2x" alt="Masterkey Decryption" />
 
 # Filename Encryption
 
@@ -58,7 +58,7 @@ The cleartext name of a file gets encoded using UTF-8 in [Normalization Form C](
 
 Cryptomator uses [AES-SIV](https://tools.ietf.org/html/rfc5297){: rel="external"} to encrypt file as well as directory names. The directory ID of the parent folder is passed as associated data. This prevents undetected movement of files between directories.
 
-<img class="center" src="../img/security/filename-encryption.png" srcset="../img/security/filename-encryption.png 1x, /img/security/filename-encryption@2x.png 2x" alt="Filename Encryption" />
+<img class="center" src="../../img/security/filename-encryption.png" srcset="../../img/security/filename-encryption.png 1x, /img/security/filename-encryption@2x.png 2x" alt="Filename Encryption" />
 <figcaption>* Unique identifier is created for each directory</figcaption>
 
 ```
@@ -126,7 +126,7 @@ ciphertextPayload := aesCtr(cleartextPayload, encryptionMasterKey, headerNonce)
 mac := hmacSha256(headerNonce . ciphertextPayload, macMasterKey)
 ```
 
-<img class="center" src="../img/security/file-header-encryption.png" srcset="../img/security/file-header-encryption.png 1x, /img/security/file-header-encryption@2x.png 2x" alt="File Header Encryption" />
+<img class="center" src="../../img/security/file-header-encryption.png" srcset="../../img/security/file-header-encryption.png 1x, /img/security/file-header-encryption@2x.png 2x" alt="File Header Encryption" />
 <figcaption>* Random per file change</figcaption>
 
 # File Content Encryption
@@ -156,7 +156,7 @@ for (int i = 0; i < length(cleartextChunks); i++) {
 ciphertextFileContent := join(ciphertextChunks[])
 ```
 
-<img class="center" src="../img/security/file-content-encryption.png" srcset="../img/security/file-content-encryption.png 1x, /img/security/file-content-encryption@2x.png 2x" alt="File Content Encryption" />
+<img class="center" src="../../img/security/file-content-encryption.png" srcset="../../img/security/file-content-encryption.png 1x, /img/security/file-content-encryption@2x.png 2x" alt="File Content Encryption" />
 <figcaption>* Random per chunk change</figcaption>
 
 # Name Shortening
