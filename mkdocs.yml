@@ -22,9 +22,6 @@ extra_javascript:
 nav:
   - Home: index.md
   - Contribute: contribute.md
-  - Security:
-    - Advice: security/advice.md
-    - Architecture: security/architecture.md
   - Desktop Application:
     - Setup: desktop/setup.md
     - Vault Management: desktop/vault-management.md
@@ -38,3 +35,6 @@ nav:
     - Introduction: sanitizer/introduction.md
     - Setup: sanitizer/setup.md
     - Usage: sanitizer/usage.md 
+  - Security:
+    - Advice: security/advice.md
+    - Architecture: security/architecture.md
