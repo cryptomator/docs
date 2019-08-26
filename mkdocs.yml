@@ -25,6 +25,7 @@ nav:
     - Setup: desktop/setup.md
     - Vault Management: desktop/vault-management.md
     - Accessing a Vault: desktop/access-vault.md
+    - Troubleshooting: desktop/troubleshooting.md
   - Android App:
     - Setup: android/setup.md
   - iOS App:
