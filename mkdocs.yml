@@ -21,7 +21,6 @@ extra_javascript:
   - js/extra.js
 nav:
   - Home: index.md
-  - Contribute: contribute.md
   - Desktop Application:
     - Setup: desktop/setup.md
     - Vault Management: desktop/vault-management.md
@@ -38,3 +37,4 @@ nav:
   - Security:
     - Advice: security/advice.md
     - Architecture: security/architecture.md
+  - Contribute: contribute.md
