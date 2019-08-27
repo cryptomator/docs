@@ -45,7 +45,7 @@ And last but not least create a **secure** password for your vault. Basically, y
 ![How to create a new vault with iOS](../img/ios/create-new-vault-7-set-password.jpg){:style="width: 346px"}
 
 !!! warning
-    You have to remember this password at all times because there is **no way to access your data if you forget your password**. Choose a [good password](/security/advice/#good-passwords) to make your data secure.
+    You have to remember this password at all times because there is **no way to access your data if you forget your password**. Choose a [good password](../../security/advice/#good-passwords) to make your data secure.
 
 After you have confirmed your password, the vault is created. You will find it now on the start page of your Cryptomator app, where you can open your vault and optionally change settings. [documentation will follow]
 

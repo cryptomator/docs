@@ -7,7 +7,7 @@ To create a new vault, click on the plus sign ① and choose _Create New Vault_ 
 After choosing the storage location you will be prompted for a password ③.
 
 !!! warning
-    You have to remember this password at all times because there is **no way to access your data if you forget your password**. Choose a [good password](/security/advice/#good-passwords) to make your data secure.
+    You have to remember this password at all times because there is **no way to access your data if you forget your password**. Choose a [good password](../../security/advice/#good-passwords) to make your data secure.
 
 Finish by clicking _Create Vault_ ④, then you can [access your data](access-vault.md).
 
