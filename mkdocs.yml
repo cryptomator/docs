@@ -29,6 +29,7 @@ nav:
   - Android App:
     - Setup: android/setup.md
     - Vault Management: android/vault-management.md
+    - Accessing a Vault: android/access-vault.md
   - iOS App:
     - Setup: ios/setup.md
     - Vault Management: ios/vault-management.md
