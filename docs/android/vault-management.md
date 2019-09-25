@@ -46,7 +46,7 @@ And last but not least create a **secure** password for your vault. Basically, y
 
 After you have confirmed your password, the vault is created. You will find it now on the start page of your Cryptomator app, where you can open your vault and optionally change settings. [documentation will follow]
 
-![How to create a new vault with Android](../img/android/create-new-vault-8-creating-vault.png){:style="width: 346px"} ![How to create a new vault with Android](../img/android/create-new-vault-9-finish.png){:style="ywidth: 346px"}
+![How to create a new vault with Android](../img/android/create-new-vault-8-creating-vault.png){:style="width: 346px"} ![How to create a new vault with Android](../img/android/create-new-vault-9-finish.png){:style="width: 346px"}
 
 # Add Existing Vaults
 
@@ -88,18 +88,18 @@ Then choose the `masterkey.cryptomator` file.
 
 Now the vault is added to the list of vaults. You will find it now on the start page of your Cryptomator app, where you can open your vault and optionally change settings. [documentation will follow]
 
-![How add a vault with Android](../img/android/add-existing-vault-7-loading.png){:style="width: 346px"} ![How to add a vault with Android](../img/android/add-existing-vault-8-finish.png){:style="ywidth: 346px"}
+![How add a vault with Android](../img/android/add-existing-vault-7-loading.png){:style="width: 346px"} ![How to add a vault with Android](../img/android/add-existing-vault-8-finish.png){:style="width: 346px"}
 
 # Remove Vaults
 
 If you want a specific vault to stop being displayed in Cryptomator, you select the `V` next to the vault ①.
 After that choose _Remove_ ②.
 
-![How remove a vault with Android](../img/android/remove-vault-0-start.png){:style="width: 346px"} ![How to remove a vault with Android](../img/android/remove-vault-1-select-remove-vault.png){:style="ywidth: 346px"}
+![How remove a vault with Android](../img/android/remove-vault-0-start.png){:style="width: 346px"} ![How to remove a vault with Android](../img/android/remove-vault-1-select-remove-vault.png){:style="width: 346px"}
 
 Confirme the deletion process using the `Delete` button.
 
-![How remove a vault with Android](../img/android/remove-vault-2-confirmation.png){:style="width: 346px"} ![How to remove a vault with Android](../img/android/remove-vault-3-finish.png){:style="ywidth: 346px"}
+![How remove a vault with Android](../img/android/remove-vault-2-confirmation.png){:style="width: 346px"} ![How to remove a vault with Android](../img/android/remove-vault-3-finish.png){:style="width: 346px"}
 
 !!! note
     By removing a vault, it is only removed from the list but not deleted in the cloud. You can re-add the vault afterwards.
@@ -109,7 +109,7 @@ Confirme the deletion process using the `Delete` button.
 If you want change the password of a specific vault in Cryptomator, you select the `V` next to the vault ①.
 After that choose _Change password_ ②.
 
-![How to change a vault password with Android](../img/android/change-password-vault-0-start.png){:style="width: 346px"} ![How to change a vault password with Android](../img/android/change-password-vault-1-select-change-pw.png){:style="ywidth: 346px"}
+![How to change a vault password with Android](../img/android/change-password-vault-0-start.png){:style="width: 346px"} ![How to change a vault password with Android](../img/android/change-password-vault-1-select-change-pw.png){:style="width: 346px"}
 
 Enter the old password and choose a **secure** new one. Basically, you have the whole Unicode for choosing a password, including non-printable characters.
 
@@ -132,8 +132,8 @@ Start the process using the `CHANGE PASSWORD` button.
 If you want to change the name of a specific vault in Cryptomator, you select the `V` next to the vault ①.
 After that choose _Rename_ ②.
 
-![How to rename a vault with Android](../img/android/rename-vault-0-start.png){:style="width: 346px"} ![How to rename a vault with Android](../img/android/rename-vault-1-select-rename.png){:style="ywidth: 346px"}
+![How to rename a vault with Android](../img/android/rename-vault-0-start.png){:style="width: 346px"} ![How to rename a vault with Android](../img/android/rename-vault-1-select-rename.png){:style="width: 346px"}
 
 Choose a new name and confirm using the `RENAME` button.
 
-![How to rename a vault with Android](../img/android/rename-vault-3-renameing.png){:style="width: 346px"} ![How to rename a vault with Android](../img/android/rename-vault-4-finish.png){:style="ywidth: 346px"}
+![How to rename a vault with Android](../img/android/rename-vault-3-renameing.png){:style="width: 346px"} ![How to rename a vault with Android](../img/android/rename-vault-4-finish.png){:style="width: 346px"}
