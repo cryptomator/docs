@@ -1,10 +1,14 @@
 # General Settings
 
+After pressing the three dots ① and clicking on `Settings`, you will find options to customize Cryptomator.
+
+![How to launch settings with Android](../img/android/launch-settings.png){:style="width: 346px"} ![How to launch settings with Android](../img/android/settings.png){:style="width: 346px"}
+
 ## Cloud services
 
 This settings lists all cloud services. When pressing on a service, the authentication starts or if you're already authenticated, the logout starts.
 
-![How to rename a vault with Android](../img/android/setting-cloud-services.png){:style="width: 346px"}
+![How to handle cloud services with Android](../img/android/setting-cloud-services.png){:style="width: 346px"}
 
 ## Fingerprint
 
@@ -14,11 +18,11 @@ This settings lists all cloud services. When pressing on a service, the authenti
 With the toggle button in the right upper corner ①, the fingerprint will be generally enabled/disabled.
 Using the toggle button next to the vault, it will be enabled/disabled for this vault ②.
 
-![How to rename a vault with Android](../img/android/setting-fingerprint-0-setup.png){:style="width: 346px"} ![How to rename a vault with Android](../img/android/setting-fingerprint-1-enter-pw.png){:style="width: 346px"}
+![How to use fingerprint with Android](../img/android/setting-fingerprint-0-setup.png){:style="width: 346px"} ![How to use fingerprint with Android](../img/android/setting-fingerprint-1-enter-pw.png){:style="width: 346px"}
 
 After enabling, you have to unlock the vault using the password.
 
-![How to rename a vault with Android](../img/android/setting-fingerprint-2-authenticate.png){:style="width: 346px"} ![How to rename a vault with Android](../img/android/setting-fingerprint-3-finish.png){:style="width: 346px"}
+![How to use fingerprint with Android](../img/android/setting-fingerprint-2-authenticate.png){:style="width: 346px"} ![How to use fingerprint with Android](../img/android/setting-fingerprint-3-finish.png){:style="width: 346px"}
 
 To have access to the key stored in the keystore, you have to authenticate against the system using the fingerprint.
 
@@ -43,7 +47,7 @@ If you see this dialog, some app is able to draw over Cryptomator:
 
 If this setting is enabled, the search mode is `live` that means, the search starts immediately after entering the search pattern. If it is disabled you have to use the magnifier or the enter button in your keyboard to start the search.
 
-![How to filter in a vault with Android](../img/android/filter.gif){:style="width: 346px"}
+![How to app is obscured with Android](../img/android/filter.gif){:style="width: 346px"}
 
 ## Screen security
 
