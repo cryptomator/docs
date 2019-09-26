@@ -50,7 +50,7 @@ After you have confirmed your password, the vault is created. You will find it n
 
 # Add Existing Vaults
 
-Adding a vault is quiet similar to creating a vault because of this, you'll find a lot of duplicate text but if you skipped the `Create a New Vault` chapter you need all the informations.
+Adding a vault is quiet similar to creating a vault because of this, you'll find a lot of duplicate text but if you skipped the `Create a New Vault` chapter you need all the information.
 
 To add an existing vault, click on the plus sign ① and choose _Add existing vault_ ② in the next screen.
 
@@ -97,7 +97,7 @@ After that choose _Remove_ ②.
 
 ![How remove a vault with Android](../img/android/remove-vault-0-start.png){:style="width: 346px"} ![How to remove a vault with Android](../img/android/remove-vault-1-select-remove-vault.png){:style="width: 346px"}
 
-Confirme the deletion process using the `Delete` button.
+Confirm the deletion process using the `Delete` button.
 
 ![How remove a vault with Android](../img/android/remove-vault-2-confirmation.png){:style="width: 346px"} ![How to remove a vault with Android](../img/android/remove-vault-3-finish.png){:style="width: 346px"}
 
