@@ -1,6 +1,6 @@
 # Requirements
 
-Requires iOS 8.2 or later. Compatible with iPhone, iPad, and iPod touch.
+Requires iOS 10.0 or later. Compatible with iPhone, iPad, and iPod touch.
 
 # Installation
 
