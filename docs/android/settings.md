@@ -85,6 +85,11 @@ If the `Automatic photo upload` is enabled, all photos taken will be marked for 
 
 Under the setting `Choose vault for upload` you can specify the target vault and folder in the vault where the images will be placed.
 
+Which pictures will be tracked depends on the Android version on you phone:
+
+* Nougat (API level 24 or 7.x) and later: All images, which Android adds to the gallery will be uploaded to the vault.
+* Pre-Nougat: Only the images created with the camera will be uploaded to the vault.
+
 # Support
 
 If you have problems with the app you can enable the `Debug mode`. After reproducing the problem, you can disable the `Debug mode` again and `Send log file`.
