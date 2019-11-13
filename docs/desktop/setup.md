@@ -9,7 +9,7 @@
 | Windows 7               | ⚠️ 1.3.4 | ✅ 1.4.x |
 | Windows Vista           | ❌ 1.2.3 | ❌ 1.2.3 |
 | Windows XP              | -       | -       |
-| macOS 10.15 Catalina    | -       | ✅ 1.4.15+ |
+| macOS 10.15 Catalina    | -       | ✅ 1.4.16+ |
 | macOS 10.14 Mojave      | -       | ✅ 1.4.x |
 | macOS 10.13 High Sierra | -       | ✅ 1.4.x |
 | macOS 10.12 Sierra      | -       | ✅ 1.4.x |
