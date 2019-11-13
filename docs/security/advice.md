@@ -31,4 +31,4 @@ Bad passwords can be cracked easily when using computers. Plenty of recommendati
 - A password should not be an existing word or a combination of few words. It should be a combination of characters or words that is as random as possible.
 - For each purpose, a unique password without similarities to other passwords should be used.
 
-If you fulfill these requirements, you quickly reach a point where remembering the passwords gets impossible. Thus, we recommend to use a password manager to generate and store the passwords. By doing so, you only have to remember a few or a single secure password. Otherwise, we recommend to use at least 10 characters, ideally [use sentences instead of words](https://xkcd.com/936/).
+If you fulfill these requirements, you quickly reach a point where remembering the passwords gets impossible. Thus, we recommend to use a password manager to generate and store the passwords. By doing so, you only have to remember a few or a single secure password. Otherwise, we recommend to use at least 10 characters, ideally [use sentences instead of words](https://xkcd.com/936/){:rel="external"}.
