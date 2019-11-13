@@ -11,7 +11,7 @@ You will now be prompted to select the cloud provider where you want to store yo
 
 Choose between _Dropbox_, _Google Drive_, _OneDrive_ (works also with _OneDrive for Business_) or _Local storage_ (which means your local device with all attached devices).
 
-If your desired provider is not listed and offers WebDAV access, please select _WebDAV_ as the storage location of your vault. Here you can find [WebDAV URLs of Common Cloud Storage Services](https://community.cryptomator.org/t/webdav-urls-of-common-cloud-storage-services/75).
+If your desired provider is not listed and offers WebDAV access, please select _WebDAV_ as the storage location of your vault. Here you can find [WebDAV URLs of Common Cloud Storage Services](https://community.cryptomator.org/t/webdav-urls-of-common-cloud-storage-services/75){:rel="external"}.
 
 ![How to create a new vault with Android](../img/android/create-new-vault-2-select-provider.png){:style="width: 346px"}
 
@@ -37,7 +37,7 @@ Then choose the location on your cloud storage where you want to have your encry
 
 ![How to create a new vault with Android](../img/android/create-new-vault-6-select-path.png){:style="width: 346px"}
 
-And last but not least create a **secure** password for your vault. Basically, you have the whole Unicode for choosing a password, including non-printable characters.
+And last but not least, create a **secure** password for your vault. Basically, you have the whole Unicode for choosing a password including non-printable characters.
 
 ![How to create a new vault with Android](../img/android/create-new-vault-7-set-password.png){:style="width: 346px"}
 
@@ -50,8 +50,6 @@ After you have confirmed your password, the vault is created. You will find it n
 
 # Add Existing Vaults
 
-Adding a vault is quiet similar to creating a vault because of this, you'll find a lot of duplicate text but if you skipped the `Create a New Vault` chapter you need all the information.
-
 To add an existing vault, click on the plus sign ① and choose _Add existing vault_ ② in the next screen.
 
 ![How to add a vault with Android](../img/android/add-existing-vault-0-start.png){:style="width: 346px"} ![How to add a vault with Android](../img/android/add-existing-vault-1-select-add-existing-vault.png){:style="width: 346px"}
@@ -60,7 +58,7 @@ You will now be prompted to select the cloud provider where the vault is located
 
 Choose between _Dropbox_, _Google Drive_, _OneDrive_ (works also with _OneDrive for Business_) or _Local storage_ (which means your local device with all attached devices).
 
-If your desired provider is not listed and offers WebDAV access, please select _WebDAV_ as the storage location of your vault. Here you can find [WebDAV URLs of Common Cloud Storage Services](https://community.cryptomator.org/t/webdav-urls-of-common-cloud-storage-services/75).
+If your desired provider is not listed and offers WebDAV access, please select _WebDAV_ as the storage location of your vault. Here you can find [WebDAV URLs of Common Cloud Storage Services](https://community.cryptomator.org/t/webdav-urls-of-common-cloud-storage-services/75){:rel="external"}.
 
 ![How add a vault with Android](../img/android/add-existing-vault-2-select-provider.png){:style="width: 346px"}
 
@@ -78,7 +76,7 @@ You can remove Cryptomator permissions from your online storage account at any t
 
 Now that you've established a connection, you'll add the existing vault.
 
-In the first step, please choose the folder in which the vault is located. This folder name is the same like the vault name (in this example our vault name is _test vault_ so we select this folder).
+In the first step, please choose the folder in which the vault is located. This folder name is the same as the vault name (in this example, our vault name is _test vault_ so we select this folder).
 
 ![How to add a vault with Android](../img/android/add-existing-vault-5-choose-folder.png){:style="width: 346px"}
 
@@ -92,8 +90,7 @@ Now the vault is added to the list of vaults. You will find it now on the start 
 
 # Remove Vaults
 
-If you want a specific vault to stop being displayed in Cryptomator, you select the `V` next to the vault ①.
-After that choose _Remove_ ②.
+If you want a specific vault to stop being displayed in Cryptomator, you select the `V` next to the vault ① and choose _Remove_ ②.
 
 ![How remove a vault with Android](../img/android/remove-vault-0-start.png){:style="width: 346px"} ![How to remove a vault with Android](../img/android/remove-vault-1-select-remove-vault.png){:style="width: 346px"}
 
@@ -106,12 +103,11 @@ Confirm the deletion process using the `Delete` button.
 
 # Change Vault Password
 
-If you want change the password of a specific vault in Cryptomator, you select the `V` next to the vault ①.
-After that choose _Change password_ ②.
+If you want change the password of a specific vault in Cryptomator, you select the `V` next to the vault ① and choose _Change password_ ②.
 
 ![How to change a vault password with Android](../img/android/change-password-vault-0-start.png){:style="width: 346px"} ![How to change a vault password with Android](../img/android/change-password-vault-1-select-change-pw.png){:style="width: 346px"}
 
-Enter the old password and choose a **secure** new one. Basically, you have the whole Unicode for choosing a password, including non-printable characters.
+Enter the old password and choose a **secure** new one. Basically, you have the whole Unicode for choosing a password including non-printable characters.
 
 ![How to change a vault password with Android](../img/android/change-password-vault-2-change-password.png){:style="width: 346px"}
 
@@ -123,14 +119,13 @@ Start the process using the `CHANGE PASSWORD` button.
 ![How to change a vault password with Android](../img/android/change-password-vault-3-changing-pw.png){:style="width: 346px"} ![How to change a vault password with Android](../img/android/change-password-vault-4-finish.png){:style="width: 346px"}
 
 !!! note
-    The password is used to derive a [KEK](https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys){: rel="external"}, which is then used to encrypt futher keys. The KEK changes, but the keys encrypted with the KEK will stay the same. The actual files will not get re-encrypted, meaning you can not upgrade a weak passphrase to a stronger one once the data has been synced to a service that allows recovery of older versions of the masterkey file.
+    The password is used to derive a [KEK](https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys){:rel="external"}, which is then used to encrypt futher keys. The KEK changes, but the keys encrypted with the KEK will stay the same. The actual files will not get re-encrypted, meaning you can not upgrade a weak passphrase to a stronger one once the data has been synced to a service that allows recovery of older versions of the masterkey file.
     
-    If you like to encrypt your vault files with a new, stronger password you need to create a new vault and drag the data from the old to the new one. Make sure to wipe all backups of the old vault afterwards.
+    If you like to encrypt your vault files with a new, stronger password, you need to create a new vault and copy the data from the old to the new one. Make sure to wipe all backups of the old vault afterwards.
 
 # Rename Vault
 
-If you want to change the name of a specific vault in Cryptomator, you select the `V` next to the vault ①.
-After that choose _Rename_ ②.
+If you want to change the name of a specific vault in Cryptomator, you select the `V` next to the vault ① and choose _Rename_ ②.
 
 ![How to rename a vault with Android](../img/android/rename-vault-0-start.png){:style="width: 346px"} ![How to rename a vault with Android](../img/android/rename-vault-1-select-rename.png){:style="width: 346px"}
 

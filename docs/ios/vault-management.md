@@ -40,7 +40,7 @@ Then choose the location on your cloud storage where you want to have your encry
 
 ![How to create a new vault with iOS](../img/ios/create-new-vault-6-select-path.jpg){:style="width: 346px"}
 
-And last but not least create a **secure** password for your vault. Basically, you have the whole Unicode for choosing a password, including non-printable characters.
+And last but not least, create a **secure** password for your vault. Basically, you have the whole Unicode for choosing a password including non-printable characters.
 
 ![How to create a new vault with iOS](../img/ios/create-new-vault-7-set-password.jpg){:style="width: 346px"}
 
