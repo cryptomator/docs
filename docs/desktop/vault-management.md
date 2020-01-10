@@ -1,23 +1,3 @@
-# Create a New Vault
-
-To create a new vault, click on the plus sign ① and choose _Create New Vault_ ②. You will now be prompted to select the storage location of your vault. This can be somewhere inside your Dropbox or Google Drive or anywhere on your hard disk. The storage location doesn't need to be a cloud-synced directory.
-
-![How to create a new vault](../img/desktop/create-new-vault.png)
-
-After choosing the storage location you will be prompted for a password ③.
-
-!!! warning
-    You have to remember this password at all times because there is **no way to access your data if you forget your password**. Choose a [good password](../../security/advice/#good-passwords) to make your data secure.
-
-Finish by clicking _Create Vault_ ④, then you can [access your data](access-vault.md).
-
-# Add Existing Vaults
-
-It is possible to access already existing vaults by adding them to the vault list. To do this, click on the plus sign and choose `Open Vault`. Navigate to the storage location of your vault and choose the file `masterkey.cryptomator` and click on `Open`.
-
-!!! note
-    If you created the vault on another device and cannot find it or its masterkey file, make sure that the directory containing the vault is accessible and properly synchronized.
-
 # Remove Vaults
 
 If you want a specific vault to stop being displayed in Cryptomator, you can select it and remove it using the minus sign or by right-clicking on it. This is only possible while the vault is locked. By removing a vault, it is only removed from the list but not deleted from your filesystem. You can re-add the vault afterwards.

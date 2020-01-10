@@ -23,6 +23,8 @@ nav:
   - Home: index.md
   - Desktop Application:
     - Setup: desktop/setup.md
+    - Basic Concepts: desktop/basic-concepts.md
+    - Adding Vaults: desktop/adding-vaults.md
     - Vault Management: desktop/vault-management.md
     - Accessing a Vault: desktop/access-vault.md
     - Troubleshooting: desktop/troubleshooting.md
