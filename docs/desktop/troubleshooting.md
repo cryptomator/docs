@@ -16,7 +16,3 @@ In order to use FUSE-based volumes, you need to install [FUSE for macOS](https:/
 
 !!! important
     Before looking for errors make sure you have the latest Version of Cryptomator installed.
-
-## Excessive RAM usage on MESA 19.2.0 beta
-
-Downgrade to MESA 19.1.x

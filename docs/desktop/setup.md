@@ -1,22 +1,10 @@
-# Requirements
+# System Requirements
 
-## Operating System Compatibility Matrix
-
-|                         | 32 bit  | 64 bit  |
-|:------------------------|:-------:|:-------:|
-| Windows 10              | ⚠️ 1.3.4 | ✅ 1.4.x |
-| Windows 8               | ⚠️ 1.3.4 | ✅ 1.4.x |
-| Windows 7               | ⚠️ 1.3.4 | ✅ 1.4.x |
-| Windows Vista           | ❌ 1.2.3 | ❌ 1.2.3 |
-| Windows XP              | -       | -       |
-| macOS 10.15 Catalina    | -       | ✅ 1.4.16+ |
-| macOS 10.14 Mojave      | -       | ✅ 1.4.x |
-| macOS 10.13 High Sierra | -       | ✅ 1.4.x |
-| macOS 10.12 Sierra      | -       | ✅ 1.4.x |
-| macOS 10.11 El Capitan  | -       | ✅ 1.4.x |
-| Linux                   | TODO    | TODO    |
-
-✅ Latest version   ⚠️ Unsupported compatible version   ❌ Incompatible 
+|         | Minimum Version  |
+|:--------|:-----------------|
+| Windows | 10 Update 1703   |
+| Mac     | macOS 10.11      |
+| Linux   | [See JDK 11 System Requirements](https://www.oracle.com/java/technologies/javase/products-doc-jdk11certconfig.html) |
 
 # Download
 
@@ -45,7 +33,3 @@ Open the downloaded `.dmg` file, accept the license, and drag & drop Cryptomator
 The primary option of using Cryptomator on Linux is via the AppImage. After you've downloaded the `.appimage` file, you simple need to [make it executable](https://docs.appimage.org/user-guide/run-appimages.html#running-appimages){:rel="external"} and you can then run it.
 
 If you are familiar with `PPA` or `AUR`, you can choose one of these options to install Cryptomator. The coordinates are available on our download page.
-
-# Getting Started
-
-[![Cryptomator Tutorial: Get Started](https://img.youtube.com/vi/g9A0zihHZ14/0.jpg)](https://www.youtube.com/watch?v=g9A0zihHZ14){:rel="external"}

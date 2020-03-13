@@ -23,8 +23,9 @@ nav:
   - Home: index.md
   - Desktop Application:
     - Setup: desktop/setup.md
-    - Basic Concepts: desktop/basic-concepts.md
+    - Getting Started: desktop/getting-started.md
     - Adding Vaults: desktop/adding-vaults.md
+    - Accessing Vaults: desktop/accessing-vaults.md
     - Vault Management: desktop/vault-management.md
     - Accessing a Vault: desktop/access-vault.md
     - Password and Recovery Key: desktop/password-and-recovery-key.md

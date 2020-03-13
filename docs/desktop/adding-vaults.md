@@ -1,10 +1,7 @@
-# Adding your first vault
+If you want to add a new vault, you have essentially two options:
 
-On your first use of Cryptomator, you will not yet have any vaults. Before you can encrypt files, you need to add a vault. To do so, start by clicking the `Add Vault` button.
-
-![Empty vault list](../img/desktop/empty-vault-list.png)
-
-If you want to create a vault yourself, choose `Create New Vault`. If you already have a vault, for example because someone shared a vault with you via a cloud storage service, you can instead choose `Open Existing Vault`.
+1. If you want to create a vault yourself, choose [`Create New Vault`](#create-a-new-vault).
+2. If you already have a vault, for example because someone shared a vault with you via a cloud storage service, you can instead choose [`Open Existing Vault`](#open-an-existing-vault).
 
 ![Create a new or open an existing vault](../img/desktop/create-or-open-vault.png)
 
@@ -26,7 +23,9 @@ You start by simply choosing a name for your vault.
 
 ## 2. Choose a Storage Location
 
-Next, choose where you want to save your vault. Usually this would be inside your cloud-synced directory. But you can choose any storage location, you like.
+Next, choose where you want to save your vault. Since a vault is just a directory containing encrypted files, you need to store it somewhere. Usually this would be inside your cloud-synced directory. But you can choose any storage location, you like.
+
+Keep in mind that Cryptomator is not a sync tool. You still need the software from your favourite cloud storage service.
 
 In this example I want to encrypt files that get synchronized via Dropbox.
 
