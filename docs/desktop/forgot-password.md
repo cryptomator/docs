@@ -35,5 +35,5 @@ If the recovery key is valid, Cryptomator indicates this by a small message and 
 [//]: # (TODO: picture with recovery key insertion prompt with valid key)
 
 In the last step you need to assign a new password to your vault.
-It is the same as during [vault creation](./adding-vaults.md#3.-choose-a-password) and as noted there, read the suggstion for choosing a [good password](../security/advice.md#good-passwords)
+It is the same as during [vault creation](./adding-vaults.md#) and as noted there, read the suggestion for choosing a [good password](../security/advice.md#good-passwords)
 Finish the dialog by entering the same password again and clicking the `Done` button.
