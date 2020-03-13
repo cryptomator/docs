@@ -35,5 +35,11 @@ If the recovery key is valid, Cryptomator indicates this by a small message and 
 ![A valid recovery key has been entered](../img/desktop/recoverykey-recover-valid.png)
 
 In the last step you need to assign a new password to your vault.
-It is the same as during [vault creation](./adding-vaults.md#) and as noted there, read the suggestion for choosing a [good password](../security/advice.md#good-passwords)
+It is the same as during [vault creation](../adding-vaults/#3-choose-a-passwords) except that no new recovery key is generated.
+As already noted there, read the suggestion for choosing a [good password](../../security/advice/#good-passwords).
+
+!!! warning
+    Even thou you have a new password for the vault afterwards, _the recovery key stays the same_. So keep it!
+
 Finish the dialog by entering the same password again and clicking the `Done` button.
+You can unlock your vault now with the new password.
