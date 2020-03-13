@@ -2,16 +2,16 @@
 
 Each Cryptomator vault is secured by a password.
 The security of your vault depends directly on the strength of its password.
-In section [] we provide suggestions, how a strong password looks like.
+In section [TODO]() we provide suggestions, how a strong password looks like.
 
 Additionally for each vault exists a unique _recovery key_.
 This key ensures that if you forget your password, you are able to create a new one.
-For more information about the difference of the password and the recovery key, see TODO.
+For more information about the difference of the password and the recovery key, see [TODO]().
 
 
-This section explains how to change a vault password, show its recovery key and reset the password to a new one.
+This section explains how to change a password for a vault, show its recovery key and reset the password to a new one.
 All actions are done in the `Password` tab of the vault options.
-You can access it over the main window by selecting the vault in question, lock it if unlocked and open its `Vault Options`.
+You can access it over the main window by selecting the vault in question, lock it if necessary and then open its `Vault Options`.
 
 ![Vault options allowing you to enter a recovery key](../img/desktop/vault-options-password.png)
 
