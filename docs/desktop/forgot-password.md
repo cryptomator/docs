@@ -4,7 +4,7 @@ If you forgot the password for a vault, but created and saved the recovery key s
 
 ## Prerequisites
 
-To be able to access the data of your vault again, there need to be three conditions fullfilled:
+To be able to access the data of your vault again, there need to be three conditions fulfilled:
 
 1. The vault was created with version 1.5.0 or newer,
 1. during vault creation the recovery key was created and
@@ -23,7 +23,7 @@ In the next step, navigate to the `Password` tab and click the `Recover Password
 A new prompt is opened, asking to insert your recovery key into the shown text box. Enter it there by copying it from a file or typing.
 
 !!! tip
-    If you printed your recovery on paper or stored it somewhere where you cannot copy it, Cryptomator offers you an auto completion feature for insertion.
+    If you printed your recovery key on paper or stored it somewhere where you cannot copy it, Cryptomator offers you an auto completion feature for insertion.
     Type a letter and see if the shown word matches your key part.
     If so, you can press tab or right arrow key to auto complete the word.
     Otherwise enter more letters, the suggestion will change accordingly.
