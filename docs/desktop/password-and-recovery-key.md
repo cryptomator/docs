@@ -35,6 +35,11 @@ To finish the workflow and really change the password, click now on the `Change`
 !!! hint
     Only if the second and third text input fields match _and_ the checkbox is selected, the `Change` button is activated.
 
+!!! note
+    The password is used to derive a [KEK](https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys){:rel="external"}, which is then used to encrypt further keys. The KEK changes, but the keys encrypted with the KEK will stay the same. The actual files will not get re-encrypted, meaning you can not upgrade a weak passphrase to a stronger one once the data has been synced to a service that allows recovery of older versions of the masterkey file.
+    
+    If you like to encrypt your vault files with a new, stronger password, you need to create a new vault and drag the data from the old to the new one. Make sure to wipe all backups of the old vault afterwards.
+
 ## Show Recovery Key
 
 Regardless of wether you chose to show the recovery key during vault creation or not, it always exists.

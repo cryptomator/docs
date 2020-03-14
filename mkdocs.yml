@@ -27,9 +27,8 @@ nav:
     - Adding Vaults: desktop/adding-vaults.md
     - Accessing Vaults: desktop/accessing-vaults.md
     - Vault Management: desktop/vault-management.md
-    - Accessing a Vault: desktop/access-vault.md
     - Password and Recovery Key: desktop/password-and-recovery-key.md
-    - Troubleshooting: desktop/troubleshooting.md
+ #   - Troubleshooting: desktop/troubleshooting.md
   - Android App:
     - Setup: android/setup.md
     - Vault Management: android/vault-management.md
@@ -43,6 +42,6 @@ nav:
     - Setup: sanitizer/setup.md
     - Usage: sanitizer/usage.md 
   - Security:
-    - Advice: security/advice.md
+#    - Advice: security/advice.md
     - Architecture: security/architecture.md
   - Contribute: contribute.md

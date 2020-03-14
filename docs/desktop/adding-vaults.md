@@ -42,7 +42,7 @@ Now it is time to choose a [good password](../../security/advice/#good-passwords
 ![Choosing a sufficiently secure password](../img/desktop/add-vault-3.png)
 
 !!! warning
-    Nobody except for yourself knows this password and there is no way to "reset" it as you may know it from online services.
+    Nobody except for yourself knows this password and other than you might know it from online services, nobody can "reset" your password for you.
     
 !!! tip
     If you plan to share this vault with a different person, you will both need to know the password. In this case, choose a password that is different from anything you tend to only use yourself. To share the password, use an encrypted messenger or any other secure means of communication.
@@ -59,6 +59,7 @@ If you chose to create a recovery key in the previous step, it will now be displ
 !!! warning
     Keep the recovery key secret. Remember, just like your password, its purpose is to gain access to your vault!
 
+For more details, take a look at our chapter about [how to use a recovery key](../../desktop/password-and-recovery-key/#reset-password).
 
 ## 5. Done
 
