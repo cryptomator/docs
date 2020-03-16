@@ -1,4 +1,4 @@
-# Password and Recovery Key
+[//]: # (Password and Recovery Key)
 
 Each Cryptomator vault is secured by a password.
 The security of your vault depends directly on the strength of its password.
@@ -15,7 +15,7 @@ You can access it over the main window by selecting the vault in question, lock 
 
 ![Vault options allowing you to enter a recovery key](../img/desktop/vault-options-password.png)
 
-## Change Password
+# Change Password
 You can change the password of an already existing vault.
 The only thing you need is to remember the current one.
 
@@ -40,7 +40,7 @@ To finish the workflow and really change the password, click now on the `Change`
     
     If you like to encrypt your vault files with a new, stronger password, you need to create a new vault and drag the data from the old to the new one. Make sure to wipe all backups of the old vault afterwards.
 
-## Show Recovery Key
+# Show Recovery Key
 
 Regardless of wether you chose to show the recovery key during vault creation or not, it always exists.
 Hence, you can view it at a later point in time.
@@ -57,7 +57,7 @@ The open window shows inside a text field a sequence of words, the recovery key 
 You can copy it to your clipboard or print it to paper.
 If you are finished, close the window with the `Done` button.
 
-## Reset Password
+# Reset Password
 
 If you forgot the password for a vault, saved the recovery key somewhere external, you are able to define a new password and have access to the vault again.
 
