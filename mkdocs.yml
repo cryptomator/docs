@@ -27,6 +27,7 @@ nav:
     - Adding Vaults: desktop/adding-vaults.md
     - Accessing Vaults: desktop/accessing-vaults.md
     - Vault Management: desktop/vault-management.md
+    - Vault Mounting: desktop/vault-mounting.md
     - Password and Recovery Key: desktop/password-and-recovery-key.md
  #   - Troubleshooting: desktop/troubleshooting.md
   - Android App:
