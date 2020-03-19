@@ -1,4 +1,5 @@
-# How Can You Help Us?
+# Contribute
+## How Can You Help Us?
 
 Cryptomator is an open source project and wouldn't be possible without contributions from users who support the idea.
 
@@ -12,7 +13,7 @@ There are several ways you can help us:
 - By becoming a [sponsor](https://cryptomator.org/sponsors/){:rel="external"},
 - Or by [donating](https://cryptomator.org/#donate){:rel="external"} to the maintainers.
 
-# Before You Start
+## Before You Start
 
 If you plan to help, please stick to our [Code of Conduct](https://github.com/cryptomator/cryptomator/blob/develop/.github/CODE_OF_CONDUCT.md){:rel="external"}.
 
