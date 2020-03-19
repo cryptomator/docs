@@ -26,8 +26,16 @@ WebDAV has additional options for configuration:
 1. `WebDAV Port` - Always present, it shows the port over which the WebDAV adapter communicates with itself.
 2. `WebDAV scheme` - TODO
 
+# Options applicable to all Systems and Adapters
 
-# WebDAV
+In this section mount options are described which are present on all operating systems and with all adapter types.
+
+Currently there is only on option, namely opening a vault in `Read-Only` mode.
+If the checkbox is set, you can unlock the vault, browse through its content and read or copy its files, but you cannot change or modify anything inside the vault.
+
+# Options applicable to specific Setups
+
+## WebDAV
 WebDAV is an [communication protocol](https://en.wikipedia.org/wiki/WebDAV) to perform operations between a client (you) and a server (your computer) on directories and resources.
 Cryptomator uses it _only locally_ to display your files and let you create, move, etc. them.
 
