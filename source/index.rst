@@ -3,8 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Cryptomator's documentation!
-=======================================
+.. image:: img/logo@2x.png
+  :width: 447
+  :align: center
+  :alt: Cryptobot
+
+Welcome to the documentation of Cryptomator!
+============================================
+
+Cryptomator encrypts your files before they get sync'ed to the cloud.
 
 .. toctree::
    :maxdepth: 2
