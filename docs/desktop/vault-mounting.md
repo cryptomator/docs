@@ -18,10 +18,14 @@ If you want to change it or only want to know which one is currently used, open 
 
 You can choose between WebDAV and, depending on your system, Dokany (Windows) or FUSE (linux, macOS).
 
-[//]: # (TODO webDav settings port selection)
-
 !!! note
-    Dokany/FUSE may not be visible for selection. This means that Cryptomator were not able to detect a valid installation of them.
+    Dokany/FUSE may not be visible for selection.
+    This means that Cryptomator is unable to detect a valid installation of them.
+
+WebDAV has additional options for configuration:
+1. `WebDAV Port` - Always present, it shows the port over which the WebDAV adapter communicates with itself.
+2. `WebDAV scheme` - TODO
+
 
 # WebDAV
 WebDAV is an [communication protocol](https://en.wikipedia.org/wiki/WebDAV) to perform operations between a client (you) and a server (your computer) on directories and resources.
