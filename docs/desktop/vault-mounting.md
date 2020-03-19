@@ -36,8 +36,8 @@ If the checkbox is set, you can unlock the vault, browse through its content and
 # Options applicable to specific Setups
 
 ## WebDAV
-WebDAV is an [communication protocol](https://en.wikipedia.org/wiki/WebDAV) to perform operations between a client (you) and a server (your computer) on directories and resources.
-Cryptomator uses it _only locally_ to display your files and let you create, move, etc. them.
+WebDAV is a [communication protocol](https://en.wikipedia.org/wiki/WebDAV) to perform operations between a client (you) and a server (your computer) on directories and resources.
+Even thou this protocol was designed for remote access, Cryptomator uses it _only locally_ to display your files and allows you to work with them.
 
 ## Windows
 
