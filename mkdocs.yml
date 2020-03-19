@@ -3,6 +3,7 @@ site_url: https://docs.cryptomator.org
 site_description: FLOSS Cloud Encryption.
 site_author: Cryptomator Team
 repo_url: https://github.com/cryptomator/docs/
+edit_uri: tree/1.5/docs
 theme: readthedocs
 strict: true
 copyright: Copyright &copy; 2019 <a href="https://cryptomator.org/impressum">Skymatic GmbH</a> and <a href="https://github.com/cryptomator/docs/graphs/contributors">contributors</a>.
