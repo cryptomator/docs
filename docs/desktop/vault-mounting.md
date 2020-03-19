@@ -1,11 +1,11 @@
 [//]: # (Mounting a vault)
 
 After a vault is unlocked, it must be integrated into the system to be accessible for you.
-Cryptomator has different adapter types for this integration:
+Cryptomator uses three different technologies (called _adapters_) for this integration:
 
 1. [WebDAV](./#webdav) - a standardized protocol to manage directories and resources
 1. [Dokany](./#dokany) - a windows specific driver for a deeper system integration
-1. [FUSE](./#fuse) - a linux specific module for a deeper system integration, also available for macOS
+1. [FUSE](./#fuse) - a linux specific kernel module for a deeper system integration, also available for macOS
 
 Each combination of operating system and adapter has its own set of settings and its benefits & drawbacks.
 
