@@ -15,9 +15,9 @@ Cryptomator encrypts your files before they get sync'ed to the cloud.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
-
-   contribute
+   :caption: Android
+   
+   android/access-vault
 
 
 
