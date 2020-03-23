@@ -71,7 +71,7 @@ In this example I want to encrypt files that get synchronized via Dropbox.
 3. Choose a Passwords
 ^^^^^^^^^^^^^^^^^^^^^
 
-Now it is time to choose a :ref:`security/advice/good-passwords` for your vault.
+Now it is time to choose a :ref:`good password <security/best-practices/good-passwords>` for your vault.
 Cryptomator requires at least 8 characters but we recommend you to use a longer phrases such as pass-sentences.
 The bar below the password field estimates the strength of your password.
 

@@ -1,7 +1,5 @@
-Architecture
-============
-
-TODO.
+Security Architecture
+=====================
 
 .. _security/architecture/virtual-filesystem:
 

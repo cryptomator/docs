@@ -20,11 +20,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Cryptomator'
-copyright = '2020, Cryptobot'
-author = 'Cryptobot'
+copyright = '2020, cryptomator.org'
+author = 'Cryptomator Contributors'
 
 # The short X.Y version
-version = ''
+version = '1.5'
 # The full version, including alpha/beta/rc tags
 release = '1.5.0'
 
@@ -43,8 +43,7 @@ import sphinx_rtd_theme
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
-    'recommonmark',
-    "sphinx_rtd_theme"
+    'sphinx_rtd_theme'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -90,7 +89,7 @@ html_theme_options = {
     # Toc options
     'collapse_navigation': True,
     'sticky_navigation': True,
-    'navigation_depth': 4,
+    'navigation_depth': 3,
     'includehidden': True,
     'titles_only': False
 }
@@ -122,7 +121,7 @@ htmlhelp_basename = 'Cryptomatordoc'
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
-    # 'papersize': 'letterpaper',
+    'papersize': 'a4paper',
 
     # The font size ('10pt', '11pt' or '12pt').
     #

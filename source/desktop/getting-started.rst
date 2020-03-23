@@ -1,3 +1,5 @@
+.. _desktop/getting-started:
+
 Getting Started
 ===============
 
@@ -17,9 +19,10 @@ By clicking on the |AddVault|_ button in the lower left corner of the window, yo
 
 .. _desktop/getting-started/tutorial-video:
 
-Tutorial Video
---------------
+..
+    Tutorial Video
+    --------------
 
-.. image:: https://img.youtube.com/vi/g9A0zihHZ14/0.jpg
-    :alt: Cryptomator Tutorial: Get Started
-    :target: https://www.youtube.com/watch?v=g9A0zihHZ14
+    .. image:: https://img.youtube.com/vi/g9A0zihHZ14/0.jpg
+        :alt: Cryptomator Tutorial: Get Started
+        :target: https://www.youtube.com/watch?v=g9A0zihHZ14

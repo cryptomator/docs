@@ -2,8 +2,7 @@ Password And Recovery Key
 =========================
 
 Each Cryptomator vault is secured by a password.
-The security of your vault depends directly on the strength of its password.
-In section `security/advice/good-passwords`_ we provide suggestions, how a strong password looks like.
+The security of your vault depends directly on the strength of its password, so we :ref:`choosing a strong password <security/best-practices/good-passwords>` is key.
 
 Additionally for each vault exists a unique *recovery key*.
 This key ensures that if you forget your password, you are able to create a new one.
@@ -30,7 +29,7 @@ In the opened window, you see three text input fields:
 .. todo:: TODO add image to for change password dialog)
 
 1. In the first you need to enter the current password of the vault.
-2. The second one takes the new password in and as already said, we suggest to follow the creation rules for :ref:`good passwords <security/advice/good-passwords>`.
+2. The second one takes the new password in and as already said, we suggest to follow the creation rules for :ref:`good passwords <security/best-practices/good-passwords>`.
 3. In the third for confirmation you need to enter the new password again.
 
 In order to proceed, you need to confirm what you are doing by selecting the checkbox.
@@ -96,8 +95,8 @@ If the recovery key is valid, Cryptomator indicates this by a small message and 
     :alt: A valid recovery key has been entered
 
 In the last step you need to assign a new password to your vault.
-It is the same as during :ref:`vault creation <adding-vaults/3-choose-a-passwords>` except that no new recovery key is generated.
-As already noted there, read the suggestion for choosing a :ref:`good password <security/advice/good-passwords>`.
+It is the same as during :ref:`vault creation <desktop/adding-vaults/3.-choose-a-passwords>` except that no new recovery key is generated.
+As already noted there, read the suggestion for choosing a :ref:`good password <security/best-practices/good-passwords>`.
 
 .. warning::
 

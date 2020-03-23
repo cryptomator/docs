@@ -84,7 +84,7 @@ Basically, you have the whole Unicode for choosing a password including non-prin
 .. warning::
 
     You have to remember this password at all times because there is **no way to access your data if you forget your password**.
-    Choose a :ref:`security/advice/good-passwords` to make your data secure.
+    Choose a :ref:`good password <security/best-practices/good-passwords>` to make your data secure.
 
 After you have confirmed your password, the vault is created.
 You will find it now on the start page of your Cryptomator app, where you can open your vault and optionally change settings. [documentation will follow]

@@ -8,8 +8,10 @@ If you want to contribute documentation in different languages, please let us kn
 
 ## Contributing
 
-- View the [MkDocs documentation](https://www.mkdocs.org).
+- Install Sphinx (`pip install sphinx sphinx_rtd_theme`)
 - Fork this repo
+- Make your changes
+- Preview changes (`make html`)
 - Send us a pull request
 
 <!--
