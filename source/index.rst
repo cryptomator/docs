@@ -27,6 +27,14 @@ Cryptomator encrypts your files before they get sync'ed to the cloud.
    
    desktop/*
 
+.. toctree::
+   :maxdepth: 2
+   :caption: iOS
+   :glob:
+   
+   ios/*
+
+
 
 
 
