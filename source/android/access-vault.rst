@@ -3,7 +3,7 @@ Working with Vaults
 
 This section shows you how to work with a vault like view its content, move files or access it with other applications.
 
-.. _android/access-vault/Unlock-Vault:
+.. _android/access-vault/unlock-vault:
 
 Unlock Vault
 ------------
@@ -36,7 +36,7 @@ After providing the credentials, the vault gets unlocked and opened.
 
 You're now able to edit the content of the vault.
 
-.. _android/access-vault/Lock-Vault:
+.. _android/access-vault/lock-vault:
 
 Lock Vault
 ----------
@@ -73,7 +73,7 @@ All of the possibilities will result in the locked vault.
 
     The auto-lock timeout specified in the settings will lock the vault if Cryptomator is in background. Furthermore if not changed in settings, the vault gets locked if the screen turns off.
 
-.. _android/access-vault/View-and-Edit-File:
+.. _android/access-vault/view-and-edit-file:
 
 View and Edit File
 ------------------
@@ -86,7 +86,7 @@ If the content has changed, the upload process starts.
     :alt: How to edit a file with Android
     :width: 346px
 
-.. _android/access-vault/Rename-File-or-Folder:
+.. _android/access-vault/rename-file-or-folder:
 
 Rename File or Folder
 ---------------------
@@ -111,7 +111,7 @@ Choose a new name and confirm using the ``RENAME`` button.
     :alt: How to rename a vault with Android
     :width: 346px
 
-.. _android/access-vault/Move-File-or-Folder:
+.. _android/access-vault/move-file-or-folder:
 
 Move File or Folder
 -------------------
@@ -153,7 +153,7 @@ While moving, you can use the ③ button to create a new folder in the current f
     :alt: How to move a file or folder with Android
     :width: 346px
 
-.. _android/access-vault/Delete-File-or-Folder:
+.. _android/access-vault/delete-file-or-folder:
 
 Delete File or Folder
 ---------------------
@@ -188,7 +188,7 @@ Confirm the deletion process using the ``DELETE`` button.
 
     By deleting a folder, all subfolders and files inside are deleted recursively.
 
-.. _android/access-vault/Export-File-or-Folder:
+.. _android/access-vault/export-file-or-folder:
 
 Export File or Folder
 ---------------------
@@ -222,7 +222,7 @@ Chose the target location where the file or folder should be exported to.
     :width: 346px
 
 
-.. _android/access-vault/Share-File-with-Other-App:
+.. _android/access-vault/share-file-with-other-app:
 
 Share File with Other App
 -------------------------
@@ -252,7 +252,7 @@ Choose the target app in which you will use the file or folder.
 
     By sharing a file or folder from Cryptomator with Cryptomator, you can copy content from one vault to another one.
 
-.. _android/access-vault/Share-File-with-Cryptomator:
+.. _android/access-vault/share-file-with-cryptomator:
 
 Share File with Cryptomator
 ---------------------------
@@ -293,7 +293,7 @@ Then the encryption and upload starts.
     :width: 346px
 
 
-.. _android/access-vault/Filter-/-Search:
+.. _android/access-vault/filter-/-search:
 
 Filter / Search
 ---------------

@@ -3,14 +3,14 @@ Setup
 
 TODO.
 
-.. _android/setup/Requirements:
+.. _android/setup/requirements:
 
 Requirements
 ------------
 
 Requires Android 4.3 or later.
 
-.. _android/setup/Installation:
+.. _android/setup/installation:
 
 Installation
 ------------

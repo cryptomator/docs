@@ -4,7 +4,7 @@ Settings
 You can configure Cryptomator to your needs.
 This section provides an overview of the different settings.
 
-.. _android/settings/General-Settings:
+.. _android/settings/general-settings:
 
 General Settings
 ----------------
@@ -19,7 +19,7 @@ After pressing the three dots ① and clicking on ``Settings``, you will find op
     :alt: How to launch settings with Android
     :width: 346px
 
-.. _android/settings/Cloud-Services:
+.. _android/settings/cloud-services:
 
 Cloud Services
 ^^^^^^^^^^^^^^
@@ -30,7 +30,7 @@ This setting lists all cloud services. When pressing on a service, the authentic
     :alt: How to handle cloud services with Android
     :width: 346px
 
-.. _android/settings/Fingerprint:
+.. _android/settings/fingerprint:
 
 Fingerprint
 ^^^^^^^^^^^
@@ -62,7 +62,7 @@ After enabling, you have to unlock the vault using the password.
 
 To have access to the key stored in the keystore, you have to authenticate against the system using the fingerprint.
 
-.. _android/settings/Block-App-When-Obscured:
+.. _android/settings/block-app-when-obscured:
 
 Block App When Obscured
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -92,7 +92,7 @@ If you see this dialog, some app is able to draw over Cryptomator:
     :alt: How to enable obscured app with Android
     :width: 346px
 
-.. _android/settings/Live-Search:
+.. _android/settings/live-search:
 
 Live Search
 ^^^^^^^^^^^
@@ -105,7 +105,7 @@ If it is disabled, you have to use the magnifier or the enter button in your key
     :alt: How to use live search with Android
     :width: 346px
 
-.. _android/settings/Screen-Security:
+.. _android/settings/screen-security:
 
 Screen Security
 ^^^^^^^^^^^^^^^
@@ -118,7 +118,7 @@ For some devices, e.g. a Chromebook with a second display or to create a screens
 
 Read more: `FLAG*SECURE <https://developer.android.com/reference/android/view/Display.html#FLAG*SECURE>`_
 
-.. _android/settings/Style:
+.. _android/settings/style:
 
 Style
 ^^^^^
@@ -137,7 +137,7 @@ You can choose between the following three styles:
     :alt: How to change style with Android
     :width: 346px
 
-.. _android/settings/Automatic-Locking:
+.. _android/settings/automatic-locking:
 
 Automatic Locking
 -----------------
@@ -154,7 +154,7 @@ You can choose between:
 
 ``When screen is disabled`` can be deactivated so that the vaults don't get locked when the screen locks.
 
-.. _android/settings/Automatic-Photo-Upload:
+.. _android/settings/automatic-photo-upload:
 
 Automatic Photo Upload
 ----------------------
@@ -168,7 +168,7 @@ Which pictures will be tracked, depends on the Android version on your phone:
 * Nougat (API level 24 or 7.x) and later: All images which Android adds to the gallery will be uploaded to the vault
 * Pre-Nougat: Only the images created with the camera will be uploaded to the vault
 
-.. _android/settings/Support:
+.. _android/settings/support:
 
 Support
 -------
