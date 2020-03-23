@@ -3,11 +3,17 @@ Adding Vaults
 
 If you want to add a new vault, you have essentially two options:
 
-1. If you want to create a vault yourself, choose :ref:```Create New Vault`` <create-a-new-vault>`.
-1. If you already have a vault, for example because someone shared a vault with you via a cloud storage service, you can instead choose :ref:```Open Existing Vault`` <open-an-existing-vault>`.
+#. If you want to create a vault yourself, choose |CreateVault|_.
+#. If you already have a vault, for example because someone shared a vault with you via a cloud storage service, you can instead choose |OpenVault|_.
 
 .. image:: ../img/desktop/create-or-open-vault.png
     :alt: Create a new or open an existing vault
+
+.. |CreateVault| replace:: ``Create New Vault``
+.. _CreateVault: ./adding-vaults.html#create-a-new-vault
+
+.. |OpenVault| replace:: ``Open Existing Vault``
+.. _OpenVault: ./adding-vaults.html#open-an-existing-vault
 
 
 .. _desktop/adding-vaults/create-a-new-vault:
@@ -65,7 +71,7 @@ In this example I want to encrypt files that get synchronized via Dropbox.
 3. Choose a Passwords
 ^^^^^^^^^^^^^^^^^^^^^
 
-Now it is time to choose a :ref:`good password <../security/advice/good-passwords>` for your vault.
+Now it is time to choose a :ref:`security/advice/good-passwords` for your vault.
 Cryptomator requires at least 8 characters but we recommend you to use a longer phrases such as pass-sentences.
 The bar below the password field estimates the strength of your password.
 
@@ -76,7 +82,7 @@ The bar below the password field estimates the strength of your password.
 
     Nobody except for yourself knows this password and other than you might know it from online services, nobody can "reset" your password for you.
     
-...note:: 
+.. note:: 
     If you plan to share this vault with a different person, you will both need to know the password.
     In this case, choose a password that is different from anything you tend to only use yourself.
     To share the password, use an encrypted messenger or any other secure means of communication.
@@ -100,7 +106,7 @@ Ideally make a hard copy of it.
 
     Keep the recovery key secret. Remember, just like your password, its purpose is to gain access to your vault!
 
-For more details, take a look at our chapter about :ref:`how to use a recovery key <../desktop/password-and-recovery-key/reset-password>`.
+For more details, take a look at our chapter about :ref:`how to use a recovery key <desktop/password-and-recovery-key/reset-password>`.
 
 .. _desktop/adding-vaults/5.-done:
 

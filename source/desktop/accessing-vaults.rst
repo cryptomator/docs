@@ -6,6 +6,7 @@ Once you have added a vault to Cryptomator, you will probably want to unlock it,
 .. image:: ../img/desktop/vault-detail-locked.png
     :alt: Cryptomator window showing a locked vault
 
+
 .. _desktop/accessing-vaults/unlocking-a-vault:
 
 Unlocking a Vault
@@ -31,6 +32,7 @@ You can either just close this Window by clicking ``Done`` or click ``Reveal Vau
 .. image:: ../img/desktop/unlock-success.png
     :alt: Vault unlock success dialog
 
+
 .. _desktop/accessing-vaults/working-with-the-unlocked-vault:
 
 Working with the Unlocked Vault
@@ -47,6 +49,7 @@ If you can not find the unlocked vault in your systems file manager (Windows Exp
 .. note::
 
     On Windows, you can choose the drive letter of the virtual drive for each vault via the advanced vault options.
+
 
 .. _desktop/accessing-vaults/locking-a-vault:
 
