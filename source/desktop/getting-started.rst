@@ -21,5 +21,5 @@ Tutorial Video
 --------------
 
 .. image:: https://img.youtube.com/vi/g9A0zihHZ14/0.jpg
-    :alt: Cryptomator Tutorial: Get Started]
+    :alt: Cryptomator Tutorial: Get Started
     :target: https://www.youtube.com/watch?v=g9A0zihHZ14
