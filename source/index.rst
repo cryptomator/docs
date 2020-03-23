@@ -41,6 +41,12 @@ Cryptomator encrypts your files before they get sync'ed to the cloud.
    
    sanitizer/*
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Security
+   :glob:
+   
+   security/*
 
 
 
