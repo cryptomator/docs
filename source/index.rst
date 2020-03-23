@@ -13,6 +13,10 @@ Welcome to the documentation of Cryptomator!
 
 Cryptomator encrypts your files before they get sync'ed to the cloud.
 
+.. todo::
+   
+   Add link to :doc:`/contribute` to the side section
+
 .. toctree::
    :maxdepth: 2
    :caption: Android
