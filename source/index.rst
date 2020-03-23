@@ -34,6 +34,13 @@ Cryptomator encrypts your files before they get sync'ed to the cloud.
    
    ios/*
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Sanitizer
+   :glob:
+   
+   sanitizer/*
+
 
 
 
