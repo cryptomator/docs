@@ -13,3 +13,9 @@ sphinx:
 formats:
   - epub
   - pdf
+
+# Sets the version of Python and requirements required to build docs
+python:
+  version: 3.8
+  install:
+    - requirements: requirements.txt
