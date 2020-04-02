@@ -30,6 +30,7 @@ If you're a first time user, you will probably want to follow :ref:`this guide o
    :caption: Android
    
    android/setup.rst
+   android/cloud-management.rst
    android/vault-management.rst
    android/access-vault.rst
    android/settings.rst

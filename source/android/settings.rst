@@ -129,7 +129,7 @@ You can choose between the following three styles:
 * Light: App shows in light mode
 * Dark: App shows in dark mode
 
-.. image:: ../img/android/setting-style-light.png
+.. image:: ../img/android/settings.png
     :alt: How to change style with Android
     :width: 346px
 
@@ -168,6 +168,40 @@ Which pictures will be tracked, depends on the Android version on your phone:
 * Nougat (API level 24 or 7.x) and later: All images which Android adds to the gallery will be uploaded to the vault
 * Pre-Nougat: Only the images created with the camera will be uploaded to the vault
 
+.. _android/settings/cache:
+
+Cache
+----------------------
+
+Introduced in version 1.5.0, if enbaled, all downloaded files will be cached (encrypted) on the file system. Further downloads will only verify with the server, that the cached file is still the latest version.
+If so it will not be downloaded again but directly retrieved from the file system. The cache is implemented using a least recently used mechanism, that means, the oldest entry will be overwritten if the max cache size is reached.
+
+.. _android/settings/chache-size-per-cloud:
+
+Cache Size Per Cloud
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Using this setting, you can specify the total max cache size per cloud provider. 
+
+You can choose between the following options:
+
+* 50 MB
+* 100 MB
+* 250 MB
+* 500 MB
+* 1 GB
+* 5 GB
+
+.. note::
+    The more memory is given to caching, the greater the convenience factor. However, this memory can be used up to the maximum on the system and is then no longer available.
+
+.. _android/settings/clear-cache:
+
+Clear Cache
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This setting will flush all cached files.
+
 .. _android/settings/support:
 
 Support
@@ -175,3 +209,32 @@ Support
 
 If you have problems with the app you can enable the ``Debug mode``.
 After reproducing the problem, you can disable the ``Debug mode`` again and ``Send log file``.
+
+.. _android/settings/version:
+
+Version
+-------
+
+This setting displays the current version of this app.
+
+The following sub settings are only available, if you're using the APK-Store version of Cryptomator and not the PlayStore one.
+
+.. _android/settings/update-check-interval:
+
+Update Check Interval
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Using the specified interval below, the app checks if the latest version is installed.
+
+You can choose between the following options:
+
+* Once a day
+* Once a week
+* Once a month
+
+.. _android/settings/check-for-updates:
+
+Check For Updates
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This setting displays the timestamp of the latest update check. You can click on this setting to trigger a update check.

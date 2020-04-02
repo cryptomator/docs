@@ -33,29 +33,9 @@ Here you can find `WebDAV URLs of Common Cloud Storage Services <https://communi
     :alt: How to create a new vault with Android
     :width: 346px
 
-In the next step, you will create the connection between the Cryptomator app and your storage provider account.
+If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the :ref:`Cloud Management <android/cloud-management>` chapter and contiune later here.
 
-(In this example, *Dropbox* was chosen.)
-
-Please enter the credentials for your provider account.
-If your authentication was successful, the provider might ask you to grant Cryptomator access permission to your online files.
-Please allow this permission.
-
-.. image:: ../img/android/create-new-vault-3-login-provider.png
-    :alt: How to create a new vault with Android
-    :width: 346px
-
-.. image:: ../img/android/create-new-vault-4-grant-provider-permission.png
-    :alt: How to create a new vault with Android
-    :width: 346px
-
-You can only create one connection between your cloud storage account and the Cryptomator app for each provider.
-You can't connect to (for example) two different *Dropbox* accounts.
-
-You can remove Cryptomator permissions from your online storage account at any time.
-Please keep in mind that Cryptomator then cannot connect to your vault anymore.
-
-Now that you've established a connection, you'll create the actual vault.
+Now that you've established a connection, you'll add the existing vault.
 
 In the first step, please enter a name for your new vault.
 This name will also be the folder name of your vault files in your online storage.
@@ -119,27 +99,7 @@ Here you can find `WebDAV URLs of Common Cloud Storage Services <https://communi
     :alt: How add a vault with Android
     :width: 346px
 
-If not already done, you have to create the connection between the Cryptomator app and your storage provider account.
-
-(In this example, *Dropbox* was chosen.)
-
-Please enter the credentials for your provider account.
-If your authentication was successful, the provider might ask you to grant Cryptomator access permission to your online files.
-Please allow this permission.
-
-.. image:: ../img/android/add-existing-vault-3-login-provider.png
-    :alt: How to add a vault with Android
-    :width: 346px
-
-.. image:: ../img/android/add-existing-vault-4-grant-provider-permission.png
-    :alt: How to add a vault with Android
-    :width: 346px
-
-You can only create one connection between your cloud storage account and the Cryptomator app for each provider.
-You can't connect to (for example) two different *Dropbox* accounts.
-
-You can remove Cryptomator permissions from your online storage account at any time.
-Please keep in mind that Cryptomator then cannot connect to your vault anymore.
+If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the :ref:`Cloud Management <android/cloud-management>` chapter and contiune later here.
 
 Now that you've established a connection, you'll add the existing vault.
 
@@ -158,10 +118,6 @@ Then choose the ``masterkey.cryptomator`` file.
 
 Now the vault is added to the list of vaults.
 You will find it now on the start page of your Cryptomator app, where you can open your vault and optionally change settings. [documentation will follow]
-
-.. image:: ../img/android/add-existing-vault-7-loading.png
-    :alt: How add a vault with Android
-    :width: 346px
 
 .. image:: ../img/android/add-existing-vault-8-finish.png
     :alt: How add a vault with Android

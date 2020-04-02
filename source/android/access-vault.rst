@@ -55,7 +55,7 @@ To lock an unlocked vault, there are several ways to do this:
     :alt: How to lock a vault with Android
     :width: 346px
 
-.. image:: ../img/android/lock-vault-3-select-lock.png
+.. image:: ../img/android/lock-vault-2-lock-start.png
     :alt: How to lock a vault with Android
     :width: 346px
 
@@ -209,10 +209,6 @@ Chose the target location where the file or folder should be exported to.
     :alt: How to export a file or folder with Android
     :width: 346px
 
-.. image:: ../img/android/export-file-2-choose-location.png
-    :alt: How to export a file or folder with Android
-    :width: 346px
-
 .. image:: ../img/android/export-file-3-exporting.png
     :alt: How to export a file or folder with Android
     :width: 346px
@@ -243,10 +239,6 @@ Choose the target app in which you will use the file or folder.
     :alt: How to share a file or folder with Android
     :width: 346px
 
-.. image:: ../img/android/share-file-2-select-app.png
-    :alt: How to share a file or folder with Android
-    :width: 346px
-
 
 .. note::
 
@@ -271,11 +263,7 @@ Press the share button ② to choose to share these file(s) and select *Cryptoma
     :alt: How share a file or folder with Android
     :width: 346px
 
-Choose the vault ④ and optionally specify the target folder in the vault ⑤ (default is the root).
-
-.. image:: ../img/android/share-with-cm-2-select-vault.png
-    :alt: How to share a file or folder with Android
-    :width: 346px
+Choose the vault ⑤ and optionally specify the target folder in the vault ④ (default is the root).
 
 .. image:: ../img/android/share-with-cm-2-select-vault.png
     :alt: How to share a file or folder with Android
