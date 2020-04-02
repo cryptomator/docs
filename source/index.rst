@@ -1,8 +1,7 @@
-..
-   image:: img/logo@2x.png
-  :width: 447
-  :align: center
-  :alt: Cryptobot
+.. image:: img/logo@2x.png
+   :width: 447
+   :align: center
+   :alt: Cryptobot
 
 Cryptomator - Put a Lock on Your cloud
 ======================================
