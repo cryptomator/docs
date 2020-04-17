@@ -20,3 +20,7 @@ python:
   version: 3.8
   install:
     - requirements: requirements.txt
+
+# Add the files of the specified submodules to the build process
+submodules:
+  include: all
