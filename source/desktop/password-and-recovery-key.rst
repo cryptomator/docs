@@ -52,8 +52,9 @@ To finish the workflow and really change the password, click now on the ``Change
 Show Recovery Key
 -----------------
 
-Regardless of wether you chose to show the recovery key during vault creation or not, it always exists.
-Hence, you can view it at a later point in time.
+It is no problem, if you missed during vault creation to generate a recovery key.
+You are still able to generate and view at a later point in time.
+To ensure safety, Cryptomator does not store it on your hard drive and always generates it on the fly.
 
 .. warning::
 
