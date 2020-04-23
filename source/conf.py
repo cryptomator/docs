@@ -38,11 +38,9 @@ release = '1.5.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-import sphinx_rtd_theme
-
+#
 extensions = [
-    'sphinx.ext.todo',
-    'sphinx_rtd_theme'
+    'sphinx.ext.todo'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -67,7 +65,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ['_themes/*']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
@@ -79,6 +77,7 @@ pygments_style = None
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+html_theme_path = ['_themes/cryptomator_theme', ]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -92,19 +91,17 @@ html_theme_options = {
     'includehidden': True,
     'titles_only': False,
     'logo_only' : True,
-    'style_nav_header_background' : '#49B04A'
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
-
-html_css_files = [
-    'css/custom.css',
-]
-
-html_style = 'css/custom.css'
+#
+#html_static_path = ['_static']
+#html_css_files = [
+#    'css/custom.css',
+#]
+#html_style = 'css/custom.css'
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.

@@ -1,0 +1,3 @@
+[submodule "sphinx_theme"]
+	path = source/_themes/cryptomator_theme
+	url = https://github.com/cryptomator/sphinx_rtd_theme.git
