@@ -54,6 +54,13 @@ If you're a first time user, you will probably want to follow :ref:`this guide o
 .. toctree::
    :hidden:
    :maxdepth: 2
+   :caption: Help
+
+   help/manual-migration.rst
+
+.. toctree::
+   :hidden:
+   :maxdepth: 2
    :caption: Misc
    
    contribute.rst
