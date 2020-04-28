@@ -44,8 +44,8 @@ To open it, select in the main window the *locked* vault in question and click t
 The options are divided in three categories:
 
 1. General - Options not fitting into another category
-1. Mounting - All options about where and how you can access your unlocked vault
-1. Password - Options and actions regarding your vault password and the recovery key
+2. Mounting - All options about where and how you can access your unlocked vault
+3. Password - Options and actions regarding your vault password and the recovery key
 
 In the ``General`` tab you can select if the vault is unlocked as soon as Cryptomator starts.
 
