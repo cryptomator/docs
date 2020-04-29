@@ -14,7 +14,7 @@ If you want to contribute documentation in different languages, please let us kn
 - Preview changes (`make html`)
 - Send us a pull request
 
-For a local live preview, install [sphinx-autobuild](https://github.com/GaretJax/sphinx-autobuild#installation) and execute `make livehtml`.
+For a live preview on a local server, install [sphinx-autobuild](https://github.com/GaretJax/sphinx-autobuild#installation) and execute `make livehtml`.
 
 <!--
 How tow record `.gif`s:
