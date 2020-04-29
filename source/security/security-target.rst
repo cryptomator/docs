@@ -1,3 +1,5 @@
+.. _security/security-target:
+
 Security Target
 ===============
 

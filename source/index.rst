@@ -3,12 +3,16 @@
    :align: center
    :alt: Cryptobot
 
-Cryptomator - Put a Lock on Your cloud
+|
+
+Cryptomator - Put a Lock on Your Cloud
 ======================================
 
 `Cryptomator <https://cryptomator.org/>`_ encrypts your data quickly and easily, so you can safely upload it to your favourite cloud service.
 
 If you're a first time user, you will probably want to follow :ref:`this guide on how to get started <desktop/getting-started>`.
+
+If you are interested in the security of Cryptomator, have a look at our :ref:`security section <security/security-target>`.
 
 .. toctree::
    :hidden:
