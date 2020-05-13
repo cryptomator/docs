@@ -2,7 +2,7 @@ Password And Recovery Key
 =========================
 
 Each Cryptomator vault is secured by a password.
-The security of your vault depends directly on the strength of its password, so we :ref:`choosing a strong password <security/best-practices/good-passwords>` is key.
+The security of your vault depends directly on the strength of its password, so :ref:`choosing a strong password <security/best-practices/good-passwords>` is key.
 
 Additionally for each vault exists a unique *recovery key*.
 This key ensures that if you forget your password, you are able to create a new one.
@@ -26,7 +26,8 @@ The only thing you need is to remember the current one.
 To do so, click on the ``Change Password`` button in the ``Password`` tab of the vault options.
 In the opened window, you see three text input fields:
 
-.. todo:: TODO add image to for change password dialog)
+.. image:: ../img/desktop/change-password-prompt.png
+    :alt: After entering your current passwort, enter your new one and confirm it
 
 1. In the first you need to enter the current password of the vault.
 2. The second one takes the new password in and as already said, we suggest to follow the creation rules for :ref:`good passwords <security/best-practices/good-passwords>`.
@@ -42,7 +43,7 @@ To finish the workflow and really change the password, click now on the ``Change
 
 .. note::
 
-    The password is used to derive a `KEK <https://en.wikipedia.org/wiki/Glossary*of*cryptographic*keys>`_, which is then used to encrypt further keys. The KEK changes, but the keys encrypted with the KEK will stay the same. The actual files will not get re-encrypted, meaning you can not upgrade a weak passphrase to a stronger one once the data has been synced to a service that allows recovery of older versions of the masterkey file.
+    The password is used to derive a `KEK <https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys>`_, which is then used to encrypt further keys. The KEK changes, but the keys encrypted with the KEK will stay the same. The actual files will not get re-encrypted, meaning you can not upgrade a weak passphrase to a stronger one once the data has been synced to a service that allows recovery of older versions of the masterkey file.
     
     If you like to encrypt your vault files with a new, stronger password, you need to create a new vault and drag the data from the old to the new one. Make sure to wipe all backups of the old vault afterwards.
 
@@ -53,18 +54,21 @@ Show Recovery Key
 -----------------
 
 It is no problem, if you missed during vault creation to generate a recovery key.
-You are still able to generate and view at a later point in time.
+You are still able to generate it and view it at a later point in time.
 To ensure safety, Cryptomator does not store it on your hard drive and always generates it on the fly.
 
 .. warning::
 
     Bear in mind that due to the ability of the recovery key to reset the current password, it is highly confidential.
-    Ensure that only trusted persons have access to it and keep it a safe spot.
 
-To do so, click on the ``Display Recovery Key`` in the ``Password`` tab of the ``Vault Options``.
-The open window shows inside a text field a sequence of words, the recovery key of the vault.
+    Ensure that only trusted persons have access to it and keep it at a safe spot.
 
-.. todo:: add image show recovery key dialog
+To do so, click on the ``Display Recovery Key`` in the ``Password`` tab of the ``Vault Options`` and enter your password.
+A new window will open. It shows a sequence of words inside a text field. This sequence is the recovery key of the vault.
+
+.. image:: ../img/desktop/recoverykey.png
+    :alt: This shows your recoverykey
+
 
 You can copy it to your clipboard or print it to paper.
 If you are finished, close the window with the ``Done`` button.

@@ -39,15 +39,28 @@ Each vault has an own set of settings which can be viewed and customized in the 
 To open it, select in the main window the *locked* vault in question and click the ``Vault Options`` button with the gear.
 
 
-.. todo:: image of vault options dialog
-
 The options are divided in three categories:
 
 1. General - Options not fitting into another category
+
+You can select here if the vault is unlocked as soon as Cryptomator starts.
+
+.. image:: ../img/desktop/vault-options-general.png
+    :alt: General vault options
+
+
 2. Mounting - All options about where and how you can access your unlocked vault
+
+.. image:: ../img/desktop/vault-options-mounting.png
+    :alt: Vault options for mounting
+
 3. Password - Options and actions regarding your vault password and the recovery key
 
-In the ``General`` tab you can select if the vault is unlocked as soon as Cryptomator starts.
+.. image:: ../img/desktop/vault-options-password.png
+    :alt: Vault options regarding the password
+
+
+
 
 For |Mounting|_ and |Password|_ we refer to the regarding sections.
 

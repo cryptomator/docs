@@ -56,4 +56,9 @@ If you can not find the unlocked vault in your systems file manager (Windows Exp
 Locking a vault
 ---------------
 
-TODO
+To lock your vault again simply click ``Lock`` and your data will be protected and encrypted again.
+
+.. image:: ../img/desktop/vault-detail-locked.png
+    :alt: Cryptomator window showing an locked vault
+
+
