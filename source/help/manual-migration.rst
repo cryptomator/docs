@@ -5,11 +5,11 @@ Under some circumstances, Cryptomator refuses to automatically migrate a vault t
 
 To upgrade to the latest version, you can perform a migration manually:
 
-1. Unlock the vault with the previous version of Cryptomator that you have used. You can find downloads of older versions `on our GitHub site <https://github.com/cryptomator/cryptomator/releases/>`_.
-2. Copy all files from this vault onto a temporary storage location on your computer. Be aware that these files are decrypted.
-3. Once finished, lock your vault and quit Cryptomator. Now install the latest version of Cryptomator.
-4. Create new vault with the latest version of Cryptomator and unlock it.
-5. Copy all files from step 2 into the new vault.
+#. Unlock the vault with the previous version of Cryptomator that you have used. You can find downloads of older versions `on our GitHub site <https://github.com/cryptomator/cryptomator/releases/>`_.
+#. Copy all files from this vault onto a temporary storage location on your computer. Be aware that these files are decrypted.
+#. Once finished, lock your vault and quit Cryptomator. Now install the latest version of Cryptomator.
+#. Create new vault with the latest version of Cryptomator and unlock it.
+#. Copy all files from step 2 into the new vault.
 
 .. note::
 

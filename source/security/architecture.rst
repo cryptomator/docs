@@ -43,7 +43,7 @@ Both keys are encrypted using `RFC 3394 <https://tools.ietf.org/html/rfc3394>`_ 
     :width: 336px
     :align: center
 
-The wrapped keys and the parameters needed to derive the KEK are then stored as integers or base64-encoded strings in a JSON file named ``masterkey.cryptomator``, which is located in the root directory of the vault.
+The wrapped keys and the parameters needed to derive the KEK are then stored as integers or Base64-encoded strings in a JSON file named ``masterkey.cryptomator``, which is located in the root directory of the vault.
 
 .. code-block:: js
 
@@ -78,6 +78,7 @@ It consists of 88 bytes.
 
     * 8 bytes filled with 1 for future use (formerly used for file size)
     * 32 bytes file content key
+
 * 32 bytes header MAC of the previous 56 bytes
 
 .. code-block:: console
@@ -142,10 +143,10 @@ Directory IDs
 -------------
 
 Each directory has a unique ID that is required during filename encryption.
-For historical reasons the directory ID is a String, even though any byte sequence would do the job.
+For historical reasons, the directory ID is a string, even though any byte sequence would do the job.
 
 The directory ID for the root directory is the empty string.
-For all other directories it is a random sequence of at most 36 ASCII chars.
+For all other directories, it is a random sequence of at most 36 ASCII chars.
 We recommend using random :abbr:`UUID (Universally unique identifier)`.
 
 .. code-block:: console
@@ -154,10 +155,10 @@ We recommend using random :abbr:`UUID (Universally unique identifier)`.
 
 When traversing directories, the directory ID of a given subdirectory is processed in four steps to determine the storage path inside the vault:
 
-#. Encryption of the directory ID using `AES-SIV <https://tools.ietf.org/html/rfc5297>`_ in order to encrypt directory hierarchies,
-#. Creating a SHA1 hash of the encrypted directory ID in order to get a uniform length,
-#. base32-encoding the hash to get a string of printable chars and
-#. finally concatenation of a path from the base32-encoded hash.
+#. encrypting the directory ID using `AES-SIV <https://tools.ietf.org/html/rfc5297>`_ in order to encrypt directory hierarchies,
+#. creating a SHA1 hash of the encrypted directory ID in order to get a uniform length,
+#. encoding the hash with Base32 to get a string of printable chars, and finally
+#. constructing the directory path out of the Base32-encoded hash.
 
 .. code-block:: console
 
@@ -193,24 +194,25 @@ This prevents undetected movement of files between directories.
 
 Depending on the kind of node, the encrypted name is then either used to create a file or a directory:
 
-* Files are stored as files
-* Non-Files are stored as directories. The type of the node then depends on the directory content:
+* files are stored as files, and
+* non-files are stored as directories. The type of the node then depends on the directory content:
 
-    * Directories are denoted by a file called ``dir.c9r`` containing aforementioned directory ID
-    * Symlinks are denoted by a file called ``symlink.c9r`` containing the encrypted link target
-    * Further types may be appended in future releases
+    * directories are denoted by a file called ``dir.c9r`` containing aforementioned directory ID,
+    * symlinks are denoted by a file called ``symlink.c9r`` containing the encrypted link target, and
+    * further types may be appended in future releases.
 
-Thus, a directory structure like this:
+Thus, a cleartext directory structure like this:
 
 .. code-block:: console
 
     .
     ├─ File.txt
     ├─ SymlinkToFile.txt
-    └─ Subdirectory
+    ├─ Subdirectory
+    │  └─ ...
     └─ ...
 
-Becomes this:
+Becomes a ciphertext directory structure like this:
 
 .. code-block:: console
 
@@ -221,10 +223,10 @@ Becomes this:
     │  │     ├─ 5TyvCyF255sRtfrIv**83ucADQ==.c9r  # File.txt
     │  │     ├─ FHTa55bH*sUfVDbEb0gTL9hZ8nho.c9r  # Subdirectory
     │  │     │  └─ dir.c9r  # contains dirId
-    │  │     ├─ gLeOGMCN358*UBf2Qk9cWCQl.c9r  # SymlinkToFile.txt
-    │  │     │  └─ symlink.c9r  # contains link target
+    │  │     └─ gLeOGMCN358*UBf2Qk9cWCQl.c9r  # SymlinkToFile.txt
+    │  │        └─ symlink.c9r  # contains link target
     │  └─ FC
-    │     └─ ZKZRLZUODUUYTYA4457CSBPZXB5A77
+    │     └─ ZKZRLZUODUUYTYA4457CSBPZXB5A77  # contains contents of Subdirectory
     │        └─ ...
     ├─ masterkey.cryptomator
     └─ masterkey.cryptomator.DFD9B248.bkup
@@ -243,7 +245,7 @@ Name Shortening
 To maximize compatibility, we need to make sure the ciphertext names don't exceed a length of 255 chars.
 As some cloud sync services might want to add a suffix to a file in case of conflicts, we decided to use at most 220 chars.
 
-If a encrypted name (including its ``.c9r`` extension) exceeds these 220 chars, we will instead create a directory named after its much shorter SHA-1 hash and the ``.c9s`` extension.
+If an encrypted name (including its ``.c9r`` extension) exceeds these 220 chars, we will instead create a directory named after its much shorter SHA-1 hash and the ``.c9s`` extension.
 Additionally we will create a reverse-mapping file named ``name.c9s`` containing the original file inside of this directory.
 
 .. code-block:: js
@@ -258,8 +260,8 @@ Additionally we will create a reverse-mapping file named ``name.c9s`` containing
 
 Again, we have to distinguish the kind of a node:
 
-* Non-Files (such as symlinks or directories) are stored as a directory anyway. Nothing changes for them.
-* Files, on the other hand, need a different place to store their contents. Therefore we introduce the ``contents.c9r`` file inside the ``.c9s`` directory.
+* Non-files (such as symlinks or directories) are stored as a directory anyway. Nothing changes for them. On the other hand,
+* files need a different place to store their contents. Therefore, we introduce the ``contents.c9r`` file inside the ``.c9s`` directory.
 
 A vault containing several nodes with very long names might result in a ciphertext structure like this:
 
@@ -280,9 +282,9 @@ A vault containing several nodes with very long names might result in a cipherte
     │  │     ├─ q2nx5XeNCenHyQvkFD4mxYNrWpQ=.c9s  # shortened name...
     │  │     │  ├─ dir.c9r  # ...node is a directory
     │  │     │  └─ name.c9s  # ...mapping to this full name
-    │  │     ├─ u*JJCJE-T4IH-EBYASUp1u3p7mA=.c9s  # shortened name...
-    │  │     │  ├─ name.c9s  # ...mapping to this full name
-    │  │     │  └─ symlink.c9r  # ...node is a symlink
+    │  │     └─ u*JJCJE-T4IH-EBYASUp1u3p7mA=.c9s  # shortened name...
+    │  │        ├─ name.c9s  # ...mapping to this full name
+    │  │        └─ symlink.c9r  # ...node is a symlink
     │  └─ FC
     │     └─ ZKZRLZUODUUYTYA4457CSBPZXB5A77
     │        └─ ...
