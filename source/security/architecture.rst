@@ -73,13 +73,13 @@ File Header Encryption
 The file header stores certain metadata, which is needed for file content encryption.
 It consists of 88 bytes.
 
-* 16 bytes nonce used during header payload encryption
+* 16 bytes nonce used during header payload encryption.
 * 40 bytes `AES-CTR <https://en.wikipedia.org/wiki/Block*cipher*mode*of*operation#Counter*.28CTR.29>`_ encrypted payload consisting of:
 
-    * 8 bytes filled with 1 for future use (formerly used for file size)
-    * 32 bytes file content key
+    * 8 bytes filled with 1 for future use (formerly used for file size) and
+    * 32 bytes file content key.
 
-* 32 bytes header MAC of the previous 56 bytes
+* 32 bytes header MAC of the previous 56 bytes.
 
 .. code-block:: console
 
@@ -106,16 +106,16 @@ This is where your actual file contents get encrypted.
 
 The cleartext is broken down into multiple chunks, each up to 32 KiB + 48 bytes consisting of:
 
-* 16 bytes nonce
-* up to 32 KiB encrypted payload using AES-CTR with the file content key
-* 32 bytes MAC of
+* 16 bytes nonce,
+* up to 32 KiB encrypted payload using AES-CTR with the file content key, and
+* 32 bytes MAC consisting of:
 
-    * file header nonce (to bind this chunk to the file header)
-    * chunk number as 8 byte big endian integer (to prevent undetected reordering)
-    * nonce
-    * encrypted payload
+    * file header nonce (to bind this chunk to the file header),
+    * chunk number as 8 byte big endian integer (to prevent undetected reordering),
+    * nonce, and
+    * encrypted payload.
 
-Afterwards the encrypted chunks are joined preserving the order of the cleartext chunks.
+Afterwards, the encrypted chunks are joined preserving the order of the cleartext chunks.
 The payload of the last chunk may be smaller than 32 KiB.
 
 .. code-block:: js
@@ -155,10 +155,10 @@ We recommend using random :abbr:`UUID (Universally unique identifier)`.
 
 When traversing directories, the directory ID of a given subdirectory is processed in four steps to determine the storage path inside the vault:
 
-#. encrypting the directory ID using `AES-SIV <https://tools.ietf.org/html/rfc5297>`_ in order to encrypt directory hierarchies,
-#. creating a SHA1 hash of the encrypted directory ID in order to get a uniform length,
-#. encoding the hash with Base32 to get a string of printable chars, and finally
-#. constructing the directory path out of the Base32-encoded hash.
+#. Encrypting the directory ID using `AES-SIV <https://tools.ietf.org/html/rfc5297>`_ in order to encrypt directory hierarchies.
+#. Creating a SHA1 hash of the encrypted directory ID in order to get a uniform length.
+#. Encoding the hash with Base32 to get a string of printable chars.
+#. Constructing the directory path out of the Base32-encoded hash.
 
 .. code-block:: console
 
@@ -192,14 +192,14 @@ This prevents undetected movement of files between directories.
 
     ciphertextName := base64url(aesSiv(cleartextName, parentDirId, encryptionMasterKey, macMasterKey)) + '.c9r'
 
-Depending on the kind of node, the encrypted name is then either used to create a file or a directory:
+Depending on the kind of node, the encrypted name is then either used to create a file or a directory.
 
-* files are stored as files, and
-* non-files are stored as directories. The type of the node then depends on the directory content:
+* Files are stored as files.
+* Non-files are stored as directories. The type of the node then depends on the directory content.
 
-    * directories are denoted by a file called ``dir.c9r`` containing aforementioned directory ID,
-    * symlinks are denoted by a file called ``symlink.c9r`` containing the encrypted link target, and
-    * further types may be appended in future releases.
+    * Directories are denoted by a file called ``dir.c9r`` containing aforementioned directory ID.
+    * Symlinks are denoted by a file called ``symlink.c9r`` containing the encrypted link target.
+    * Further types may be appended in future releases.
 
 Thus, a cleartext directory structure like this:
 
@@ -258,10 +258,10 @@ Additionally we will create a reverse-mapping file named ``name.c9s`` containing
         dirIdFilePath := deflatedName + '/dir.c9r'
     }
 
-Again, we have to distinguish the kind of a node:
+Again, we have to distinguish the kind of a node.
 
-* Non-files (such as symlinks or directories) are stored as a directory anyway. Nothing changes for them. On the other hand,
-* files need a different place to store their contents. Therefore, we introduce the ``contents.c9r`` file inside the ``.c9s`` directory.
+* Non-files (such as symlinks or directories) are stored as a directory anyway. Nothing changes for them.
+* Files, on the other hand, need a different place to store their contents. Therefore, we introduce the ``contents.c9r`` file inside the ``.c9s`` directory.
 
 A vault containing several nodes with very long names might result in a ciphertext structure like this:
 
