@@ -4,7 +4,7 @@ Password And Recovery Key
 Each Cryptomator vault is secured by a password.
 The security of your vault depends directly on the strength of its password, so :ref:`choosing a strong password <security/best-practices/good-passwords>` is key.
 
-Additionally for each vault exists a unique *recovery key*.
+Additionally for each vault a unique *recovery key* can be derived.
 This key ensures that if you forget your password, you are able to create a new one.
 For more information about the difference of the password and the recovery key, see :doc:`TODO <>`.
 
@@ -22,6 +22,13 @@ Change Password
 ---------------
 You can change the password of an already existing vault.
 The only thing you need is to remember the current one.
+
+.. note::
+
+    The password is used to derive a `KEK <https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys>`_, which is then used to encrypt further keys. The KEK changes, but the keys encrypted with the KEK will stay the same. The actual files will not get re-encrypted, meaning you can not upgrade a weak passphrase to a stronger one once the data has been synced to a service that allows recovery of older versions of the masterkey file.
+    
+    If you like to encrypt your vault files with a new, stronger password, you need to create a new vault and drag the data from the old to the new one. Make sure to wipe all backups of the old vault afterwards.
+
 
 To do so, click on the ``Change Password`` button in the ``Password`` tab of the vault options.
 In the opened window, you see three text input fields:
@@ -41,21 +48,15 @@ To finish the workflow and really change the password, click now on the ``Change
 
     Only if the second and third text input fields match *and* the checkbox is selected, the ``Change`` button is activated.
 
-.. note::
-
-    The password is used to derive a `KEK <https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys>`_, which is then used to encrypt further keys. The KEK changes, but the keys encrypted with the KEK will stay the same. The actual files will not get re-encrypted, meaning you can not upgrade a weak passphrase to a stronger one once the data has been synced to a service that allows recovery of older versions of the masterkey file.
-    
-    If you like to encrypt your vault files with a new, stronger password, you need to create a new vault and drag the data from the old to the new one. Make sure to wipe all backups of the old vault afterwards.
-
 
 .. _desktop/password-and-recovery-key/show-recovery-key:
 
 Show Recovery Key
 -----------------
 
-It is no problem, if you missed during vault creation to generate a recovery key.
-You are still able to generate it and view it at a later point in time.
-To ensure safety, Cryptomator does not store it on your hard drive and always generates it on the fly.
+It is not a problem, if you missed to display the recovery key during vault creation.
+You are still able to derive it and view it at a later point in time.
+To increase security, Cryptomator does not store it on your hard drive and always derives it on the fly.
 
 .. warning::
 
@@ -64,7 +65,9 @@ To ensure safety, Cryptomator does not store it on your hard drive and always ge
     Ensure that only trusted persons have access to it and keep it at a safe spot.
 
 To do so, click on the ``Display Recovery Key`` in the ``Password`` tab of the ``Vault Options`` and enter your password.
-A new window will open. It shows a sequence of words inside a text field. This sequence is the recovery key of the vault.
+A new window will open.
+It shows a sequence of words inside a text field.
+This sequence is the recovery key of the vault.
 
 .. image:: ../img/desktop/recoverykey.png
     :alt: This shows your recoverykey
@@ -79,10 +82,11 @@ If you are finished, close the window with the ``Done`` button.
 Reset Password
 --------------
 
-If you forgot the password for a vault, saved the recovery key somewhere external, you are able to define a new password and have access to the vault again.
+If you forgot the password for a vault, but saved the recovery key somewhere external, you are able to define a new password and gain access to the vault again.
 
-Again, navigate to the ``Password`` tab in the vault options and click the ``Recover Password`` button.
-A new prompt is opened, asking to insert your recovery key into the shown text box. Enter it there by copying it from a file or typing.
+Navigate to the ``Password`` tab in the vault options and click the ``Recover Password`` button.
+A new prompt is opened, asking to insert your recovery key into the shown text box.
+Enter it there by copying it from a file or typing.
 
 .. note::
 
