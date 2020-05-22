@@ -9,13 +9,13 @@ Sharing of Vaults
 Always be careful when sharing your vault with other people.
 
 In general, keep your vault password secret.
-Nobody except youself should know the vault password.
+Nobody except yourself should know the vault password.
 Only when you use a vault together with other people, they may know your vault password.
 Keep in mind that other people could pass on – with or without intent – the vault password.
 Only share your vaults with people you trust.
 
 If you share a vault with others, do not communicate the vault password on an insecure channel.
-Tell the password in person, use encrypted email, or other similar secure means.
+Tell the password in person, use encrypted email or messengers or other similar secure means.
 
 
 .. _security/best-practices/good-passwords:

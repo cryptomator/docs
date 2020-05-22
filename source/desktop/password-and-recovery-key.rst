@@ -6,7 +6,7 @@ The security of your vault depends directly on the strength of its password, so 
 
 Additionally for each vault a unique *recovery key* can be derived.
 This key ensures that if you forget your password, you are able to create a new one.
-For more information about the difference of the password and the recovery key, see :doc:`TODO <>`.
+It is a human readable form of your decrypted :ref:`masterkey <security/architecture/masterkey-derivation>` and therefore independent of the current vault password and highly confidential.
 
 This section explains how to change a password for a vault, show its recovery key and reset the password to a new one.
 All actions are done in the ``Password`` tab of the vault options.
