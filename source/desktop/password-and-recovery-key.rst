@@ -34,7 +34,7 @@ To do so, click on the ``Change Password`` button in the ``Password`` tab of the
 In the opened window, you see three text input fields:
 
 .. image:: ../img/desktop/change-password-prompt.png
-    :alt: After entering your current passwort, enter your new one and confirm it
+    :alt: After entering your current password, enter your new one and confirm it
 
 1. In the first you need to enter the current password of the vault.
 2. The second one takes the new password in and as already said, we suggest to follow the creation rules for :ref:`good passwords <security/best-practices/good-passwords>`.
