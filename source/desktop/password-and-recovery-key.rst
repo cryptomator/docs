@@ -61,7 +61,6 @@ To increase security, Cryptomator does not store it on your hard drive and alway
 .. warning::
 
     Bear in mind that due to the ability of the recovery key to reset the current password, it is highly confidential.
-
     Ensure that only trusted persons have access to it and keep it at a safe spot.
 
 To do so, click on the ``Display Recovery Key`` in the ``Password`` tab of the ``Vault Options`` and enter your password.
@@ -103,13 +102,19 @@ If the recovery key is valid, Cryptomator indicates this by a small message and 
 .. image:: ../img/desktop/recoverykey-recover-valid.png
     :alt: A valid recovery key has been entered
 
+.. warning::
+
+    By design of the recovery mechanism, *any* valid recovery key is accepted.
+    But only the one derived from the vault resets the the vault password in a way such that the your data is accessible afterwards.
+    **If you use a different recovery key, the data already stored in the vault will be lost.**
+
 In the last step you need to assign a new password to your vault.
 It is the same as during :ref:`vault creation <desktop/adding-vaults/3.-choose-a-passwords>` except that no new recovery key is generated.
 As already noted there, read the suggestion for choosing a :ref:`good password <security/best-practices/good-passwords>`.
 
-.. warning::
-
-    Even thou you have a new password for the vault afterwards, *the recovery key stays the same*. So keep it!
-
 Finish the dialog by entering the same password again and clicking the ``Done`` button.
 You can unlock your vault now with the new password.
+
+.. note::
+
+    Since the recovery key stays the same, don't discard it and put it to a safe location again.
