@@ -106,7 +106,8 @@ If the recovery key is valid, Cryptomator indicates this by a small message and 
 
     By design of the recovery mechanism, *any* valid recovery key is accepted.
     But only the one derived from the vault resets the the vault password in a way such that the your data is accessible afterwards.
-    **If you use a different recovery key, the data already stored in the vault will be lost.**
+    **If you use a different recovery key, the data already stored in the vault will be inaccessible.**
+    It can be made accessible again by re-running the recovery mechanism with the original and correct recovery key.
 
 In the last step you need to assign a new password to your vault.
 It is the same as during :ref:`vault creation <desktop/adding-vaults/3.-choose-a-passwords>` except that no new recovery key is generated.
