@@ -281,9 +281,9 @@ Then the encryption and upload starts.
     :width: 346px
 
 
-.. _android/access-vault/filter-/-search:
+.. _android/access-vault/search:
 
-Filter / Search
+Search in Folder
 ---------------
 
 Search for files or folders within the same folder using the magnifier ①.
@@ -303,3 +303,33 @@ Using the `X` ② you can clear the pattern and after pressing it again, the fil
 .. image:: ../img/android/search-2-finish.png
     :alt: How to search in a vault with Android
     :width: 346px
+
+
+In the settings there are two options that influence the behavior of the search:
+
+* Live search (disbaled by default)
+* Search using glob pattern matching (disbaled by default)
+
+For more information, see the Settings chapter.
+
+
+.. _android/access-vault/sort:
+
+Sort Folder by...
+---------------
+
+.. image:: ../img/android/sort.gif
+    :alt: How to sort the content of a folder with Android
+    :width: 346px
+
+
+.. _android/access-vault/fast-scroll:
+
+Fast scroll
+---------------
+
+.. image:: ../img/android/fast-scroll.gif
+    :alt: How to scroll fast through the content of a folder with Android
+    :width: 346px
+
+If the folder contents are sorted by file size, the preview will show the file sizes accordingly. The same applies to the modification date.

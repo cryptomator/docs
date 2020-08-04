@@ -92,18 +92,6 @@ If you see this dialog, some app is able to draw over Cryptomator:
     :alt: How to enable obscured app with Android
     :width: 346px
 
-.. _android/settings/live-search:
-
-Live Search
-^^^^^^^^^^^
-
-If this setting is enabled, the search mode is ``live``.
-That means, the search starts immediately after entering the search pattern.
-If it is disabled, you have to use the magnifier or the enter button in your keyboard to start the search.
-
-.. image:: ../img/android/filter.gif
-    :alt: How to use live search with Android
-    :width: 346px
 
 .. _android/settings/screen-security:
 
@@ -136,6 +124,49 @@ You can choose between the following three styles:
 .. image:: ../img/android/setting-style-dark.png
     :alt: How to change style with Android
     :width: 346px
+
+
+.. _android/settings/search:
+
+Search
+----------------------
+
+You can use the magnifier inside the cloud node list to search for specific nodes.
+Thereby there are two settings:
+
+* Live search (disbaled by default)
+* Search using glob pattern matching (disbaled by default)
+
+both are described in the following chapters.
+
+.. _android/settings/live-search:
+
+Live Search
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If this setting is enabled, the search mode is ``live``.
+That means, the search starts immediately after entering the search pattern.
+
+.. image:: ../img/android/search.gif
+    :alt: How to use live search with Android
+    :width: 346px
+
+If it is disabled, you have to use the magnifier or the enter button in your keyboard to start the search.
+
+
+.. _android/settings/search-using-globbing:
+
+Search using glob pattern matching
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If this setting is enabled, you have to enter a glob pattern into the search bar.
+
+.. image:: ../img/android/search-glob-pattern.gif
+    :alt: How to use live search with Android
+    :width: 346px
+
+If it is disabled, the beginning of the cloud node names must match the entered text. Upper and lower case is not relevant in this option.
+ 
 
 .. _android/settings/automatic-locking:
 
