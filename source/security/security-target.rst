@@ -16,8 +16,7 @@ These are:
 * number of files and folders in a vault and in the folders, and
 * size of the stored files.
 
-In addition, you have to keep in mind what Cryptomator is not.
-Protection of the files on the local computer is not the focus of Cryptomator.
+In addition, you have to keep in mind what Cryptomator is not protection of the files on the local computer is not the focus of Cryptomator.
 Cryptomator is not a complete replacement for other encryption tools based on container files if the aforementioned meta information should be encrypted.
 Cryptomator does not provide protection if programs create backup copies of the encrypted files when working with them.
 Such files are not detected by Cryptomator and may remain on the computer even after unlocking a vault.
