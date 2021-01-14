@@ -15,7 +15,7 @@ There are several ways you can help us:
 * By helping us with the `localization <https://translate.cryptomator.org/>`_ of Cryptomator,
 * By improving this documentation,
 * By becoming a `sponsor <https://cryptomator.org/sponsors/>`_,
-* Or by `donating <https://cryptomator.org/#donate>`_ to the maintainers.
+* Or by `donating <https://cryptomator.org/donate/>`_ to the maintainers.
 
 Before You Start
 ----------------

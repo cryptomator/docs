@@ -67,5 +67,5 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :maxdepth: 2
    :caption: Misc
    
-   contribute.rst
+   misc/contribute.rst
 
