@@ -1,8 +1,10 @@
 Vault Version History
 =====================
 
-Cryptomator vaults need to adhere to a structure and format (as described in :ref:`Security Architecture <security/architecture>`) that may change over time.
+Cryptomator vaults need to adhere to a structure and format (as described in :doc:`Security Architecture </security/architecture>`) that may change over time.
 In order to identify the correct format, the masterkey file contains a version number, which represents the vault version.
+
+.. _misc/vault-version-history/version-7:
 
 Version 7
 ---------
@@ -47,6 +49,8 @@ This is an example of the vault structure:
     ├─ masterkey.cryptomator
     └─ masterkey.cryptomator.DFD9B248.bkup
 
+.. _misc/vault-version-history/version-6:
+
 Version 6
 ---------
 
@@ -54,6 +58,8 @@ Introduced in Cryptomator 1.3.0 on 2017-07-01.
 The following changes are:
 
 * Password is normalized in NFC.
+
+.. _misc/vault-version-history/version-5:
 
 Version 5
 ---------
@@ -66,6 +72,8 @@ The following changes are:
 File sizes can be determined in ``O(1)`` instead of having to read and decrypt the file header.
 This allows showing file sizes in the directory listing without having to download each file first.
 The file size in the header is now unused and filled with ``0xFFFFFFFFFFFFFFFF``.
+
+.. _misc/vault-version-history/version-4:
 
 Version 4
 ---------
@@ -97,6 +105,8 @@ This is an example of the vault structure:
     │  └─ ...
     ├─ masterkey.cryptomator
     └─ masterkey.cryptomator.bkup
+
+.. _misc/vault-version-history/version-3:
 
 Version 3
 ---------
