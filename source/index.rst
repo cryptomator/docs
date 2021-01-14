@@ -68,4 +68,4 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :caption: Misc
    
    misc/contribute.rst
-
+   misc/vault-version-history.rst
