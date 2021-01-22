@@ -16,7 +16,7 @@ The following changes are:
 * Encrypted directories are now actually directories. Directory file is now inside of that with the fixed name ``dir.c9r``.
 * Encrypted symlinks are now directories. Symlink file is now inside of that with the fixed name ``symlink.c9r``.
 * Files and directories with shortened filenames are now directories (identifiable by the ``.c9s`` suffix). Mapping file with the long filename is now inside of that with the fixed name ``name.c9s``. If it's a regular file, the content file has the fixed name ``contents.c9r``.
-* Removed directory ``m`` because filename mappings for shortened filenames are now in ``d`` as well.
+* Removed directory ``m`` because mapping files for shortened filenames are now in ``d`` as well.
 * Filenames are encoded with base64url so that name shortenings are less likely.
 * Increased ciphertext filename threshold to 220 characters.
 
