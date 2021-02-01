@@ -1,13 +1,13 @@
-Vault Version History
-=====================
+Vault Format History
+====================
 
 Cryptomator vaults need to adhere to a structure and format (as described in :doc:`Security Architecture </security/architecture>`) that may change over time.
-In order to identify the correct format, the masterkey file contains a version number, which represents the vault version.
+In order to identify the correct format, the masterkey file contains a version number, which represents the vault format.
 
-.. _misc/vault-version-history/version-7:
+.. _misc/vault-format-history/format-7:
 
-Version 7
----------
+Format 7
+--------
 
 Introduced in Cryptomator 1.5.0 on 2020-04-16.
 The following changes are:
@@ -49,20 +49,20 @@ This is an example of the vault structure:
     ├─ masterkey.cryptomator
     └─ masterkey.cryptomator.DFD9B248.bkup
 
-.. _misc/vault-version-history/version-6:
+.. _misc/vault-format-history/format-6:
 
-Version 6
----------
+Format 6
+--------
 
 Introduced in Cryptomator 1.3.0 on 2017-07-01.
 The following changes are:
 
 * Password is normalized in NFC.
 
-.. _misc/vault-version-history/version-5:
+.. _misc/vault-format-history/format-5:
 
-Version 5
----------
+Format 5
+--------
 
 Introduced in Cryptomator 1.2.0 on 2016-09-19.
 The following changes are:
@@ -73,10 +73,10 @@ File sizes can be determined in ``O(1)`` instead of having to read and decrypt t
 This allows showing file sizes in the directory listing without having to download each file first.
 The file size in the header is now unused and filled with ``0xFFFFFFFFFFFFFFFF``.
 
-.. _misc/vault-version-history/version-4:
+.. _misc/vault-format-history/format-4:
 
-Version 4
----------
+Format 4
+--------
 
 Introduced in Cryptomator 1.1.1 on 2016-07-08.
 The following changes are:
@@ -106,16 +106,16 @@ This is an example of the vault structure:
     ├─ masterkey.cryptomator
     └─ masterkey.cryptomator.bkup
 
-.. _misc/vault-version-history/version-3:
+.. _misc/vault-format-history/format-3:
 
-Version 3
----------
+Format 3
+--------
 
 Introduced in Cryptomator 1.0.0 on 2016-03-09.
 
-Vault version 3 is basically the official "first" version.
+Vault format 3 is basically the official "first" version.
 To be exact, it was actually introduced in Cryptomator Beta 0.11 on 2016-03-03.
-Vault versions 1 and 2 were only used in beta versions of Cryptomator.
+Vault formats 1 and 2 were only used in beta versions of Cryptomator.
 
 This is an example of the vault structure:
 
