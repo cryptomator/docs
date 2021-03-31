@@ -68,7 +68,7 @@ In this example I want to encrypt files that get synchronized via Dropbox.
 
 .. _desktop/adding-vaults/3.-choose-a-passwords:
 
-3. Choose a Passwords
+3. Choose a Password
 ^^^^^^^^^^^^^^^^^^^^^
 
 Now it is time to choose a :ref:`good password <security/best-practices/good-passwords>` for your vault.
