@@ -54,6 +54,7 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    security/security-target.rst
    security/architecture.rst
    security/best-practices.rst
+   security/verify-installers.rst
 
 .. toctree::
    :hidden:
