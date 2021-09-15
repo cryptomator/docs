@@ -8,7 +8,7 @@ TODO.
 Requirements
 ------------
 
-Requires Android 4.3 or later.
+Requires Android 6.0 or later.
 
 .. _android/setup/installation:
 
