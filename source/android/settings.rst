@@ -262,6 +262,7 @@ You can choose between the following options:
 * Once a day
 * Once a week
 * Once a month
+* Never
 
 .. _android/settings/check-for-updates:
 
