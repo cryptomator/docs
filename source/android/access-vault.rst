@@ -284,7 +284,7 @@ Then the encryption and upload starts.
 .. _android/access-vault/search:
 
 Search in Folder
----------------
+----------------
 
 Search for files or folders within the same folder using the magnifier ①.
 
@@ -316,7 +316,7 @@ For more information, see the Settings chapter.
 .. _android/access-vault/sort:
 
 Sort Folder by...
----------------
+-----------------
 
 .. image:: ../img/android/sort.gif
     :alt: How to sort the content of a folder with Android
@@ -326,7 +326,7 @@ Sort Folder by...
 .. _android/access-vault/fast-scroll:
 
 Fast scroll
----------------
+-----------
 
 .. image:: ../img/android/fast-scroll.gif
     :alt: How to scroll fast through the content of a folder with Android

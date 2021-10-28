@@ -226,7 +226,7 @@ Choose a new name and confirm using the ``RENAME`` button.
 .. _android/vault-management/change-vault-position:
 
 Change Vault Position
-------------
+---------------------
 
 If you want to change the position of a specific vault in the vault list in Cryptomator, long-press on the vault and drag it to the desired position in the pressed state:
 
