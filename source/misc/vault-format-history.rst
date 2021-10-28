@@ -4,6 +4,17 @@ Vault Format History
 Cryptomator vaults need to adhere to a structure and format (as described in :doc:`Security Architecture </security/architecture>`) that may change over time.
 In order to identify the correct format, the masterkey file contains a version number, which represents the vault format.
 
+.. _misc/vault-format-history/format-8:
+
+Format 8
+--------
+
+Introduced in Cryptomator 1.6.0 on 2021-10-19.
+The following changes are:
+
+* Decoupled vault configuration from key derivation by introducing new vault configuration file named ``vault.cryptomator``. It is a JWT containing basic information about the vault and specification what key to use.
+* ``version`` inside ``masterkey.cryptomator`` is now deprecated.
+
 .. _misc/vault-format-history/format-7:
 
 Format 7

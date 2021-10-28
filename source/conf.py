@@ -24,9 +24,9 @@ copyright = '2021, cryptomator.org'
 author = 'Cryptomator Contributors'
 
 # The short X.Y version
-version = '1.5'
+version = '1.6'
 # The full version, including alpha/beta/rc tags
-release = '1.5.0'
+release = '1.6.0'
 
 
 # -- General configuration ---------------------------------------------------

@@ -12,10 +12,54 @@ Files are transparently en- and decrypted.
 There are no unencrypted copies on your hard disk drive.
 With every access on your files inside the virtual drive, Cryptomator will en- and decrypt these files on-the-fly.
 
-Currently Dokany (on Windows) and FUSE (on macOS and Linux) are our frontends of choice.
+Currently Dokany or WinFsp (on Windows) and FUSE (on macOS and Linux) are our frontends of choice.
 If they're not available on your system, Cryptomator will fall back on WebDAV, as it is supported on every major operating system. WebDAV is an HTTP-based protocol and Cryptomator acts as a WebDAV server accepting so-called loopback connections on your local machine only.
 
 Whenever your file manager accesses files through this virtual drive, Cryptomator will process this request via the following layers.
+
+
+.. _security/architecture/vault-configuration:
+
+Vault Configuration
+-------------------
+
+Every vault must have a vault configuration file named ``vault.cryptomator`` in the root directory of the vault.
+It is a JWT containing basic information about the vault and specification what key to use.
+The JWT is signed using the 512 bit raw masterkey.
+
+This is an example of an encoded vault configuration file:
+
+.. code-block:: console
+
+    eyJraWQiOiJtYXN0ZXJrZXlmaWxlOm1hc3RlcmtleS5jcnlwdG9tYXRvciIsInR5cCI6IkpXVCIsImFsZyI6IkhTMjU2In0.eyJmb3JtYXQiOjgsInNob3J0ZW5pbmdUaHJlc2hvbGQiOjIyMCwianRpIjoiY2U5NzZmN2EtN2I5Mi00Y2MwLWI0YzEtYzc0YTZhYTE3Y2Y1IiwiY2lwaGVyQ29tYm8iOiJTSVZfQ1RSTUFDIn0.IJlu4dHb3fqB2fAk9lf8G8zyEXc7OLB-5m9aNxOEXIQ
+
+The decoded header:
+
+.. code-block:: js
+
+    {
+      "kid": "masterkeyfile:masterkey.cryptomator", /* URI of where to get the key */
+      "typ": "JWT",
+      "alg": "HS256" /* current implementations also support HS384 and HS512 */
+    }
+
+The decoded payload:
+
+.. code-block:: js
+
+    {
+      "format": 8, /* vault format for checking software compatibility */
+      "shorteningThreshold": 220, /* how many characters in ciphertext filenames before shortening */
+      "jti": "ce976f7a-7b92-4cc0-b4c1-c74a6aa17cf5", /* random UUID to uniquely identify the vault */
+      "cipherCombo": "SIV_CTRMAC" /* currently only SIV_CTRMAC is supported */
+    }
+
+When opening a vault, the following steps have to be followed:
+
+#. Decode ``vault.cryptomator`` without verification.
+#. Read ``kid`` header and, depending on its value, retrieve the masterkey from the specified location.
+#. Verify the JWT signature using the masterkey.
+#. Make sure ``format`` and ``cipherCombo`` are supported.
 
 
 .. _security/architecture/masterkey-derivation:
@@ -48,7 +92,7 @@ The wrapped keys and the parameters needed to derive the KEK are then stored as 
 .. code-block:: js
 
     {
-        "version": 7, /* vault version for checking software compatibility */
+        "version": 999, /* deprecated, vault format is now specified in the vault configuration */
         "scryptSalt": "QGk...jY=",
         "scryptCostParam": 16384,
         "scryptBlockSize": 8,
@@ -229,7 +273,8 @@ Becomes a ciphertext directory structure like this:
     │     └─ ZKZRLZUODUUYTYA4457CSBPZXB5A77  # contains contents of Subdirectory
     │        └─ ...
     ├─ masterkey.cryptomator
-    └─ masterkey.cryptomator.DFD9B248.bkup
+    ├─ masterkey.cryptomator.DFD9B248.bkup
+    └─ vault.cryptomator
 
 
 .. _security/architecture/name-shortening:
@@ -289,4 +334,5 @@ A vault containing several nodes with very long names might result in a cipherte
     │     └─ ZKZRLZUODUUYTYA4457CSBPZXB5A77
     │        └─ ...
     ├─ masterkey.cryptomator
-    └─ masterkey.cryptomator.DFD9B248.bkup
+    ├─ masterkey.cryptomator.DFD9B248.bkup
+    └─ vault.cryptomator
