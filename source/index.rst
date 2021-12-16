@@ -44,7 +44,10 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :caption: iOS
    
    ios/setup.rst
+   ios/cloud-management.rst
    ios/vault-management.rst
+   ios/access-vault.rst
+   ios/settings.rst
 
 .. toctree::
    :hidden:
