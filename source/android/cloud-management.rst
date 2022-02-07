@@ -83,12 +83,7 @@ You can find `here <https://community.cryptomator.org/t/webdav-urls-of-common-cl
 Login Local Storage
 -----------------------
 
-There can be used two types of local storages: 
-
-* "Default storage" : This is the default internal storage of the android phone.
-* "Custom location" : Using custom locatins you can access a vault stored on e.g. a removabal device like a SD card
-
-The following pictures describes how to setup a custom location to access vaults stored on the SD card:
+The following pictures describes how to setup a location to access vaults stored on the internal storage of the device (the same applies for vaults located e.g. on a SD card):
 
 .. image:: ../img/android/add-localstorage-login-provider-0.png
     :alt: How to handle cloud services with Android
@@ -106,7 +101,11 @@ The following pictures describes how to setup a custom location to access vaults
     :alt: How to handle cloud services with Android
     :width: 346px
 
-After creating the custom location, you can access it by clicking on the name of the location to add the vault or create a new vault.
+.. image:: ../img/android/add-localstorage-login-provider-4.png
+    :alt: How to handle cloud services with Android
+    :width: 346px
+
+After creating the location, you can access it by clicking on the name of the location to add a vault or create a new vault.
 
 .. note::
     If you use a custom location please make sure to add the root folder of the storage like described in the pictures and don't navigate directly into the vault.
