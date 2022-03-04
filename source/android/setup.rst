@@ -49,4 +49,4 @@ As well as using the APK Store variant because this app version wasn't bought us
 Requirements
 ------------
 
-Requires Android 7.0 or later.
+Requires Android 8.0 or later.
