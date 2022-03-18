@@ -16,7 +16,7 @@ Using the `AppImage.asc` signature file, you can check the authenticity and inte
     :width: 1316px
     :align: center
 
-#. Use ``gpg --list-keys --fingerprint 58117AFA1F85B3EEC154677D615D449FE6E6A235`` to make sure you have loaded the GPG key. If it is not available, download it from a trusted source or retrieve it from a keyserver, e.g.: ``gpg --keyserver keys.gnupg.net --recv-keys 58117AFA1F85B3EEC154677D615D449FE6E6A235``
+#. Use ``gpg --list-keys --fingerprint 58117AFA1F85B3EEC154677D615D449FE6E6A235`` to make sure you have loaded the GPG key. If it is not available, download it from a keyserver e.g.: ``gpg --keyserver keys.gnupg.net --recv-keys 58117AFA1F85B3EEC154677D615D449FE6E6A235`` or another trusted source like from Cryptobot using Github ``curl -sSL https://github.com/cryptobot.gpg | gpg --import -``.
 
 #. Use ``gpg --verify cryptomator-*.AppImage.asc cryptomator-*.AppImage`` to execute the verification process (replace ``*`` with the downloaded version).
 
