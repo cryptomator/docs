@@ -45,5 +45,5 @@ Linux
 The primary option of using Cryptomator on Linux is via the AppImage.
 After you've downloaded the ``.appimage`` file, you simple need to `make it executable <https://docs.appimage.org/user-guide/run-appimages.html#running-appimages>`_ and you can then run it.
 
-If you are familiar with ``PPA`` or ``AUR``, you can choose one of these options to install Cryptomator.
+If you are familiar with ``Flatpak``, ``PPA`` or ``AUR``, you can choose one of these options to install Cryptomator.
 The coordinates are available on our download page.
