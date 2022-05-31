@@ -3,6 +3,8 @@ Working with Vaults
 
 Cryptomator for iOS is fully integrated into the Files app of iOS. In order to access your encrypted data, you have to use the Files app.
 
+.. _ios/access-vault/enable-cryptomator-in-files-app:
+
 Enable Cryptomator in Files App
 -------------------------------
 
