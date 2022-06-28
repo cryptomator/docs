@@ -118,7 +118,7 @@ The file header stores certain metadata, which is needed for file content encryp
 It consists of 88 bytes.
 
 * 16 bytes nonce used during header payload encryption.
-* 40 bytes `AES-CTR <https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation>`_ encrypted payload consisting of:
+* 40 bytes `AES-CTR <https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Counter_(CTR)>`_ encrypted payload consisting of:
 
     * 8 bytes filled with 1 for future use (formerly used for file size) and
     * 32 bytes file content key.
