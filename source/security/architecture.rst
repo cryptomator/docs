@@ -336,3 +336,23 @@ A vault containing several nodes with very long names might result in a cipherte
     ├─ masterkey.cryptomator
     ├─ masterkey.cryptomator.DFD9B248.bkup
     └─ vault.cryptomator
+
+
+.. _security/architecture/backup-dir-ids:
+
+Backup Directory IDs
+--------------------
+
+.. note::
+
+    This layer is optional and not required for a complete implementation of the Cryptomator Vault Scheme.
+    Also, it doesn't provide any additional security.
+    Its sole purpose is to increase data recoverability in case of vault structure corruption.
+
+By obfuscating the hierarchy of cleartext paths (see `Directory IDs`_) using ``dir.c9r`` link files, the directory structure is more vulnerable to problems like incomplete synchronization or bit rotting.
+When a link file is missing or damaged, the ``dirPath`` cannot be computed, which effectively makes the directory content inaccessible in the normal filesystem.
+The encrypted content of files can be recovered.
+But since the filename encryption is dependent on the id of the parent directory (see `Filename Encryption`_), which is only stored in the link file, names of all resources (files, symlinks or directories) are lost.
+
+For such a case of vault structure corruption, every ciphertext directory contains a file named ``dirid.c9r`` which contains the ID of its parent directory.
+It is encrypted like a regular ciphertext file (see `File Content Encryption`_).
