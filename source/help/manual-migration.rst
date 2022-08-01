@@ -18,4 +18,4 @@ To upgrade to the latest version, you can perform a migration manually:
     - Network drives on Windows, such as WebDAV mounts
     - eCryptfs-encrypted volumes on Linux
 
-    In this case, during step 5, you may encouter warnings indicating that you can not encrypt files due to such length limitations. Feel free to simply change the name of any affected files.
+    In this case, during step 5, you may encounter warnings indicating that you can not encrypt files due to such length limitations. Feel free to simply change the name of any affected files.
