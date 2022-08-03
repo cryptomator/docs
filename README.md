@@ -11,10 +11,10 @@ If you want to contribute documentation in different languages, please let us kn
 - Install Sphinx (`pip install sphinx sphinx_rtd_theme`)
 - Fork this repo
 - Make your changes
-- Preview changes (`make html`)
+- Preview changes (`make clean html`)
 - Send us a pull request
 
-For a live preview on a local server, install [sphinx-autobuild](https://github.com/GaretJax/sphinx-autobuild#installation) and execute `make livehtml`.
+For a live preview on a local server, install [sphinx-autobuild](https://github.com/GaretJax/sphinx-autobuild#installation) and execute `make clean livehtml`.
 
 <!--
 How tow record `.gif`s:

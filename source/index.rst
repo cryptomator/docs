@@ -53,6 +53,16 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
 .. toctree::
    :hidden:
    :maxdepth: 2
+   :caption: Hub
+   
+   hub/setup.rst
+   hub/vault-management.rst
+   hub/access-vault.rst
+   hub/settings.rst
+
+.. toctree::
+   :hidden:
+   :maxdepth: 2
    :caption: Security
    
    security/security-target.rst
