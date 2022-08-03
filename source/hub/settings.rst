@@ -1,10 +1,10 @@
 Settings
 ========
 
-You can configure Cryptomator Hub to your needs. The following options are available:
+Access the settings of Cryptomator Hub by tapping the profile icon in the top right corner.
 
 .. image:: ../img/hub/settings.png
-    :alt: How to launch settings with Android
+    :alt: Settings of Cryptomator Hub
     :width: 920px
 
 .. _hub/settings/version:
@@ -27,6 +27,6 @@ The following versions are compatible with each other:
      - Cryptomator iOS
    * - 1.0.0
      - 18, 19
-     - 1.6.11 (beta)
+     - 1.6.11
      - N/A
      - N/A
