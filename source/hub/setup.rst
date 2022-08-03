@@ -3,6 +3,25 @@
 Setup
 =====
 
+Quickstart
+----------
+
+#. Decide, on which web addresses you want to deploy Hub and Keycloak (and set up DNS and TLS termination, if required)
+
+#. Use the `Setup Wizard <https://cryptomator.org/hub/setup/>`_ to generate a deployment descriptor template
+
+#. Customize the template if needed (e.g. adjust the Ingress settings) and deploy the software stack to your cluster
+
+#. Login to Keycloak to
+
+   * adjust authentication settings
+   * set up users/groups or LDAP/AD
+
+#. Login to Cryptomator Hub and start creating Hub-managed Vaults
+
+More Details
+------------
+
 Cryptomator Hub is a server application that can be deployed via Kubernetes or Docker Compose. To get started, use the `Setup Wizard <https://cryptomator.org/hub/setup/>`_ to generate the necessary configuration files.
 
 Cryptomator Hub depends on `Keycloak <https://www.keycloak.org/>`_, an open-source identity and access management solution. That means, Hub manages access to your vaults whereas Keycloak manages users, groups, and authentication. In the Setup Wizard, you will have the option to choose between deploying Keycloak alongside Hub or specifying an URL to an existing Keycloak installation.
