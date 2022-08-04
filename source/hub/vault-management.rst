@@ -61,7 +61,7 @@ The details are displayed on the right side.
 Manage Vault
 ^^^^^^^^^^^^
 
-To add a user, grant devices access, or view the members list, you have enable the management section in the vault details.
+To add a user, grant devices access, or view the members list, you have to enable the management section in the vault details.
 Open the vault details and click the ``Manage Vault`` button.
 In the dialog, enter the vault admin password.
 
