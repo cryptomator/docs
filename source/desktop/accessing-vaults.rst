@@ -20,7 +20,7 @@ You will then be prompted for your vault's password:
 
 .. note::
 
-    By checking the "Save Password" checkbox, the password will be stored in your operating system's keychain.
+    By checking the "Save Password" checkbox, the password will be stored in your operating system's keychain. There is also a `plug\-in <https://plugin.purejava.org>`_ for Cryptomator available, that allows to store Cryptomator vault passwords in a KeePassXC database.
 
 .. warning::
 
