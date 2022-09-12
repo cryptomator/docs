@@ -88,6 +88,10 @@ Dokany-specific options
 FUSE-specific options
 ---------------------
 
+Filesystem in USErspace (`FUSE <https://en.wikipedia.org/wiki/Filesystem_in_Userspace>`_) is a software interface for Unix and Unix-like computer operating systems that lets non-privileged users create their own file systems without editing kernel code. Cryptomator mounts a file system on your machine and allows to display your files and work with them.
+
+If you want to apply FUSE-specific options on unlocking and opening your vault, you can add them to the |VaultOptions|_ of your vault. Check the ``CustomMountOptions`` on the ``Mounting`` tab.
+
 .. _desktop/vault-mounting/fuse/macos:
 
 MacOS
@@ -97,3 +101,12 @@ MacOS
 
 Linux
 ^^^^^
+
+Because these options are part of third party libraries, they are not listed here. Info about these FUSE options on Linux can be found in the `man page for mount\.fuse <https://man7.org/linux/man-pages/man8/mount.fuse3.8.html>`_.
+
+.. note::
+
+    The options ``allow_root`` and ``allow_other`` cannot be applied to the |VaultOptions|_ without a change to the **/etc/fuse.conf** configuration file for FUSE on your machine. Witin this file, the ``user_allow_other`` option needs to be enabled / uncommented.
+
+.. |VaultOptions| replace:: ``VaultOptions``
+.. _VaultOptions: ./vault-management.html#vault-options
