@@ -89,7 +89,7 @@ Developing a device driver (other than FAT or NTFS) that works in kernel mode on
 
 You might want to apply Dokany-specific options to the Dokany file system driver on unlocking and opening your vault. You can do so by adding them to the |VaultOptions|_ of your vault. Check the ``CustomMountOptions`` on the ``Mounting`` tab.
 
-.. _desktop/vault-mounting/fuse/windows:
+.. _desktop/vault-mounting/dokany/windows:
 
 Windows
 ^^^^^^^
