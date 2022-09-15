@@ -39,7 +39,7 @@ Working with the Unlocked Vault
 -------------------------------
 
 After unlocking, your vault's contents will become available as a virtual drive on your PC.
-This means, that you interact with your confidential files in the same way as with any other hard drive or USB stick.
+This means, that you interact with your confidential files in the same way as with any other hard drive or USB thumb drive.
 
 If you can not find the unlocked vault in your systems file manager (Windows Explorer, Finder, ...), you can always click on ``Reveal Drive`` in your Cryptomator window:
 

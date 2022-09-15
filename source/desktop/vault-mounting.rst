@@ -83,12 +83,25 @@ Linux
 Dokany-specific options
 -----------------------
 
+In order to add and retrieve files to your vault, Cryptomator mounts a file system on your machine, that allows to work with your files. In general, when you want to create a new file system on Windows, that can be mounted by Cryptomator, you need to develop a file system driver.
+
+Developing a device driver (other than FAT or NTFS) that works in kernel mode on Windows is extremely technical. By using `Dokan <https://en.wikipedia.org/wiki/Dokan_Library>`_, you can create your own file systems very easily without writing device drivers. Cryptomator takes care of all this. `Dokany <https://github.com/dokan-dev/dokany>`_ is a fork of Dokan 0.6.0 with bug fixes, clean change history and updated to build with latest tools.
+
+You might want to apply Dokany-specific options to the Dokany file system driver on unlocking and opening your vault. You can do so by adding them to the |VaultOptions|_ of your vault. Check the ``CustomMountOptions`` on the ``Mounting`` tab.
+
+.. _desktop/vault-mounting/dokany/windows:
+
+Windows
+^^^^^^^
+
+Because these options are part of third party libraries, they are not listed here. Info about these Dokany options can be found in the `Javadoc of our dokany\-nio\-adapter <https://github.com/cryptomator/dokany-nio-adapter/blob/cc16727febcbf2c297b3e296ff2765b4da81a2b6/src/main/java/org/cryptomator/frontend/dokany/MountUtil.java#L27-L34>`_ and the `Dokany API documentation <https://dokan-dev.github.io/dokany-doc/html/group___d_o_k_a_n___o_p_t_i_o_n.html#ga4b96dce8ea1b901a7babe05767a27abe>`_.
+
 .. _desktop/vault-mounting/fuse:
 
 FUSE-specific options
 ---------------------
 
-Filesystem in USErspace (`FUSE <https://en.wikipedia.org/wiki/Filesystem_in_Userspace>`_) is a software interface for Unix and Unix-like computer operating systems that lets non-privileged users create their own file systems without editing kernel code. Cryptomator mounts a file system on your machine and allows to display your files and work with them.
+Filesystem in USErspace (`FUSE <https://en.wikipedia.org/wiki/Filesystem_in_Userspace>`_) is a software interface for Unix and Unix-like computer operating systems that lets non-privileged users create their own file systems without editing kernel code. Cryptomator mounts a file system on your machine using FUSE and allows to display your files and work with them.
 
 If you want to apply FUSE-specific options on unlocking and opening your vault, you can add them to the |VaultOptions|_ of your vault. Check the ``CustomMountOptions`` on the ``Mounting`` tab.
 
@@ -97,12 +110,14 @@ If you want to apply FUSE-specific options on unlocking and opening your vault, 
 MacOS
 ^^^^^
 
+Because these options are part of third party libraries, they are not listed here. Info about these FUSE options on Mac can be found in the `wiki of the osxfuse project <https://github.com/osxfuse/osxfuse/wiki/Mount-options>`_.
+
 .. _desktop/vault-mounting/fuse/linux:
 
 Linux
 ^^^^^
 
-Because these options are part of third party libraries, they are not listed here. Info about these FUSE options on Linux can be found in the `man page for mount\.fuse <https://man7.org/linux/man-pages/man8/mount.fuse3.8.html>`_.
+As before, these options are not listed here, because they are part of third party libraries. Info about these FUSE options on Linux can be found in the `man page for mount\.fuse <https://man7.org/linux/man-pages/man8/mount.fuse3.8.html>`_.
 
 .. note::
 
