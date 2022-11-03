@@ -134,8 +134,8 @@ Search
 You can use the magnifier inside the cloud node list to search for specific nodes.
 Thereby there are two settings:
 
-* Live search (disbaled by default)
-* Search using glob pattern matching (disbaled by default)
+* Live search (disabled by default)
+* Search using glob pattern matching (disabled by default)
 
 both are described in the following chapters.
 
