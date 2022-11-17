@@ -26,7 +26,7 @@ The following versions are compatible with each other:
      - Cryptomator Android
      - Cryptomator iOS
    * - 1.0.0
-     - 18, 19
+     - 18, 19, 20
      - 1.6.11
      - N/A
      - N/A
