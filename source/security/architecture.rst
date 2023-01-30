@@ -51,7 +51,7 @@ The decoded payload:
       "format": 8, /* vault format for checking software compatibility */
       "shorteningThreshold": 220, /* how many characters in ciphertext filenames before shortening */
       "jti": "ce976f7a-7b92-4cc0-b4c1-c74a6aa17cf5", /* random UUID to uniquely identify the vault */
-      "cipherCombo": "SIV_CTRMAC" /* currently only SIV_CTRMAC is supported */
+      "cipherCombo": "SIV_GCM" /* mode of operation for the block cipher. Other possible values are "SIV_CTRMAC" */
     }
 
 When opening a vault, the following steps have to be followed:
@@ -114,11 +114,15 @@ When unlocking a vault the KEK is used to unwrap (i.e. decrypt) the stored maste
 File Header Encryption
 ----------------------
 
+.. note::
+
+    The following section only applies to vaults with the cipher combo ``SIV_GCM`` in the decoded JWT payload. For vaults with ``SIV_CTRMAC``, have a look at our `1.6 documentation <https://docs.cryptomator.org/en/1.6/security/architecture/#file-header-encryption>`_.
+
 The file header stores certain metadata, which is needed for file content encryption.
 It consists of 88 bytes.
 
 * 16 bytes nonce used during header payload encryption.
-* 40 bytes `AES-CTR <https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Counter_(CTR)>`_ encrypted payload consisting of:
+* 40 bytes `AES-GCM <https://en.wikipedia.org/wiki/Galois/Counter_Mode>`_ encrypted payload consisting of:
 
     * 8 bytes filled with 1 for future use (formerly used for file size) and
     * 32 bytes file content key.
@@ -151,7 +155,7 @@ This is where your actual file contents get encrypted.
 The cleartext is broken down into multiple chunks, each up to 32 KiB + 48 bytes consisting of:
 
 * 16 bytes nonce,
-* up to 32 KiB encrypted payload using AES-CTR with the file content key, and
+* up to 32 KiB encrypted payload using AES-GCM with the file content key, and
 * 32 bytes MAC consisting of:
 
     * file header nonce (to bind this chunk to the file header),
