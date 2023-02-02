@@ -24,9 +24,9 @@ copyright = '2023, cryptomator.org'
 author = 'Cryptomator Contributors'
 
 # The short X.Y version
-version = '1.6'
+version = '1.7'
 # The full version, including alpha/beta/rc tags
-release = '1.6.0'
+release = '1.7.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -60,12 +60,12 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_themes/*']
+#exclude_patterns = ['_themes/*']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
@@ -77,7 +77,7 @@ pygments_style = None
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
-html_theme_path = ['_themes/cryptomator_theme', ]
+#html_theme_path = ['_themes/cryptomator_theme', ]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -91,17 +91,22 @@ html_theme_options = {
     'includehidden': True,
     'titles_only': False,
     'logo_only' : True,
+    'style_nav_header_background': '#49B04A',
+    'display_version': True,
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': True,
+    'vcs_pageview_mode': '',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 #
-#html_static_path = ['_static']
-#html_css_files = [
-#    'css/custom.css',
-#]
-#html_style = 'css/custom.css'
+html_static_path = ['_static']
+html_css_files = [
+    'css/custom.css',
+]
+html_style = 'css/overrides.css'
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
