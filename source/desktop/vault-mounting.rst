@@ -1,123 +1,121 @@
 Vault Mounting
 ==============
 
-After a vault is unlocked, it must be integrated into the system to be accessible for you.
-Cryptomator uses three different technologies (called *adapters*) for this integration:
+After a vault is unlocked, it is integrated into the operating system to be conveniently accessible for you.
+Cryptomator offers different ways of integration (called *volume types*), which can be differentiated in three categories:
 
-#. :ref:`WebDAV <desktop/vault-mounting/webdav>` - a standardized protocol to manage directories and resources
-#. :ref:`Dokany <desktop/vault-mounting/dokany>` - a windows specific driver for a deeper system integration
-#. :ref:`FUSE <desktop/vault-mounting/fuse>` - a linux specific kernel module for a deeper system integration, also available for macOS
+#. :ref:`WebDAV <desktop/vault-mounting/webdav>` related volume types
+#. :ref:`FUSE <desktop/vault-mounting/fuse>` related volume types and
+#. :ref:`Dokany <desktop/vault-mounting/dokany>` volume type
 
 Each combination of operating system and adapter has its own set of settings and its benefits & drawbacks.
 
 
-.. _desktop/vault-mounting/general-adapter-selection:
+.. _desktop/vault-mounting/general-volume-type-selection:
 
-General Adapter Selection
--------------------------
+General Volume Type Selection
+-----------------------------
 
-Cryptomator only uses one adapter type to serve all your unlocked vaults.
-If you want to change it or only want to know which one is currently used, open the ``Preferences`` by clicking the gears symbol in the upper right corner of the main window and change to the ``Virtual Drive`` tab.
+The volume type is set app wide in the general ``preferences`` of Cryptomator.
+You view the selected volume type by clicking the gears symbol in the upper right corner of the main window and change to the ``Virtual Drive`` tab.
+The selected volume type will be used to integrate unlocked vaults into the system.
+If you change it, you need to restart the app in order to use the new volume type.
 
-..
-    (TODO image of virtual drive picture)
+.. image:: ../img/desktop/preferences-virtual-drive.png
+    :alt: Virtual Drive Tab in Preferences
 
-You can choose between WebDAV and, depending on your system, Dokany (Windows) or FUSE (linux, macOS).
-
-.. note::
-
-    Dokany/FUSE may not be visible for selection.
-    This means that Cryptomator is unable to detect a valid installation of them.
-
-WebDAV has additional options for configuration:
-
-#. ``WebDAV Port`` - Always present, it shows the port over which the WebDAV adapter communicates with itself.
-#. ``WebDAV scheme`` - TODO
-
-
-.. _desktop/vault-mounting/options-applicable-to-all-systems-and-adapters:
-
-Options applicable to all Systems and Adapters
-----------------------------------------------
-
-In this section mount options are described which are present on all operating systems and with all adapter types.
-
-Currently there is only on option, namely opening a vault in ``Read-Only`` mode.
-If the checkbox is set, you can unlock the vault, browse through its content and read or copy its files, but you cannot change or modify anything inside the vault.
+The choices in the drop down menu depend on your OS and if certain libraries (e.g., macFUSE) are installed.
+Some volume types allow specifying custom mount options.
+If supported, these options are specifed for each vault individually in the |VaultOptions|_ , mounting tab.
 
 
 .. _desktop/vault-mounting/webdav:
 
-WebDAV-specific options
------------------------
+WebDAV Related Volume Types
+---------------------------
 
-WebDAV is a `communication protocol <https://en.wikipedia.org/wiki/WebDAV>`_ to perform operations between a client (you) and a server (your computer) on directories and resources.
-Even thou this protocol was designed for remote access, Cryptomator uses it *only locally* to display your files and allows you to work with them.
+WebDAV is a standardized `communication protocol <https://en.wikipedia.org/wiki/WebDAV>`_ to perform operations between a client (you) and a server (your local computer) on directories and resources.
+Even though this protocol was designed for remote access, Cryptomator uses it *only locally* to display your files and allows you to work with them.
+It has wide spread support and sufficient performance, but its implementation varies over the OSses.
 
-.. _desktop/vault-mounting/webdav/windows:
+Since WebDAV starts a local server, it needs a port to communicate with the local filesystem.
+If the port of the local server is already in use, you can change it in the general preferences, virtual volume tab.
 
-Windows
-^^^^^^^
 
-..
-    (TODO image of mount options webdav+windows)
+.. _desktop/vault-mounting/webdav/explorer:
 
-.. _desktop/vault-mounting/webdav/macos:
+WebDAV (Windows Explorer)
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-MacOS
-^^^^^
+**Requirements:** Windows
 
-..
-    (TODO image of mount options webdav+macOS)
+This volume uses the Windows command `net use <https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/gg651155(v=ws.11)>`_.
+By default unlocked vaults are mounted as a network drive to a drive letter.
+Using WebDAV on Windows has the following drawbacks:
 
-.. _desktop/vault-mounting/webdav/linux:
+    * the size of transferred files is set to a maximum of 4GB
+    * the total and free space of the network drive shown in the explorer equals the C: drive, albeit not true
 
-Linux
-^^^^^
+Additionally, sometimes mounting fails with ``System error 67 has occurred. The network name cannot be found.`` (or its translations).
+If it happens, follow you can follow the guide TODO to get access again.
 
-..
-    TODO image of mount options webdav+ubuntu
+.. _desktop/vault-mounting/webdav/applescript:
 
-.. _desktop/vault-mounting/dokany:
+WebDAV (AppleScript)
+^^^^^^^^^^^^^^^^^^^^
 
-Dokany-specific options
------------------------
+**Requirements:** macOS
 
-In order to add and retrieve files to your vault, Cryptomator mounts a file system on your machine, that allows to work with your files. In general, when you want to create a new file system on Windows, that can be mounted by Cryptomator, you need to develop a file system driver.
+This volume uses the scripting language `AppleScript`.
+By default unlocked vaults are mounted to `/Volumes`.
+In certain environments, mounting fails with the message ``osascript: can't open default scripting component``.
+The cause is unclear, but there are suggestions, that third party applications/drivers block the execution.
 
-Developing a device driver (other than FAT or NTFS) that works in kernel mode on Windows is extremely technical. By using `Dokan <https://en.wikipedia.org/wiki/Dokan_Library>`_, you can create your own file systems very easily without writing device drivers. Cryptomator takes care of all this. `Dokany <https://github.com/dokan-dev/dokany>`_ is a fork of Dokan 0.6.0 with bug fixes, clean change history and updated to build with latest tools.
+.. _desktop/vault-mounting/webdav/gio:
 
-You might want to apply Dokany-specific options to the Dokany file system driver on unlocking and opening your vault. You can do so by adding them to the |VaultOptions|_ of your vault. Check the ``CustomMountOptions`` on the ``Mounting`` tab.
+WebDAV (gio)
+^^^^^^^^^^^^
 
-.. _desktop/vault-mounting/dokany/windows:
+**Requirements:** Linux, ``gio`` installed
 
-Windows
-^^^^^^^
+Due to the wide variety of  Linux distributions, Cryptomator does only support a direct system integration with the GNOME tool `gio <https://manpage.me/?gio>`_.
+If ``gio`` is not installed, unlock your vault with the :ref:`desktop/vault-mounting/webdav/server-only` and read for your Linux distro how to integrate WebDAV shares.
 
-Because these options are part of third party libraries, they are not listed here. Info about these Dokany options can be found in the `Javadoc of our dokany\-nio\-adapter <https://github.com/cryptomator/dokany-nio-adapter/blob/cc16727febcbf2c297b3e296ff2765b4da81a2b6/src/main/java/org/cryptomator/frontend/dokany/MountUtil.java#L27-L34>`_ and the `Dokany API documentation <https://dokan-dev.github.io/dokany-doc/html/group___d_o_k_a_n___o_p_t_i_o_n.html#ga4b96dce8ea1b901a7babe05767a27abe>`_.
+
+.. _desktop/vault-mounting/webdav/server-only:
+
+WebDAV (Server-only)
+^^^^^^^^^^^^^^^^^^^^
+
+**Requirements:** None
+
+This volume type is always present and can be used, if any other volume type fails to mount.
+It simply starts the above mentioned local-only WebDAV server, which can be manually integrated into the system or accessed by a third party application (e.g., `CyberDuck <https://cyberduck.io/>`_).
+
 
 .. _desktop/vault-mounting/fuse:
 
-FUSE-specific options
----------------------
+FUSE Related Volume Types
+-------------------------
 
-Filesystem in USErspace (`FUSE <https://en.wikipedia.org/wiki/Filesystem_in_Userspace>`_) is a software interface for Unix and Unix-like computer operating systems that lets non-privileged users create their own file systems without editing kernel code. Cryptomator mounts a file system on your machine using FUSE and allows to display your files and work with them.
+Filesystem in USErspace (`FUSE <https://en.wikipedia.org/wiki/Filesystem_in_Userspace>`_) is a filesystem interface originally developed for Unix operating systems that lets non-privileged users create their own file systems without editing kernel code.
+It is now supported on all major desktop OS'ses.
 
-If you want to apply FUSE-specific options on unlocking and opening your vault, you can add them to the |VaultOptions|_ of your vault. Check the ``CustomMountOptions`` on the ``Mounting`` tab.
+All FUSE related volume types support additional, custom mount options.
+Every option must be prefixed with ``-o`` when specified, i.e. if you want to specify ``allow_other``, you enter ``-oallow_other``.
 
-.. _desktop/vault-mounting/fuse/macos:
 
-MacOS
-^^^^^
+.. _desktop/vault-mounting/fuse/fuse:
 
-Because these options are part of third party libraries, they are not listed here. Info about these FUSE options on Mac can be found in the `wiki of the osxfuse project <https://github.com/osxfuse/osxfuse/wiki/Mount-options>`_.
+FUSE
+^^^^
 
-.. _desktop/vault-mounting/fuse/linux:
+**Requirements:** Linux, ``libfuse3`` installed
 
-Linux
-^^^^^
-
-As before, these options are not listed here, because they are part of third party libraries. Info about these FUSE options on Linux can be found in the `man page for mount\.fuse <https://man7.org/linux/man-pages/man8/mount.fuse3.8.html>`_.
+This volume type binds to the library `libfuse3`.
+The library is present on all major linux distributions.
+By default unlocked vaults are mounted to `~/.local/share/Cryptomator/mnt`.
+Infos about the FUSE custom mount options on Linux can be found in the `man page for mount\.fuse <https://man7.org/linux/man-pages/man8/mount.fuse3.8.html>`_.
 
 .. note::
 
@@ -125,3 +123,78 @@ As before, these options are not listed here, because they are part of third par
 
 .. |VaultOptions| replace:: ``VaultOptions``
 .. _VaultOptions: ./vault-management.html#vault-options
+
+
+.. _desktop/vault-mounting/fuse/fuse-t:
+
+FUSE-T
+^^^^^^
+
+**Requirements:** MacOS, FUSE-T installed
+
+This volume type binds to a library provided by the new `FUSE-T project <https://www.fuse-t.org/>`_.
+You can install it via brew:
+
+.. code-block:: shell
+
+    brew tap macos-fuse-t/homebrew-cask
+    brew install fuse-t
+
+By default unlocked vaults are mounted to `/Volumes`.
+Infos about supported custom options can be found in the `wiki of the osxfuse project <https://github.com/osxfuse/osxfuse/wiki/Mount-options>`_.
+
+.. note::
+
+    Support for FUSE-T is currently experimental, due to the young age of the project.
+
+.. _desktop/vault-mounting/fuse/winfsp:
+
+WinFsp / WinFsp (Local Drive)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Requirements:** Windows, WinFsp installed
+
+This volume type binds to a library provided by the `WinFsp project <https://winfsp.dev/>`_.
+It is installed along Cryptomator when you are using the EXE installer, otherwise you can download the WinFsp standalone installer `here <https://winfsp.dev/rel/>`_.
+By default unlocked vaults are mounted to a drive letter, either as a network or a local drive.
+Infos about supported custom options can be found in the `WinFsp repository <https://github.com/winfsp/winfsp/blob/c61679a35d041d843173fa3b2eba106b5ab7b01f/src/dll/fuse/fuse.c#L628-L654>`_.
+
+.. note:: Vaults mounted to a drive letter are only accessible to the `current user`. If you want to access the vault as a different/elevated user, use either
+
+    - the UNC path if using WinFsp (e.g, ``\\cryptomator-vault\secretFiles`` for a vault named "secretFiles"),
+    - or mount to a directory if using WinFsp (Local Drive).
+
+
+.. _desktop/vault-mounting/fuse/macFUSE:
+
+macFUSE
+^^^^^^^
+
+**Requirements:** macOS, macFUSE installed
+
+This volume type binds to a library provided by the `macFUSE project <https://osxfuse.github.io/>`_.
+Due to license restrictions, you have to install it separately.
+The most recent installer can be found on the `macFUSE release page <https://github.com/osxfuse/osxfuse/releases>`_.
+By default unlocked vaults are mounted to `/Volumes`.
+Infos about supported custom options can be found in the `macFUSE wiki <https://github.com/osxfuse/osxfuse/wiki/Mount-options>`_.
+
+.. warning::
+
+    Apple has deprecated the OS APIs used by macFUSE since macOS 12.3 and made installation difficult. We suggest to try out FUSE-T and only fallback to macFUSE, if problems arise.
+
+
+.. _desktop/vault-mounting/dokany:
+
+Dokany
+------
+
+.. warning::
+
+    With version 1.7.0 Dokany support in Cryptomator is deprecated. We suggest to switch to :ref:`desktop/vault-mounting/fuse/winfsp`.
+
+**Requirements:** Windows, Dokany 1.5.1 installed
+
+The `Dokan project <https://dokan-dev.github.io/>` aims for the same goal as FUSE, but specific for Windows: Provide an interface to create your own filesystem without requiring to write your own kernel filesystem driver.
+It has to be installed separately, you can download the installer on the `Dokany release page <https://github.com/dokan-dev/dokany/releases/tag/v1.5.1.1000>`_.
+By default unlocked vaults are mounted to a drive letter.
+
