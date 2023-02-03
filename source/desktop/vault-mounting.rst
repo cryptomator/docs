@@ -84,8 +84,8 @@ If ``gio`` is not installed, unlock your vault with the :ref:`desktop/vault-moun
 
 .. _desktop/vault-mounting/webdav/server-only:
 
-WebDAV (Server-only)
-^^^^^^^^^^^^^^^^^^^^
+WebDAV (HTTP Address)
+^^^^^^^^^^^^^^^^^^^^^
 
 **Requirements:** None
 
