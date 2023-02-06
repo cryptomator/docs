@@ -64,3 +64,31 @@ Requirements
 ------------
 
 Currently, we are evaluating the system requirements for Cryptomator Hub. If you can provide data, please send us an email to hub-beta@cryptomator.org.
+
+.. _hub/setup/backup:
+
+Backup
+------------
+
+Cryptomator Hub and Keycloak both write to the connected Postgres database. So the best and easiest way is to backup it cyclically using e.g. a Cron Job. Depending on your deployment, here is a sample command that you can run on the host system to backup the entire databases to a file using the Postgres container, which you than could import in a similar way:
+
+.. code-block:: console
+
+    Docker:
+    docker exec -u postgres -it postgres /bin/bash -c /usr/local/bin/pg_dumpall \ 
+        > "$(date +%F)-hub-backup"
+    
+    Kubernetes:
+    kubectl exec -it deployments/postgres -n NAMESPACE \
+        -- /usr/local/bin/pg_dumpall -U postgres > "$(date +%F)-hub-backup"
+
+See https://www.postgresql.org/docs/current/app-pg-dumpall.html for more information on the `pg_dumpall` command.
+The command will create a file on the host with a name like "2023-02-06-hub-backup".
+
+Besides `pg_dumpall` Postgres offers with `psql -f PATH_TO_FILE` a command to restore the database from this file and a new system is completely at the state of this file.
+
+If you also back up the deployment script, you can restore the entire solution to production in minutes.
+
+.. note::
+
+    Make sure this backup is moved to another secure location.
