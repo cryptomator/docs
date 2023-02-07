@@ -1,14 +1,14 @@
-Vault Mounting
-==============
+Volume Type
+===========
 
-After a vault is unlocked, it is integrated into the operating system to be conveniently accessible for you.
-Cryptomator offers different ways of integration (called *volume types*), which can be differentiated in three categories:
+After a vault is unlocked, it is integrated (also called mounted) into the operating system to be conveniently accessible for you as a virtual drive.
+Cryptomator offers different ways of mounting, called *volume types*, which can be differentiated in three categories:
 
 #. :ref:`WebDAV <desktop/vault-mounting/webdav>` related volume types
 #. :ref:`FUSE <desktop/vault-mounting/fuse>` related volume types and
 #. :ref:`Dokany <desktop/vault-mounting/dokany>` volume type
 
-Each combination of operating system and adapter has its own set of settings and its benefits & drawbacks.
+Each volume type has its own requirements, settings, benefits & drawbacks.
 
 
 .. _desktop/vault-mounting/general-volume-type-selection:
@@ -53,11 +53,11 @@ This volume uses the Windows command `net use <https://learn.microsoft.com/en-us
 By default unlocked vaults are mounted as a network drive to a drive letter.
 Using WebDAV on Windows has the following drawbacks:
 
-    * the size of transferred files is set to a maximum of 4GB
+    * the size of transferred files is restricted to a maximum of 4GB
     * the total and free space of the network drive shown in the explorer equals the C: drive, albeit not true
 
-Additionally, sometimes mounting fails with ``System error 67 has occurred. The network name cannot be found.`` (or its translations).
-If it happens, follow you can follow the guide TODO to get access again.
+.. Additionally, sometimes mounting fails with ``System error 67 has occurred. The network name cannot be found.`` (or its translations).
+.. If it happens, follow you can follow the guide TODO to get access again.
 
 .. _desktop/vault-mounting/webdav/applescript:
 
@@ -68,8 +68,8 @@ WebDAV (AppleScript)
 
 This volume uses the scripting language `AppleScript`.
 By default unlocked vaults are mounted to `/Volumes`.
-In certain environments, mounting fails with the message ``osascript: can't open default scripting component``.
-The cause is unclear, but there are suggestions, that third party applications/drivers block the execution.
+.. In certain environments, mounting fails with the message ``osascript: can't open default scripting component``.
+.. The cause is unclear, but there are suggestions, that third party applications/drivers block the execution.
 
 .. _desktop/vault-mounting/webdav/gio:
 
@@ -79,10 +79,10 @@ WebDAV (gio)
 **Requirements:** Linux, ``gio`` installed
 
 Due to the wide variety of  Linux distributions, Cryptomator does only support a direct system integration with the GNOME tool `gio <https://manpage.me/?gio>`_.
-If ``gio`` is not installed, unlock your vault with the :ref:`desktop/vault-mounting/webdav/server-only` and read for your Linux distro how to integrate WebDAV shares.
+If ``gio`` is not installed, unlock your vault with the :ref:`desktop/vault-mounting/webdav/http-address` and read for your Linux distro how to integrate WebDAV shares.
 
 
-.. _desktop/vault-mounting/webdav/server-only:
+.. _desktop/vault-mounting/webdav/http-address:
 
 WebDAV (HTTP Address)
 ^^^^^^^^^^^^^^^^^^^^^
@@ -100,6 +100,7 @@ FUSE Related Volume Types
 
 Filesystem in USErspace (`FUSE <https://en.wikipedia.org/wiki/Filesystem_in_Userspace>`_) is a filesystem interface originally developed for Unix operating systems that lets non-privileged users create their own file systems without editing kernel code.
 It is now supported on all major desktop OS'ses.
+In general FUSE volume types have a very good performance.
 
 All FUSE related volume types support additional, custom mount options.
 Every option must be prefixed with ``-o`` when specified, i.e. if you want to specify ``allow_other``, you enter ``-oallow_other``.
