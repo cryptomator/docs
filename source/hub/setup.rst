@@ -72,7 +72,6 @@ If you don't have a running Traefik deployment and want to use Docker Compose to
           - '--global.checknewversion=false'
           - '--global.sendanonymoususage=false'
           - '--ping'
-          - '--providers.file.watch=true'
         ports:
           - '80:80'
           - '443:443'
