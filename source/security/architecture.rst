@@ -120,23 +120,22 @@ File Header Encryption
     The following section only applies to vaults with the cipher combo ``SIV_GCM`` in the decoded JWT payload. For vaults with ``SIV_CTRMAC``, have a look at our `1.6 documentation <https://docs.cryptomator.org/en/1.6/security/architecture/#file-header-encryption>`_.
 
 The file header stores certain metadata, which is needed for file content encryption.
-It consists of 88 bytes.
+It consists of 68 bytes.
 
-* 16 bytes nonce used during header payload encryption.
+* 12 bytes nonce used during header payload encryption.
 * 40 bytes `AES-GCM <https://en.wikipedia.org/wiki/Galois/Counter_Mode>`_ encrypted payload consisting of:
 
     * 8 bytes filled with 1 for future use (formerly used for file size) and
     * 32 bytes file content key.
 
-* 32 bytes header MAC of the previous 56 bytes.
+* 16 bytes tag of the encrypted payload.
 
 .. code-block:: console
 
-    headerNonce := createRandomBytes(16)
+    headerNonce := createRandomBytes(12)
     contentKey := createRandomBytes(32)
     cleartextPayload := 0xFFFFFFFFFFFFFFFF . contentKey
-    ciphertextPayload := aesCtr(cleartextPayload, encryptionMasterKey, headerNonce)
-    mac := hmacSha256(headerNonce . ciphertextPayload, macMasterKey)
+    ciphertextPayload, tag := aesGcm(cleartextPayload, encryptionMasterKey, headerNonce)
 
 .. figure:: ../img/security/file-header-encryption@2x.png
     :alt: File Header Encryption
@@ -153,16 +152,14 @@ File Content Encryption
 
 This is where your actual file contents get encrypted.
 
-The cleartext is broken down into multiple chunks, each up to 32 KiB + 48 bytes consisting of:
+The cleartext is broken down into multiple chunks, each up to 32 KiB + 28 bytes consisting of:
 
-* 16 bytes nonce,
+* 12 bytes nonce,
 * up to 32 KiB encrypted payload using AES-GCM with the file content key, and
-* 32 bytes MAC consisting of:
+* 16 bytes tag computed by GCM with the following AAD:
 
+    * chunk number as 32 bit big endian integer (to prevent undetected reordering),
     * file header nonce (to bind this chunk to the file header),
-    * chunk number as 8 byte big endian integer (to prevent undetected reordering),
-    * nonce, and
-    * encrypted payload.
 
 Afterwards, the encrypted chunks are joined preserving the order of the cleartext chunks.
 The payload of the last chunk may be smaller than 32 KiB.
@@ -171,10 +168,10 @@ The payload of the last chunk may be smaller than 32 KiB.
 
     cleartextChunks[] := split(cleartext, 32KiB)
     for (int i = 0; i < length(cleartextChunks); i++) {
-        chunkNonce := createRandomBytes(16)
-        ciphertextPayload := aesCtr(cleartextChunks[i], contentKey, chunkNonce)
-        mac := hmacSha256(headerNonce . bigEndian(i) . chunkNonce . ciphertextPayload, macMasterKey)
-        ciphertextChunks[i] := chunkNonce . ciphertextPayload . mac
+        chunkNonce := createRandomBytes(12)
+        aad := [bigEndian(i), headerNonce]
+        ciphertextPayload, tag := aesGcm(cleartextChunks[i], contentKey, chunkNonce, aad)
+        ciphertextChunks[i] := chunkNonce . ciphertextPayload . tag
     }
     ciphertextFileContent := join(ciphertextChunks[])
 
