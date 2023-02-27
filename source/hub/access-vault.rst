@@ -1,6 +1,9 @@
 Working with Vaults
 ===================
 
+.. note:: Vaults created with Hub are unlocked with the regular Cryptomator apps for desktop, Android and iOS. They can be downloaded `here <https://cryptomator.org/downloads/>`_.
+
+
 This section describes exemplarily how to unlock a vault in the Desktop app. Android and iOS work analogously.
 
 As described in :ref:`open an existing vault <desktop/adding-vaults/open-an-existing-vault>`, you should have already added the vault to the vault list, e.g., by selecting the `vault.cryptomator` file.
