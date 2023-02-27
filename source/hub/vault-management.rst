@@ -37,11 +37,13 @@ Fill out the form and complete the setup by clicking the ``Create Vault`` button
     The vault password is needed to grant or revoke access to the vault. It is not used to unlock the vault in Cryptomator apps.
 
 When the setup is finished, you have the opportunity to download the initial vault template and place it in your desired cloud storage location.
+You can unlock the vault and place data inside with `Cryptomator <https://cryptomator.org/downloads/>`_.
 If you skip this step, you can download the template :ref:`later <hub/vault-management/manage-vault>`.
 
 .. image:: ../img/hub/create-vault-download.png
     :alt: Download vault template
     :width: 920px
+
 
 .. _hub/vault-management/vault-details:
 
