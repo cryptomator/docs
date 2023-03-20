@@ -163,7 +163,7 @@ Infos about supported custom options can be found in the `WinFsp repository <htt
 .. note:: Vaults mounted to a drive letter are only accessible to the `current user`. If you want to access the vault as a different/elevated user, use either
 
     - the UNC path if using WinFsp (e.g, ``\\cryptomator-vault\secretFiles`` for a vault named "secretFiles"),
-    - or mount to a directory if using WinFsp (Local Drive).
+    - or :ref:`mount to a directory <desktop/vault-management/vault-options>` if using WinFsp (Local Drive).
 
 
 .. _desktop/vault-mounting/fuse/macFUSE:
