@@ -51,6 +51,8 @@ You can select here if the vault is unlocked as soon as Cryptomator starts.
 
 2. Mounting - All options about where and how you can access your unlocked vault
 
+.. note:: The mount options depend on the selected :ref:`volume type <desktop/volume-type/general-volume-type-selection>`
+
 .. image:: ../img/desktop/vault-options-mounting.png
     :alt: Vault options for mounting
 

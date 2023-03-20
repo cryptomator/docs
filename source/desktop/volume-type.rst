@@ -4,14 +4,14 @@ Volume Type
 After a vault is unlocked, it is integrated (also called mounted) into the operating system to be conveniently accessible for you as a virtual drive.
 Cryptomator offers different ways of mounting, called *volume types*, which can be differentiated in three categories:
 
-#. :ref:`WebDAV <desktop/vault-mounting/webdav>` related volume types
-#. :ref:`FUSE <desktop/vault-mounting/fuse>` related volume types and
-#. :ref:`Dokany <desktop/vault-mounting/dokany>` volume type
+#. :ref:`WebDAV <desktop/volume-type/webdav>` related volume types
+#. :ref:`FUSE <desktop/volume-type/fuse>` related volume types and
+#. :ref:`Dokany <desktop/volume-type/dokany>` volume type
 
 Each volume type has its own requirements, settings, benefits & drawbacks.
 
 
-.. _desktop/vault-mounting/general-volume-type-selection:
+.. _desktop/volume-type/general-volume-type-selection:
 
 General Volume Type Selection
 -----------------------------
@@ -29,7 +29,7 @@ Some volume types allow specifying custom mount options.
 If supported, these options are specifed for each vault individually in the |VaultOptions|_ , mounting tab.
 
 
-.. _desktop/vault-mounting/webdav:
+.. _desktop/volume-type/webdav:
 
 WebDAV Related Volume Types
 ---------------------------
@@ -42,7 +42,7 @@ Since WebDAV starts a local server, it needs a port to communicate with the loca
 If the port of the local server is already in use, you can change it in the general preferences, virtual volume tab.
 
 
-.. _desktop/vault-mounting/webdav/explorer:
+.. _desktop/volume-type/webdav/explorer:
 
 WebDAV (Windows Explorer)
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -59,7 +59,7 @@ Using WebDAV on Windows has the following drawbacks:
 .. Additionally, sometimes mounting fails with ``System error 67 has occurred. The network name cannot be found.`` (or its translations).
 .. If it happens, follow you can follow the guide TODO to get access again.
 
-.. _desktop/vault-mounting/webdav/applescript:
+.. _desktop/volume-type/webdav/applescript:
 
 WebDAV (AppleScript)
 ^^^^^^^^^^^^^^^^^^^^
@@ -71,7 +71,7 @@ By default unlocked vaults are mounted to `/Volumes`.
 .. In certain environments, mounting fails with the message ``osascript: can't open default scripting component``.
 .. The cause is unclear, but there are suggestions, that third party applications/drivers block the execution.
 
-.. _desktop/vault-mounting/webdav/gio:
+.. _desktop/volume-type/webdav/gio:
 
 WebDAV (gio)
 ^^^^^^^^^^^^
@@ -79,10 +79,10 @@ WebDAV (gio)
 **Requirements:** Linux, ``gio`` installed
 
 Due to the wide variety of  Linux distributions, Cryptomator does only support a direct system integration with the GNOME tool `gio <https://manpage.me/?gio>`_.
-If ``gio`` is not installed, unlock your vault with the :ref:`desktop/vault-mounting/webdav/http-address` and read for your Linux distro how to integrate WebDAV shares.
+If ``gio`` is not installed, unlock your vault with the :ref:`desktop/volume-type/webdav/http-address` and read for your Linux distro how to integrate WebDAV shares.
 
 
-.. _desktop/vault-mounting/webdav/http-address:
+.. _desktop/volume-type/webdav/http-address:
 
 WebDAV (HTTP Address)
 ^^^^^^^^^^^^^^^^^^^^^
@@ -93,7 +93,7 @@ This volume type is always present and can be used, if any other volume type fai
 It simply starts the above mentioned local-only WebDAV server, which can be manually integrated into the system or accessed by a third party application (e.g., `CyberDuck <https://cyberduck.io/>`_).
 
 
-.. _desktop/vault-mounting/fuse:
+.. _desktop/volume-type/fuse:
 
 FUSE Related Volume Types
 -------------------------
@@ -106,7 +106,7 @@ All FUSE related volume types support additional, custom mount options.
 Every option must be prefixed with ``-o`` when specified, i.e. if you want to specify ``allow_other``, you enter ``-oallow_other``.
 
 
-.. _desktop/vault-mounting/fuse/fuse:
+.. _desktop/volume-type/fuse/fuse:
 
 FUSE
 ^^^^
@@ -126,7 +126,7 @@ Infos about the FUSE custom mount options on Linux can be found in the `man page
 .. _VaultOptions: ./vault-management.html#vault-options
 
 
-.. _desktop/vault-mounting/fuse/fuse-t:
+.. _desktop/volume-type/fuse/fuse-t:
 
 FUSE-T
 ^^^^^^
@@ -148,7 +148,7 @@ Infos about supported custom options can be found in the `wiki of the osxfuse pr
 
     Support for FUSE-T is currently experimental, due to the young age of the project.
 
-.. _desktop/vault-mounting/fuse/winfsp:
+.. _desktop/volume-type/fuse/winfsp:
 
 WinFsp / WinFsp (Local Drive)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -166,7 +166,7 @@ Infos about supported custom options can be found in the `WinFsp repository <htt
     - or :ref:`mount to a directory <desktop/vault-management/vault-options>` if using WinFsp (Local Drive).
 
 
-.. _desktop/vault-mounting/fuse/macFUSE:
+.. _desktop/volume-type/fuse/macFUSE:
 
 macFUSE
 ^^^^^^^
@@ -184,14 +184,14 @@ Infos about supported custom options can be found in the `macFUSE wiki <https://
     Apple has deprecated the OS APIs used by macFUSE since macOS 12.3 and made installation difficult. We suggest to try out FUSE-T and only fallback to macFUSE, if problems arise.
 
 
-.. _desktop/vault-mounting/dokany:
+.. _desktop/volume-type/dokany:
 
 Dokany
 ------
 
 .. warning::
 
-    With version 1.7.0 Dokany support in Cryptomator is deprecated. We suggest to switch to :ref:`desktop/vault-mounting/fuse/winfsp`.
+    With version 1.7.0 Dokany support in Cryptomator is deprecated. We suggest to switch to :ref:`desktop/volume-type/fuse/winfsp`.
 
 **Requirements:** Windows, Dokany 1.5.1 installed
 
