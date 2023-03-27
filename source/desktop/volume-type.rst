@@ -26,7 +26,7 @@ If you change it, you need to restart the app in order to use the new volume typ
 
 The choices in the drop down menu depend on your OS and if certain libraries (e.g., macFUSE) are installed.
 Some volume types allow specifying custom mount options.
-If supported, these options are specifed for each vault individually in the |VaultOptions|_ , mounting tab.
+If supported, these options are specifed for each vault individually in the :ref:`desktop/vault-management/vault-options` , mounting tab.
 
 
 .. _desktop/volume-type/webdav:
@@ -120,10 +120,7 @@ Infos about the FUSE custom mount options on Linux can be found in the `man page
 
 .. note::
 
-    The options ``allow_root`` and ``allow_other`` cannot be applied to the |VaultOptions|_ without a change to the **/etc/fuse.conf** configuration file for FUSE on your machine. Witin this file, the ``user_allow_other`` option needs to be enabled / uncommented.
-
-.. |VaultOptions| replace:: ``VaultOptions``
-.. _VaultOptions: ./vault-management.html#vault-options
+    The options ``allow_root`` and ``allow_other`` cannot be applied to the :ref:`custom mount flags <desktop/vault-management/vault-options>` without a change to the **/etc/fuse.conf** configuration file for FUSE on your machine. Witin this file, the ``user_allow_other`` option needs to be enabled / uncommented.
 
 
 .. _desktop/volume-type/fuse/fuse-t:
