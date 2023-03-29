@@ -19,7 +19,8 @@ General Volume Type Selection
 The volume type is set app wide in the general ``preferences`` of Cryptomator.
 You view the selected volume type by clicking the gears symbol in the upper right corner of the main window and change to the ``Virtual Drive`` tab.
 The selected volume type will be used to integrate unlocked vaults into the system.
-If you change it, you need to restart the app in order to use the new volume type.
+Some volume types require an app restart when changing between each other.
+A label is displayed, if such a case occurs.
 
 .. image:: ../img/desktop/preferences-virtual-drive.png
     :alt: Virtual Drive Tab in Preferences
@@ -157,10 +158,7 @@ It is installed along Cryptomator when you are using the EXE installer, otherwis
 By default unlocked vaults are mounted to a drive letter, either as a network or a local drive.
 Infos about supported custom options can be found in the `WinFsp repository <https://github.com/winfsp/winfsp/blob/c61679a35d041d843173fa3b2eba106b5ab7b01f/src/dll/fuse/fuse.c#L628-L654>`_.
 
-.. note:: Vaults mounted to a drive letter are only accessible to the `current user`. If you want to access the vault as a different/elevated user, use either
-
-    - the UNC path if using WinFsp (e.g, ``\\cryptomator-vault\secretFiles`` for a vault named "secretFiles"),
-    - or :ref:`mount to a directory <desktop/vault-management/vault-options>` if using WinFsp (Local Drive).
+.. note:: Vaults mounted to a drive letter are only accessible to the `current user`. If you want to access the vault as a different/elevated user, you have to use WinFsp (Local Drive) and :ref:`mount to a directory <desktop/vault-management/vault-options>`.
 
 
 .. _desktop/volume-type/fuse/macFUSE:
