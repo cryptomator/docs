@@ -147,7 +147,7 @@ The ``Get License`` button will direct you to an external website at cryptomator
 Requirements
 ------------
 
-Currently, we are evaluating the system requirements for Cryptomator Hub. If you can provide data, please send us an email to hub-beta@cryptomator.org.
+Currently, we are evaluating the system requirements for Cryptomator Hub. If you can provide data, please send us an email to hub@cryptomator.org.
 
 .. _hub/setup/backup:
 
