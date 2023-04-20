@@ -96,6 +96,9 @@ A search field opens up where you can search for users and groups.
 
 To add a user or group, select it from the results list and click the ``Add`` button.
 
+.. note:: 
+    Currently, users and groups can only be :ref:`managed via Keyloak<hub/setup/keycloak-administration>`.
+
 .. _hub/vault-management/updating-permission:
 
 Update Permissions

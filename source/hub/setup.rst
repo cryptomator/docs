@@ -114,7 +114,14 @@ Troubleshooting: If you encounter problems, check the log files in ``logs/traffi
 Keycloak Administration
 -----------------------
 
-Using Keycloak, you can `create users <https://www.keycloak.org/docs/latest/server_admin/index.html#proc-creating-user_server_administration_guide>`_, `delete users <https://www.keycloak.org/docs/latest/server_admin/index.html#proc-creating-user_server_administration_guide>`_, `manage groups <https://www.keycloak.org/docs/latest/server_admin/index.html#proc-managing-groups_server_administration_guide>`_, and optionally also synchronize users/groups to Keycloak using `LDAP <https://www.keycloak.org/docs/latest/server_admin/#_ldap>`_ to whom you can then give access to vaults in Hub.   
+User and group management is done via Keycloak. 
+You can access the Keycloak management interface over the admin section of Hub.
+
+.. image:: ../img/hub/access-keycloak-link.png
+    :alt: Accessing Keycloak via Hub
+    :width: 920px
+
+There you can `create users <https://www.keycloak.org/docs/latest/server_admin/index.html#proc-creating-user_server_administration_guide>`_, `delete users <https://www.keycloak.org/docs/latest/server_admin/index.html#proc-creating-user_server_administration_guide>`_, `manage groups <https://www.keycloak.org/docs/latest/server_admin/index.html#proc-managing-groups_server_administration_guide>`_, and optionally also synchronize users/groups to Keycloak using `LDAP <https://www.keycloak.org/docs/latest/server_admin/#_ldap>`_ to whom you can then give access to vaults in Hub.   
 Other identity providers such as ``OpenID Connect`` or ``SAML`` can also be used. However, they work slightly differently: With ``LDAP``, all users and groups are imported and synchronised with Keycloak, so they are available immediately after setup. With ``OpenID Connect`` or ``SAML``, users are unknown to Keycloak and Hub until they log in. This is why we strongly recommend using ``LDAP``.
 
 In Keycloak you will find a user called ``syncer``. It is used to synchronise all users and groups from Keycloak to Hub, so please do not delete or change it.
