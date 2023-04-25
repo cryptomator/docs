@@ -36,6 +36,12 @@ Fill out the form and complete the setup by clicking the ``Create Vault`` button
 .. note::
     The vault password is needed to grant or revoke access to the vault. It is not used to unlock the vault in Cryptomator apps.
 
+As with a normal Cryptomator vault a *recovery key* is derived for each vault. This key ensures that you can access the vault again if the vault administrator password is lost or Cryptomator Hub does not work as expected. Read :ref:`here <hub/vault-recovery>` more about the vault recovery process. It is a human readable form of the decrypted :ref:`masterkey <security/architecture/masterkey-derivation>` and therefore independent of the key management in Cryptomator Hub and highly confidential.
+
+.. image:: ../img/hub/create-vault-recoverykey.png
+    :alt: Save vault recoverykey
+    :width: 920px
+
 When the setup is finished, you have the opportunity to download the initial vault template and place it in your desired cloud storage location.
 You can unlock the vault and place data inside with `Cryptomator <https://cryptomator.org/downloads/>`_.
 If you skip this step, you can download the template :ref:`later <hub/vault-management/manage-vault>`.
