@@ -1,49 +1,52 @@
 Setup
 =====
 
-You can start using Cryptomator by simply downloading it for free from our `downloads page <https://cryptomator.org/downloads>`_.
-Please choose the appropriate download for your operating system and check the minimum system requirements.
+The Desktop version of Cryptomator is currently available for Windows, macOS, and Linux. 
+Download and installation process varies depending on your operating system, follow the instructions for your operating system.
+Ensure that your computer's specifications meet the system requirements required to run Cryptomator smoothly.
 
 .. note::
 
-    You can find older releases as well as detailed changelogs in the `GitHub releases section <https://github.com/cryptomator/cryptomator/releases>`_.
-
-After downloading, the installation process depends on your operating system.
-
+    We maintain archives of all Cryptomator versions along with detailed changelogs on our `GitHub releases page <https://github.com/cryptomator/cryptomator/releases>`_.
 
 .. _desktop/setup/windows:
 
-Windows
--------
+|
 
-Launch the downloaded ``.exe`` file and follow the setup as usual.
-We recommend also installing *Dokany*, which is included in the installer.
+Install Cryptomator on Windows
+------------------------------
 
-.. note::
+1. Download Cryptomator's ``.exe`` installer for Windows from our `downloads page <https://cryptomator.org/downloads>`_.
+2. Launch the ``.exe`` installer.
+3. Follow the on-screen instructions.
 
-    If you are updating Cryptomator by installing a new version and additionally want to update Dokany, you need to remove the old Dokany version first, restart the PC, and then execute the Cryptomator installer.
-
+|
 
 .. _desktop/setup/macos:
 
-macOS
------
+Install Cryptomator on macOS
+----------------------------
 
-Open the downloaded ``.dmg`` file, accept the license, and drag & drop Cryptomator onto the Applications folder.
-We recommend also installing *FUSE for macOS*, which is linked from inside the ``.dmg`` file.
+1. Download Cryptomator's ``.dmg`` installer for macOS from our `downloads page <https://cryptomator.org/downloads>`_.
+2. Launch the ``.dmg`` installer.
+3. Accept the license.
+4. Drag & drop Cryptomator into the Applications folder.
+
+*FUSE-T for macOS* needs to be installed alongside Cryptomator to make file browsing integrations possible.
+We have included *FUSE-T for macOS* with the ``.dmg`` installer, so you don't need to install it seperately.
 
 .. note::
 
-    In case the application is blocked by Gatekeeper, you need to change your `Gatekeeper settings <https://support.apple.com/HT202491>`_.
-
+    Change your `Gatekeeper settings <https://support.apple.com/HT202491>`_ if macOS blocks Cryptomator's installation.
 
 .. _desktop/setup/linux:
 
-Linux
------
+Install Cryptomator on Linux
+----------------------------
 
-The primary option of using Cryptomator on Linux is via the AppImage.
-After you've downloaded the ``.appimage`` file, you simple need to `make it executable <https://docs.appimage.org/user-guide/run-appimages.html#running-appimages>`_ and you can then run it.
+Cryptomator is available on Linux via ``Flatpak``, ``PPA`` and ``AUR`` package managers, and as an AppImage (an ``.appimage`` file).
 
-If you are familiar with ``Flatpak``, ``PPA`` or ``AUR``, you can choose one of these options to install Cryptomator.
-The coordinates are available on our download page.
+The easiest and recommended way of installing Cryptomator on Linux is by downloading Cryptomator's AppImage (an ``.appimage`` file) - as it works on almost all distrubtions. 
+Just remember to `make it executable <https://docs.appimage.org/user-guide/run-appimages.html#running-appimages>`_ before you try to run it.
+
+Visit our `downloads page <https://cryptomator.org/downloads>`_ to choose your preferred installation method.

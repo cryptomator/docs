@@ -1,9 +1,9 @@
 Vault Management
 ================
 
-A *vault* is the fundamental object in Cryptomator.
-Like the term suggests, it represents the single location where all files inside this vault are stored encrypted.
-From the perspective of your operating system it is a normal directory containing at least two files and one directory:
+A *vault* is where your files are stored encrypted.
+For your operating system or other apps a vault is a just a normal directory containing some encrypted files.
+Only Cryptomator understands can decrypt the vault's contents when you unlock it using a password.
 
 
 .. _desktop/vault-management/remove-vaults:
@@ -11,12 +11,12 @@ From the perspective of your operating system it is a normal directory containin
 Remove Vaults
 -------------
 
-You can remove a vault from the vault list by right clicking on the list entry. This is only possible while the vault is locked. 
+To remove a vault from the vault list, right click on a vault, and click remove. 
+This is only possible if the vault is locked.
 
 .. note::
 
-    By removing a vault from this list, it is **not** deleted from your filesystem.
-    To irrevocably get rid of the vault, you can simply delete the vault directory (which contains your ``masterkey.cryptomator`` and the ``d`` directory) using your normal file manager.
+    The vault's is **not** deleted from your PC by removing it from the list. You need to delete the vault directory to permentantly delete your encrypted files using the file manager.
 
 
 .. _desktop/vault-management/reorder-vaults:
@@ -24,7 +24,7 @@ You can remove a vault from the vault list by right clicking on the list entry. 
 Reorder Vaults
 --------------
 
-You can change the order of your vaults by dragging them to the desired position.
+You can change the order of the vaults in the list by dragging them.
 
 .. image:: ../img/desktop/move-vaults.gif
     :alt: How to reorder vaults
@@ -35,28 +35,27 @@ You can change the order of your vaults by dragging them to the desired position
 Vault Options
 -------------
 
-Each vault has an own set of settings which can be viewed and customized in the vault options window.
-To open it, select in the main window the *locked* vault in question and click the ``Vault Options`` button with the gear.
+Each vault has it's own settings which can be customized under vault options.
+To open a vault's settings, select a vault, lock it, and click on ``Vault Options`` (gear icon).
 
 
-The options are divided in three categories:
+The options are divided across three categories:
 
-1. General - Options not fitting into another category
+1. General - Options not fitting in other categories
 
-You can select here if the vault is unlocked as soon as Cryptomator starts.
+You can select this option if the vault is unlocked as soon as Cryptomator starts.
 
 .. image:: ../img/desktop/vault-options-general.png
     :alt: General vault options
 
-
-2. Mounting - All options about where and how you can access your unlocked vault
+2. Mounting - Settings that manage how and where a vault is mounted.
 
 .. note:: The mount options depend on the selected :ref:`volume type <desktop/volume-type/general-volume-type-selection>`
 
 .. image:: ../img/desktop/vault-options-mounting.png
     :alt: Vault options for mounting
 
-3. Password - Options and actions regarding your vault password and the recovery key
+3. Password - Here you can manage the vault's password and recovery key.
 
 .. image:: ../img/desktop/vault-options-password.png
     :alt: Vault options regarding the password
@@ -64,7 +63,7 @@ You can select here if the vault is unlocked as soon as Cryptomator starts.
 
 
 
-For |Mounting|_ and |Password|_ we refer to the regarding sections.
+Take a look at the |Mounting|_ and |Password|_ sections to understand how vault mounting and passwords work.
 
 .. |Mounting| replace:: ``Mounting``
 .. _Mounting: ./vault-mounting.html
