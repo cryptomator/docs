@@ -125,3 +125,17 @@ If a member of this vault registers a new device or still has unauthorized devic
 .. image:: ../img/hub/update-permission.png
     :alt: Update permissions in the management section of vault details
     :width: 920px
+
+
+.. _hub/vault-management/import-vault:
+
+Import a Vault
+--------------
+
+If you have a existing, password-based Cryptomator vault and want to switch to centralized, password-less user access management, you can import the vault in Cryptomator Hub.
+For a successful import, the :ref:`recovery key<desktop/password-and-recovery-key/show-recovery-key>` of the vault and write access to its storage location is needed
+
+The import is done via the Hub vault recovery feature.
+Follow the :ref:`vault online recovery guide <hub/vault-recovery/online-recovery>` and use the recovery key of the password-based vault in the process.
+Don't forget to replace the vault config file ``vault.cryptomator`` at the vault storage location at the end.
+Finally, to ensure that the vault cannot be unlocked with its old password anymore, remove the file ``masterkey.cryptomator`` and all backup files ( ending with ``.bkup``).
