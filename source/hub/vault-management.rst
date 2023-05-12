@@ -120,7 +120,9 @@ To add a user or group, select it from the results list and click the ``Add`` bu
 Update Permissions
 """"""""""""""""""
 
-If a member of this vault registers a new device or still has unauthorized devices, an admin of the vault has to grant access to these devices explicitly. Only then, the user can unlock the vault with the device. As a vault admin, you can see that an update is necessary when an ``Update Permissions`` button appears.
+If a member of this vault registers a new device or still has unauthorized devices, an admin of the vault has to grant access to these devices explicitly.
+Only then, the user can unlock the vault with the device.
+As a vault admin, you can see that an update is necessary when an ``Update Permissions`` button appears.
 
 .. image:: ../img/hub/update-permission.png
     :alt: Update permissions in the management section of vault details
