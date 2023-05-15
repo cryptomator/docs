@@ -146,7 +146,7 @@ Info on custom mount options is available at `wiki of the FUSE-T project <https:
 
 .. note::
 
-    FUSE-T is a new project, so you may come across bugs here and there.
+    FUSE-T is a new project, so support for it is currently marked as experimental. Be sure to keep FUSE-T up to date to benefit from the latest improvements.
 
 .. _desktop/volume-type/fuse/winfsp:
 
@@ -155,7 +155,7 @@ WinFsp / WinFsp (Local Drive)
 
 **Requirements:** Windows, WinFsp installed
 
-FUSE with WinFsp depends on a library provided by the `WinFsp project <https://winfsp.dev/>`_.
+The `WinFsp project <https://winfsp.dev/>`_ provides FUSE bindings for Windows.
 WinFsp is automatically installed along Cryptomator when you are using the EXE installer, but there's also a WinFsp standalone installer `here <https://winfsp.dev/rel/>`_ if you ever need it.
 
 
@@ -192,7 +192,7 @@ Dokany
 
 .. warning::
 
-    Dokany support in Cryptomator is deprecated since version 1.7.0. We suggest a to switch to :ref:`desktop/volume-type/fuse/winfsp`.
+    Dokany support in Cryptomator is deprecated since version 1.7.0. We suggest to switch to :ref:`desktop/volume-type/fuse/winfsp`.
 
 **Requirements:** Windows, Dokany 1.5.1 installed
 
