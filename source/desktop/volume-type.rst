@@ -1,7 +1,7 @@
 Volume Type
 ===========
 
-When a vault is unlocked it is integrated (also called mounted) into the operating system as a virtual drive, so you can browse the decrypted files.
+When a vault is unlocked, it is integrated (also called mounted) into the operating system as a virtual drive, so you can browse the decrypted files.
 Cryptomator currently offers three *volume types* used for mounting a vault. 
 Each volume type has its own requirements, settings, benefits, and drawbacks.
 
@@ -17,13 +17,13 @@ Default Volume Type
 
 Cryptomator allows you to select a default volume type to be used every time you unlock a vault.
 You can set a default volume type by navigating to ``Preferences`` (gear icon at top right), then ``Virtual Drive``.
-The availabe volume types depend on your operating system and if required libraries are installed (e.g., macFUSE-T).
+The availabe volume types depend on your operating system and if required libraries are installed (e.g., FUSE-T).
 Some volume type changes require an app restart, and you will be notified if a restart is required.
 
 .. image:: ../img/desktop/preferences-virtual-drive.png
     :alt: Virtual Drive Tab in Preferences
 
-Volume types, like WebDAV, etc, allow specifying custom mount options.
+Some volume types allow specifying custom mount options.
 If supported, these options can be set for each vault individually in :ref:`desktop/vault-management/vault-options`, under the mounting tab.
 
 
@@ -33,7 +33,7 @@ WebDAV Volume Type
 ------------------
 
 WebDAV is a standardized `communication protocol <https://en.wikipedia.org/wiki/WebDAV>`_ used to perform operations on resources (files, directories/folders) between a client (you) and a server (your local computer).
-WebDAV was intended for remote access, but Cryptomator uses it to start a local only webserver which you can use to browse your decrypted files.
+WebDAV was intended for remote access, but Cryptomator uses it to start a local-only server which you can use to browse your decrypted files.
 
 You can tweak WebDAV's settings for each vault by navigating to `Cryptomator Preferences` -> `Virtual Drive` .
 
@@ -47,7 +47,7 @@ WebDAV (Windows Explorer)
 
 **Requirements:** Windows
 
-WebDAV on Windows uses the `net use <https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/gg651155(v=ws.11)>`_ command to handle WebDAV operations.
+WebDAV on Windows uses the `net use <https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/gg651155(v=ws.11)>`_ command to mount/unmount the virtual drive.
 By default, unlocked vaults are mounted as a network drive and assigned a random drive letter.
 Using WebDAV on Windows has the following drawbacks:
 
@@ -65,7 +65,7 @@ WebDAV (AppleScript)
 
 **Requirements:** macOS
 
-WebDAV on utlizes the scripting language `AppleScript` to handle WebDAV operations.
+WebDAV on macOS utlizes the scripting language `AppleScript` to mount/unmount the virtual drive.
 By default, unlocked vaults are mounted to `/Volumes`.
 
 .. In certain environments, mounting fails with the message ``osascript: can't open default scripting component``.
@@ -79,8 +79,8 @@ WebDAV (gio)
 **Requirements:** Linux, ``gio`` installed
 
 Due to the wide variety of Linux distributions, Cryptomator only supports system integrated WebDAV volume type if `gio <https://manpage.me/?gio>`_ is installed.
-You can unlock your vault without ``gio`` using :ref:`desktop/volume-type/webdav/http-address`, but support across distributions is not gurranteed.
-Also, it's upto yourself to figure out how to integrate WebDAV share with your distro.
+You can unlock your vault without ``gio`` using :ref:`desktop/volume-type/webdav/http-address`, but support across distributions is not guaranteed.
+Also, it's up to yourself to figure out how to integrate WebDAV share with your distro.
 
 .. _desktop/volume-type/webdav/http-address:
 
@@ -91,7 +91,7 @@ WebDAV (HTTP Address)
 **Requirements:** None
 
 This volume type is always present and comes in handy when all other volume types fails to mount.
-It starts the above mentioned local-only WebDAV server, which can be manually integrated into the system or accessed using a third party application, like `CyberDuck <https://cyberduck.io/>`_).
+It starts the above mentioned local-only WebDAV server, which can be manually integrated into the system or accessed using a third-party application, like `Cyberduck <https://cyberduck.io/>`_).
 
 
 .. _desktop/volume-type/fuse:
@@ -142,7 +142,7 @@ You can install it using brew:
     brew install fuse-t
 
 By default, unlocked vaults are mounted to `/Volumes`.
-Info on custom mount options is available at `wiki of the osxfuse project <https://github.com/osxfuse/osxfuse/wiki/Mount-options>`_.
+Info on custom mount options is available at `wiki of the FUSE-T project <https://github.com/macos-fuse-t/fuse-t/wiki#supported-mount-options>`_.
 
 .. note::
 

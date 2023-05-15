@@ -2,8 +2,8 @@ Vault Management
 ================
 
 A *vault* is where your files are stored encrypted.
-For your operating system or other apps a vault is a just a normal directory containing some encrypted files.
-Only Cryptomator understands can decrypt the vault's contents when you unlock it using a password.
+For your operating system or other apps, a vault is a just a normal directory containing some encrypted files.
+Only Cryptomator can decrypt the vault's contents when you unlock it using a password.
 
 
 .. _desktop/vault-management/remove-vaults:
@@ -16,7 +16,7 @@ This is only possible if the vault is locked.
 
 .. note::
 
-    The vault's is **not** deleted from your PC by removing it from the list. You need to delete the vault directory to permentantly delete your encrypted files using the file manager.
+    The vault is **not** deleted from your PC by removing it from the list. If you wish to permanently delete your encrypted files, you need to delete the vault directory using the file manager.
 
 
 .. _desktop/vault-management/reorder-vaults:
@@ -35,13 +35,13 @@ You can change the order of the vaults in the list by dragging them.
 Vault Options
 -------------
 
-Each vault has it's own settings which can be customized under vault options.
-To open a vault's settings, select a vault, lock it, and click on ``Vault Options`` (gear icon).
+Each vault has its own settings which can be customized under vault options.
+To open a vault's settings, select a vault, lock it, and click on ``Vault Options``.
 
 
 The options are divided across three categories:
 
-1. General - Options not fitting in other categories
+1. General - Options not fitting in other categories.
 
 You can select this option if the vault is unlocked as soon as Cryptomator starts.
 

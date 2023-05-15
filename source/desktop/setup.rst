@@ -2,7 +2,7 @@ Setup
 =====
 
 The Desktop version of Cryptomator is currently available for Windows, macOS, and Linux. 
-Download and installation process varies depending on your operating system, follow the instructions for your operating system.
+Download and installation process varies depending on your operating system. Follow the instructions for your operating system.
 Ensure that your computer's specifications meet the system requirements required to run Cryptomator smoothly.
 
 .. note::

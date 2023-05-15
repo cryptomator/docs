@@ -23,7 +23,7 @@ You will be presented with two options when adding a vault:
 Create a New Vault
 ------------------
 
-If you chose to create a new vault, the wizard will guide you through a simple 5 step vault creation process.
+If you chose to create a new vault, the wizard will guide you through a simple 5-step vault creation process.
 
 
 .. _desktop/adding-vaults/1.-choose-a-name:
@@ -76,15 +76,15 @@ The bar below the password field will help you estimate the strength of your pas
     Additionally, we recommend sharing passwords only over a secure channel, like PGP encypted emails, or end-to-end encrypted chat apps.
 
 .. image:: ../img/desktop/add-vault-3.png
-    :alt: choose a strong password for your Cryptomator vault
+    :alt: Choose a strong password for your Cryptomator vault
 
 .. warning::
 
     Nobody except you knows this password, and we also cannot "reset" it for you. 
-    Without a vaild password your files can't be decrypted and will become inaccssible. 
+    Without a vaild password, your files can't be decrypted and will become inaccessible. 
     So, store your password in a secure password manager or just don't forget it. 
     
-    Nevertheless you reset a vault's password by yourself if you have it's *recovery key*.
+    However, you can reset a vault's password by yourself if you have its *recovery key*.
 
 
 .. _desktop/adding-vaults/4.-show-recovery-key-(optional-step):

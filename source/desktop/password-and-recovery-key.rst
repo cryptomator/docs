@@ -2,18 +2,18 @@ Password And Recovery Key
 =========================
 
 This section explains how to change a password for a vault, show its recovery key, and reset a password.
-But, before that let's understand how Cryptomator encrypts a vault using a password and what is a recovery key.
-The security of your vault is only as good as it's password because Cryptomator encrypts your vault using a key derived from your password.
+But, before that, let's understand how Cryptomator encrypts a vault using a password and what a recovery key is.
+The security of your vault is only as good as its password because Cryptomator encrypts your vault using a key derived from your password.
 So, :ref:`choosing a strong password <security/best-practices/good-passwords>` is very important.
 
-Additionally an unique *recovery key* can be derived for each vault while creating it's password or later.
+Additionally, a unique *recovery key* can be derived for each vault while creating its password or later.
 A *recovery key* allows you to create a new password if you forget the original one.
 Do note that the *recovery key* feature does not break encryption in any way.
 It is a human readable form of your decrypted :ref:`masterkey <security/architecture/masterkey-derivation>` and therefore independent of the current vault password and highly confidential.
 Keep it as safe as your password.
 
 All actions can be carried out using the ``Password`` tab under vault options.
-You can access it by selecting a vault, lock it if necessary and click on ``Vault Options``.
+You can access it by selecting a vault, lock it if necessary, and click on ``Vault Options``.
 
 .. image:: ../img/desktop/vault-options-password.png
     :alt: Vault options allowing you to enter a recovery key
@@ -24,11 +24,11 @@ You can access it by selecting a vault, lock it if necessary and click on ``Vaul
 Change Password
 ---------------
 
-To change the password of an existing vault, you need to know it's current one or have a recovery key (see reset password section).
+To change the password of an existing vault, you need to know its current one or have a recovery key (see reset password section).
 
-Navigate to the ``Vault options`` -> ``Password`` tab, and click on ``Change Password``.
+Navigate to the ``Vault Options`` -> ``Password`` tab, and click on ``Change Password``.
 
-In the opened window, you you will be asked for:
+In the opened window, you will be asked for:
 
 1. The vault's current password.
 2. A new password. We suggest following our guide on choosing a :ref:`strong password <security/best-practices/good-passwords>`.
@@ -67,25 +67,25 @@ To increase security, Cryptomator does not store the recovery key on your hard d
 
 To derive a recovery key:
 
-1. Navigate to the ``Password`` tab under ``Vault Options``
+1. Navigate to the ``Password`` tab under ``Vault Options``.
 2. Click on ``Display Recovery Key``.
 3. Enter the vault's password.
 
-A new window will open displaying a sequence of words (i.e. the recovery key).
+A new window will open displaying a sequence of words (i.e., the recovery key).
 
 .. image:: ../img/desktop/recoverykey.png
     :alt: This shows your recoverykey
 
-You can copy it to your clipboard and store it in a secure password manager or print it on a paper.
+You can copy it to your clipboard and store it in a secure password manager, or print it on paper.
 
 .. _desktop/password-and-recovery-key/reset-password:
 
 Reset Password
 --------------
 
-We cannot reset the password of a vault for you in any way. Only you can reset a vault's password, assuming you have it's recovery key. Keep it ready before you proceed.
+We cannot reset the password of a vault for you in any way. Only you can reset a vault's password, assuming you have its recovery key. Keep it ready before you proceed.
 
-1. Navigate to the ``Password`` tab under vault options.
+1. Navigate to the ``Password`` tab under ``Vault Options``.
 2. Click on ``Recover Password``.
 
 Type or paste your recovery key in the new window.
@@ -104,7 +104,7 @@ If the recovery key is valid, a small message will be displayed below the entere
 
 .. warning::
 
-    By design, *any* valid recovery key is accepted, but that does not mean *any* valid recovery key can reset the vault's password correctly. **A valid but incorrect key will make your old data inaccessible.** If that's the case, you can make it accessible by re-running the recovery mechanism with the vaild and correct recovery key.
+    By design, *only* the correct recovery key is accepted. **A valid but incorrect key won't be accepted to prevent your old data from becoming inaccessible.**
 
 Finally, assign a new password to your vault.
 It is the same process as the :ref:`vault creation <desktop/adding-vaults/3.-choose-a-passwords>`, except that no new recovery key is generated.

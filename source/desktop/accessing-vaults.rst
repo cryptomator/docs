@@ -1,7 +1,7 @@
 Accessing Vaults
 ================
 
-You can only access decrypted files of a vault if you can unlock it. Unlocking a vault is just a two step process as long as you know the password.
+You can only access decrypted files of a vault if you can unlock it. Unlocking a vault is just a two-step process as long as you know the password.
 
 .. image:: ../img/desktop/vault-detail-locked.png
     :alt: Cryptomator window showing a locked vault
@@ -16,7 +16,7 @@ Unlocking a Vault
 2. Click on the large ``Unlock`` button located at the center of the Cryptomator window.
 3. Enter your vault's password.
 
-A confirmation will be displayed iff your password is correct.
+A confirmation will be displayed if your password is correct.
 You can either close the confirmation window by clicking ``Done`` or click on ``Reveal Vault`` to show your unlocked vault in your file manager.
 
 .. image:: ../img/desktop/unlock-prompt.png
@@ -24,7 +24,7 @@ You can either close the confirmation window by clicking ``Done`` or click on ``
 
 .. note::
 
-    You can store the password in your operating system's keychain by checking the "Save Password" checkbox. There is also a `plug\-in <https://plugin.purejava.org>`_ for Cryptomator, that allows you to store Cryptomator's vault passwords in a KeePassXC database. With a saved password you can unlock your vaults without typing a password on every unlock. It's faster.
+    You can store the password in your operating system's keychain by checking the "Save Password" checkbox. There is also a `plug\-in <https://plugin.purejava.org>`_ for Cryptomator, that allows you to store Cryptomator's vault passwords in a KeePassXC database. With a saved password, you can unlock your vaults without typing a password on every unlock. It's faster.
 
 .. warning::
 
@@ -57,7 +57,7 @@ Click on ``Reveal Drive`` in the Cryptomator window to open the virtual drive us
 Locking a vault
 ---------------
 
-To lock a vault simply click ``Lock`` and the virtual drive will disappear or render empty. Your files remain encrypted at the vault's location.
+To lock a vault, simply click ``Lock`` and the virtual drive will disappear or render empty. Your files remain encrypted at the vault's location.
 
 .. image:: ../img/desktop/vault-detail-locked.png
     :alt: Cryptomator window showing an locked vault
