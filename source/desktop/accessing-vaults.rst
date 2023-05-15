@@ -40,9 +40,15 @@ You can either close the confirmation window by clicking ``Done`` or click on ``
 Manage Files and Folders in your Vault
 --------------------------------------
 
-Once unlocked, the vault's contents will be shown via an attached virtual drive on your PC.
+By default, a vault's content will be accessible via an attached virtual drive on your PC.
 So, you can manage files and folders in your unlocked vault just like you do on any other hard drive or USB drive.
-Click on ``Reveal Drive`` in the Cryptomator window to open the virtual drive using the default file manager (Windows Explorer, Finder, ...).
+
+Alternatively, a vault's content can be accessed via a directory or a WebDAV server by changing its :ref:`volume type <desktop/volume-type/general-volume-type-selection>`. 
+Click on ``Reveal Drive`` in the Cryptomator window to open the mount location using the default file manager (Windows Explorer, Finder, ...).
+
+.. note::
+
+     Even though your files are shown unencrypted in the virtual drive, they are not stored unencrypted on the hard drive but only in `volatile memory <https://en.wikipedia.org/wiki/Volatile_memory>`_
 
 .. image:: ../img/desktop/vault-detail-unlocked.png
     :alt: Cryptomator window showing an unlocked vault
