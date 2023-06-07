@@ -6,7 +6,7 @@ Volume Types
 Volume types play an important role when handling your files.
 
 When you unlock a vault, Cryptomator makes decrypted files available in your file manager by mounting a virtual drive on your operating system.
-This mounting of a virtual drive is handled differently depending on the volume type chosen in Cryptomator's settings.
+This mounting of a virtual drive is handled differently depending on the volume type chosen in Cryptomator's preferences.
 
 Cryptomator currently offers choice between three *volume types* .
 Each volume type has its own requirements, settings, benefits, and drawbacks.
@@ -47,7 +47,7 @@ Choosing a default Volume Type
 
 Cryptomator allows you to choose a default common volume type for all vaults.
 In Cryptomator's window, navigate to ``Preferences`` (gear icon at top right), then ``Virtual Drive`` to set a default volume type.
-The availability of volume types depends on your operating system and installed libraries.
+The availability of volume types depends on your operating system and installed drivers.
 You might have to restart Cryptomator when changing volume types.
 A notification will be showed if a restart is needed.
 

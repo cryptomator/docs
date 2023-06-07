@@ -32,8 +32,8 @@ Install Cryptomator on macOS
 3. Accept the license.
 4. Drag & drop Cryptomator into the Applications folder.
 
-On macOS, Cryptomator will use WebDAV volume type by default, but we recommend installing *macFUSE* or *FUSE-T* for a smoother file browsing experience.
-Install *macFUSE* if your MacBook comes with an Intel CPU or install *FUSE-T* if your MacBook comes with an Apple Silicon CPU.
+On macOS, Cryptomator will use WebDAV volume type by default if no FUSE driver is installed on the system. But we recommend installing *macFUSE* or *FUSE-T* for a smoother file browsing experience.
+Install *macFUSE* if your Mac comes with an Intel CPU or install *FUSE-T* if your Mac comes with an Apple Silicon CPU.
 
 .. note::
 
