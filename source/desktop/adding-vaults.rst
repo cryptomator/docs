@@ -1,10 +1,10 @@
 Adding Vaults
 =============
 
-If you want to add a new vault, you have essentially two options:
+You will be presented with two options when adding a vault:
 
-#. If you want to create a vault yourself, choose |CreateVault|_.
-#. If you already have a vault, for example because someone shared a vault with you via a cloud storage service, you can instead choose |OpenVault|_.
+#. |CreateVault|_ - Choose this if you wish to create a new vault.
+#. |OpenVault|_ - Choose this if you already have a vault and wish to open it.
 
 .. image:: ../img/desktop/create-or-open-vault.png
     :alt: Create a new or open an existing vault
@@ -18,10 +18,12 @@ If you want to add a new vault, you have essentially two options:
 
 .. _desktop/adding-vaults/create-a-new-vault:
 
+|
+
 Create a New Vault
 ------------------
 
-If you chose to create a new vault, the wizard will now guide you through the vault creation process.
+If you chose to create a new vault, the wizard will guide you through a simple 5-step vault creation process.
 
 
 .. _desktop/adding-vaults/1.-choose-a-name:
@@ -29,16 +31,10 @@ If you chose to create a new vault, the wizard will now guide you through the va
 1. Choose a Name
 ^^^^^^^^^^^^^^^^
 
-You start by simply choosing a name for your vault.
+Start by choosing a name for your vault.
 
 .. image:: ../img/desktop/add-vault-1.png
     :alt: Choosing "My first Vault" as a vault name
-
-.. note::
-
-    Your vault name will be used as a directory name on your file system.
-    Make sure not to use any characters that might cause problems with your setup.
-    Especially if you want to share the vault via the cloud with other users, keep in mind that these users might use different software or operating systems that might not cope well with special characters.
 
 
 .. _desktop/adding-vaults/2.-choose-a-storage-location:
@@ -46,24 +42,22 @@ You start by simply choosing a name for your vault.
 2. Choose a Storage Location
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Next, choose where you want to save your vault.
-Since a vault is just a directory containing encrypted files, you need to store it somewhere.
-Usually this would be inside your cloud-synced directory.
-But you can choose any storage location, you like.
+Next, you need to choose a directory on your PC where your vault's encrypted data will be stored.
+If you wish to sync the encrypted data to your cloud storage, then choose a cloud-synced directory.
 
-Keep in mind that Cryptomator is not a sync tool.
-You still need the software from your favourite cloud storage service.
-
-In this example I want to encrypt files that get synchronized via Dropbox.
-
-.. image:: ../img/desktop/add-vault-2.png
-    :alt: Choosing Dropbox as a storage location for my vault
+Cryptomator is not a sync tool.
+You need to install the sync software of your cloud storage provider to sync your encrypted data.
 
 .. note::
 
-    You might not see all the above options, depending on what cloud services you have installed on your PC.
-    Cryptomator tries to detect some well-known locations.
-    You can always choose ``Custom Location`` and navigate to your cloud storage directory manually.
+    Cryptomator tries to detect locations of well-known cloud sync software (see screenshot below).
+
+    The screenshot below shows multiple cloud storage locations, because we have multiple sync software installed on our device.
+    You might not see the same options, depending on which cloud services are installed on your PC, but you can always choose ``Custom Location`` and navigate to your cloud-synced directory manually.
+
+
+.. image:: ../img/desktop/add-vault-2.png
+    :alt: Choosing Dropbox as a storage location for my vault
 
 
 .. _desktop/adding-vaults/3.-choose-a-passwords:
@@ -71,23 +65,26 @@ In this example I want to encrypt files that get synchronized via Dropbox.
 3. Choose a Password
 ^^^^^^^^^^^^^^^^^^^^^
 
-Now it is time to choose a :ref:`good password <security/best-practices/good-passwords>` for your vault.
-Cryptomator requires at least 8 characters but we recommend you to use a longer phrases such as pass-sentences.
-The bar below the password field estimates the strength of your password.
+Now it is time to choose a :ref:`strong password <security/best-practices/good-passwords>` for your vault.
+Cryptomator requires at least 8 characters, but we recommend you to use longer phrases such as pass-sentences.
+The bar below the password field will help you estimate the strength of your password.
+
+.. note::
+
+    Always choose a password that's unique across your vaults and accounts.
+    This is espically important if you plan to share a vault with someone.
+    Additionally, we recommend sharing passwords only over a secure channel, like PGP encypted emails, or end-to-end encrypted chat apps.
 
 .. image:: ../img/desktop/add-vault-3.png
-    :alt: Choosing a sufficiently secure password
+    :alt: Choose a strong password for your Cryptomator vault
 
 .. warning::
 
-    Nobody except for yourself knows this password and other than you might know it from online services, nobody can "reset" your password for you.
+    Nobody except you knows this password, and we also cannot "reset" it for you. 
+    Without a vaild password, your files can't be decrypted and will become inaccessible. 
+    So, store your password in a secure password manager or just don't forget it. 
     
-.. note:: 
-    If you plan to share this vault with a different person, you will both need to know the password.
-    In this case, choose a password that is different from anything you tend to only use yourself.
-    To share the password, use an encrypted messenger or any other secure means of communication.
-
-Since we can not reset your password, we recommend you to create an additional *recovery key*.
+    However, you can reset a vault's password by yourself if you have its *recovery key*.
 
 
 .. _desktop/adding-vaults/4.-show-recovery-key-(optional-step):
@@ -95,18 +92,20 @@ Since we can not reset your password, we recommend you to create an additional *
 4. Show Recovery Key (optional step)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+A recovery key allows you to reset your password if you ever forget it.
+
 If you chose to create a recovery key in the previous step, it will now be displayed.
-Make sure not to lose it.
-Ideally make a hard copy of it.
+Make sure not to lose it and ideally make a hard copy of it.
 
 .. image:: ../img/desktop/add-vault-4.png
     :alt: Showing the recovery key
 
 .. warning::
 
-    Keep the recovery key secret. Remember, just like your password, its purpose is to gain access to your vault!
+    Remember, a recovery key is just like your password, its purpose is to gain access to your vault!
+    Keep it as safe as your password.
 
-For more details, take a look at our chapter about :ref:`how to use a recovery key <desktop/password-and-recovery-key/reset-password>`.
+For more details, take a look at :ref:`how a recovery key works <desktop/password-and-recovery-key/reset-password>`.
 
 .. _desktop/adding-vaults/5.-done:
 
@@ -116,7 +115,7 @@ For more details, take a look at our chapter about :ref:`how to use a recovery k
 That's it.
 You have successfully created a new vault.
 
-You can now unlock this vault using your password and start adding sensitive files to it.
+You can now unlock this vault using your password and start adding files into it.
 
 .. image:: ../img/desktop/add-vault-5.png
     :alt: Showing the recovery key
@@ -127,7 +126,7 @@ You can now unlock this vault using your password and start adding sensitive fil
 Open an Existing Vault
 ----------------------
 
-If you chose to open an existing vault, all you need to do is to locate the ``masterkey.cryptomator`` file of the vault you want to open.
+To open an existing vault, you need to locate the ``masterkey.cryptomator`` file of the vault you wish to open.
 
 .. note::
 
