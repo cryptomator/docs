@@ -241,6 +241,34 @@ Support
 If you have problems with the app you can enable the ``Debug mode``.
 After reproducing the problem, you can disable the ``Debug mode`` again and ``Send log file``.
 
+.. _android/settings/advanced-settings:
+
+Advanced Settings
+----------------------
+
+.. _android/settings/advanced-settings/workaround-opening-microsoft-files:
+
+Workaround opening Microsoft files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+With this setting enabled, files are opened in Microsoft applications with write permission.
+
+Due to a bug in Microsoft apps, the file to be edited must be shared with these apps in a public media folder on the device. After Cryptomator is resumed, the publicly accessible file is deleted again but Cryptomator cannot influence what has happened to this file in the meantime. Make sure that you are aware of this behavior when activating this option. This will only apply to Microsoft file types.
+
+.. _android/settings/advanced-settings/keep-unlocked:
+
+Keep unlocked
+^^^^^^^^^^^^^
+
+With this setting enabled, all vaults remain unlocked when a file is opened by a third-party application, which can be useful in combination with the "Workaround opening Microsoft files".
+
+.. _android/settings/advanced-settings/accelerate-unlock:
+
+Accelerate Unlock
+^^^^^^^^^^^^^^^^^
+
+Download files to unlock the vault in the background while prompted to enter the password or biometric authentication. Keep it activated unless unlocking the vault does not work.
+
 .. _android/settings/version:
 
 Version
