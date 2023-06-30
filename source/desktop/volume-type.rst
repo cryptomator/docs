@@ -8,12 +8,11 @@ Volume types play an important role when handling your files.
 When you unlock a vault, Cryptomator makes decrypted files available in your file manager by mounting a virtual drive on your operating system.
 This mounting of a virtual drive is handled differently depending on the volume type chosen in Cryptomator's preferences.
 
-Cryptomator currently offers choice between three *volume types*.
-Each volume type has its own requirements, settings, benefits, and drawbacks.
+In general, all volume types Cryptomator offers can be categorized into three categories:
 
 #. :ref:`WebDAV <desktop/volume-type/webdav>`
 #. :ref:`FUSE <desktop/volume-type/fuse>`
-#. :ref:`Dokany <desktop/volume-type/dokany>`
+#. :ref:`Other <desktop/volume-type/dokany>`
 
 
 .. _desktop/volume-type/webdav:
@@ -42,30 +41,21 @@ All FUSE related volume types support custom mount options, but every option mus
 For example, you must enter ``-oallow_other`` if you want to specify ``allow_other`` option.
 
 
-Choosing a default Volume Type
-------------------------------
+Choosing a Volume Type
+----------------------
 
-Cryptomator allows you to choose a default common volume type for all vaults.
-In Cryptomator's window, navigate to ``Preferences`` (gear icon at top right), then ``Virtual Drive`` to set a default volume type.
+Cryptomator uses the same volume type for all vaults.
+You can select which volume type to use in the preferences.
+Every volume type offers fixed set of features for mounting a vault.
+The feature set is shown when selecting the volume type.
+
+In Cryptomator's window, navigate to ``Preferences`` (gear icon at top right), then ``Virtual Drive`` to set the volume type.
 The availability of volume types depends on your operating system and installed drivers.
 You might have to restart Cryptomator when changing volume types.
-A notification will be showed if a restart is needed.
+A notification will be displayed if a restart is needed.
 
 .. image:: ../img/desktop/preferences-virtual-drive.png
     :alt: Virtual Drive Tab in Preferences
-
-
-Customizing a Volume Type
--------------------------
-
-Some volume types allow specifying custom mount options.
-When supported, these options can be set for each vault individually in :ref:`desktop/vault-management/vault-options`, located under the mounting tab.
-
-
-Operating system specific Volume Types 
---------------------------------------
-
-Volume Types vary across operating systems.
 
 
 Windows
