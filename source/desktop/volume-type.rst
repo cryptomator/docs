@@ -202,7 +202,8 @@ Due to the wide variety of Linux distributions, Cryptomator only supports system
 You can unlock your vault without ``gio`` using :ref:`desktop/volume-type/webdav/http-address`, but support across distributions is not guaranteed.
 Also, it's up to yourself to figure out how to integrate WebDAV share with your distro.
 
-Common Volume Types
+
+OS Independent
 -------------------
 
 .. _desktop/volume-type/webdav/http-address:
@@ -214,3 +215,6 @@ WebDAV (HTTP Address)
 
 This volume type is always present and comes in handy when all other volume types fail to mount.
 It starts a local-only WebDAV server, which can be manually integrated into the system or accessed using a third-party application, like `Cyberduck <https://cyberduck.io/>`_.
+Check out the regarding manuals for your OS on how to connect to a WebDAV server.
+The address of Cryptomators local-only WebDAV server can be copied from the vault detail screen by clicking the green "Copy" button.
+
