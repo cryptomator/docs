@@ -177,7 +177,7 @@ Linux based OS
 FUSE
 ^^^^
 
-**Requirements:** Linux, ``libfuse3`` installed
+**Requirements:** Linux, ``libfuse3`` and/or ``fuse3`` installed
 
 FUSE on Linux works only if the `libfuse3` library is installed.
 Luckily, `libfuse3` library comes pre-installed on all major Linux distributions.
