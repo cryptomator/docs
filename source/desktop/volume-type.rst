@@ -148,7 +148,7 @@ You can install it using brew:
     brew tap macos-fuse-t/homebrew-cask
     brew install fuse-t
 
-By default, unlocked vaults are mounted to `/Volumes`.
+By default, unlocked vaults are mounted to `~/Cryptomator/`.
 Info on custom mount options is available at `wiki of the FUSE-T project <https://github.com/macos-fuse-t/fuse-t/wiki#supported-mount-options>`_.
 
 .. note::
