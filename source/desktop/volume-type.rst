@@ -180,7 +180,7 @@ FUSE
 **Requirements:** Linux, ``fuse3`` installed
 
 FUSE on Linux works only if the `fuse3` package is installed.
-Luckily, `fuse3` comes pre-installed on all major Linux distributions.
+Luckily, `fuse3` comes pre-installed on many Linux distributions.
 
 
 By default, unlocked vaults are mounted to `~/.local/share/Cryptomator/mnt`, but you can use custom mount options to change the path.
