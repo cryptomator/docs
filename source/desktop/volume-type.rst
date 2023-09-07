@@ -188,7 +188,7 @@ Info on custom mount options is available at `man page for mount\.fuse <https://
 
 .. note::
 
-    ``allow_root`` and ``allow_other`` cannot be used as :ref:`custom mount flags <desktop/vault-management/vault-options>` without enabling (uncommenting) ``user_allow_other``option in **/etc/fuse.conf** configuration file.
+    ``allow_root`` and ``allow_other`` cannot be used as :ref:`custom mount flags <desktop/vault-management/vault-options>` without enabling (uncommenting) ``user_allow_other`` option in **/etc/fuse.conf** configuration file.
 
 
 .. _desktop/volume-type/webdav/gio:
