@@ -19,16 +19,16 @@ If you have a Google PlayStore on your device, we recommend using the PlayStore 
 .. csv-table:: Cryptomator for Android variants
    :header: "", ":ref:`Google Play <android/setup/google-playstore>`", ":ref:`APK Store <android/setup/apk-store>`", ":ref:`Cryptomator F-Droid repo <android/setup/f-droid-repository>`", ":ref:`Main F-Droid repo <android/setup/f-droid-main-repository>`"
 
-   "Dropbox", "🗸", "🗸", "🗸", "X¹"
-   "Google Drive", "🗸", "🗸", "X²", "X¹"
-   "OneDrive", "🗸", "🗸", "🗸", "X¹"
-   "pCloud", "🗸", "🗸", "🗸", "X¹"
-   "WebDAV", "🗸", "🗸", "🗸", "🗸"
-   "S3", "🗸", "🗸", "🗸", "🗸"
-   "Local Storage", "🗸", "🗸", "🗸", "🗸"
+   "Dropbox", "✅", "✅", "✅", "❌¹"
+   "Google Drive", "✅", "✅", "❌²", "❌¹"
+   "OneDrive", "✅", "✅", "✅", "❌¹"
+   "pCloud", "✅", "✅", "✅", "❌¹"
+   "WebDAV", "✅", "✅", "✅", "✅"
+   "S3", "✅", "✅", "✅", "✅"
+   "Local Storage", "✅", "✅", "✅", "✅"
 
-X¹: Excluded because they require API keys. :raw-html:`<br />`
-X²: Excluded because they contains proprietary dependencies.
+❌¹: Excluded because they require API keys. :raw-html:`<br />`
+❌²: Excluded because they contains proprietary dependencies.
 
 .. _android/setup/google-playstore:
 
