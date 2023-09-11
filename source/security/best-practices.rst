@@ -17,6 +17,10 @@ Only share your vaults with people you trust.
 If you share a vault with others, do not communicate the vault password on an insecure channel.
 Tell the password in person, use encrypted email or messengers or other similar secure means.
 
+Are you working in a team and do not want to share vault passwords?
+Consider using `Cryptomator Hub <https://cryptomator.org/hub/>`_.
+It adds access management for your vaults and allows you to unlock vaults with your own account.
+
 
 .. _security/best-practices/good-passwords:
 
