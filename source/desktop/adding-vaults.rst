@@ -12,7 +12,7 @@ You will be presented with two options when adding a vault:
 .. |CreateVault| replace:: ``New Vault...``
 .. _CreateVault: ./adding-vaults.html#create-a-new-vault
 
-.. |OpenVault| replace:: ``Existing Vault``
+.. |OpenVault| replace:: ``Existing Vault...``
 .. _OpenVault: ./adding-vaults.html#open-an-existing-vault
 
 
