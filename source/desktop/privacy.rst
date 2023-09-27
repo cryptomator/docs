@@ -16,7 +16,8 @@ Simply click the ``Look up Solution`` button.
 
 We will cross-reference your current error with the database and provide a solution link if one is available.
 
-ToDo: Add "More info..." hyperlink to error dialog and refresh screenshot.
+.. ToDo:
+   Add "More info..." hyperlink to error dialog and refresh screenshot.
 
 .. image:: ../img/desktop/error-lookup.png
     :alt: Error loading vault
