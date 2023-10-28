@@ -9,10 +9,10 @@ You will be presented with two options when adding a vault:
 .. image:: ../img/desktop/create-or-open-vault.png
     :alt: Create a new or open an existing vault
 
-.. |CreateVault| replace:: ``Create New Vault``
+.. |CreateVault| replace:: ``New Vault...``
 .. _CreateVault: ./adding-vaults.html#create-a-new-vault
 
-.. |OpenVault| replace:: ``Open Existing Vault``
+.. |OpenVault| replace:: ``Existing Vault...``
 .. _OpenVault: ./adding-vaults.html#open-an-existing-vault
 
 
