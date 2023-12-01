@@ -55,6 +55,7 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :maxdepth: 2
    :caption: Hub
    
+   hub/introduction.rst
    hub/setup.rst
    hub/vault-management.rst
    hub/access-vault.rst

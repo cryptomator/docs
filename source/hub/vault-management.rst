@@ -1,3 +1,5 @@
+.. _hub/vault-management:
+
 Vault Management
 ================
 
