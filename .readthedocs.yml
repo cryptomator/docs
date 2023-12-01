@@ -15,9 +15,13 @@ formats:
   - epub
   - pdf
 
-# Sets the version of Python and requirements required to build docs
+build:
+  os: "ubuntu-22.04"
+  tools:
+    python: "3.12"
+
+# Python config
 python:
-  version: 3.8
   install:
     - requirements: requirements.txt
 
