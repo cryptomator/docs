@@ -101,8 +101,8 @@ If the password is correct, the vault details view is enriched with more element
 
 .. _hub/vault-management/add-user:
 
-Add a User
-""""""""""
+Share a vault
+"""""""""""""
 
 If a user should have access to this vault, you need to share it with the user.
 Click on the ``Share`` button in the ``Shared with`` list.
@@ -114,8 +114,6 @@ A search field opens up where you can search for users and groups.
 
 To add a user or group, select it from the results list and click the ``Add`` button.
 
-.. note:: 
-    Currently, users and groups can only be :ref:`managed via Keyloak<hub/setup/keycloak-administration>`.
 
 .. _hub/vault-management/updating-permission:
 

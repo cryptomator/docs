@@ -15,7 +15,8 @@ As usual, your favorite cloud service remains your free choice.
 
 This documentation covers the following topics:
 
-* :ref:`Setup <hub/setup>` - how to build and run Cryptomator Hub.
+* :ref:`Deployment <hub/deployment>` - how to deploy Cryptomator Hub.
+* :ref:`Setup <hub/setup>` - how to configure Hub and use its full potential.
 * :ref:`User management <hub/user-management>` - how to manage users and groups.
 * :ref:`Vault management <hub/vault-management>` - how to manage vaults.
 * :ref:`Vault Recovery <hub/vault-recovery>` - how to recover access to data in case of an emergency.

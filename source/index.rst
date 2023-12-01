@@ -56,6 +56,7 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :caption: Hub
    
    hub/introduction.rst
+   hub/deployment.rst
    hub/setup.rst
    hub/user-management.rst
    hub/vault-management.rst
