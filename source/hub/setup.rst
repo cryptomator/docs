@@ -1,7 +1,7 @@
 .. _hub/setup:
 
 Setup
------
+=====
 
 After Cryptomator Hub is deployed, you can already login to the web interface and create your first vault.
 However, you will not be able share it, since no other users are registered.
@@ -12,15 +12,22 @@ For on-premise installations, you must additionally add your license if you want
 License
 -------
 
-When Cryptomator Hub is freshly installed, it comes with a community license.
+Every Cryptomator Hub instance requires a license.
+The license is bound to the instance and cannot be transferred to another instance.
+A license has a fixed amount of seats.
+A seat is taken for every user, which is assigned to at least one vault.
+If a user is not assigned to any vault, it does not occupy a seat.
+
+By default, when Cryptomator Hub is freshly installed, it comes with a community license.
 
 .. image:: ../img/hub/billing-community-license.png
     :alt: Billing shows community license
     :width: 920px
 
-This license is valid for 5 seats. Only users assigned to a vault will occupy a seat.
+This license is valid for 5 seats.
 
-The ``Get License`` button will direct you to an external website at cryptomator.org where you can buy a license for this instance. If successful, you will be automatically redirected back to your Hub instance.
+The ``Get License`` button will redirect you to the Cryptomator Hub license store where you can buy a license for your instance.
+If you buy a license (or upgrade the existing one), you will be automatically redirected back to your Hub instance.
 
 .. image:: ../img/hub/billing-active-license.png
     :alt: Billing shows standard license
@@ -28,9 +35,9 @@ The ``Get License`` button will direct you to an external website at cryptomator
 
 .. _hub/setup/keycloak:
 
-Adding Users
+Create Users
 ------------
 
-While Cryptomator Hub manages access to vaults, it does not manage users directly.
-Instead, it uses Keycloak, an open source identity and access management solution for this task.
-Section :ref:`hub/user-management` explains how to access Keycloak from Cryptomator Hub and manage users.
+Cryptomator Hub uses *Keycloak* to manage users and groups.
+Keycloak is an open source identity and access management solution.
+Section :ref:`hub/user-management` explains how to access Keycloak from Cryptomator Hub and use it.
