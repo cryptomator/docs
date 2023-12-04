@@ -1,4 +1,4 @@
-.. _hub/user-management:
+.. _hub/user-group-management:
 
 User & Group Management
 =======================
@@ -22,7 +22,7 @@ There you can perform all users or groups related tasks, such as
     Subgroups are not supported at this time.
 
 
-.. _hub/user-management/external-id-providers:
+.. _hub/user-group-management/external-id-providers:
 
 Connect external identity management solutions
 ----------------------------------------------

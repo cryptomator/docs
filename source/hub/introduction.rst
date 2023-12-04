@@ -13,10 +13,18 @@ Cryptomator Hub adds *zero-knowledge key management* for teams and organizations
 It easily integrates into your existing identity management incl. OpenID Connect, SAML, and LDAP.
 As usual, your favorite cloud service remains your free choice.
 
-This documentation covers the following topics:
+This documentation covers various topics, depending on your role.
+If you are …
+
+…an **administrator**:
 
 * :ref:`Deployment <hub/deployment>` - how to deploy Cryptomator Hub.
 * :ref:`Setup <hub/setup>` - how to configure Hub and use its full potential.
-* :ref:`User management <hub/user-management>` - how to manage users and groups.
-* :ref:`Vault management <hub/vault-management>` - how to manage vaults.
+* :ref:`User & Group management <hub/user-group-management>` - how to manage multiple users and groups.
+
+
+…a **user**:
+
+* :ref:`Your Account <hub/your-account>` - how to manage your own account.
+* :ref:`Working with Vaults <hub/vault-management>` - how to use vaults.
 * :ref:`Vault Recovery <hub/vault-recovery>` - how to recover access to data in case of an emergency.
