@@ -79,8 +79,7 @@ If you don't trust a device anymore, you can remove it from the list of authoriz
 User Key Fingerprint
 ^^^^^^^^^^^^^^^^^^^^
 
-TODO
-
+This fingerprint can be used to verify the identity of the user, for example when updating the permissions of a vault. It will only change if you :ref:`reset your account <hub/your-account/reset-account>`.
 
 .. _hub/your-account/reset-account:
 
