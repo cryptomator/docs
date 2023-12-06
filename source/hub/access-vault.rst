@@ -1,3 +1,5 @@
+.. _hub/working-with-vaults:
+
 Working with Vaults
 ===================
 

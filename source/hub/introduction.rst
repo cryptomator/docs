@@ -26,5 +26,6 @@ If you are…
 …a **user**:
 
 * :ref:`Your Account <hub/your-account>` - how to manage your own account.
-* :ref:`Working with Vaults <hub/vault-management>` - how to use vaults.
+* :ref:`Managing Vaults <hub/vault-management>` - how to manage vaults.
+* :ref:`Working with Vaults <hub/working-with-vaults>` - how to use vaults.
 * :ref:`Vault Recovery <hub/vault-recovery>` - how to recover access to data in case of an emergency.
