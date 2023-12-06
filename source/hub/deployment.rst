@@ -3,11 +3,11 @@
 Deployment
 ==========
 
-Cryptomator Hub is a can be deployed to a Kubernetes cluster or a Docker host. The following sections describe the deployment process in detail.
+Cryptomator Hub can be deployed to a Kubernetes cluster or a Docker host. The following sections describe the deployment process in detail.
 
 .. note::
 
-    Cryptomator Hub is also offered as a hosted solution, including 99%-uptime guarantee and regular backups! Visit https://cryptomator.org/hub/ for more information.
+    Cryptomator Hub is also offered as a hosted solution, including 99.5%-uptime guarantee and regular backups! Visit https://cryptomator.org/hub/ for more information.
 
 Summary
 -------
@@ -17,7 +17,8 @@ Summary
 #. Use the `Setup Wizard <https://cryptomator.org/hub/setup/>`_ to generate a deployment descriptor template
 #. Customize the template if needed (e.g., adjust the Ingress settings) and deploy the software stack to your cluster
 
-Afterwards you're done. You can now login to Cryptomator Hub and start :ref:`creating vaults<hub/vault-management>` or :ref:`add users <hub/user-management>`.
+Afterwards you're done.
+You can now login to Cryptomator Hub and start :ref:`creating vaults<hub/vault-management>` or :ref:`add users <hub/user-group-management>`.
 
 .. _hub/deployment/requirements:
 

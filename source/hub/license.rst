@@ -32,17 +32,15 @@ Note that:
 Community License
 -----------------
 
-When you deploy Cryptomator Hub by yourself, it comes with a community license.
+When you deploy Cryptomator Hub by yourself, by default it comes with a community license with life-long validity.
 This license is valid for 5 seats.
+
 
 .. _hub/license/buy-license:
 
-Buying a License
-----------------
+Updating your License
+---------------------
 
-The ``Get License`` button will redirect you to the Cryptomator Hub license store where you can buy a license for your instance.
+If you want to buy a paid license or upgrade the current one, click on the button in the lower right corner of the administration area.
+It will redirect you to the Cryptomator Hub license store.
 If you buy a license (or upgrade the existing one), you will be automatically redirected back to your Hub instance.
-
-.. image:: ../img/hub/billing-active-license.png
-    :alt: Billing shows standard license
-    :width: 920px
