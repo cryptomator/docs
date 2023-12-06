@@ -64,7 +64,6 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    hub/vault-management.rst
    hub/access-vault.rst
    hub/vault-recovery.rst
-   hub/settings.rst
 
 .. toctree::
    :hidden:
