@@ -3,21 +3,40 @@
 Your Account
 ============
 
-This topic describes how to manage your account in Cryptomator Hub. You can view your account key and fingerprint, manage your trusted devices and change your password.
+To open vaults secured by a Cryptomator Hub instance, you need an account on the regarding Hub instance.
+This account is used to authenticate you and to manage your trusted devices.
+
+If you don't have an account, contact your local administrator to create one for you.
 
 
-.. _hub/your-account/first-login:
+.. _hub/your-account/account-key:
 
-First Login
+Account Key
 -----------
+
+Every account has a private *Account Key*.
+The Account Key is used for trusting browsers or apps which try to connect to Hub.
+It is not used for encrypting vault data.
+Keep your account key secret and only store it in a secure place (e.g. password manager).
+You can view your account key in your :ref:`profile <hub/your-account/profile>` on trusted browsers.
+
+.. note::
+    If you lose your account key, you have two options: If you have access to a trusted browser, you can :ref:`generate a new key <hub/your-account/reset-account>` or otherwise, you can :ref:`reset your account <hub/your-account/reset-account>`.
+
+.. _hub/your-account/setup:
+
+Account Setup
+-------------
 
 The very first time you log in to Cryptomator Hub, you're asked to set up your account.
 This is a one-time process that takes just a minute.
 
-In the setup your private *Account Key* is generated and displayed.
-Your account key is used for trusting browsers or apps connecting to Hub, it is not used for encrypting vault data.
-We recommend to copy your account key to a secure place (e.g. password manager), but you can always view it later in your profile from any trusted browser.
-If you lose your account key, you can reset it.
+.. image:: ../img/hub/account-setup.png
+    :alt: Account setup on first login
+
+
+In the setup your :ref:`hub/your-account/account-key` is generated and displayed.
+We recommend to copy your Account Key to a secure place (e.g. password manager), but you can always view it later in your profile from any trusted browser.
 
 The browser used for the setup is automatically trusted.
 You can revoke the trust at any time in your profile.
@@ -25,11 +44,50 @@ You can revoke the trust at any time in your profile.
 After storing your account key securely, tick the checkbox and finish the setup.
 You are now logged in to Hub and can start using it.
 
-.. TODO: Picture of setup wizard
 
+.. _hub/your-account/profile:
 
-.. _hub/your-account/your-profile:
-
-Profile View
+Profile Page
 ------------
 
+On the profile page, you can manage your account.
+It shows your account key and fingerprint, lists your trusted devices and more.
+
+You can open it by clicking on your profile icon in the top right corner and select *Your Profile*.
+
+.. image:: ../img/hub/profile-view.png
+    :alt: Your account in Cryptomator Hub
+
+
+.. _hub/your-account/profile/regenerate-account-key:
+
+Regenerate Account Key
+^^^^^^^^^^^^^^^^^^^^^^
+
+If you suspect that your old Account Key has been compromised, you can regenerate it.
+You will then only be able to add new devices with the new Account Key.
+Your existing devices will remain trusted.
+
+
+Authorized Devices
+^^^^^^^^^^^^^^^^^^
+A device is authorized if it has been authenticated with your Account Key.
+Only on authorized devices you can log in to Hub and open vaults.
+
+If you don't trust a device anymore, you can remove it from the list of authorized devices.
+
+User Key Fingerprint
+^^^^^^^^^^^^^^^^^^^^
+
+TODO
+
+
+.. _hub/your-account/reset-account:
+
+Reset Account
+-------------
+You can reset your account
+If you lose your account key and can't access any trusted browser, you can reset your account when logging in from a new device.
+
+.. image:: ../img/hub/trust-device.png
+    :alt: Reset account on login
