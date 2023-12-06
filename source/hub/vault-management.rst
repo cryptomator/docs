@@ -88,7 +88,7 @@ To add a user, grant devices access, or view the members list, you need to have 
 Open the :ref:`vault details <hub/vault-management/vault-details>` page to manage a vault.
 
 * ``Shared with`` members list
-* ``Update Permissions`` button (only shown if necessary)
+* ``Update Permissions`` button (only clickable if necessary)
 * ``Edit Vault Metatdata`` button
 * ``Download Vault Template`` button
 * ``Show Recovery Key`` button
