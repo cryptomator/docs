@@ -14,13 +14,13 @@ It easily integrates into your existing identity management incl. OpenID Connect
 As usual, your favorite cloud service remains your free choice.
 
 This documentation covers various topics, depending on your role.
-If you are …
+If you are…
 
 …an **administrator**:
 
 * :ref:`Deployment <hub/deployment>` - how to deploy Cryptomator Hub.
-* :ref:`Setup <hub/setup>` - how to configure Hub and use its full potential.
-* :ref:`User & Group management <hub/user-group-management>` - how to manage multiple users and groups.
+* :ref:`License <hub/license>` - how to manage your Hub license.
+* :ref:`User & Group management <hub/user-group-management>` - how to manage users and groups.
 
 
 …a **user**:
