@@ -118,7 +118,7 @@ To change user's ownership of a vault, click on the three dots next to the user'
 Update Permissions
 ^^^^^^^^^^^^^^^^^^
 
-If members of the vault have finished the :ref:`first login <hub/your-account/first-login>` or reset user accounts, a vault owner must explicitly grant access to these users.
+If members of the vault have finished the :ref:`first login <hub/your-account/setup>` or reset user accounts, a vault owner must explicitly grant access to these users.
 Only then, the user can unlock the vault with its device.
 
 As a vault owner, you can see that an update is necessary when the ``Update Permissions`` button is clickable.
@@ -127,7 +127,7 @@ As a vault owner, you can see that an update is necessary when the ``Update Perm
     :alt: Update permissions in the vault details
     :width: 920px
 
-.. _hub/vault-management/import-vault:
+.. _hub/vault-management/edit-vault-metadata:
 
 Edit Vault Metadata
 ^^^^^^^^^^^^^^^^^^^
