@@ -18,7 +18,7 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :hidden:
    :maxdepth: 2
    :caption: Desktop
-   
+
    desktop/setup.rst
    desktop/getting-started.rst
    desktop/adding-vaults.rst
@@ -31,7 +31,7 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :hidden:
    :maxdepth: 2
    :caption: Android
-   
+
    android/setup.rst
    android/cloud-management.rst
    android/vault-management.rst
@@ -42,7 +42,7 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :hidden:
    :maxdepth: 2
    :caption: iOS
-   
+
    ios/setup.rst
    ios/cloud-management.rst
    ios/vault-management.rst
@@ -54,9 +54,8 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :hidden:
    :maxdepth: 2
    :caption: Hub
-   
+
    hub/introduction.rst
-   hub/quickstart.rst
    hub/deployment.rst
    hub/license.rst
    hub/user-group-management.rst
@@ -69,7 +68,7 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :hidden:
    :maxdepth: 2
    :caption: Security
-   
+
    security/security-target.rst
    security/architecture.rst
    security/best-practices.rst
@@ -85,6 +84,6 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :hidden:
    :maxdepth: 2
    :caption: Misc
-   
+
    misc/contribute.rst
    misc/vault-format-history.rst
