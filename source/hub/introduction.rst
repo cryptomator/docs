@@ -26,5 +26,5 @@ If you are…
 
 * :ref:`Your Account <hub/your-account>` - how to manage your own account.
 * :ref:`Managing Vaults <hub/vault-management>` - how to manage vaults.
-* :ref:`Working with Vaults <hub/working-with-vaults>` - how to use vaults.
+* :ref:`Working with Vaults <hub/working-with-vaults>` - how to use Hub vaults with Cryptomator apps to encrypt your data.
 * :ref:`Vault Recovery <hub/vault-recovery>` - how to recover access to data in case of an emergency.

@@ -24,19 +24,19 @@ There you can perform all users or groups related tasks, such as
 
 .. _hub/user-group-management/external-id-providers:
 
-Connect external identity management solutions
-----------------------------------------------
+Connect external IAM
+------------------------
 
-Alternatively to the in-house administration, you can also connect Keycloak to other identity providers (e.g. Active Directory/Microsoft Entra) to keep your user management centralized.
-You can either only synchronize existing users and groups from your identity provider to Keycloak (using LDAP or Active Directory) or completely delegate the authentication process to an identity provider of your choice via OpenID Connect or SAML.
+Alternatively to the in-house administration, you can also connect Keycloak to other identity and access management solutions (IAM) to keep your user management centralized.
+You can either only synchronize existing users and groups from your IAM (using LDAP or Active Directory) or completely delegate the authentication process to your IAM via OpenID Connect or SAML.
 
 Setting up LDAP synchronization is described in the `Keycloak documentation <https://www.keycloak.org/docs/latest/server_admin/#_ldap>`_.
 For OpenID Connect and SAML, the Keycloak documentation provides `general information <https://www.keycloak.org/docs/latest/server_admin/#_identity_broker>`_.
-A good step-by-step guide for setting up OpenID Connect with Microsoft Azure can be found `here <https://dev.to/andremoriya/keycloak-azure-active-directory-4cg4>`_.
+A good step-by-step guide for connecting Microsoft Entra with OpenID Connect can be found `here <https://dev.to/andremoriya/keycloak-azure-active-directory-4cg4>`_.
 
 .. note::
     With ``LDAP``, all users and groups are imported and synchronized with Keycloak, so they are available immediately after setup.
     With ``OpenID Connect`` or ``SAML``, users are unknown to Keycloak and Hub *until they log in for the first time*.
 
 .. warning::
-    All preconfigured Keycloak instance already contains a user called ``syncer``. **Do not edit or delete it!** It is necessary to synchronize users and groups from Keycloak to Hub.
+    Regardless of your choice, your Keycloak instance always contains two local users: ``admin`` and ``syncer``. **Do not edit or delete them!** The first one is for administration tasks and the second one is used to synchronize users and groups between Keycloak and Hub.

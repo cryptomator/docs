@@ -3,7 +3,11 @@
 Vault Management
 ================
 
-This section contains instructions to manage vaults in Cryptomator Hub.
+The central entities in Cryptomator Hub are vaults.
+In Hub, every vault contains a key to encrypt and decrypt your data stored in the cloud of your choice.
+Hub manages access to the vaults, it does not store any encrypted user data.
+This section describes how to manage vaults in Cryptomator Hub.
+
 
 .. _hub/vault-management/vault-list:
 
@@ -23,6 +27,7 @@ Alternatively, you can also access the list by clicking on the ``Vaults`` tab in
 
     * As a user, you will only see the vaults that you have access to.
     * As an admin of the Hub instance, you can see all vaults, but you can only access those that you have been granted access to.
+
 
 .. _hub/vault-management/create-vault:
 
@@ -45,7 +50,7 @@ Store it at a safe location, tick the checkbox and complete the setup by clickin
     :alt: Save vault recoverykey
     :width: 920px
 
-.. warning:: 
+.. warning::
     The recovery key is **highly confidential**.
     It is a human readable form of the vault :ref:`masterkey <security/architecture/masterkey-derivation>`, which is used to encrypt your data and independent of the key management in Cryptomator Hub.
 

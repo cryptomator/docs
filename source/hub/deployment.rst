@@ -7,7 +7,7 @@ Cryptomator Hub can be deployed to a Kubernetes cluster or a Docker host. The fo
 
 .. note::
 
-    Cryptomator Hub is also offered as a hosted solution, including 99.5%-uptime guarantee and regular backups! Visit https://cryptomator.org/hub/ for more information.
+    Cryptomator Hub is also offered as a hosted solution, including 99.5%-uptime guarantee and regular backups! Visit `cryptomator.org <https://cryptomator.org/hub/>`_ for more information.
 
 Summary
 -------

@@ -5,6 +5,7 @@ License
 
 Every Cryptomator Hub instance requires a license.
 The license is bound to the instance and cannot be transferred to another instance.
+Every license has a number of seats and a validity period.
 As an Hub administrator, you can view license information in the administration area.
 
 .. image:: ../img/hub/admin-area.png
@@ -13,8 +14,8 @@ As an Hub administrator, you can view license information in the administration 
 
 .. _hub/license/seat:
 
-Seat
-----
+What is a Seat?
+---------------
 
 A regular license contains a fixed number of *seats*.
 A *seat* is taken for every user, which is assigned to at least one, not-archived vault.
@@ -32,8 +33,7 @@ Note that:
 Community License
 -----------------
 
-When you deploy Cryptomator Hub by yourself, by default it comes with a community license with life-long validity.
-This license is valid for 5 seats.
+When you deploy Cryptomator Hub by yourself, it comes with a community license with life-long validity and 5 seats.
 
 
 .. _hub/license/buy-license:
@@ -41,6 +41,8 @@ This license is valid for 5 seats.
 Updating your License
 ---------------------
 
-If you want to buy a paid license or upgrade the current one, click on the button in the lower right corner of the administration area.
+If the communtiy license is not sufficient for your needs, you can upgrade it to a paid license.
+You can also upgrade an already existing, paid license.
+To do so, click on the button in the lower right corner of the administration area.
 It will redirect you to the Cryptomator Hub license store.
-If you buy a license (or upgrade the existing one), you will be automatically redirected back to your Hub instance.
+After the purchase, you will be automatically redirected back to your Hub instance.
