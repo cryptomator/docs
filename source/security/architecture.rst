@@ -94,7 +94,7 @@ When using :ref:`Cryptomator Hub <hub/access-vault/unlocking-a-vault>`, the encr
     Example: ``"kid": "hub+https://hub.example.com/api/vaults/bb36d67c"``
 
 Every Cryptomator Hub user who is authorized to access this vault will retrieve an individual ciphertext from the vault's ``/access-token`` sub-resource.
-This ciphertext is formatted as a `JWE <https://tools.ietf.org/html/rfc7516>`_ and can be decrypted using `ECDH-ES <https://datatracker.ietf.org/doc/html/rfc7518#section-4.6>`_ and the user's static private key.
+This ciphertext is formatted as a `JWE <https://tools.ietf.org/html/rfc7516>`_ and can be decrypted using `ECDH-ES <https://datatracker.ietf.org/doc/html/rfc7518#section-4.6>`_ and the :ref:`user's static private key <security/hub/keys/user-keys>`.
 The JWE's decoded header looks something like this:
 
 .. code-block:: js
