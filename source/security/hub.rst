@@ -16,7 +16,7 @@ User Key Pair
 ~~~~~~~~~~~~~
 
 During first login, every user will generate a new EC key pair. The private key is then encrypted using both the :ref:`Account Key <security/hub/keys/account-key>`
-as well as every single :ref:`Device Key <security/hub/keys/device-keys>`.
+as well as the :ref:`Device Key <security/hub/keys/device-keys>` of every single device owned by this user.
 
 The purpose of the user key is to access secrets that have been shared with this user using `ECDH-ES-encrypted JWEs <https://datatracker.ietf.org/doc/html/rfc7518.html#section-4.6>`_, most prominently the masterkey of shared vaults.
 
