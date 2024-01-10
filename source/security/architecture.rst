@@ -26,7 +26,7 @@ Vault Configuration
 
 Every vault must have a vault configuration file named ``vault.cryptomator`` in the root directory of the vault.
 It is a JWT containing basic information about the vault and specification what key to use.
-The JWT is signed using the 512 bit raw masterkey ().
+The JWT is signed using the 512 bit raw masterkey.
 
 This is an example of an encoded vault configuration file:
 
