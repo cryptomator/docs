@@ -52,7 +52,7 @@ Store it at a safe location, tick the checkbox and complete the setup by clickin
 
 .. warning::
     The recovery key is **highly confidential**.
-    It is a human readable form of the vault :ref:`masterkey <security/architecture/masterkey-derivation>`, which is used to encrypt your data and independent of the key management in Cryptomator Hub.
+    It is a human readable form of the vault :ref:`masterkey <security/architecture/masterkey>`, which is used to encrypt your data and independent of the key management in Cryptomator Hub.
 
 When the setup is finished, you have the opportunity to download the initial vault template and place it in your desired cloud storage location.
 You can unlock the vault and place data inside with `Cryptomator <https://cryptomator.org/downloads/>`_.
