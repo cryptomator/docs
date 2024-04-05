@@ -1,7 +1,7 @@
 Error Handling
 =============
 
-When you encounter an unexpected error, our system provides you with an immediate tool to find a solution efficiently.
+If you encounter an unexpected error, Cryptomator gives you the option to look up a solution in our error database. It's possible that the error has already been reported and a solution has been suggested for you to follow.
 
 Simply click the ``Look up Solution`` button.
 
