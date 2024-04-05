@@ -18,7 +18,7 @@ If no results are found, you have the option to initiate your own search by sele
 .. image:: ../img/desktop/error-dialog-3.png
     :alt: Error dialog with options to look up or report the error
 
-Your privacy is important to us. We assure you that all requests are handled with your explicit consent and are directed exclusively to our server. This feature operates solely on an Opt-In basis to protect your privacy.
+Your privacy is important to us. We assure you that all requests are handled with your explicit consent and are directed exclusively to our server. This feature operates solely on an opt-in basis to protect your privacy.
 
 For further information, please visit our |privacy policy|.
 
