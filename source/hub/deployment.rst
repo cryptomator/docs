@@ -1,32 +1,39 @@
-.. _hub/setup:
+.. _hub/deployment:
 
-Setup
-=====
+Deployment
+==========
 
-Cryptomator Hub is a zero-knowledge key management solution that allows you to manage access to your vaults from a central component deployed on your own infrastructure.
+Cryptomator Hub can be deployed to a Kubernetes cluster or a Docker host. The following sections describe the deployment process in detail.
 
-Quickstart
-----------
+.. note::
 
-#. Decide, on which web addresses you want to deploy Hub and Keycloak (and set up DNS and TLS termination, if required)
+    Cryptomator Hub is also offered as a hosted solution, including 99.5%-uptime guarantee and regular backups! Visit `cryptomator.org <https://cryptomator.org/hub/>`_ for more information.
 
+Summary
+-------
+
+#. Decide, on which web addresses you want to deploy Hub and Keycloak
+#. Set up DNS and TLS termination
 #. Use the `Setup Wizard <https://cryptomator.org/hub/setup/>`_ to generate a deployment descriptor template
-
 #. Customize the template if needed (e.g., adjust the Ingress settings) and deploy the software stack to your cluster
 
-#. Log in to Keycloak to
+Afterwards you're done.
+You can now login to Cryptomator Hub and start :ref:`creating vaults<hub/vault-management>` or :ref:`add users <hub/user-group-management>`.
 
-   * adjust authentication settings
-   * set up users/groups or LDAP/AD
+.. _hub/deployment/requirements:
 
-#. Log in to Cryptomator Hub and start creating Hub-managed vaults
+Hardware Requirements
+---------------------
 
-More Details
+Currently, we are evaluating the system requirements for Cryptomator Hub. If you can provide data, please send us an email to hub@cryptomator.org.
+
+Setup Wizard
 ------------
 
 To get started, use the `Setup Wizard <https://cryptomator.org/hub/setup/>`_ to generate the necessary configuration files.
 
-Cryptomator Hub depends on `Keycloak <https://www.keycloak.org/>`_, an open-source identity and access management solution. That means, Hub manages access to your vaults whereas Keycloak manages users, groups, and authentication. In the Setup Wizard, you will have the option to choose between deploying Keycloak alongside Hub or specifying an URL to an existing Keycloak installation.
+Cryptomator Hub depends on `Keycloak <https://www.keycloak.org/>`_, an open-source identity and access management solution.
+In the Setup Wizard, you will have the option to choose between deploying Keycloak alongside Hub or specifying an URL to an existing Keycloak installation.
 
 Reverse Proxy
 -------------
@@ -109,57 +116,11 @@ Before running this deployment
 
 Troubleshooting: If you encounter problems, check the log files in ``logs/traffik.log`` and ``logs/access.log``. Make sure you entered ``srv`` as ``Public Network`` in the Setup Wizard of Hub.
 
-.. _hub/setup/keycloak-administration:
-
-Keycloak Administration
------------------------
-
-User and group management is done via Keycloak. 
-You can access the Keycloak management interface over the admin section of Hub.
-
-.. image:: ../img/hub/access-keycloak-link.png
-    :alt: Accessing Keycloak via Hub
-    :width: 920px
-
-There you can `create users <https://www.keycloak.org/docs/latest/server_admin/index.html#proc-creating-user_server_administration_guide>`_, `delete users <https://www.keycloak.org/docs/latest/server_admin/index.html#proc-creating-user_server_administration_guide>`_, `manage groups <https://www.keycloak.org/docs/latest/server_admin/index.html#proc-managing-groups_server_administration_guide>`_, and optionally also synchronize users/groups to Keycloak using `LDAP <https://www.keycloak.org/docs/latest/server_admin/#_ldap>`_ to whom you can then give access to vaults in Hub.   
-Other identity providers such as ``OpenID Connect`` or ``SAML`` can also be used. However, they work slightly differently: With ``LDAP``, all users and groups are imported and synchronised with Keycloak, so they are available immediately after setup. With ``OpenID Connect`` or ``SAML``, users are unknown to Keycloak and Hub until they log in. This is why we strongly recommend using ``LDAP``.
-
-In Keycloak you will find a user called ``syncer``. It is used to synchronise all users and groups from Keycloak to Hub, so please do not delete or change it.
-
-.. note::
-
-    Subgroups are not supported at this time.
-
-.. _hub/setup/billing:
-
-Billing
--------
-
-When Cryptomator Hub is freshly installed, it comes with a community license.
-
-.. image:: ../img/hub/billing-community-license.png
-    :alt: Billing shows community license
-    :width: 920px
-
-This license is valid for 5 seats. Only users assigned to a vault will occupy a seat.
-
-The ``Get License`` button will direct you to an external website at cryptomator.org where you can buy a license for this instance. If successful, you will be automatically redirected back to your Hub instance. 
-
-.. image:: ../img/hub/billing-active-license.png
-    :alt: Billing shows standard license
-    :width: 920px
-
-.. _hub/setup/requirements:
-
-Requirements
-------------
-
-Currently, we are evaluating the system requirements for Cryptomator Hub. If you can provide data, please send us an email to hub@cryptomator.org.
 
 .. _hub/setup/backup:
 
 Backup
-------------
+------
 
 Cryptomator Hub and Keycloak both write to the connected Postgres database. So the best and easiest way is to backup it cyclically using e.g. a Cron Job. Depending on your deployment, here is a sample command that you can run on the host system to backup the entire databases to a file using the Postgres container, which you than could import in a similar way:
 
