@@ -6,17 +6,17 @@ Enhancing error management and facilitating problem resolution, we offer you the
 Simply click the ``Look up Solution`` button.
 
 .. image:: ../img/desktop/error-dialog-1.png
-    :alt: Lorem
+    :alt: Error dialog with options to dismiss or loop up solution
 
 We will cross-reference your current error with the database and provide a solution link if one is available.
 
 .. image:: ../img/desktop/error-dialog-2.png
-    :alt: Lorem
+    :alt: Error dialog with look up the solution link to matching error
 
 If no results are found, you can initiate your own search by selecting ``Look up this error`` or create a ticket by selecting ``Report this error``.
 
 .. image:: ../img/desktop/error-dialog-3.png
-    :alt: Lorem
+    :alt: Error dialog with options to look up or report the error
 
 You can find further information in the |privacy policy|.
 
