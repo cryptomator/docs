@@ -72,7 +72,7 @@ The bar below the password field will help you estimate the strength of your pas
 .. note::
 
     Always choose a password that's unique across your vaults and accounts.
-    This is espically important if you plan to share a vault with someone.
+    This is especially important if you plan to share a vault with someone.
     Additionally, we recommend sharing passwords only over a secure channel, like PGP encypted emails, or end-to-end encrypted chat apps.
 
 .. image:: ../img/desktop/add-vault-3.png
