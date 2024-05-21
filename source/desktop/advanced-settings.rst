@@ -48,7 +48,7 @@ The location may differ depending on Cryptomator's installation location:
      - Default path
      - Notes
    * - Windows
-     - `C:\Program Files\Cryptomator\app\Cryptomator.cfg`
+     - `C:\\Program Files\\Cryptomator\\app\\Cryptomator.cfg`
      -
    * - macOS
      - `/Applications/Cryptomator.app/Contents/app/Cryptomator.cfg`
@@ -73,8 +73,8 @@ takes precedence over the *system-wide advanced configuration* for that user:
      - Path
      - Notes
    * - Windows
-     - `%LocalAppData%\Cryptomator\Cryptomator.cfg` (*)
-       `%AppData%\Cryptomator\Cryptomator.cfg`
+     - `%LocalAppData%\\Cryptomator\\Cryptomator.cfg` (*)
+       `%AppData%\\Cryptomator\\Cryptomator.cfg`
      - If both exist, the path marked with (*) takes precedence.
    * - macOS
      - `~/Library/Application Support/Cryptomator/Cryptomator.cfg`
@@ -219,7 +219,7 @@ Cryptomator's properties come with the following types:
      - Might use `substitutions`_.
    * - FilePathList
      - List of `FilePaths` divided by ":" (Linux, macOS) or ";" (Windows).
-     - cryptomator.integrationsWin.keychainPaths="C:\file.one;C:\file.two"
+     - cryptomator.integrationsWin.keychainPaths="C:\\file.one;C:\\file.two"
      - The entire list is quoted instead of individual entries. Might use `substitutions`_.
    * - Language
      - Unquoted ISO 639 alpha-2 or alpha-3 language code
