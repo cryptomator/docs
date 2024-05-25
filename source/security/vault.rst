@@ -49,7 +49,7 @@ The cleartext is broken down into multiple chunks, each up to 32 KiB + 28 bytes 
 * up to 32 KiB encrypted payload using AES-GCM with the file content key, and
 * 16 bytes tag computed by GCM with the following AAD:
 
-    * chunk number as 32 bit big endian integer (to prevent undetected reordering),
+    * chunk number as 64 bit big endian integer (to prevent undetected reordering),
     * file header nonce (to bind this chunk to the file header),
 
 Afterwards, the encrypted chunks are joined preserving the order of the cleartext chunks.
