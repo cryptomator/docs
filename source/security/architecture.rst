@@ -161,3 +161,52 @@ When unlocking a vault the KEK is used to unwrap (i.e. decrypt) the stored maste
     :alt: Masterkey Decryption
     :width: 440px
     :align: center
+
+
+Key Rotation: Multiple Masterkey Generations using Cryptomator Hub with Universal Vault Format
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`Unified Vault Format (uvf) <https://github.com/encryption-alliance/unified-vault-format>`_
+defines a common vendor-independent standard based on `Vault Format 8 <https://docs.cryptomator.org/en/latest/misc/vault-format-history/>`_.
+
+The uvf metadata file ``vault.uvf`` replaces the ``vault.cryptomator`` file.
+It is both stored in the vault as file and uploaded to hub.
+It can contain many key generations - only the latest generation is used for data encryption.
+The older generations are used to read the older data encrypted with previous generation keys.
+See :ref:`Key Rotation <security/uvf/key-rotation>` for more details.
+
+Cryptomator hub `1.3.0 <https://github.com/cryptomator/hub/releases/tag/1.3.0>`_) introduced user-specific vault access token JWE containing the vault masterkey for data encryption.
+In the uvf setting, the uvf metadata (with the current and older (master)key generations.
+
+Instead, it will contain a Vault Member key, which allows to decrypt the ``vault.uvf`` metadata.
+Specifically, a Vault Owner will have an access token under ``/access-token`` sub-resource of the form
+
+.. code-block:: json
+
+    {
+        "key": "{memberkey}",
+        "recoveryKey": "{recovery key}",
+    }
+
+Non-owner Vault Members will not have the ``recoveryKey`` shared with them, the JWE will only contain the ``key`` element.
+Vault members can decrypt their access token using their private user key.
+See :ref:`User Key Pair <security/hub/keys/user-keys>`.
+
+Upon Vault creation, a new memberkey and an asymmetric recovery key pair are generated. The public recovery key and the ``vault.uvf`` JWE are uploaded to Cryptomator hub.
+
+.. image:: ../img/security/uvf_vault_creation.drawio.png
+    :alt: uvf Vault Creation
+    :width: 700px
+    :align: center
+
+See :ref:`Key Rotation <security/uvf/key-rotation>` for more details on key rotation and ``vault.uvf``.
+
+Vault sharing is the same as with access tokens introduced in Cryptomator hub `1.3.0 <https://github.com/cryptomator/hub/releases/tag/1.3.0>`_.
+
+Only the payload's ``key`` field contains the latest member key (instead of the masterkey) and the ``recoverKey`` (Vault Owners only).
+
+.. image:: ../img/security/uvf_vault_sharing.drawio.png
+    :alt: uvf Vault Sharing
+    :width: 550px
+    :align: center
+
