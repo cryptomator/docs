@@ -11,8 +11,8 @@ This section describes exemplarily how to unlock a vault in the Desktop app.
 Android and iOS work analogously.
 
 .. note::
-    Currently, only our desktop version supports Cryptomator Hub vaults.
-    We are working on adding support for Android and iOS.
+    Currently, our desktop and iOS version supports Cryptomator Hub vaults.
+    We are working on adding support for Android.
 
 
 As described in :ref:`open an existing vault <desktop/adding-vaults/open-an-existing-vault>`, you should have already added the vault to the vault list, e.g., by selecting the `vault.cryptomator` file.
