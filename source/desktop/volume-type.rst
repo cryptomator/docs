@@ -8,11 +8,10 @@ Volume types play an important role when handling your files.
 When you unlock a vault, Cryptomator makes decrypted files available in your file manager by mounting a virtual drive on your operating system.
 This mounting of a virtual drive is handled differently depending on the volume type chosen in Cryptomator's preferences.
 
-In general, all volume types Cryptomator offers can be categorized into three categories:
+In general, all volume types Cryptomator offers can be categorized into two categories:
 
 #. :ref:`WebDAV <desktop/volume-type/webdav>`
 #. :ref:`FUSE <desktop/volume-type/fuse>`
-#. :ref:`Other <desktop/volume-type/dokany>`
 
 
 .. _desktop/volume-type/webdav:
@@ -93,22 +92,6 @@ Using WebDAV on Windows has the following drawbacks:
 
 .. Additionally, sometimes mounting fails with ``System error 67 has occurred. The network name cannot be found.`` (or its translations).
 .. If it happens, follow you can follow the guide TODO to get access again.
-
-.. _desktop/volume-type/dokany:
-
-Dokany (v1.5.1)
-^^^^^^^^^^^^^^^^
-
-.. warning::
-
-    Dokany support in Cryptomator is deprecated since version 1.7.0. We suggest switching to :ref:`desktop/volume-type/fuse/winfsp`.
-
-**Requirements:** Windows, Dokany 1.5.1 installed
-
-The `Dokany project <https://dokan-dev.github.io/>`_ aims to achieve the same goals as FUSE, but specific for Windows: Provide an interface to create your own filesystem without requiring to write your own kernel filesystem driver.
-It has to be installed separately by downloading an installer from `Dokany's releases page <https://github.com/dokan-dev/dokany/releases/tag/v1.5.1.1000>`_.
-By default, unlocked vaults are mounted to a random drive letter.
-
 
 macOS
 -----
