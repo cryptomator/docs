@@ -82,3 +82,16 @@ Requirements
 ------------
 
 Requires Android 8.0 or later.
+
+.. _android/setup/update-rollout:
+
+Update Rollout
+---------------
+
+The timing of the update depends on your installation type:
+
+* Google PlayStore: Updates are reviewed by Google, so it may take a few days before the update is available.
+* APK Store: Updates are available as they are released.
+* Cryptomator F-Droid Repo: Updates are available as they are released.
+* Main F-Droid Repo: Updates are available as soon as the F-Droid maintainers have built the application, which can take a few days.
+
