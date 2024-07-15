@@ -73,4 +73,22 @@ To lock a vault, simply click ``Lock`` and the virtual drive will disappear or r
 .. image:: ../img/desktop/vault-detail-locked.png
     :alt: Cryptomator window showing an locked vault
 
+Locate Encrypted File
+---------------------
 
+The Locate Encrypted File feature helps users find the encrypted version of a specific file. This feature is particularly useful when vault files are versioned and the user wants to restore an older version of a file. As Cryptomator encrypts filenames and obfuscates directory structures, users first locate the encrypted file and then restore an older version of the encrypted file with the third party app.
+
+1. Unlock the desired vault.
+2. Click on the ``Locate Encrypted File`` button.
+3. Select the file within the vault.
+
+As an alternativ for clicking the button, you can directly drag & drop a file onto the button.
+
+A file manager window opens showing the encrypted folder and marking the encrypted file.
+
+.. raw:: html
+
+    <video width="640" height="360" controls autoplay loop muted>
+      <source src="../_static/vid/locate-encrypted-file.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
