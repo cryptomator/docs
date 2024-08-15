@@ -27,7 +27,7 @@ If a member (assume it's Bob) is removed from a vault, we need to replace the ex
 Theoretically, we could re-encrypt the whole data. However, this is time- and resource-consuming (I/O). And Bob may have made a backup copy of the data anyway.
 Therefore, key rotation aims at enrypting new data - Bob must not be able to decrypt the new data with his old key, even if he still has access to the new ciphertext.
 
-The uvf metadata file replaces the the masterkey file (or the user-specific JWE containing the masterkey introduced in Cryptomator hub `1.3.0 <https://github.com/cryptomator/hub/releases/tag/1.3.0>`_).
+The uvf metadata file replaces the masterkey file (or the user-specific JWE containing the masterkey introduced in Cryptomator hub `1.3.0 <https://github.com/cryptomator/hub/releases/tag/1.3.0>`_).
 It can contain many key generations - only the latest generation is used for data encryption.
 The older generations are used to read the older data encrypted with previous generation keys.
 
