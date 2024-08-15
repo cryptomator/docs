@@ -177,7 +177,7 @@ The following rules need to be respected upon encrypting the CEK for vault recov
     "JWE signature", "JWE manipulation"
     "public key hash",  "implantation of new public key at server side"
 
-Only URLs relative to the trusted hub must be followed, absolute URLs must not be followed in order for not retrieve the public recovery key from an untrusted source.
+Only URLs relative to the trusted hub must be followed, absolute URLs must not be followed in order not to retrieve the public recovery key from an untrusted source.
 JWE signature verification makes sure the JWE comes from someone having access to the CEK, i.e. from a vault member (having access to CEK via memberkey or recoverykey).
 A technical admin of the managed server cannot implant public keys at the server side unnoticed without being a vault member, as the keyhash is authenticated by the `tag` as well.
 
@@ -210,7 +210,7 @@ Key rotation will comprise the following steps:
 - generate new CEK
 - generate new seed for data encryption and add to `seeds` of new metadata payload
 - encrypt payload with CEK for `ciphertext` of new metadata JWE
-- encrypt CEK with new memberkey and public recovery key into corresponding `encrypted_key` new metadata JWE
+- encrypt CEK with new memberkey and public recovery key into corresponding ``encrypted_key`` new metadata JWE
 - upload new metadata JWE
 - return mutex for vault key rotation to hub
 
