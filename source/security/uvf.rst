@@ -111,7 +111,7 @@ All vault members share the same vault member key to access the vault metadata.
 The shared vault member key is a 256 bit AES Key. It is used for AES Key Wrap (``"alg": "A256KW"``) to enrypt/decrypt the metadata CEK.
 The wrapped CEK is stored as ``encrypted_key`` for the ``org.cryptomator.hub.memberkey`` recipient.
 
-The vault member key in turn is stored for each user separately in the hub in the form of a JWE encrypted with user's public user key.
+The vault member key in turn is stored for each user separately in the hub in the form of a JWE encrypted with the user's public user key.
 Upon key rotation, the JWE for each user needs to be updated by using the public user key of each vault member.
 
 
