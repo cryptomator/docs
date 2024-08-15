@@ -95,7 +95,7 @@ Here's an example of an (encrypted) metadata file (JWE in JSON serialization, se
 
 The `tag` field contains the `MAC <https://en.wikipedia.org/wiki/Message_authentication_code>`_ which allows to verify message authentication and integrigy checking, i.e.
 verify that the message can only come from someone having access to the CEK and not being tampered with.
-Note that he recipient headers are authenticated as well.
+Note that the recipient headers are authenticated as well.
 
 .. image:: ../img/security/uvf_key_rotation.drawio.png
     :alt: uvf Key Rotation
