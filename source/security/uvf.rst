@@ -51,7 +51,7 @@ Here's an example of the uvf metadata payload with different key generations in 
     }
 
 
-When a new generation of keys is added to the metadata file, it must be re-encrypted as well - Bob, with his old key, must not have be able to decrypt data encrypted later.
+When a new generation of keys is added to the metadata file, it must be re-encrypted as well - Bob, with his old key, must not be able to decrypt data encrypted later.
 
 Furthermore, for technical reasons (which will become clear below), the above payload needs to be shared with several ``recipients``.
 More precisely, we use different Key Encapsulation methods to encrypt the payload for multiple recipients (a ``recipient`` being identified by their key ID ``kid``).
