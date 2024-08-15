@@ -58,7 +58,7 @@ More precisely, we use different Key Encapsulation methods to encrypt the payloa
 This is done in two steps:
 
 - The payload is encrypted only once with the same (shared) Content Encryption Key (CEK). The encrypted payload is stored in the ``ciphertext`` field of the encrypted metadata file.
-- The CEK is then encrypted specifically for each recipient with their key and method, and the resulting encrypted stored in the ``encrypted_key`` field of the encrypted metadata file.
+- The CEK is then encrypted specifically for each recipient with their key and method, and the resulting encrypted key is stored in the ``encrypted_key`` field of the encrypted metadata file.
 
 Here's an example of an (encrypted) metadata file (JWE in JSON serialization, see `RFC 7516 <https://www.rfc-editor.org/rfc/rfc7516.html>`_)  with two recipients (``org.cryptomator.hub.memberkey`` and ``org.cryptomator.hub.recoverykey``):
 
