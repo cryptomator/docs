@@ -27,3 +27,10 @@ In order to have a guarantee that your vault stays unlocked for a certain amount
 E.g., if you choose "1 Hour" and Cryptomator gets terminated by iOS within that time frame, your vault can automatically be unlocked again using the key from the iOS keychain. If the selected time frame has passed, the key will be removed from the iOS keychain and your vault will get automatically locked.
 
 If you choose the "Indefinite" option, your vault will be kept unlocked until you have manually locked it.
+
+.. _ios/vault-management/security-considerations:
+
+Security Considerations
+--------------------------
+
+Refer to the :ref:`Secrets Management <security/architecture/secrets-management>` section to understand when and how your vault passwords are stored in the iOS Keychain.
