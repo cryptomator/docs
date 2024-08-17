@@ -33,4 +33,12 @@ If you choose the "Indefinite" option, your vault will be kept unlocked until yo
 Security Considerations
 --------------------------
 
-Refer to the :ref:`Secrets Management <security/architecture/secrets-management>` section to understand when and how your vault passwords are stored in the iOS Keychain.
+iOS will store a copy of your Vault passwords in the iOS Keychain for vaults that use ``Face ID`` or have the ``Unlock duration`` set to anything except ``Let iOS Decide Automatically``.
+
+Cryptomator stores vault passwords in the iOS Keychain with the `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly <https://developer.apple.com/documentation/security/ksecattraccessibleafterfirstunlockthisdeviceonly>`_ attribute, which ensures:
+
+1. After a reboot, the copy of your vault passwords stored in the iOS Keychain are only available to use by the Cryptomator app after the first unlock using your device's passcode.
+2. Vault passwords are not migrated to a new device when restoring an iOS device from a backup of a different iOS device.
+3. Vault passwords aren't synced to iCloud.
+
+It should be obvious, but Cryptomator won't store a copy of your vault password in the iOS Keychain, for vaults that don't use ``Face ID`` and also have their ``Unlock duration`` set to ``Let iOS Decide Automatically``.
