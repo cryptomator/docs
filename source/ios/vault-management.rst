@@ -31,14 +31,17 @@ If you choose the "Indefinite" option, your vault will be kept unlocked until yo
 .. _ios/vault-management/security-considerations:
 
 Security Considerations
---------------------------
+-----------------------
 
-iOS will store a copy of your Vault passwords in the iOS Keychain for vaults that use ``Face ID`` or have the ``Unlock duration`` set to anything except ``Let iOS Decide Automatically``.
+Cryptomator balances security and usability by storing certain credentials in the iOS Keychain to enable convenient features like biometric authentication and reduced password prompts. Here's how it works:
 
-Cryptomator stores vault passwords in the iOS Keychain with the `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly <https://developer.apple.com/documentation/security/ksecattraccessibleafterfirstunlockthisdeviceonly>`_ attribute, which ensures:
+* Vault Passwords: Cryptomator stores a copy of your vault password in the iOS Keychain when Touch ID or Face ID is enabled.
+* Masterkeys: Cryptomator stores a copy of the masterkey in the iOS Keychain for vaults with a specified "Unlock Duration" (anything except "Let iOS Decide Automatically").
 
-1. After a reboot, the copy of your vault passwords stored in the iOS Keychain are only available to use by the Cryptomator app after the first unlock using your device's passcode.
-2. Vault passwords are not migrated to a new device when restoring an iOS device from a backup of a different iOS device.
-3. Vault passwords aren't synced to iCloud.
+These credentials are stored with the `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly <https://developer.apple.com/documentation/security/ksecattraccessibleafterfirstunlockthisdeviceonly>`_ attribute, ensuring:
 
-It should be obvious, but Cryptomator won't store a copy of your vault password in the iOS Keychain, for vaults that don't use ``Face ID`` and also have their ``Unlock duration`` set to ``Let iOS Decide Automatically``.
+1. Keychain entries are only accessible after the first unlock using your device's passcode following a reboot.
+2. Keychain entries are not transferred to a new device when restoring from a backup.
+3. Keychain entries are not synchronized to iCloud.
+
+These measures are designed to provide a secure yet convenient experience on your trusted devices. If you prefer not to store these credentials in the Keychain due to security concerns, you can opt out of using these features. However, for most users, this balance between security and usability is appropriate and safe.
