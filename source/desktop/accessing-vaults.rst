@@ -89,6 +89,6 @@ A file manager window opens showing the encrypted folder and marking the encrypt
 .. raw:: html
 
     <video width="640" height="360" controls autoplay loop muted>
-      <source src="/_static/vid/locate-encrypted-file.mov" type="video/mp4">
+      <source src="../../_static/vid/locate-encrypted-file.mov" type="video/mp4">
       Your browser does not support the video tag.
     </video>
