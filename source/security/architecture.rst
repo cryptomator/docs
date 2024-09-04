@@ -176,9 +176,9 @@ The older generations are used to read the older data encrypted with previous ge
 See :ref:`Key Rotation <security/uvf/key-rotation>` for more details.
 
 Cryptomator hub `1.3.0 <https://github.com/cryptomator/hub/releases/tag/1.3.0>`_) introduced user-specific vault access token JWE containing the vault masterkey for data encryption.
-In the uvf setting, the uvf metadata (with the current and older (master)key generations.
+In the uvf setting, the uvf metadata must hold the current and older (master)key generations.
 
-Instead, it will contain a Vault Member key, which allows to decrypt the ``vault.uvf`` metadata.
+In order to give access to the vault metadata, the vault access token will contain a Vault Member key, which allows to decrypt the ``vault.uvf`` metadata.
 Specifically, a Vault Owner will have an access token under ``/access-token`` sub-resource of the form
 
 .. code-block:: json
