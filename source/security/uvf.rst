@@ -204,15 +204,15 @@ Even a technical admin with access to the DB cannot gain access to the key mater
 
 Key rotation will comprise the following steps:
 
-- get mutex for vault key rotation from hub (avoid concurrent key rotation for the same vault, lock at server)
-- generate new memberkey
-- encrypt new memberkey for all members with their public user key and update their vault access token
-- generate new CEK
-- generate new seed for data encryption and add to `seeds` of new metadata payload
-- encrypt payload with CEK for `ciphertext` of new metadata JWE
-- encrypt CEK with new memberkey and public recovery key into corresponding ``encrypted_key`` new metadata JWE
-- upload new metadata JWE
-- return mutex for vault key rotation to hub
+#. get mutex for vault key rotation from hub (avoid concurrent key rotation for the same vault, lock at server)
+#. generate new memberkey
+#. encrypt new memberkey for all members with their public user key and update their vault access token
+#. generate new CEK
+#. generate new seed for data encryption and add to `seeds` of new metadata payload
+#. encrypt payload with CEK for `ciphertext` of new metadata JWE
+#. encrypt CEK with new memberkey and public recovery key into corresponding ``encrypted_key`` new metadata JWE
+#. upload new metadata JWE
+#. return mutex for vault key rotation to hub
 
 
 File Header Encryption
