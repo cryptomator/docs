@@ -167,7 +167,7 @@ Key Rotation: Multiple Masterkey Generations using Cryptomator Hub with Universa
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 `Unified Vault Format (uvf) <https://github.com/encryption-alliance/unified-vault-format>`_
-defines a common vendor-independent standard based on `Vault Format 8 <https://docs.cryptomator.org/en/latest/misc/vault-format-history/>`_.
+defines a common vendor-independent standard inspired by and partially based on `Vault Format 8 <https://docs.cryptomator.org/en/latest/misc/vault-format-history/>`_.
 
 The uvf metadata file ``vault.uvf`` replaces the ``vault.cryptomator`` file.
 It is both stored in the vault as file and uploaded to hub.
