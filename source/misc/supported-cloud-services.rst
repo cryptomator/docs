@@ -79,3 +79,10 @@ by both Cryptomator for Android and Cryptomator for iOS.
 
 Incompatible Cloud Services
 ---------------------------
+
+| The Cloud Services listed in the following *non-exhaustive* table can currently **not** be used natively or via WebDAV.
+| This applies to both Cryptomator for Android and Cryptomator for iOS.
+
+.. csv-table:: Incompatible Cloud Services
+   :header-rows: 1
+   :file: ../_static/csv/incompatible-clouds.csv
