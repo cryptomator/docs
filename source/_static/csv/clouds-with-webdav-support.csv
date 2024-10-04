@@ -13,7 +13,7 @@
 "MagentaCLOUD [#note-magentacloud]_","``https://magentacloud.de/remote.php/webdav``"
 "Mailbox.org","``https://dav.mailbox.org/servlet/webdav.infostore/``"
 "Mail.Ru","``https://webdav.cloud.mail.ru``"
-"Nextcloud [#note-nextcloud]_","``https://{host}/{path}/remote.php/dav/files/{username}`` or ``https://{host}/{path}/remote.php/webdav``"
+"Nextcloud [#note-nextcloud]_","``https://{host}/{path}/remote.php/dav/files/{username}``"
 "ownCloud [#note-owncloud]_","``https://{host}/{path}/remote.php/webdav``"
 "pCloud (EU) [#note-pcloud]_","``https://ewebdav.pcloud.com``"
 "pCloud (US) [#note-pcloud]_","``https://webdav.pcloud.com``"
