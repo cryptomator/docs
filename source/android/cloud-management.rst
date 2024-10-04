@@ -13,7 +13,7 @@ Please enter the credentials for your provider account or in case of Google Driv
 If your authentication was successful, some of the providers might ask you to grant Cryptomator access permission to your online files.
 Please allow this permission.
 
-In Google Drive, OneDrive and Dropox you can only create one connection between your cloud storage account and the Cryptomator app.
+In Google Drive, OneDrive and Dropbox you can only create one connection between your Cloud Service account and the Cryptomator app.
 You can't connect to (for example) two different *Dropbox* accounts.
 
 If the provider requested permission to access your online files you can remove Cryptomator permissions from your online storage account at any time.
@@ -60,7 +60,8 @@ Login OneDrive
 Login WebDAV
 ------------------
 
-You can find `here <https://community.cryptomator.org/t/webdav-urls-of-common-cloud-storage-services/75>`_ a list of the most common WebDAV URLs.
+Please see :ref:`misc/supported-cloud-services/clouds-with-webdav-support` for a non-exhaustive list of Cloud Services
+and information about accessing them with WebDAV.
 
 .. image:: ../img/android/add-webdav-login-provider-0.png
     :alt: How to handle cloud services with Android
