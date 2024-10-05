@@ -56,6 +56,24 @@ The following Cloud Services are natively supported by Cryptomator for Android a
 Cloud Services with WebDAV support
 ----------------------------------
 
+The following *non-exhaustive* table lays out information about Cloud Services that can be accessed using WebDAV
+by both Cryptomator for Android and Cryptomator for iOS.
+
+.. csv-table:: Cloud Services with WebDAV support
+   :header-rows: 1
+   :file: ../_static/csv/clouds-with-webdav-support.csv
+
+| \* Disroot: To login you must provide your disroot user_name (or your email if using with own domain) and password. If 2FA is enabled, generate app-specific-password
+| \* IceDrive requires a paid plan and a separate access key as password. (see `here <https://icedrive.net/help/account/does-icedrive-support-webdav>`_)
+| \* kDrive disables WebDAV support for free users.
+| \* Koofr needs a separate app password for WebDAV access.
+| \* MagentaCLOUD needs a separate protocol password for WebDAV access.
+| \* Nextcloud needs an app-specific password when 2FA is enabled.
+| \* ownCloud needs an app-specific password when 2FA is enabled.
+| \* pCloud disables WebDAV access when 2FA is enabled. Requires a paid plan.
+| \* Yandex.Disk needs an app-specific password when 2FA is enabled.
+| \* Strato and HiDrive using 2FA requires the OTP provided next to the password but it is only valid for 60 minutes then (see `here <https://www.strato.de/faq/cloud-speicher/2-Faktor-Authentifizierung/>`_)
+
 .. _misc/supported-cloud-services/incompatible-clouds:
 
 Incompatible Cloud Services
