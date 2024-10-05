@@ -63,16 +63,17 @@ by both Cryptomator for Android and Cryptomator for iOS.
    :header-rows: 1
    :file: ../_static/csv/clouds-with-webdav-support.csv
 
-| \* Disroot: To login you must provide your disroot user_name (or your email if using with own domain) and password. If 2FA is enabled, generate app-specific-password
-| \* IceDrive requires a paid plan and a separate access key as password. (see `here <https://icedrive.net/help/account/does-icedrive-support-webdav>`_)
-| \* kDrive disables WebDAV support for free users.
-| \* Koofr needs a separate app password for WebDAV access.
-| \* MagentaCLOUD needs a separate protocol password for WebDAV access.
-| \* Nextcloud needs an app-specific password when 2FA is enabled.
-| \* ownCloud needs an app-specific password when 2FA is enabled.
-| \* pCloud disables WebDAV access when 2FA is enabled. Requires a paid plan.
-| \* Yandex.Disk needs an app-specific password when 2FA is enabled.
-| \* Strato and HiDrive using 2FA requires the OTP provided next to the password but it is only valid for 60 minutes then (see `here <https://www.strato.de/faq/cloud-speicher/2-Faktor-Authentifizierung/>`_)
+.. [#note-disroot] Disroot: To login, you must provide your disroot username (or your email if you are using your own domain) and your password. If 2FA is enabled you will have to generate an app-specific password.
+.. [#note-hidrive-ionos] HiDrive IONOS: When using 2FA WebDAV requires the OTP provided next to the password but it is only valid for 30 minutes then (see `here \[de\] <https://www.ionos.de/hilfe/hidrive/sicherheit-in-hidrive/aktivieren-der-zwei-faktor-authentifizierung/>`__)
+.. [#note-hidrive-strato] HiDrive Strato: When using 2FA WebDAV requires the OTP provided next to the password but it is only valid for 60 minutes then (see `here \[de\] <https://www.strato.de/faq/cloud-speicher/2-Faktor-Authentifizierung/>`__)
+.. [#note-icedrive] IceDrive: WebDAV requires a paid plan and a separate access key as password. (see `here <https://icedrive.net/help/account/does-icedrive-support-webdav>`__)
+.. [#note-kdrive] kDrive: WebDAV support is disabled for free users.
+.. [#note-koofr] Koofr: WebDAV access requires a separate app password.
+.. [#note-magentacloud] MagentaCLOUD: WebDAV access requires a separate protocol password.
+.. [#note-nextcloud] Nextcloud: WebDAV requires an app-specific password when 2FA is enabled.
+.. [#note-owncloud] ownCloud: WebDAV requires an app-specific password when 2FA is enabled.
+.. [#note-pcloud] pCloud: WebDAV access is disabled when 2FA is enabled. Requires a paid plan.
+.. [#note-yandex-disk] Yandex.Disk: WebDAV requires an app-specific password when 2FA is enabled.
 
 .. _misc/supported-cloud-services/incompatible-clouds:
 
