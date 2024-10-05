@@ -36,3 +36,9 @@ border-color: #407F41;
 .rst-content .note, .rst-content .seealso, .rst-content .wy-alert-info.admonition, .rst-content .wy-alert-info.admonition-todo, .rst-content .wy-alert-info.attention, .rst-content .wy-alert-info.caution, .rst-content .wy-alert-info.danger, .rst-content .wy-alert-info.error, .rst-content .wy-alert-info.hint, .rst-content .wy-alert-info.important, .rst-content .wy-alert-info.tip, .rst-content .wy-alert-info.warning, .wy-alert.wy-alert-info {
 background: #EBF5EB;
 }
+
+.rst-content .highlights {
+    margin-left: 0;
+    padding: 0 0.5em;
+    border-left: 0.25em solid #66CC68;
+}
