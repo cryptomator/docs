@@ -35,7 +35,7 @@ The following Cloud Services are natively supported by Cryptomator for Android a
    :header-rows: 1
    :file: ../_static/csv/natively-supported-clouds.csv
 
-.. [#playstore-recommendation] **We recommend using the Google Play Store variant of Cryptomator for Android users**
+.. [#playstore-recommendation] **We recommend using the** |GooglePlayStoreVariant|_ **of Cryptomator for Android users**
    for the best experience. Please see :ref:`here <android/setup/variant-differences>` for more information about
    the different Cryptomator for Android variants and the reasoning behind those.
 .. [#except-f-droid-main] Not supported by the :ref:`Main F-Droid repo variant <android/setup/f-droid-main-repository>`
@@ -86,3 +86,6 @@ Incompatible Cloud Services
 .. csv-table:: Incompatible Cloud Services
    :header-rows: 1
    :file: ../_static/csv/incompatible-clouds.csv
+
+.. |GooglePlayStoreVariant| replace:: **Google Play Store variant**
+.. _GooglePlayStoreVariant: ../android/setup.html#google-play-store
