@@ -24,7 +24,7 @@ After pressing the three dots ① and clicking on ``Settings``, you will find op
 Cloud Services
 ^^^^^^^^^^^^^^
 
-This setting lists all cloud services. When pressing on a service, the authentication starts or if you're already authenticated, you will be logged out.
+This setting lists all Cloud Services. When pressing on a service, the authentication starts or if you're already authenticated, you will be logged out.
 
 .. image:: ../img/android/setting-cloud-services.png
     :alt: How to handle cloud services with Android
@@ -212,7 +212,7 @@ If so it will not be downloaded again but directly retrieved from the file syste
 Cache Size Per Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Using this setting, you can specify the total max cache size per cloud provider. 
+Using this setting, you can specify the total max cache size per Cloud Service.
 
 You can choose between the following options:
 
@@ -276,7 +276,7 @@ Version
 
 This setting displays the current version of this app.
 
-The following sub settings are only available, if you're using the APK-Store version of Cryptomator and not the PlayStore one.
+The following sub settings are only available, if you're using the APK-Store variant of Cryptomator and not the Google Play Store one.
 
 .. _android/settings/update-check-interval:
 

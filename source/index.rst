@@ -90,4 +90,5 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :caption: Misc
 
    misc/contribute.rst
+   misc/supported-cloud-services.rst
    misc/vault-format-history.rst
