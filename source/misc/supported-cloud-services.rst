@@ -45,7 +45,7 @@ The following Cloud Services are natively supported by Cryptomator for Android a
 .. [#note-app-spaces] Some Android and iOS apps integrate into the operating system's file manager with their own
    storage spaces to allow seamless access to their files via so called "File Providers." Cryptomator generally supports
    saving vaults in those spaces, but is dependent on those apps explicitly supporting access by other
-   apps like Cryptomator. This is not a limitation of Cryptomator and needs to be addressed by those apps.
+   apps like Cryptomator.
    For more technical information about this see `here <https://github.com/cryptomator/android/issues/553>`__ for Android
    and `here <https://github.com/cryptomator/ios/issues/51>`__ for iOS.
 .. [#note-webdav] Please see :ref:`misc/supported-cloud-services/clouds-with-webdav-support` for a non-exhaustive list
