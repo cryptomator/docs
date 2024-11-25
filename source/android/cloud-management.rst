@@ -81,6 +81,17 @@ and information about accessing them with WebDAV.
 
 .. _android/cloud-management/login-local-storage:
 
+Login S3
+------------------
+
+Generate a key that has permissions "Allow List All Bucket Names". (AWS root users have this by default and `this permission may not be necessary in the future <https://github.com/cryptomator/android/issues/339>`_.)
+
+"endpoint" refers to how the S3 API for your bucket can be reached. In the case of `official S3 <https://docs.aws.amazon.com/general/latest/gr/s3.html>`_, it would be ``s3.<region>.amazonaws.com``, for e.g. `Backblaze B2 <https://www.backblaze.com/apidocs/introduction-to-the-s3-compatible-api>`_ ``s3.<region>.backblazeb2.com``.
+
+.. image:: ../img/android/add-s3-login-provider.png
+    :alt: Android S3 connection form
+    :width: 346px
+
 Login Local Storage
 -----------------------
 
