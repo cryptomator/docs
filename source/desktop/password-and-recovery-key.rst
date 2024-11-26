@@ -107,7 +107,7 @@ If the recovery key is valid, a small message will be displayed below the entere
     By design, *only* the correct recovery key is accepted. **A valid but incorrect key won't be accepted to prevent your old data from becoming inaccessible.**
 
 Finally, assign a new password to your vault.
-It is the same process as the :ref:`vault creation <desktop/adding-vaults/3.-choose-a-passwords>`, except that no new recovery key is generated.
+It is the same process as the :ref:`vault creation <desktop/adding-vaults/4.-choose-a-passwords>`, except that no new recovery key is generated.
 Again, please choose a :ref:`strong password <security/best-practices/good-passwords>`.
 
 Once changed, you can unlock your vault with the new password.
