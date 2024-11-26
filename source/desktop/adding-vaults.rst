@@ -89,7 +89,7 @@ Refer to :ref:`Name Shortening <security/vault/name-shortening>` for additional 
    Adjusting the maximum length of encrypted file names may affect compatibility with certain filesystems. Ensure you thoroughly test these settings before enabling them for critical data.
 
 
-.. _desktop/adding-vaults/4.-choose-a-passwords:
+.. _desktop/adding-vaults/4.-choose-a-password:
 
 4. Choose a Password
 ^^^^^^^^^^^^^^^^^^^^^
