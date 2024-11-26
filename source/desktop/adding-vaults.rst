@@ -35,7 +35,6 @@ Start by choosing a name for your vault.
 .. image:: ../img/desktop/add-vault-1.png
     :alt: Choosing "My first Vault" as a vault name
 
-
 .. _desktop/adding-vaults/2.-choose-a-storage-location:
 
 2. Choose a Storage Location
