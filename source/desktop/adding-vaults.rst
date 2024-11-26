@@ -10,10 +10,10 @@ You will be presented with two options when adding a vault:
     :alt: Create a new or open an existing vault
 
 .. |CreateVault| replace:: ``Create New Vault...``
-.. _CreateVault: ./adding-vaults.html#create-a-new-vault
+.. _CreateVault: #create-a-new-vault
 
 .. |OpenVault| replace:: ``Open Existing Vault...``
-.. _OpenVault: ./adding-vaults.html#open-an-existing-vault
+.. _OpenVault: #open-an-existing-vault
 
 
 .. _desktop/adding-vaults/create-a-new-vault:
