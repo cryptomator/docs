@@ -76,6 +76,7 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    security/hub.rst
    security/vault.rst
    security/best-practices.rst
+   security/uvf.rst
 
 .. toctree::
    :hidden:
