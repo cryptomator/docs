@@ -26,8 +26,8 @@ You can either close the confirmation window by clicking ``Done`` or click on ``
 
     You can store the password in your operating system's keychain by checking the "Save Password" checkbox. There are also plug-ins available for Cryptomator, that allow you to store Cryptomator's vault passwords in third party password managers:
 
-      - this `plug\-in <https://plugin.purejava.org>`_ stores Cryptomator’s vault passwords in a KeePassXC database
-      - that `plug\-in <https://github.com/purejava/cryptomator-bitwarden/wiki>`_ stores the vault passwords in Bitwarden's Secrets Manager
+      - `KeePassXC plug\-in <https://plugin.purejava.org>`_ stores Cryptomator’s vault passwords in a KeePassXC database
+      - `Bitwarden plug\-in <https://github.com/purejava/cryptomator-bitwarden/wiki>`_ stores the vault passwords in Bitwarden's Secrets Manager
 
     With a saved password, you can unlock your vaults without typing a password on every unlock. It's faster.
 
