@@ -23,10 +23,12 @@ project = 'Cryptomator'
 copyright = '2024, cryptomator.org'
 author = 'Cryptomator Contributors'
 
+html_title = 'Cryptomator Documentation'
+
 # The short X.Y version
-version = '1.7'
+version = 'main'
 # The full version, including alpha/beta/rc tags
-release = '1.7.0'
+release = 'main'
 
 
 # -- General configuration ---------------------------------------------------
@@ -92,7 +94,6 @@ html_theme_options = {
     'titles_only': False,
     'logo_only' : True,
     'style_nav_header_background': '#49B04A',
-    'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': True,
     'vcs_pageview_mode': '',

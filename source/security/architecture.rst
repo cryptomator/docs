@@ -148,7 +148,7 @@ The wrapped keys and the parameters needed to derive the KEK are then stored as 
     {
         "version": 999, /* deprecated, vault format is now specified in the vault configuration */
         "scryptSalt": "QGk...jY=",
-        "scryptCostParam": 16384,
+        "scryptCostParam": 32768,
         "scryptBlockSize": 8,
         "primaryMasterKey": "QDi...Q==", /* wrappedEncryptionMasterKey */
         "hmacMasterKey": "L83...Q==", /* wrappedMacMasterKey */

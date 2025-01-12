@@ -27,6 +27,7 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    desktop/vault-management.rst
    desktop/volume-type.rst
    desktop/error-handling.rst
+   desktop/sync-conflicts.rst
    desktop/advanced-settings.rst
 
 .. toctree::
@@ -91,4 +92,5 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :caption: Misc
 
    misc/contribute.rst
+   misc/supported-cloud-services.rst
    misc/vault-format-history.rst

@@ -50,7 +50,7 @@ If you don't have a running Traefik deployment and want to use Docker Compose to
 
     services:
       traefik:
-        image: traefik:v2.9
+        image: traefik:v3.0
         command:
           # Provider
           - '--providers.docker'
@@ -68,6 +68,8 @@ If you don't have a running Traefik deployment and want to use Docker Compose to
           # Uncomment to use staging for testing
           # - '--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory'
           - '--entrypoints.websecure.http.tls.certresolver=myresolver'
+          # HTTP/3
+          - '--entrypoints.websecure.http3'
           # Logs
           - '--accesslog.filepath=/logs/access.log'
           - '--accesslog.format=json'
