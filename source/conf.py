@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Cryptomator'
-copyright = '2024, cryptomator.org'
+copyright = '2025, cryptomator.org'
 author = 'Cryptomator Contributors'
 
 html_title = 'Cryptomator Documentation'
