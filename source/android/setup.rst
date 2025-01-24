@@ -7,6 +7,7 @@ You can get Cryptomator for Android on
 * `APK Store`_
 * `Cryptomator F-Droid repository`_
 * `Main F-Droid repository`_
+* `Accrescent`_
 
 No matter which variant of the app you choose: The key functionality of Cryptomator stays the same.
 
@@ -31,7 +32,7 @@ Most users will want to use the :ref:`Google Play Store<android/setup/google-pla
   Additionally the *Main F-Droid repo variant* **doesn't** support **any** Cloud Services that require an API key.
 | Both can be downloaded from their corresponding F-Droid repository and require a license which can be obtained via
   `our website. <APK Store_>`_
-| The *APK Store* and *F-Droid variants* of Cryptomator were created to serve users who do not have the *Google Play Store* installed
+| The *APK Store*, *F-Droid variants* and *Accrescent* of Cryptomator were created to serve users who do not have the *Google Play Store* installed
   on their Android device or do not want their purchases to go through Google.
 
 .. note::
@@ -109,6 +110,21 @@ The *Main F-Droid repository variant* can be installed directly from the `Main F
 
 Unlike all other variants of Cryptomator for Android, this variant has its own package name: ``org.cryptomator.lite``. It means that you cannot, intentionally or unintentionally, simply switch between this and the other variants. It requires to setup the app again. The reason we decided to do this is that other Cryptomator variants already exist in some popular F-Droid repositories, and if we hadn't decided to do this, there could have been an unwanted variant switch.
 
+.. _android/setup/accrescent:
+
+Accrescent
+----------
+
+.. highlights::
+    | You can buy a license for the *Accrescent* variant of Cryptomator here:
+    | `APK Store`_
+
+.. highlights::
+    | You can download the *Accrescent* variant of Cryptomator here:
+    | `Accrescent`_
+
+As this variant is not bought using the *Google Play Store* you need to buy a license key from the `APK Store`_ on our website. After Cryptomator is installed, you have to enter this key. This can be done by copying and pasting the license into the field when asked for it or by clicking on the link starting with ``cryptomator://license/YOUR_LICENSE_KEY``.
+
 .. _android/setup/requirements:
 
 Requirements
@@ -132,6 +148,7 @@ The timing of the update depends on your installed variant:
 .. _`APK Store`: https://cryptomator.org/android/
 .. _`Cryptomator F-Droid repository`: https://static.cryptomator.org/android/fdroid/repo?fingerprint=F7C3EC3B0D588D3CB52983E9EB1A7421C93D4339A286398E71D7B651E8D8ECDD
 .. _`Main F-Droid repository`: https://f-droid.org/en/packages/org.cryptomator.lite
+.. _`Accrescent`: https://accrescent.app/app/org.cryptomator
 
 .. |GooglePlayStoreVariant| replace:: **Google Play Store variant**
 .. _GooglePlayStoreVariant: `android/setup/google-playstore`_

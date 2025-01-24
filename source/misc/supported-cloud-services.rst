@@ -42,6 +42,8 @@ The following Cloud Services are natively supported by Cryptomator for Android a
    because this Cloud Service requires an API key.
 .. [#except-f-droid-cryptomator] Not supported by the :ref:`Cryptomator F-Droid repo variant <android/setup/f-droid-repository>`
    because this Cloud Service requires proprietary dependencies.
+.. [#except-accrescent] Not supported by the :ref:`Accrescent variant <android/setup/accrescent>`
+   because this Cloud Service requires proprietary dependencies.
 .. [#note-app-spaces] Some Android and iOS apps integrate into the operating system's file manager with their own
    storage spaces to allow seamless access to their files via so called "File Providers." Cryptomator generally supports
    saving vaults in those spaces, but is dependent on those apps explicitly supporting access by other
