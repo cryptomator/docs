@@ -143,6 +143,7 @@ The timing of the update depends on your installed variant:
 * *APK Store:* Updates are available as they are released.
 * *Cryptomator F-Droid Repo:* Updates are available as they are released.
 * *Main F-Droid Repo:* Updates are available as soon as the F-Droid maintainers have built the application, which can take a few days.
+* *Accrescent:* Updates are reviewed by the Accrescent team, updates are available as soon as the review is complete.
 
 .. _`Google Play Store`: https://play.google.com/store/apps/details?id=org.cryptomator&hl=en
 .. _`APK Store`: https://cryptomator.org/android/
