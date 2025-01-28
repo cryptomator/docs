@@ -29,6 +29,7 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    desktop/error-handling.rst
    desktop/sync-conflicts.rst
    desktop/advanced-settings.rst
+   desktop/network.rst
 
 .. toctree::
    :hidden:
