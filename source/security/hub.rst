@@ -58,30 +58,3 @@ the :ref:`User Key <security/hub/keys/user-keys>`. The Account Key acts as a pas
     The Account Key itself is stored as an `ECDH-ES-encrypted JWE <https://datatracker.ietf.org/doc/html/rfc7518.html#section-4.6>`_, allowing its owner to
     view it from any authorized device. Regardless it should be securely stored independently.
 
-
-.. _security/hub/wot:
-
-Web of Trust
-------------
-
-The Web of Trust (WoT) feature in Cryptomator Hub helps users verify each other's identity by signing the :ref:`User Key Pair <security/hub/keys/user-keys>` with their private keys using ECDSA.
-First the trusting user needs to verify the trustee by entering the first characters of the trustee's public key fingerprint. Once signed, the proof is uploaded to Hub, where others can check its authenticity e.g. during vault sharing.
-
-WoT also supports transitive trust, meaning if alice trusts bob, and bob trusts charlie, then alice implicitly trusts charlie. This forms a trust chain, allowing users to establish indirect trust relationships.
-
-The maximum depth of such chains can be configured using the ``wot_max_depth`` property, which limits how far trust can extend within Hub:
-
-* The default value is 3 ("Great-Grandchild")
-* The maximum value is 9
-* The minimum value, 0, means no trust chain is allowed, only direct trust relationships are considered
-
-With the ``wot_id_verify_len`` property, the minimum length of to be entered public key fingerprint can be configured:
-
-* The default value is 2
-* The minimum value, 0, means the fingerprint of the trustee is fully shown wihtout any input needed
-
-.. note::
-
-    If a user resets their account, their User Key Pair is regenerated, invalidating all previously established trust relationships regarding this user. As a result, the user must be re-verified by everyone who previously trusted them.
-    Additionally, any existing trust chains that included the user will be broken, requiring re-verification to restore trust and re-establish transitive trust relationships.
-

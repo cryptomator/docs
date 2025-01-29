@@ -40,36 +40,3 @@ A good step-by-step guide for connecting Microsoft Entra with OpenID Connect can
 
 .. warning::
     Regardless of your choice, your Keycloak instance always contains two local users: ``admin`` and ``syncer``. **Do not edit or delete them!** The first one is for administration tasks and the second one is used to synchronize users and groups between Keycloak and Hub.
-
-
-.. _hub/user-group-management/roles:
-
-Roles
--------------
-
-There are four different roles in Cryptomator Hub:
-
-* **user**: A user can open vaults and manage their own account.
-* **admin**: An admin manages the Keycloak realm, can see the audit log, and can create vaults.
-* **create-vault**: Only users with this role can create vaults. The role is inherited by the `admin` role.
-
-The ``user``, ``admin``, and ``create-vault`` roles are assigned to users or groups via the Keycloak admin console by an existing user with the ``admin`` role.
-
-.. _hub/user-group-management/roles/create-vault:
-
-Create Vault Role
-^^^^^^^^^^^^^^^^^
-
-By default, this role is only assigned to the ``admin`` role. This means that only users with the ``admin`` role can create vaults. If you want to allow other users to create vaults, you can assign the ``create-vault`` role to them directly or via a group.
-
-If you want that all users can create vaults, assigning the ``create-vault`` role as transient role to the ``user`` role. This way, every user will have the ``create-vault`` role as well.
-
-To allow all users vault creation, assign ``create-vault`` as a transient role to the ``user`` role:
-
-1. Open the Keycloak admin console.
-2. Select ``Realm roles``.
-3. Select the ``user`` role.
-4. Select ``Assign role``.
-5. Select the ``create-vault`` role.
-6. Apply with ``Assign``.
-
