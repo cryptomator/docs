@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-#    branches: ["main"] TODO: Uncomment this line to restrict the action to the main branch
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
