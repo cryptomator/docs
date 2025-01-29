@@ -35,7 +35,7 @@ Create a Vault
 --------------
 
 .. note::
-    Creating vaults do require the ``create-vault`` role. :ref:`Here <hub/user-group-management/roles>` you can read more about roles.
+    Creating vaults require the ``create-vault`` role. :ref:`Here <hub/user-group-management/roles>` you can read more about roles.
 
 To create a vault in Hub, navigate to the vault list and click on the ``Create Vault`` button in the top right corner.
 Every vault has a name and optionally a description.
@@ -173,14 +173,12 @@ You can unarchive it by clicking on the ``Owned by me`` tab in the navigation ba
 Web of Trust
 ^^^^^^^^^^^^
 
-Cryptomator Hub uses the Web of Trust (WoT) to verify the identity of users during vault sharing.
+Cryptomator Hub uses a Web of Trust (WoT) to verify the identity of users during vault sharing.
 
 The WoT state of a user is displayed in the vault details page. The state can be one of the following:
 
-* **Unverified**: There is no turst chain between you and the specific user. You can change this by verifying the user.
-* **Verified**: There is a trust chain between you and the specific user. You or a user you trust has verified the user.
-
-The red and green shield icons indicate the WoT state of a user.
+* **Unverified**: There is no turst chain between you and the specific user. Indicated with a red shield. You can change this by verifying the user.
+* **Verified**: There is a trust chain between you and the specific user. Indicated with a green shield. You or a user you trust has verified the user.
 
 To verify ``alice``, click on the red shield icon and select ``Check Idenditiy...``
 
@@ -221,4 +219,4 @@ For a successful import, the :ref:`recovery key<desktop/password-and-recovery-ke
 The import is done via the Hub vault recovery feature.
 Follow the :ref:`vault online recovery guide <hub/vault-recovery/online-recovery>` and use the recovery key of the password-based vault in the process.
 Don't forget to replace the vault config file ``vault.cryptomator`` at the vault storage location at the end.
-Finally, to ensure that the vault cannot be unlocked with its old password anymore, remove the file ``masterkey.cryptomator`` and all backup files ( ending with ``.bkup``).
+Finally, to ensure that the vault cannot be unlocked with its old password anymore, remove the file ``masterkey.cryptomator`` and all backup files (ending with ``.bkup``).
