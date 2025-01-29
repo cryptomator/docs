@@ -64,7 +64,7 @@ the :ref:`User Key <security/hub/keys/user-keys>`. The Account Key acts as a pas
 Web of Trust
 ------------
 
-The Web of Trust (WoT) feature in Cryptomator Hub helps users verify each other's identity by signing using ECDSA the :ref:`User Key Pair <security/hub/keys/user-keys>` with their private keys.
+The Web of Trust (WoT) feature in Cryptomator Hub helps users verify each other's identity by signing the :ref:`User Key Pair <security/hub/keys/user-keys>` with their private keys using ECDSA.
 First the trusting user needs to verify the trustee by entering the first characters of the trustee's public key fingerprint. Once signed, the proof is uploaded to Hub, where others can check its authenticity e.g. during vault sharing.
 
 WoT also supports transitive trust, meaning if alice trusts bob, and bob trusts charlie, then alice implicitly trusts charlie. This forms a trust chain, allowing users to establish indirect trust relationships.
