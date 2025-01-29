@@ -26,9 +26,9 @@ author = 'Cryptomator Contributors'
 html_title = 'Cryptomator Documentation'
 
 # The short X.Y version
-version = 'main'
+version = 'latest'
 # The full version, including alpha/beta/rc tags
-release = 'main'
+release = 'latest'
 
 
 # -- General configuration ---------------------------------------------------
