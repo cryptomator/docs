@@ -28,4 +28,4 @@ Suppose you have a file named ``document.txt`` in your vault. In the encrypted v
 
 If a synchronization conflict occurs, it will happen on the encrypted filename. Cryptomator detects unexpected patterns in the encrypted filename and handles the conflict accordingly.
 
-For example, if there is a conflict with ``5TyvCyF255sRtfrIv...83ucADQ== (1).c9r``, Cryptomator will decrypt the decryptable part of the filename and rename the file to include a conflict suffix. The conflicted file might be renamed to something like ``FHTa55bH...sUfVDbEb0gTL9hZ8nho.c9r``, which corresponds to ``document (Conflict XYZ).txt``.
+For example, if there is a conflict with ``5TyvCyF255sRtfrIv...83ucADQ== (1).c9r``, Cryptomator will decrypt the decryptable part of the filename and rename the file to include a conflict suffix. The conflicted file might be renamed to something like ``FHTa55bH...sUfVDbEb0gTL9hZ8nho.c9r``, which corresponds to ``document (1).txt``.
