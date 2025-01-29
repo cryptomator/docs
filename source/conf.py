@@ -25,8 +25,6 @@ author = 'Cryptomator Contributors'
 
 html_title = 'Cryptomator Documentation'
 
-html_baseurl = '/en/latest/'
-
 # The short X.Y version
 version = 'latest'
 # The full version, including alpha/beta/rc tags
