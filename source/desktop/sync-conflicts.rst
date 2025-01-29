@@ -5,7 +5,7 @@ Working on encrypted data from multiple locations works the same as working on u
 
 When a sync conflict occurs, cloud storage services typically create a conflict file by appending a suffix (e.g., ``(1)``) to indicate that there was a conflict. You then need to determine which file to keep.
 
-Cryptomator handles encrypted files in the same way. It detects synchronization conflicts and displays the conflicted file with a ``(Conflict XYZ)`` suffix.
+Cryptomator handles encrypted files in the same way. It detects synchronization conflicts and displays the conflicted file with a ``(X)`` suffix, where X is an integer.
 
 .. note::
 
@@ -14,7 +14,7 @@ Cryptomator handles encrypted files in the same way. It detects synchronization 
 Handling Sync Conflicts
 -----------------------
 
-1. When a sync conflict is detected, Cryptomator will display the conflicted file with a ``(Conflict XYZ)`` suffix.
+1. When a sync conflict is detected, Cryptomator will display the conflicted file with a ``(X)`` suffix, where X is an increasing integer.
 2. Manually review both the original and conflicted files.
 3. Decide which file to keep based on your review.
 4. If both files are identical, you can delete one of the copies to resolve the conflict.
