@@ -24,8 +24,8 @@ gh-pages:
 	printf -- "---\nredirect_to: /en/latest/\n---\n" > $(BUILDDIR)/html/index.md
 	# Create redirect for /en/ to /en/latest/
 	printf -- "---\nredirect_to: /en/latest/\n---\n" > $(BUILDDIR)/html/en/index.md
-	# Ensure GitHub Pages processes Jekyll
-	rm -f $(BUILDDIR)/html/.nojekyll
+	# Ensure GitHub Pages does NOT treat this as a Jekyll site
+	touch $(BUILDDIR)/html/.nojekyll
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
