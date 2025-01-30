@@ -42,7 +42,8 @@ release = 'latest'
 # ones.
 #
 extensions = [
-    'sphinx.ext.todo'
+    'sphinx.ext.todo',
+    'sphinx_reredirects'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -120,6 +121,18 @@ html_style = 'css/overrides.css'
 html_logo = 'img/logo-mono-white.png'
 
 html_favicon = 'img/favicon.ico'
+
+redirects = {
+     "hub/setup/requirements/index": "/hub/deployment.html#hardware-requirements",
+     "hub/setup/billing/index": "/hub/license.html",
+     "hub/setup/keycloak-administration/index": "/hub/user-group-management.html",
+     "hub/setup/index": "/hub/deployment.html",
+     "hub/access-vault/unlocking-a-vault/4.-vault-unlocked/index": "/hub/access-vault/unlocking-a-vault/vault-unlocked.html",
+     "hub/access-vault/unlocking-a-vault/3.-add-device/index": "/hub/access-vault/unlocking-a-vault/add-device.html",
+     "hub/access-vault/unlocking-a-vault/2.-authenticate/index": "/hub/access-vault/unlocking-a-vault/authenticate.html",
+     "hub/access-vault/unlocking-a-vault/1.-click-unlock/index": "/hub/access-vault/unlocking-a-vault/click-unlock.html",
+     "desktop/vault-mounting/index": "/desktop/volume-type.html"
+}
 
 # -- Options for HTMLHelp output ---------------------------------------------
 

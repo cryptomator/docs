@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13' 
-      - run: pip install sphinx sphinx_rtd_theme
+      - run: pip install sphinx sphinx_rtd_theme sphinx-reredirects
       - run: make gh-pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
