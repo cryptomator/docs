@@ -122,6 +122,9 @@ html_logo = 'img/logo-mono-white.png'
 
 html_favicon = 'img/favicon.ico'
 
+html_link_suffix = ''
+html_use_index = True
+
 redirects = {
      "hub/setup/requirements/index": "/hub/deployment.html#hardware-requirements",
      "hub/setup/billing/index": "/hub/license.html",
