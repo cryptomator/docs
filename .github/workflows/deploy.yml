@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.13' 
       - run: pip install sphinx sphinx_rtd_theme
-      - run: make html
+      - run: make gh-pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
