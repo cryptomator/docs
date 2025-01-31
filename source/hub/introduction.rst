@@ -5,6 +5,8 @@
 
 |
 
+.. _hub/introduction:
+
 ***************
 Cryptomator Hub
 ***************
