@@ -122,6 +122,8 @@ html_logo = 'img/logo-mono-white.png'
 
 html_favicon = 'img/favicon.ico'
 
+html_show_sphinx = False
+
 redirects = {
      "hub/setup/requirements": "/hub/deployment#hardware-requirements",
      "hub/setup/billing": "/hub/license",
