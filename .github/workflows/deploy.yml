@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.12' 
       - run: pip install sphinx sphinx_rtd_theme sphinx-reredirects
-      - run: make html
+      - run: make dirhtml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
