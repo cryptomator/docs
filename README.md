@@ -1,4 +1,4 @@
-[![Documentation Build Status](https://readthedocs.org/projects/cryptomator/badge/?version=latest)](https://docs.cryptomator.org/en/latest/?badge=latest)
+![Documentation Build Status](https://github.com/cryptomator/cryptomator.github.io/workflows/GitHub%20Pages/badge.svg)
 
 # Cryptomator's Documentation
 
