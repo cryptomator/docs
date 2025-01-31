@@ -125,6 +125,7 @@ html_favicon = 'img/favicon.ico'
 html_link_suffix = ''
 
 redirects = {
+     "index": "/",
      "hub/setup/requirements": "/hub/deployment#hardware-requirements",
      "hub/setup/billing": "/hub/license",
      "hub/setup/keycloak-administration": "/hub/user-group-management",
