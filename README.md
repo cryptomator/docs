@@ -1,4 +1,4 @@
-![Documentation Build Status](https://github.com/cryptomator/cryptomator.github.io/workflows/GitHub%20Pages/badge.svg)
+![Documentation Build Status](https://github.com/cryptomator/docs/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)
 
 # Cryptomator's Documentation
 
