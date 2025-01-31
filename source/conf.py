@@ -122,16 +122,18 @@ html_logo = 'img/logo-mono-white.png'
 
 html_favicon = 'img/favicon.ico'
 
+html_link_suffix = ''
+
 redirects = {
-     "hub/setup/requirements": "/hub/deployment.html#hardware-requirements",
-     "hub/setup/billing": "/hub/license.html",
-     "hub/setup/keycloak-administration": "/hub/user-group-management.html",
-     "hub/setup": "/hub/deployment.html",
-     "hub/access-vault/unlocking-a-vault/4.-vault-unlocked": "/hub/access-vault/unlocking-a-vault/vault-unlocked.html",
-     "hub/access-vault/unlocking-a-vault/3.-add-device": "/hub/access-vault/unlocking-a-vault/add-device.html",
-     "hub/access-vault/unlocking-a-vault/2.-authenticate": "/hub/access-vault/unlocking-a-vault/authenticate.html",
-     "hub/access-vault/unlocking-a-vault/1.-click-unlock": "/hub/access-vault/unlocking-a-vault/click-unlock.html",
-     "desktop/vault-mounting": "/desktop/volume-type.html"
+     "hub/setup/requirements": "/hub/deployment#hardware-requirements",
+     "hub/setup/billing": "/hub/license",
+     "hub/setup/keycloak-administration": "/hub/user-group-management",
+     "hub/setup": "/hub/deployment",
+     "hub/access-vault/unlocking-a-vault/4.-vault-unlocked": "/hub/access-vault/unlocking-a-vault/vault-unlocked",
+     "hub/access-vault/unlocking-a-vault/3.-add-device": "/hub/access-vault/unlocking-a-vault/add-device",
+     "hub/access-vault/unlocking-a-vault/2.-authenticate": "/hub/access-vault/unlocking-a-vault/authenticate",
+     "hub/access-vault/unlocking-a-vault/1.-click-unlock": "/hub/access-vault/unlocking-a-vault/click-unlock",
+     "desktop/vault-mounting": "/desktop/volume-type"
 }
 
 # -- Options for HTMLHelp output ---------------------------------------------
