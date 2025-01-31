@@ -17,13 +17,13 @@ jobs:
         uses: actions/configure-pages@v5
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.13' 
-      - run: pip install sphinx sphinx_rtd_theme
-      - run: make gh-pages
+          python-version: '3.12' 
+      - run: pip install sphinx sphinx_rtd_theme sphinx-reredirects
+      - run: make dirhtml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build/html'
+          path: 'build/dirhtml'
 
   # DEPLOY
   deploy:
