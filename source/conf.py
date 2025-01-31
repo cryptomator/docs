@@ -107,7 +107,6 @@ html_theme_options = {
 html_static_path = ['_static']
 html_css_files = []
 html_style = 'css/overrides.css'
-html_baseurl = 'https://docs2.cryptomator.org/'
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -123,19 +122,16 @@ html_logo = 'img/logo-mono-white.png'
 
 html_favicon = 'img/favicon.ico'
 
-html_link_suffix = ''
-html_use_index = True
-
 redirects = {
-     "hub/setup/requirements/index": "/hub/deployment.html#hardware-requirements",
-     "hub/setup/billing/index": "/hub/license.html",
-     "hub/setup/keycloak-administration/index": "/hub/user-group-management.html",
-     "hub/setup/index": "/hub/deployment.html",
-     "hub/access-vault/unlocking-a-vault/4.-vault-unlocked/index": "/hub/access-vault/unlocking-a-vault/vault-unlocked.html",
-     "hub/access-vault/unlocking-a-vault/3.-add-device/index": "/hub/access-vault/unlocking-a-vault/add-device.html",
-     "hub/access-vault/unlocking-a-vault/2.-authenticate/index": "/hub/access-vault/unlocking-a-vault/authenticate.html",
-     "hub/access-vault/unlocking-a-vault/1.-click-unlock/index": "/hub/access-vault/unlocking-a-vault/click-unlock.html",
-     "desktop/vault-mounting/index": "/desktop/volume-type.html"
+     "hub/setup/requirements": "/hub/deployment.html#hardware-requirements",
+     "hub/setup/billing": "/hub/license.html",
+     "hub/setup/keycloak-administration": "/hub/user-group-management.html",
+     "hub/setup": "/hub/deployment.html",
+     "hub/access-vault/unlocking-a-vault/4.-vault-unlocked": "/hub/access-vault/unlocking-a-vault/vault-unlocked.html",
+     "hub/access-vault/unlocking-a-vault/3.-add-device": "/hub/access-vault/unlocking-a-vault/add-device.html",
+     "hub/access-vault/unlocking-a-vault/2.-authenticate": "/hub/access-vault/unlocking-a-vault/authenticate.html",
+     "hub/access-vault/unlocking-a-vault/1.-click-unlock": "/hub/access-vault/unlocking-a-vault/click-unlock.html",
+     "desktop/vault-mounting": "/desktop/volume-type.html"
 }
 
 # -- Options for HTMLHelp output ---------------------------------------------
