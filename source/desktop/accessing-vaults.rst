@@ -70,9 +70,6 @@ Locking a vault
 
 To lock a vault, simply click ``Lock`` and the virtual drive will disappear or render empty. Your files remain encrypted at the vault's location.
 
-.. image:: ../img/desktop/vault-detail-locked.png
-    :alt: Cryptomator window showing an locked vault
-
 Locate Encrypted File
 ---------------------
 
