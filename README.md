@@ -28,13 +28,16 @@ We prefer contributions to our documentation to be in English, but if you wish t
   
   Run the commands below in the repo's directory to start a Docker container based on the built image.
 
-  For live preview:
+  #### Live preview 
 
   ```
-  docker run -p 8000:8000 -v $(pwd)/source:/source -v $(pwd)/build:/build cryptomator_docs_image sphinx-autobuild -b html /source /build/html --host 0.0.0.0
+  docker compose up -d
   ```
+  The container will use the settings defined in the `docker-compose.yml` file.
+  
+  The live preview will be available at: [http://localhost:8000/](http://localhost:8000/)
 
-  To build site:
+  #### Build site
 
   ```
   docker run -v $(pwd)/source:/source -v $(pwd)/build:/build cryptomator_docs_image sphinx-build -M html /source /build/html
