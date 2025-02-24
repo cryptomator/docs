@@ -7,4 +7,8 @@ services:
       - ./source:/source
       - ./build:/build
     command: >
-      sphinx-autobuild -b html /source /build/html --host 0.0.0.0
+      sphinx-autobuild
+      -b html
+      /source
+      /build/html
+      --host 0.0.0.0
