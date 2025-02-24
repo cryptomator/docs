@@ -20,27 +20,19 @@ We prefer contributions to our documentation to be in English, but if you wish t
 ### Using Docker
 
 - Install [Docker](https://www.docker.com/)
-- Build a Docker image as per the Dockerfile included in this repo. You just need to run the command below (don't omit the dot at the end).
+  #### For live preview:
 
   ```
-  docker build -t cryptomator_docs_image .
-  ```
-  
-  Run the commands below in the repo's directory to start a Docker container based on the built image.
-
-  #### Live preview 
-
-  ```
-  docker compose up -d
+  docker compose up
   ```
   The container will use the settings defined in the `docker-compose.yml` file.
   
   The live preview will be available at: [http://localhost:8000/](http://localhost:8000/)
-
-  #### Build site
+  
+  #### To build site:
 
   ```
-  docker run -v $(pwd)/source:/source -v $(pwd)/build:/build cryptomator_docs_image sphinx-build -M html /source /build/html
+  docker compose exec cryptomator-docs sphinx-build -M html /source /build/html
   ```
 
 ### Without Using Docker
@@ -52,13 +44,13 @@ We prefer contributions to our documentation to be in English, but if you wish t
   pip install sphinx sphinx_rtd_theme sphinx-autobuild
   ```
 
-  For live preview:
+  #### For live preview:
 
   ```
   make clean livehtml
   ``` 
 
-  To build site:
+  #### To build site:
 
   ```
   make clean html

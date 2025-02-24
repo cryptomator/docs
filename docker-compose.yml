@@ -1,6 +1,6 @@
 services:
-  sphinx:
-    image: cryptomator_docs_image
+  cryptomator-docs:
+    build: .
     ports:
       - "8000:8000"
     volumes:
