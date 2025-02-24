@@ -16,21 +16,21 @@ Event Types
 
 The following events are logged:
 
-- **DeviceRegister** – A device has been registered.
-- **DeviceRemove** – A device has been removed.
-- **SettingWotUpdate** – A Web-of-Trust setting has been updated.
-- **SignedWotId** – A Web-of-Trust identity has been signed.
-- **UserAccountReset** – A user account has been reset.
-- **VaultAccessGrant** – Access to a vault has been granted.
-- **VaultCreate** – A vault has been created.
-- **VaultKeyRetrieve** – A vault key has been retrieved.
-- **VaultMemberAdd** – A member has been added to a vault.
-- **VaultMemberRemove** – A member has been removed from a vault.
-- **VaultMemberUpdate** – A vault member’s permissions have been updated.
-- **VaultOwnershipClaim** – Vault ownership has been claimed.
-- **VaultUpdate** – A vault has been updated.
-- **UserKeysChange** – User keys have been changed.
-- **UserSetupCodeChanged** – A user’s setup code has been changed.
+- **Register Device** – A device has been registered. :ref:`Read more LINK NOT WORKING <hub/access-vault/register-device>`
+- **Remove Device** – A device has been removed.
+- **Update Wot Setting** – A Web-of-Trust setting has been updated.
+- **Signed Identity** – A Web-of-Trust identity has been signed. :ref:`Read more LINK NOT WORKING <hub/vault-management/web-of-trust>`
+- **Reset User Account** – A user account has been reset.  :ref:`Read more OK <hub/your-account/reset-account>`
+- **Grant Vault Access** – Access to a vault has been granted. :ref:`Read more LINK NOT WORKING  <hub/vault-management/update-permissions>`
+- **Create Vault** – A vault has been created. :ref:`Read more LINK NOT WORKING <hub/vault-management/create-a-vault>`
+- **Retrieve Vault Key** – A vault key has been retrieved.
+- **Add Vault Member** – A member has been added to a vault.  :ref:`Read more LINK NOT WORKING <hub/vault-management/share-a-vault>`
+- **Remove Vault Member** – A member has been removed from a vault.
+- **Update Vault Member** – A vault member’s role (owner VS user) have been updated. :ref:`Read more OK <hub/vault-management/change-ownership>`
+- **Claim Vault Ownership** – Vault ownership has been claimed.
+- **Update Vault** – A vault has been updated. :ref:`Read more OK <hub/vault-management/edit-vault-metadata>`
+- **User Keys Change** – User keys have been changed. :ref:`Read more OK <hub/your-account/account-key>`
+- **Account Key Changed** – A user’s account key has been changed. :ref:`Read more LINK NOT WORKING <hub/your-account/regenerate-account-key>`
 
 .. _hub/audit-logs/table-view:
 
