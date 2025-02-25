@@ -25,7 +25,6 @@ We prefer contributions to our documentation to be in English, but if you wish t
   ```
   docker compose up
   ```
-  The container will use the settings defined in the `docker-compose.yml` file.
   
   The live preview will be available at: [http://localhost:8000/](http://localhost:8000/)
   
