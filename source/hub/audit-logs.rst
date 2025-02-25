@@ -16,21 +16,29 @@ Event Types
 
 The following events are logged:
 
-- **Register Device** – A device has been registered. :ref:`Read more LINK NOT WORKING <hub/access-vault/register-device>`
+Device
+^^^^^^
+- **Register Device** – A device has been registered. :ref:`Read more <hub/access-vault/unlocking-a-vault/add-device>`
 - **Remove Device** – A device has been removed.
+WoT
+^^^
+- **Signed Identity** – A Web-of-Trust identity has been signed. :ref:`Read more <hub/vault-management/wot>`
 - **Update Wot Setting** – A Web-of-Trust setting has been updated.
-- **Signed Identity** – A Web-of-Trust identity has been signed. :ref:`Read more LINK NOT WORKING <hub/vault-management/web-of-trust>`
-- **Reset User Account** – A user account has been reset.  :ref:`Read more OK <hub/your-account/reset-account>`
-- **Grant Vault Access** – Access to a vault has been granted. :ref:`Read more LINK NOT WORKING  <hub/vault-management/update-permissions>`
-- **Create Vault** – A vault has been created. :ref:`Read more LINK NOT WORKING <hub/vault-management/create-a-vault>`
-- **Retrieve Vault Key** – A vault key has been retrieved.
-- **Add Vault Member** – A member has been added to a vault.  :ref:`Read more LINK NOT WORKING <hub/vault-management/share-a-vault>`
-- **Remove Vault Member** – A member has been removed from a vault.
-- **Update Vault Member** – A vault member’s role (owner VS user) have been updated. :ref:`Read more OK <hub/vault-management/change-ownership>`
+Vault
+^^^^^
+- **Add Vault Member** – A member has been added to a vault.  :ref:`Read more <hub/vault-management/add-user>`
+- **Create Vault** – A vault has been created. :ref:`Read more <hub/vault-management/create-vault>`
 - **Claim Vault Ownership** – Vault ownership has been claimed.
-- **Update Vault** – A vault has been updated. :ref:`Read more OK <hub/vault-management/edit-vault-metadata>`
-- **User Keys Change** – User keys have been changed. :ref:`Read more OK <hub/your-account/account-key>`
-- **Account Key Changed** – A user’s account key has been changed. :ref:`Read more LINK NOT WORKING <hub/your-account/regenerate-account-key>`
+- **Grant Vault Access** – Access to a vault has been granted. :ref:`Read more <hub/vault-management/updating-permission>`
+- **Retrieve Vault Key** – A vault key has been retrieved.
+- **Remove Vault Member** – A member has been removed from a vault.
+- **Update Vault Member** – A vault member’s role (owner VS user) have been updated. :ref:`Read more <hub/vault-management/change-ownership>`
+- **Update Vault** – A vault has been updated. :ref:`Read more <hub/vault-management/edit-vault-metadata>`
+Account
+^^^^^^^
+- **Account Key Changed** – A user’s account key has been changed. :ref:`Read more <hub/your-account/profile/regenerate-account-key>`
+- **Reset User Account** – A user account has been reset.  :ref:`Read more <hub/your-account/reset-account>`
+- **User Keys Change** – User keys have been changed. :ref:`Read more <hub/your-account/account-key>`
 
 .. _hub/audit-logs/table-view:
 
@@ -45,8 +53,6 @@ The logs are displayed in a structured table containing the following columns:
 
 .. image:: ../img/hub/auditlogs-overview.png
     :alt: Audit Logs Table View
-
-Each page contains up to 20 entries, with pagination controls at the bottom.
 
 .. _hub/audit-logs/filters:
 
