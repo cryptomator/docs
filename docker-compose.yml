@@ -1,0 +1,14 @@
+services:
+  cryptomator-docs:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./source:/source
+      - ./build:/build
+    command: >
+      sphinx-autobuild
+      -b html
+      /source
+      /build/html
+      --host 0.0.0.0
