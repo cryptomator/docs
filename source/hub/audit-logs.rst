@@ -18,27 +18,38 @@ The following events are logged:
 
 Device
 ^^^^^^
-- **Register Device** – A device has been registered. :ref:`Read more <hub/access-vault/unlocking-a-vault/add-device>`
-- **Remove Device** – A device has been removed.
-WoT
-^^^
-- **Signed Identity** – A Web-of-Trust identity has been signed. :ref:`Read more <hub/vault-management/wot>`
-- **Update Wot Setting** – A Web-of-Trust setting has been updated.
+
+- **Register Device** - A user :ref:`registered a new device <hub/access-vault/unlocking-a-vault/add-device>`. This can be e.g. a Cryptomator app (desktop/mobile) to unlock a vault or a web browser to access Cryptomator Hub.
+- **Remove Device** – A user :ref:`removed a device <hub/your-account/profile/authorized-devices>`.
+
+Web of Trust
+^^^^^^^^^^^^
+
+- **Signed Identity** – A user :ref:`signed the identity of another user <hub/vault-management/wot>`.
+- **Update Wot Setting** – A user updated :ref:`Web-of-Trust settings<hub/vault-management/wot>`, e.g. the ``wot_max_depth``.
+
 Vault
 ^^^^^
-- **Add Vault Member** – A member has been added to a vault.  :ref:`Read more <hub/vault-management/add-user>`
-- **Create Vault** – A vault has been created. :ref:`Read more <hub/vault-management/create-vault>`
-- **Claim Vault Ownership** – Vault ownership has been claimed.
-- **Grant Vault Access** – Access to a vault has been granted. :ref:`Read more <hub/vault-management/updating-permission>`
-- **Retrieve Vault Key** – A vault key has been retrieved.
-- **Remove Vault Member** – A member has been removed from a vault.
-- **Update Vault Member** – A vault member’s role (owner VS user) have been updated. :ref:`Read more <hub/vault-management/change-ownership>`
-- **Update Vault** – A vault has been updated. :ref:`Read more <hub/vault-management/edit-vault-metadata>`
+
+- **Add Vault Member** – A vault owner :ref:`added a member to a vault <hub/vault-management/add-user>`. This only adds the member but does not derive the vault key for the new member.
+- **Create Vault** – A user :ref:`created a vault <hub/vault-management/create-vault>`.
+- **Grant Vault Access** – A user :ref:`derived the vault key for the new member <hub/vault-management/updating-permission>`.
+- **Retrieve Vault Key** – A user retrieved a vault key. This happens when a user :ref:`unlocks a vault <hub/access-vault/unlocking-a-vault>` but also e.g. when a owner manages the vault.
+- **Remove Vault Member** – A vault owner removed a member from a vault.
+- **Update Vault Member** – A vault owner :ref:`changed a member’s role <hub/vault-management/change-ownership>` (owner or user).
+- **Update Vault** – A vault owner :ref:`updated the vault metadata <hub/vault-management/edit-vault-metadata>`. This includes the vault name or description.
+
 Account
 ^^^^^^^
-- **Account Key Changed** – A user’s account key has been changed. :ref:`Read more <hub/your-account/profile/regenerate-account-key>`
-- **Reset User Account** – A user account has been reset.  :ref:`Read more <hub/your-account/reset-account>`
-- **User Keys Change** – User keys have been changed. :ref:`Read more <hub/your-account/account-key>`
+
+- **Account Key Changed** – A user :ref:`re-generated the account key <hub/your-account/profile/regenerate-account-key>`. This also logs ``User Keys Change`` because changing the account key also changes parts of the user keys.
+- **Reset User Account** – A user :ref:`resetted it's account <hub/your-account/reset-account>`.
+- **User Keys Change** – A user changed it's keys. This happens when e.g. the user :ref:`finished the account setup <hub/your-account/setup>` or when the ``Account Key Changed``.
+
+Legacy
+^^^^^^
+
+- **Claim Vault Ownership** – A user claimed vault ownership. This event is logged when a vault created with hub pre 1.3.0 is claimed by the vault creator using the `Vault Admin Password`.
 
 .. _hub/audit-logs/table-view:
 
