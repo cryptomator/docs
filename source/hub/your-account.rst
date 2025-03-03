@@ -76,8 +76,12 @@ Authorized Devices
 A device is authorized if it has been authenticated with your Account Key.
 Only on authorized devices you can log in to Hub and open vaults.
 
-If you don't trust a device anymore, you can remove it from the list of authorized devices.
+For each authorized device, you can view its name, type (e.g., browser), the date it was added, the last time it accessed a vault, and its IP address. The device marked with ``This Device`` is the one you are currently using. This allows you to easily verify your active session and detect any unauthorized access.
 
+By managing your authorized devices, you ensure that only trusted ones remain active, giving you greater security and control over your account.
+
+If you don't trust a device anymore, you can remove it from the list of authorized devices.
+This will log out the device and revoke access to all shared vaults.
 
 .. _hub/your-account/profile/fingerprint:
 
