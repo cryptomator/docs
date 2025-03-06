@@ -21,7 +21,7 @@ If you are…
 …an **administrator**:
 
 * :ref:`User & Group management <hub/user-group-management>` - how to manage users and groups.
-* :ref:`License <hub/license>` - how to manage your Hub license.
+* :ref:`License <hub/admin>` - how to manage your Hub license.
 * :ref:`Deployment <hub/deployment>` - how to deploy Cryptomator Hub.
 
 …a **user**:

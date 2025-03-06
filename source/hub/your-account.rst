@@ -59,6 +59,20 @@ You can open it by clicking on your profile icon in the top right corner and sel
     :alt: Your account in Cryptomator Hub
 
 
+.. _hub/your-account/profile/change-language:
+
+Change Language
+^^^^^^^^^^^^^^^
+
+You can change the language of Cryptomator Hub to match your preference.  
+The language selection is available in the profile settings.
+
+Is your preferred language not available yet?  
+We are continuously working on adding more languages.  
+If you're interested, you can contribute translations via Crowdin:  
+`Cryptomator Hub on Crowdin <https://crowdin.com/project/cryptomator>`_.
+
+
 .. _hub/your-account/profile/regenerate-account-key:
 
 Regenerate Account Key
