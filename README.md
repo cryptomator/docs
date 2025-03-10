@@ -25,13 +25,13 @@ We prefer contributions to our documentation to be in English, but if you wish t
   ```
   docker compose up
   ```
-  
+
   The live preview will be available at: [http://localhost:8000/](http://localhost:8000/)
-  
+
   #### To build site:
 
   ```
-  docker compose exec cryptomator-docs sphinx-build -M html /source /build/html
+  docker compose exec cryptomator-docs sphinx-build -M dirhtml /source /build/dirhtml
   ```
 
 ### Without Using Docker
@@ -52,8 +52,8 @@ We prefer contributions to our documentation to be in English, but if you wish t
   #### To build site:
 
   ```
-  make clean html
-  ``` 
+  make clean dirhtml
+  ```
 
 <!--
 How tow record `.gif`s:

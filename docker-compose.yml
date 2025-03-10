@@ -8,7 +8,7 @@ services:
       - ./build:/build
     command: >
       sphinx-autobuild
-      -b html
+      -b dirhtml
       /source
-      /build/html
+      /build/dirhtml
       --host 0.0.0.0
