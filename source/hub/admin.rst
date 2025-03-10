@@ -18,7 +18,7 @@ As an Hub administrator, you can view license information in the administration 
     :alt: Administration area
 
 
-.. _hub/admin/seat:
+.. _hub/admin/license/seat:
 
 What is a Seat?
 ^^^^^^^^^^^^^^^
@@ -34,7 +34,7 @@ Note that:
 .. note:: Enterprise licenses can have an unlimited number of seats. Visit `cryptomator.org <https://cryptomator.org/hub/>`_ for more information.
 
 
-.. _hub/admin/community-license:
+.. _hub/admin/license/community-license:
 
 Community License
 ^^^^^^^^^^^^^^^^^
@@ -42,7 +42,7 @@ Community License
 When you deploy Cryptomator Hub by yourself, it comes with a community license with life-long validity and 5 seats.
 
 
-.. _hub/admin/buy-license:
+.. _hub/admin/license/buy-license:
 
 Updating your License
 ^^^^^^^^^^^^^^^^^^^^^
@@ -144,6 +144,8 @@ WoT also supports transitive trust, meaning if Alice trusts Bob, and Bob trusts 
 
 .. image:: ../img/hub/wot-admin.png
     :alt: Audit Log Filtering Options
+
+**In the administration area, administrators can configure the following trust settings:**
 
 The maximum depth of such chains can be configured using the **Maximum WoT Depth** property:
 
