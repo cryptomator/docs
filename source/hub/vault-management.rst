@@ -206,7 +206,7 @@ The verification process is logged in the audit log with event type ``Signed Ide
 
 ``signature still valid`` means that the ``identiy`` has still the same key. If the user account gets reset after verification, this message changes to ``was valid; signed key changed by now`` and the user needs to get verified again.
 
-You can read more details about Web of Trust in the :ref:`Security section of Hub <security/hub/wot>`.
+You can read more details about Web of Trust and how to configure its settings in the :ref:`Admin section of Hub <hub/admin/wot>`.
 
 .. _hub/vault-management/import-vault:
 
