@@ -129,10 +129,10 @@ redirects = {
      "hub/setup/billing": "/hub/license",
      "hub/setup/keycloak-administration": "/hub/user-group-management",
      "hub/setup": "/hub/deployment",
-     "hub/access-vault/unlocking-a-vault/4.-vault-unlocked": "/hub/access-vault/unlocking-a-vault/vault-unlocked",
-     "hub/access-vault/unlocking-a-vault/3.-add-device": "/hub/access-vault/unlocking-a-vault/add-device",
-     "hub/access-vault/unlocking-a-vault/2.-authenticate": "/hub/access-vault/unlocking-a-vault/authenticate",
-     "hub/access-vault/unlocking-a-vault/1.-click-unlock": "/hub/access-vault/unlocking-a-vault/click-unlock",
+     "hub/access-vault/unlocking-a-vault/4.-vault-unlocked": "/hub/access-vault/#vault-unlocked",
+     "hub/access-vault/unlocking-a-vault/3.-add-device": "/hub/access-vault/#register-device",
+     "hub/access-vault/unlocking-a-vault/2.-authenticate": "/hub/access-vault/#authenticate",
+     "hub/access-vault/unlocking-a-vault/1.-click-unlock": "/hub/access-vault/#click-unlock",
      "desktop/vault-mounting": "/desktop/volume-type"
 }
 
