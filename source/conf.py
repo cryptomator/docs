@@ -133,6 +133,10 @@ redirects = {
      "hub/access-vault/unlocking-a-vault/3.-add-device": "/hub/access-vault/#register-device",
      "hub/access-vault/unlocking-a-vault/2.-authenticate": "/hub/access-vault/#authenticate",
      "hub/access-vault/unlocking-a-vault/1.-click-unlock": "/hub/access-vault/#click-unlock",
+     "hub/license": "/hub/admin/license",
+     "hub/license/#what-is-a-seat": "/hub/admin/#what-is-a-seat",
+     "hub/license/#community-license": "/hub/admin/#community-license",
+     "hub/license/#updating-your-license": "/hub/admin/#updating-your-license",
      "desktop/vault-mounting": "/desktop/volume-type"
 }
 
