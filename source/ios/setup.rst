@@ -8,4 +8,4 @@ You can get Cryptomator for iOS on the `App Store <https://apps.apple.com/app/cr
 Requirements
 ------------
 
-Requires iOS 13.0 or later. Compatible with iPhone, iPad, and iPod touch.
+Requires iOS 14.0 or later. Compatible with iPhone, iPad, and iPod touch.
