@@ -58,3 +58,5 @@ the :ref:`User Key <security/hub/keys/user-keys>`. The Account Key acts as a pas
     The Account Key itself is stored as an `ECDH-ES-encrypted JWE <https://datatracker.ietf.org/doc/html/rfc7518.html#section-4.6>`_, allowing its owner to
     view it from any authorized device. Regardless it should be securely stored independently.
 
+
+.. _security/hub/wot:
