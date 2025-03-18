@@ -3,7 +3,6 @@
 Admin
 =====
 
-
 .. _hub/admin/license:
 
 License
@@ -16,7 +15,6 @@ As an Hub administrator, you can view license information in the administration 
 
 .. image:: ../img/hub/admin-area-license.png
     :alt: Administration area
-
 
 .. _hub/admin/license/seat:
 
@@ -33,14 +31,12 @@ Note that:
 
 .. note:: Enterprise licenses can have an unlimited number of seats. Visit `cryptomator.org <https://cryptomator.org/hub/>`_ for more information.
 
-
 .. _hub/admin/license/community-license:
 
 Community License
 ^^^^^^^^^^^^^^^^^
 
 When you deploy Cryptomator Hub by yourself, it comes with a community license with life-long validity and 5 seats.
-
 
 .. _hub/admin/license/buy-license:
 
@@ -52,7 +48,6 @@ You can also upgrade an already existing, paid license.
 To do so, click on the button in the lower right corner of the administration area.
 It will redirect you to the Cryptomator Hub license store.
 After the purchase, you will be automatically redirected back to your Hub instance.
-
 
 .. _hub/admin/audit-logs:
 
@@ -130,7 +125,6 @@ To refine the displayed logs, a filtering function is available:
 
 .. image:: ../img/hub/auditlogs-filter-events.png
     :alt: Audit Log Filtering Options
-
 
 .. _hub/admin/wot:
 
