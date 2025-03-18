@@ -1,7 +1,7 @@
 Setup
 =====
 
-You can get Cryptomator for iOS on the `App Store <https://apps.apple.com/app/cryptomator/id1560822163>`_.
+You can get Cryptomator for iOS on the `App Store <https://apps.apple.com/app/cryptomator/id1560822163>`_. It is available for free with in-app purchases. The free version gives you read-only access to your vaults. With the in-app purchase, you can unlock the full version to gain write access to your vaults. You can also try out the full version free for 30 days.
 
 Full Version
 ------------
