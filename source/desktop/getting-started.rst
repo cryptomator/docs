@@ -10,7 +10,7 @@ You can create new vaults (or add existing ones) using the |AddVault|_ button lo
     :alt: Empty vault list
 
 .. |AddVault| replace:: ``+``
-.. _AddVault: ./adding-vaults.html
+.. _AddVault: ../adding-vaults/
 
 .. _desktop/getting-started/tutorial-video:
 

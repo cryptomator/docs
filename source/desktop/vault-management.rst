@@ -65,8 +65,8 @@ You can select this option if the vault is unlocked as soon as Cryptomator start
 
 Take a look at the |Mounting|_ and |Password|_ sections to understand how vault mounting and passwords work.
 
-.. |Mounting| replace:: ``Mounting``
-.. _Mounting: ./vault-mounting.html
+.. |Mounting| replace:: ``Volume Type``
+.. _Mounting: ../volume-type/
 
-.. |Password| replace:: ``Password``
-.. _Password: ./password-and-recovery-key.html
+.. |Password| replace:: ``Password And Recovery Key``
+.. _Password: ../password-and-recovery-key/

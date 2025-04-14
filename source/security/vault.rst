@@ -122,7 +122,7 @@ This prevents undetected movement of files between directories.
     :width: 614px
     :align: center
 
-    \*Unencrypted directory ID of the partent dir `as described above <security/vault/directory-ids>`_
+    \*Unencrypted directory ID of the parent dir `as described above <#directory-ids>`_
 
 
 .. code-block:: console

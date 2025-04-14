@@ -90,4 +90,4 @@ Incompatible Cloud Services
    :file: ../_static/csv/incompatible-clouds.csv
 
 .. |GooglePlayStoreVariant| replace:: **Google Play Store variant**
-.. _GooglePlayStoreVariant: ../android/setup.html#google-play-store
+.. _GooglePlayStoreVariant: ../../android/setup/#google-play-store
