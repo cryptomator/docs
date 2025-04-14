@@ -17,7 +17,7 @@ Event View
 ------------
 
 The event view shows the events of all vaults.
-To open the event view, click on the Bell icon in the left lower corner of the main window.
+To open the event view, click on the Bell icon in the lower left corner of the main window.
 If new, unread events are present, the icon has a small red dot.
 
 .. image:: ../img/desktop/event-view.png
@@ -36,9 +36,9 @@ Also, you can clear the event log by clicking on the trash can icon.
 Vault Event
 -----------
 
-A vault event consists of a title, its number of appearances in brackets, an affected file and a timestamp.
+A vault event consists of a title, its number of appearances in brackets, an affected file, and a timestamp.
 If you hover over the event, a button to open a context menu appears.
-The context menu contains event specific actions, mostly to reveal affected files in the file manager.
+The context menu contains event-specific actions, mostly to reveal affected files in the file manager.
 
 If the vault of the event is locked, the event is anonymized.
 To view the event details, you need to unlock the vault first.
