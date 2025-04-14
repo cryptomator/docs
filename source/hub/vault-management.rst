@@ -34,6 +34,9 @@ Alternatively, you can also access the list by clicking on the ``Vaults`` tab in
 Create a Vault
 --------------
 
+.. note::
+    Creating vaults require the ``create-vault`` role. :ref:`Here <hub/user-group-management/roles>` you can read more about roles.
+
 To create a vault in Hub, navigate to the vault list and click on the ``Create Vault`` button in the top right corner.
 Every vault has a name and optionally a description.
 Fill out the form and continue the process by clicking the ``Next`` button in the right corner.
@@ -165,6 +168,46 @@ To archive the vault, click on the ``Archive Vault`` button in the :ref:`vault d
 
 You can unarchive it by clicking on the ``Owned by me`` tab in the navigation bar, select the vault and clicking on the ``Reactive Vault`` button.
 
+.. _hub/vault-management/wot:
+
+Web of Trust
+^^^^^^^^^^^^
+
+Cryptomator Hub uses a Web of Trust (WoT) to verify the identity of users during vault sharing.
+
+The WoT state of a user is displayed in the vault details page. The state can be one of the following:
+
+* **Unverified**: There is no turst chain between you and the specific user. Indicated with a red shield. You can change this by verifying the user.
+* **Verified**: There is a trust chain between you and the specific user. Indicated with a green shield. You or a user you trust has verified the user.
+
+To verify ``alice``, click on the red shield icon and select ``Check Idenditiy...``
+
+.. image:: ../img/hub/wot-carol-unverified.png
+    :alt: Carol is unverified regarding its Web of Trust state
+    :width: 920px
+
+While verifiying a user, you need to enter the first characters of the user's public key fingerprint. This fingerprint is displayed in user coresponding user profile page.
+
+.. image:: ../img/hub/wot-carol-verify.png
+    :alt: Verify Alice regarding its Web of Trust state
+    :width: 920px
+
+``alice`` is now verified
+
+.. image:: ../img/hub/wot-carol-verified.png
+    :alt: Alice is verified regarding its Web of Trust state
+    :width: 920px
+
+The verification process is logged in the audit log with event type ``Signed Identity``
+
+.. image:: ../img/hub/wot-audit-log.png
+    :alt: WAudit log
+    :width: 920px
+
+``signature still valid`` means that the ``identiy`` has still the same key. If the user account gets reset after verification, this message changes to ``was valid; signed key changed by now`` and the user needs to get verified again.
+
+You can read more details about Web of Trust and how to configure its settings in the :ref:`Admin section of Hub <hub/admin/wot>`.
+
 .. _hub/vault-management/import-vault:
 
 Import a Vault
@@ -176,4 +219,4 @@ For a successful import, the :ref:`recovery key<desktop/password-and-recovery-ke
 The import is done via the Hub vault recovery feature.
 Follow the :ref:`vault online recovery guide <hub/vault-recovery/online-recovery>` and use the recovery key of the password-based vault in the process.
 Don't forget to replace the vault config file ``vault.cryptomator`` at the vault storage location at the end.
-Finally, to ensure that the vault cannot be unlocked with its old password anymore, remove the file ``masterkey.cryptomator`` and all backup files ( ending with ``.bkup``).
+Finally, to ensure that the vault cannot be unlocked with its old password anymore, remove the file ``masterkey.cryptomator`` and all backup files (ending with ``.bkup``).
