@@ -103,7 +103,7 @@ To change the name of a specific file or folder in Cryptomator, you select the `
 
 Choose a new name and confirm using the ``RENAME`` button.
 
-.. image:: ../img/android/rename-vault-3-renameing.png
+.. image:: ../img/android/rename-vault-3-renaming.png
     :alt: How to rename a vault with Android
     :width: 346px
 

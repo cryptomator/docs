@@ -46,7 +46,7 @@ Install Cryptomator on Linux
 
 Cryptomator is available on Linux via ``Flatpak``, ``PPA`` and ``AUR`` package managers, and as an AppImage (an ``.appimage`` file).
 
-The easiest and recommended way of installing Cryptomator on Linux is by downloading Cryptomator's AppImage (an ``.appimage`` file) - as it works on almost all distrubtions. 
+The easiest and recommended way of installing Cryptomator on Linux is by downloading Cryptomator's AppImage (an ``.appimage`` file) - as it works on almost all distributions. 
 Just remember to `make it executable <https://docs.appimage.org/user-guide/run-appimages.html#running-appimages>`_ before you try to run it.
 
 Visit our `downloads page <https://cryptomator.org/downloads>`_ to choose your preferred installation method.

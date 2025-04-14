@@ -110,7 +110,7 @@ The bar below the password field will help you estimate the strength of your pas
 .. warning::
 
     Nobody except you knows this password, and we also cannot "reset" it for you. 
-    Without a vaild password, your files can't be decrypted and will become inaccessible. 
+    Without a valid password, your files can't be decrypted and will become inaccessible. 
     So, store your password in a secure password manager or just don't forget it. 
     
     However, you can reset a vault's password by yourself if you have its *recovery key*.

@@ -77,7 +77,7 @@ and information about accessing them with WebDAV.
 
 
 .. note::
-    While creating the WebDAV connection, please make sure to add the root of the accessible stroge and don't navigate directly into the vault.
+    While creating the WebDAV connection, please make sure to add the root of the accessible storage and don't navigate directly into the vault.
 
 .. _android/cloud-management/login-local-storage:
 

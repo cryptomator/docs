@@ -33,7 +33,7 @@ What is a FUSE volume type?
 ---------------------------
 
 Filesystem in Userspace (`FUSE <https://en.wikipedia.org/wiki/Filesystem_in_Userspace>`_) is a filesystem interface originally developed for Unix operating systems that let non-privileged users create their own file systems without editing kernel code.
-Which means, FUSE does not require admin privileges and is has good support across all major desktop operating systems.
+Which means, FUSE does not require admin privileges and has good support across all major desktop operating systems.
 FUSE volume type also delivers good performance when working on files.
 
 All FUSE related volume types support custom mount options, but every option must be prefixed with ``-o``.
@@ -199,5 +199,5 @@ WebDAV (HTTP Address)
 This volume type is always present and comes in handy when all other volume types fail to mount.
 It starts a local-only WebDAV server, which can be manually integrated into the system or accessed using a third-party application, like `Cyberduck <https://cyberduck.io/>`_.
 Check out the regarding manuals for your OS on how to connect to a WebDAV server.
-The address of Cryptomators local-only WebDAV server can be copied from the vault detail screen by clicking the green "Copy" button.
+The address of Cryptomator's local-only WebDAV server can be copied from the vault detail screen by clicking the green "Copy" button.
 

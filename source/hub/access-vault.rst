@@ -70,7 +70,7 @@ When you finished the account setup in Hub, unlock the vault again.
 4. Register Device
 ^^^^^^^^^^^^^^^^^^
 
-If you just did setup your accout, a vault owner needs to grant you access for the requested vault as described :ref:`here <hub/vault-management/updating-permission>`. Retry unlocking the vault after the vault owner granted you access.
+If you just did setup your account, a vault owner needs to grant you access for the requested vault as described :ref:`here <hub/vault-management/updating-permission>`. Retry unlocking the vault after the vault owner granted you access.
 
 .. image:: ../img/hub/unlock-access-denied.png
     :alt: Access is denied since it has not been granted by a vault owner yet

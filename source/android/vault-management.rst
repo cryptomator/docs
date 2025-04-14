@@ -34,7 +34,7 @@ Choose between *Dropbox*, *Google Drive*, *OneDrive* (works also with *OneDrive 
     :alt: How to create a new vault with Android
     :width: 346px
 
-If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the :ref:`Cloud Management <android/cloud-management>` chapter and contiune later here.
+If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the :ref:`Cloud Management <android/cloud-management>` chapter and continue later here.
 
 Now that you've established a connection, you'll add the existing vault.
 
@@ -101,7 +101,7 @@ Choose between *Dropbox*, *Google Drive*, *OneDrive* (works also with *OneDrive 
     :alt: How add a vault with Android
     :width: 346px
 
-If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the :ref:`Cloud Management <android/cloud-management>` chapter and contiune later here.
+If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the :ref:`Cloud Management <android/cloud-management>` chapter and continue later here.
 
 Now that you've established a connection, you'll add the existing vault.
 
@@ -217,7 +217,7 @@ If you want to change the name of a specific vault in Cryptomator, you select th
 
 Choose a new name and confirm using the ``RENAME`` button.
 
-.. image:: ../img/android/rename-vault-3-renameing.png
+.. image:: ../img/android/rename-vault-3-renaming.png
     :alt: How to rename a vault with Android
     :width: 346px
 

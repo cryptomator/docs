@@ -177,7 +177,7 @@ Cryptomator Hub uses a Web of Trust (WoT) to verify the identity of users during
 
 The WoT state of a user is displayed in the vault details page. The state can be one of the following:
 
-* **Unverified**: There is no turst chain between you and the specific user. Indicated with a red shield. You can change this by verifying the user.
+* **Unverified**: There is no trust chain between you and the specific user. Indicated with a red shield. You can change this by verifying the user.
 * **Verified**: There is a trust chain between you and the specific user. Indicated with a green shield. You or a user you trust has verified the user.
 
 To verify ``alice``, click on the red shield icon and select ``Check Idenditiy...``

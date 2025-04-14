@@ -79,7 +79,7 @@ The Locate Encrypted File feature helps users find the encrypted version of a sp
 2. Click on the ``Locate Encrypted File`` button.
 3. Select the file within the vault.
 
-As an alternativ for clicking the button, you can directly drag & drop a file onto the button.
+As an alternative for clicking the button, you can directly drag & drop a file onto the button.
 
 A file manager window opens showing the encrypted folder and marking the encrypted file.
 

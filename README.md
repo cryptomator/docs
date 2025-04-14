@@ -56,7 +56,7 @@ We prefer contributions to our documentation to be in English, but if you wish t
   ```
 
 <!--
-How tow record `.gif`s:
+How to record `.gif`s:
 
 1. Record screen using Quicktime on #FCFCFC background
 2. Generate palette for PNG: `ffmpeg -i recording.mov -vf "fps=10,palettegen" -y palette.png`
