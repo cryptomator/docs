@@ -29,7 +29,7 @@ Note that:
 * If a user is assigned to multiple vaults, it only *occupies one* seat.
 * If :ref:`a user is created or imported to Hub <hub/user-group-management>`, it does not occupy a seat.
 
-.. note:: Enterprise licenses can have an unlimited number of seats. Visit `cryptomator.org <https://cryptomator.org/hub/>`_ for more information.
+.. note:: Enterprise licenses can have an unlimited number of seats. Visit `cryptomator.org <https://cryptomator.org/for-teams/>`_ for more information.
 
 .. _hub/admin/license/community-license:
 
