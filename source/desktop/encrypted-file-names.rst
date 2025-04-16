@@ -39,15 +39,16 @@ The actual directory structure of the vault on your hard drive/cloud will look l
 While this increases security, it also makes it impossible to see the original file names and directory structure without decrypting them first.
 When you need to know the original name of a file (e.g. to restore an older version), you can use the ``Decrypt file name`` feature to decrypt the file name.
 
-.. note::
-
-    Due to technical reasons, Cryptomator can only restore the original filename.
-    It cannot restore the complete path the file.
 
 .. _desktop/encrypted-file-names/decryption:
 
 Decrypting File Names
 ---------------------
+
+.. note::
+
+    Due to technical reasons, Cryptomator can only decrypt the filen name given an encrypted file .
+    It cannot compute the path inside the vault to the file.
 
 You can access this feature from the unlocked view of a vault in the Cryptomator main window.
 On the bottom of the unlocked view, drop files on the "Decrypt file name" zone or click on it.
