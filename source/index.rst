@@ -25,6 +25,7 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    desktop/accessing-vaults.rst
    desktop/password-and-recovery-key.rst
    desktop/vault-management.rst
+   desktop/encrypted-file-names.rst
    desktop/volume-type.rst
    desktop/error-handling.rst
    desktop/sync-conflicts.rst

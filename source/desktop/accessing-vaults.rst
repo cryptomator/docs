@@ -55,7 +55,7 @@ Click on ``Reveal Drive`` in the Cryptomator window to open the mount location u
 
      Even though your files are shown unencrypted in the virtual drive, they are not stored unencrypted on the hard drive but only in `volatile memory <https://en.wikipedia.org/wiki/Volatile_memory>`_
 
-.. image:: ../img/desktop/vault-detail-unlocked.png
+.. image:: ../img/desktop/vault-detail-unlocked-simple.png
     :alt: Cryptomator window showing an unlocked vault
 
 .. note::
