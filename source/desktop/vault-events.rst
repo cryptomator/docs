@@ -21,7 +21,7 @@ To open the event view, click on the Bell icon in the lower left corner of the m
 If new, unread events are present, the icon has a small red dot.
 
 .. image:: ../img/desktop/event-view.png
-    :scale: 50%
+    :scale: 63%
     :alt: Event view
 
 
@@ -41,4 +41,4 @@ If you hover over the event, a button to open a context menu appears.
 The context menu contains event-specific actions, mostly to reveal affected files in the file manager.
 
 If the vault of the event is locked, the event is anonymized.
-To view the event details, you need to unlock the vault first.
+To view the event details, you need to unlock the corresponding vault first.
