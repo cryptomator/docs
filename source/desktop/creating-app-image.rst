@@ -33,7 +33,7 @@ Optionally test the JAR file
 
     java -Dcryptomator.ipcSocketPath=/tmp/cryptomator.sock \
          -Dcryptomator.mountPointsDir=/tmp/cryptomounts \
-         -cp "/your/path/to/cryptomator/target/mods/*:cryptomator-1.16.0-SNAPSHOT.jar" \
+         -cp "/your/path/to/cryptomator/target/mods/*:/your/path/to/cryptomator/target/cryptomator-1.16.0-SNAPSHOT.jar"\
          org.cryptomator.launcher.Cryptomator
 
 .. note::
