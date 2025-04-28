@@ -12,11 +12,16 @@ It detects synchronization conflicts and appends the suffix from your cloud prov
 If the filename with the conflict suffix is too long, Cryptomator shortens the overall filename.
 And if the decrypted filename already exists, the conflicted file has a simple ``(X)`` suffix, where X is an integer.
 
-| cloud provider suffix                    | original decrypted name                           | new decrypted name                                                 | comment                                                     |
-|------------------------------------------|---------------------------------------------------|--------------------------------------------------------------------|-------------------------------------------------------------|
-| (Created by Alice)                       | businessPitch.odp                                 | businessPitch (Created by Alice).odp                               | regular case                                                |
-| (Created by Alice)                       | businessPitch.odp                                 | businessPitch (1).odp                                              | preferred name already taken                                |
-| (Created by Alice on 2024-01-31)         | businessPitchForTheGreatIdeaIHadLastNight.odp     | businessPitchForTheGreatIdeaI (Created by Alice on 2024-01.odp     | maximum cleartext of the vault is set to 62                 |
+
++---------------------------------------------+----------------------------------+-----------------------------------------------+----------------------------------------------------------------+
+| Situation                                   | Cloud Provider Suffix            | Original DecryptedNname                       | New Decrypted Name                                             |
++=============================================+==================================+===============================================+================================================================+
+| Regular                                     | (Created by Alice)               | businessPitch.odp                             | businessPitch (Created by Alice).odp                           |
++---------------------------------------------+----------------------------------+-----------------------------------------------+----------------------------------------------------------------+
+| Preferred name already taken                | (Created by Alice)               | businessPitch.odp                             | businessPitch (1).odp                                          |
++---------------------------------------------+----------------------------------+-----------------------------------------------+----------------------------------------------------------------+
+| Maximum cleartext of the vault is set to 62 | (Created by Alice on 2024-01-31) | businessPitchForTheGreatIdeaIHadLastNight.odp | businessPitchForTheGreatIdeaI (Created by Alice on 2024-01.odp |
++---------------------------------------------+----------------------------------+-----------------------------------------------+----------------------------------------------------------------+
 
 
 .. note::
