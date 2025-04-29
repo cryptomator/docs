@@ -5,10 +5,10 @@ Working on encrypted data from multiple locations is the same as working on unen
 If there is a synchronization conflict, it is handled similarly to how most cloud storage services deal with conflicts.
 
 When a sync conflict occurs, cloud storage services typically resolve the conflict by leaving the local file as it is and create an additional, conflicting file with the content from the cloud.
-The file name is the same as the original one, suffixed with a short string (e.g., ``(Created by Alice)``) to indicate its a different version.
+The file name is the same as the original one, suffixed with a short string (e.g., ``(Created by Alice)``) to indicate it's a different version.
 
 Cryptomator handles encrypted files in the same way.
-It detects synchronization conflicts and appends the suffix from your cloud provider to the decrypted filename.
+It detects sync conflicts and appends the suffix from your cloud provider to the decrypted filename.
 If the filename with the conflict suffix is too long, Cryptomator shortens the overall filename.
 If the (decrypted) filename with the conflict suffix already exists, the conflicted file has a simple ``(X)`` suffix, where X is an integer.
 

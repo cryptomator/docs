@@ -47,8 +47,8 @@ Decrypting File Names
 
 .. note::
 
-    Due to technical reasons, Cryptomator can only decrypt the filen name given an encrypted file .
-    It cannot compute the path inside the vault to the file.
+    Due to technical reasons, given only an encrypted file Cryptomator can only decrypt its name.
+    It cannot compute its cleartext path.
 
 You can access this feature from the unlocked view of a vault in the Cryptomator main window.
 On the bottom of the unlocked view, drop files on the "Decrypt file name" zone or click on it.
