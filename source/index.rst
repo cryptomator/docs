@@ -20,6 +20,7 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :caption: Desktop
 
    desktop/setup.rst
+   desktop/creating-app-image.rst
    desktop/getting-started.rst
    desktop/adding-vaults.rst
    desktop/accessing-vaults.rst
