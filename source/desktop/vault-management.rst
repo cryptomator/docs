@@ -48,6 +48,14 @@ You can select this option if the vault is unlocked as soon as Cryptomator start
 .. image:: ../img/desktop/vault-options-general.png
     :alt: General vault options
 
+- ``Vault Name`` - The name of the vault. *You can edit this field to rename the vault.*
+- ``Lock when idle for <n> minutes`` - The vault will be locked automatically after the specified time of inactivity.
+- ``Unlock vault when starting Cryptomator`` - On app start, Cryptomator will unlock the vault (otherwise the vault will remain locked).
+- ``After successful unlock``
+    - ``Do nothing`` - Cryptomator will do nothing after unlocking the vault.
+    - ``Reveal Drive`` - Opens the mount location using the default file manager (Windows Explorer, Finder, …).
+    - ``Ask`` - Cryptomator will ask you what to do after unlocking the vault.
+
 2. Mounting - Settings that manage how and where a vault is mounted.
 
 .. note:: The mount options depend on the selected :ref:`volume type <desktop/volume-type/general-volume-type-selection>`
