@@ -56,7 +56,7 @@ The payload of the last chunk may be smaller than 32 KiB.
     cleartextChunks[] := split(cleartext, 32KiB)
     for (int i = 0; i < length(cleartextChunks); i++) {
         chunkNonce := createRandomBytes(12)
-        aad := [bigEndian(i), headerNonce]
+        aad := bigEndian(i) . headerNonce
         ciphertextPayload, tag := aesGcm(cleartextChunks[i], contentKey, chunkNonce, aad)
         ciphertextChunks[i] := chunkNonce . ciphertextPayload . tag
     }

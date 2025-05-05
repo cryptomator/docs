@@ -59,7 +59,7 @@ When opening a vault, the following steps have to be followed:
 
 #. Decode ``vault.cryptomator`` without verification.
 #. Read ``kid`` header and, depending on its value, retrieve the masterkey from the specified location.
-#. Verify the JWT signature using the masterkey.
+#. Verify the JWT signature using the concatenation of encryption masterkey and MAC masterkey.
 #. Make sure ``format`` and ``cipherCombo`` are supported.
 
 
@@ -125,7 +125,7 @@ The JWE's decrypted payload holds a single value, which can then be consumed by 
 Masterkey File
 ^^^^^^^^^^^^^^
 
-Alternatively, for normal password-protected vaults, Cryptomator will derive a :abbr:`KEK (Key-encryption key)` via `scrypt <https://tools.ietf.org/html/rfc7914>`_, encrypt the masterkeys using `AES Key Wrap (RFC 3394) <https://tools.ietf.org/html/rfc3394>`_,
+Alternatively, for normal password-protected vaults, Cryptomator will derive a 32byte long :abbr:`KEK (Key-encryption key)` via `scrypt <https://tools.ietf.org/html/rfc7914>`_ (non-parallel), encrypt both masterkeys using `AES Key Wrap (RFC 3394) <https://tools.ietf.org/html/rfc3394>`_,
 and store the results together with the key derivation parameters in a JSON file:
 
 .. code-block:: console
