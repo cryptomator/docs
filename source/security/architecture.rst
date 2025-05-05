@@ -125,7 +125,7 @@ The JWE's decrypted payload holds a single value, which can then be consumed by 
 Masterkey File
 ^^^^^^^^^^^^^^
 
-Alternatively, for normal password-protected vaults, Cryptomator will derive a :abbr:`KEK (Key-encryption key)` via `scrypt <https://tools.ietf.org/html/rfc7914>`_, encrypt the masterkeys using `AES Key Wrap (RFC 3394) <https://tools.ietf.org/html/rfc3394>`_,
+Alternatively, for normal password-protected vaults, Cryptomator will derive a 32byte long :abbr:`KEK (Key-encryption key)` via `scrypt <https://tools.ietf.org/html/rfc7914>`_ (non-parallel), encrypt both masterkeys using `AES Key Wrap (RFC 3394) <https://tools.ietf.org/html/rfc3394>`_,
 and store the results together with the key derivation parameters in a JSON file:
 
 .. code-block:: console
