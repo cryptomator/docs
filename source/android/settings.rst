@@ -24,7 +24,7 @@ After pressing the three dots ① and clicking on ``Settings``, you will find op
 Cloud Services
 ^^^^^^^^^^^^^^
 
-This setting lists all cloud services. When pressing on a service, the authentication starts or if you're already authenticated, you will be logged out.
+This setting lists all Cloud Services. When pressing on a service, the authentication starts or if you're already authenticated, you will be logged out.
 
 .. image:: ../img/android/setting-cloud-services.png
     :alt: How to handle cloud services with Android
@@ -80,7 +80,7 @@ The Android documentation contains `some more details <https://developer.android
 Starting from version 1.3.0, this protection can be disabled in the settings. We rather recommend to use the app without a blue light filter because this is more secure.
 
 If you want to disable protection, the blue light filter or any app obscuring Cryptomator has to be disabled one time.
-Afterwards, the settings can be opened and the option "Disable app when obscured" can be disabled. And then the relevant apps can be reenabled again.
+Afterwards, the settings can be opened and the option "Disable app when obscured" can be disabled. And then the relevant apps can be re-enabled again.
 
 To identify apps which could cause this, open the Android settings and navigate to **Settings - Apps - Advanced (gear icon) - Draw over other apps**.
 This will list the installed Apps and will show you which ones are allowed to draw over other apps.
@@ -204,7 +204,7 @@ Which pictures will be tracked, depends on the Android version on your phone:
 Cache
 ----------------------
 
-Introduced in version 1.5.0, if enbaled, all downloaded files will be cached (encrypted) on the file system. Further downloads will only verify with the server, that the cached file is still the latest version.
+Introduced in version 1.5.0, if enabled, all downloaded files will be cached (encrypted) on the file system. Further downloads will only verify with the server, that the cached file is still the latest version.
 If so it will not be downloaded again but directly retrieved from the file system. The cache is implemented using a least recently used mechanism, that means, the oldest entry will be overwritten if the max cache size is reached.
 
 .. _android/settings/chache-size-per-cloud:
@@ -212,7 +212,7 @@ If so it will not be downloaded again but directly retrieved from the file syste
 Cache Size Per Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Using this setting, you can specify the total max cache size per cloud provider. 
+Using this setting, you can specify the total max cache size per Cloud Service.
 
 You can choose between the following options:
 
@@ -276,7 +276,7 @@ Version
 
 This setting displays the current version of this app.
 
-The following sub settings are only available, if you're using the APK-Store version of Cryptomator and not the PlayStore one.
+The following sub settings are only available, if you're using the APK-Store variant of Cryptomator and not the Google Play Store one.
 
 .. _android/settings/update-check-interval:
 

@@ -24,7 +24,12 @@ You can either close the confirmation window by clicking ``Done`` or click on ``
 
 .. note::
 
-    You can store the password in your operating system's keychain by checking the "Save Password" checkbox. There is also a `plug\-in <https://plugin.purejava.org>`_ for Cryptomator, that allows you to store Cryptomator's vault passwords in a KeePassXC database. With a saved password, you can unlock your vaults without typing a password on every unlock. It's faster.
+    You can store the password in your operating system's keychain by checking the "Save Password" checkbox. There are also plug-ins available for Cryptomator, that allow you to store Cryptomator's vault passwords in third party password managers:
+
+      - `KeePassXC plug\-in <https://plugin.purejava.org>`_ stores Cryptomator’s vault passwords in a KeePassXC database
+      - `Bitwarden plug\-in <https://github.com/purejava/cryptomator-bitwarden/wiki>`_ stores the vault passwords in Bitwarden's Secrets Manager
+
+    With a saved password, you can unlock your vaults without typing a password on every unlock. It's faster.
 
 .. warning::
 
@@ -50,7 +55,7 @@ Click on ``Reveal Drive`` in the Cryptomator window to open the mount location u
 
      Even though your files are shown unencrypted in the virtual drive, they are not stored unencrypted on the hard drive but only in `volatile memory <https://en.wikipedia.org/wiki/Volatile_memory>`_
 
-.. image:: ../img/desktop/vault-detail-unlocked.png
+.. image:: ../img/desktop/vault-detail-unlocked-simple.png
     :alt: Cryptomator window showing an unlocked vault
 
 .. note::
@@ -65,7 +70,22 @@ Locking a vault
 
 To lock a vault, simply click ``Lock`` and the virtual drive will disappear or render empty. Your files remain encrypted at the vault's location.
 
-.. image:: ../img/desktop/vault-detail-locked.png
-    :alt: Cryptomator window showing an locked vault
+Locate Encrypted File
+---------------------
 
+The Locate Encrypted File feature helps users find the encrypted version of a specific file. This feature is particularly useful when vault files are versioned and the user wants to restore an older version of a file. As Cryptomator encrypts filenames and obfuscates directory structures, users first locate the encrypted file and then restore an older version of the encrypted file with the third party app.
 
+1. Unlock the desired vault.
+2. Click on the ``Locate Encrypted File`` button.
+3. Select the file within the vault.
+
+As an alternative for clicking the button, you can directly drag & drop a file onto the button.
+
+A file manager window opens showing the encrypted folder and marking the encrypted file.
+
+.. raw:: html
+
+    <video width="640" height="360" controls autoplay loop muted>
+      <source src="../../_static/vid/locate-encrypted-file.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>

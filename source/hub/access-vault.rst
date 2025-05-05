@@ -11,8 +11,8 @@ This section describes exemplarily how to unlock a vault in the Desktop app.
 Android and iOS work analogously.
 
 .. note::
-    Currently, only our desktop version supports Cryptomator Hub vaults.
-    We are working on adding support for Android and iOS.
+    Currently, our desktop and iOS version supports Cryptomator Hub vaults.
+    We are working on adding support for Android.
 
 
 As described in :ref:`open an existing vault <desktop/adding-vaults/open-an-existing-vault>`, you should have already added the vault to the vault list, e.g., by selecting the `vault.cryptomator` file.
@@ -70,7 +70,7 @@ When you finished the account setup in Hub, unlock the vault again.
 4. Register Device
 ^^^^^^^^^^^^^^^^^^
 
-If you just did setup your accout, a vault owner needs to grant you access for the requested vault as described :ref:`here <hub/vault-management/updating-permission>`. Retry unlocking the vault after the vault owner granted you access.
+If you just did setup your account, a vault owner needs to grant you access for the requested vault as described :ref:`here <hub/vault-management/updating-permission>`. Retry unlocking the vault after the vault owner granted you access.
 
 .. image:: ../img/hub/unlock-access-denied.png
     :alt: Access is denied since it has not been granted by a vault owner yet

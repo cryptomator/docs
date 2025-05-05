@@ -22,18 +22,19 @@ To create a new vault, click on the plus sign ① and choose *Create new vault* 
 
     If you already have a vault created with the desktop app and just want to add this vault to your mobile app, please select go to chapter ``Add Existing Vaults``.
 
-You will now be prompted to select the cloud provider where you want to store your vault.
+You will now be prompted to select the Cloud Service where you want to store your vault.
 
 Choose between *Dropbox*, *Google Drive*, *OneDrive* (works also with *OneDrive for Business*) or *Local storage* (which means your local device with all attached devices).
 
-If your desired provider is not listed and offers WebDAV access, please select *WebDAV* as the storage location of your vault.
-Here you can find `WebDAV URLs of Common Cloud Storage Services <https://community.cryptomator.org/t/webdav-urls-of-common-cloud-storage-services/75>`_.
+| If your desired provider is not listed and offers WebDAV access, please select *WebDAV* as the storage location of your vault.
+| Please see :ref:`misc/supported-cloud-services/clouds-with-webdav-support` for a non-exhaustive list of Cloud Services
+  and information about accessing them with WebDAV.
 
 .. image:: ../img/android/create-new-vault-2-select-provider.png
     :alt: How to create a new vault with Android
     :width: 346px
 
-If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the :ref:`Cloud Management <android/cloud-management>` chapter and contiune later here.
+If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the :ref:`Cloud Management <android/cloud-management>` chapter and continue later here.
 
 Now that you've established a connection, you'll add the existing vault.
 
@@ -44,7 +45,7 @@ This name will also be the folder name of your vault files in your online storag
     :alt: How to create a new vault with Android
     :width: 346px
 
-Then choose the location on your cloud storage where you want to have your encrypted vault files stored.
+Then choose the location on your Cloud Service where you want to have your encrypted vault files stored.
 
 .. image:: ../img/android/create-new-vault-6-select-path.png
     :alt: How to create a new vault with Android
@@ -88,18 +89,19 @@ To add an existing vault, click on the plus sign ① and choose *Add existing va
     :alt: How to add a vault with Android
     :width: 346px
 
-You will now be prompted to select the cloud provider where the vault is located.
+You will now be prompted to select the Cloud Service where the vault is located.
 
 Choose between *Dropbox*, *Google Drive*, *OneDrive* (works also with *OneDrive for Business*) or *Local storage* (which means your local device with all attached devices).
 
-If your desired provider is not listed and offers WebDAV access, please select *WebDAV* as the storage location of your vault.
-Here you can find `WebDAV URLs of Common Cloud Storage Services <https://community.cryptomator.org/t/webdav-urls-of-common-cloud-storage-services/75>`_.
+| If your desired provider is not listed and offers WebDAV access, please select *WebDAV* as the storage location of your vault.
+| Please see :ref:`misc/supported-cloud-services/clouds-with-webdav-support` for a non-exhaustive list of Cloud Services
+  and information about accessing them with WebDAV.
 
 .. image:: ../img/android/add-existing-vault-2-select-provider.png
     :alt: How add a vault with Android
     :width: 346px
 
-If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the :ref:`Cloud Management <android/cloud-management>` chapter and contiune later here.
+If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the :ref:`Cloud Management <android/cloud-management>` chapter and continue later here.
 
 Now that you've established a connection, you'll add the existing vault.
 
@@ -215,7 +217,7 @@ If you want to change the name of a specific vault in Cryptomator, you select th
 
 Choose a new name and confirm using the ``RENAME`` button.
 
-.. image:: ../img/android/rename-vault-3-renameing.png
+.. image:: ../img/android/rename-vault-3-renaming.png
     :alt: How to rename a vault with Android
     :width: 346px
 

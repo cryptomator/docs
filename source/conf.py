@@ -20,13 +20,15 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Cryptomator'
-copyright = '2023, cryptomator.org'
+copyright = '2025, cryptomator.org'
 author = 'Cryptomator Contributors'
 
+html_title = 'Cryptomator Documentation'
+
 # The short X.Y version
-version = '1.7'
+version = 'latest'
 # The full version, including alpha/beta/rc tags
-release = '1.7.0'
+release = 'latest'
 
 
 # -- General configuration ---------------------------------------------------
@@ -40,7 +42,8 @@ release = '1.7.0'
 # ones.
 #
 extensions = [
-    'sphinx.ext.todo'
+    'sphinx.ext.todo',
+    'sphinx_reredirects'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -92,7 +95,6 @@ html_theme_options = {
     'titles_only': False,
     'logo_only' : True,
     'style_nav_header_background': '#49B04A',
-    'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': True,
     'vcs_pageview_mode': '',
@@ -119,6 +121,24 @@ html_style = 'css/overrides.css'
 html_logo = 'img/logo-mono-white.png'
 
 html_favicon = 'img/favicon.ico'
+
+html_show_sphinx = False
+
+redirects = {
+     "hub/setup/requirements": "/hub/deployment#hardware-requirements",
+     "hub/setup/billing": "/hub/license",
+     "hub/setup/keycloak-administration": "/hub/user-group-management",
+     "hub/setup": "/hub/deployment",
+     "hub/access-vault/unlocking-a-vault/4.-vault-unlocked": "/hub/access-vault/#vault-unlocked",
+     "hub/access-vault/unlocking-a-vault/3.-add-device": "/hub/access-vault/#register-device",
+     "hub/access-vault/unlocking-a-vault/2.-authenticate": "/hub/access-vault/#authenticate",
+     "hub/access-vault/unlocking-a-vault/1.-click-unlock": "/hub/access-vault/#click-unlock",
+     "hub/license": "/hub/admin/license",
+     "hub/license/#what-is-a-seat": "/hub/admin/#what-is-a-seat",
+     "hub/license/#community-license": "/hub/admin/#community-license",
+     "hub/license/#updating-your-license": "/hub/admin/#updating-your-license",
+     "desktop/vault-mounting": "/desktop/volume-type"
+}
 
 # -- Options for HTMLHelp output ---------------------------------------------
 

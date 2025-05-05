@@ -39,7 +39,7 @@ goto end
 %SPHINXBUILD% -M help %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
 
 :clean
-rmdir /S %BUILDDIR
+rmdir /S %BUILDDIR%
 
 :end
 popd

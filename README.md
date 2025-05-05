@@ -1,4 +1,4 @@
-[![Documentation Build Status](https://readthedocs.org/projects/cryptomator/badge/?version=latest)](https://docs.cryptomator.org/en/latest/?badge=latest)
+![Documentation Build Status](https://github.com/cryptomator/docs/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)
 
 # Cryptomator's Documentation
 
@@ -20,24 +20,18 @@ We prefer contributions to our documentation to be in English, but if you wish t
 ### Using Docker
 
 - Install [Docker](https://www.docker.com/)
-- Build a Docker image as per the Dockerfile included in this repo. You just need to run the command below (don't omit the dot at the end).
+  #### For live preview:
 
   ```
-  docker build -t cryptomator_docs_image .
-  ```
-  
-  Run the commands below in the repo's directory to start a Docker container based on the built image.
-
-  For live preview:
-
-  ```
-  docker run -p 8000:8000 -v $(pwd)/source:/source -v $(pwd)/build:/build cryptomator_docs_image sphinx-autobuild -b html /source /build/html --host 0.0.0.0
+  docker compose up
   ```
 
-  To build site:
+  The live preview will be available at: [http://localhost:8000/](http://localhost:8000/)
+
+  #### To build site:
 
   ```
-  docker run -v $(pwd)/source:/source -v $(pwd)/build:/build cryptomator_docs_image sphinx-build -M html /source /build/html
+  docker compose exec cryptomator-docs sphinx-build -M dirhtml /source /build/dirhtml
   ```
 
 ### Without Using Docker
@@ -49,20 +43,20 @@ We prefer contributions to our documentation to be in English, but if you wish t
   pip install sphinx sphinx_rtd_theme sphinx-autobuild
   ```
 
-  For live preview:
+  #### For live preview:
 
   ```
   make clean livehtml
   ``` 
 
-  To build site:
+  #### To build site:
 
   ```
-  make clean html
-  ``` 
+  make clean dirhtml
+  ```
 
 <!--
-How tow record `.gif`s:
+How to record `.gif`s:
 
 1. Record screen using Quicktime on #FCFCFC background
 2. Generate palette for PNG: `ffmpeg -i recording.mov -vf "fps=10,palettegen" -y palette.png`

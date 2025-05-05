@@ -7,14 +7,14 @@ Cryptomator Hub can be deployed to a Kubernetes cluster or a Docker host. The fo
 
 .. note::
 
-    Cryptomator Hub is also offered as a hosted solution, including 99.5%-uptime guarantee and regular backups! Visit `cryptomator.org <https://cryptomator.org/hub/>`_ for more information.
+    Cryptomator Hub is also offered as a hosted solution, including 99.5%-uptime guarantee and regular backups! Visit `cryptomator.org <https://cryptomator.org/for-teams/>`_ for more information.
 
 Summary
 -------
 
 #. Decide, on which web addresses you want to deploy Hub and Keycloak
 #. Set up DNS and TLS termination
-#. Use the `Setup Wizard <https://cryptomator.org/hub/setup/>`_ to generate a deployment descriptor template
+#. Use the `Setup Wizard <https://cryptomator.org/hub/self-hosted/>`_ to generate a deployment descriptor template
 #. Customize the template if needed (e.g., adjust the Ingress settings) and deploy the software stack to your cluster
 
 Afterwards you're done.
@@ -30,7 +30,7 @@ Currently, we are evaluating the system requirements for Cryptomator Hub. If you
 Setup Wizard
 ------------
 
-To get started, use the `Setup Wizard <https://cryptomator.org/hub/setup/>`_ to generate the necessary configuration files.
+To get started, use the `Setup Wizard <https://cryptomator.org/hub/self-hosted/>`_ to generate the necessary configuration files.
 
 Cryptomator Hub depends on `Keycloak <https://www.keycloak.org/>`_, an open-source identity and access management solution.
 In the Setup Wizard, you will have the option to choose between deploying Keycloak alongside Hub or specifying an URL to an existing Keycloak installation.
@@ -38,7 +38,7 @@ In the Setup Wizard, you will have the option to choose between deploying Keyclo
 Reverse Proxy
 -------------
 
-Cryptomator Hub must be used behind a reverse proxy such as Traefik or Nginx. In the `Setup Wizard <https://cryptomator.org/hub/setup/>`_ you can already add rules for some reverse proxies like Traefik. As mentioned there, you will still need a running Traefik deployment.
+Cryptomator Hub must be used behind a reverse proxy such as Traefik or Nginx. In the `Setup Wizard <https://cryptomator.org/hub/self-hosted/>`_ you can already add rules for some reverse proxies like Traefik. As mentioned there, you will still need a running Traefik deployment.
 
 If you don't have a running Traefik deployment and want to use Docker Compose to run Hub, you can use the following as starting point:
 
@@ -50,7 +50,7 @@ If you don't have a running Traefik deployment and want to use Docker Compose to
 
     services:
       traefik:
-        image: traefik:v2.9
+        image: traefik:v3.0
         command:
           # Provider
           - '--providers.docker'
@@ -68,6 +68,8 @@ If you don't have a running Traefik deployment and want to use Docker Compose to
           # Uncomment to use staging for testing
           # - '--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory'
           - '--entrypoints.websecure.http.tls.certresolver=myresolver'
+          # HTTP/3
+          - '--entrypoints.websecure.http3'
           # Logs
           - '--accesslog.filepath=/logs/access.log'
           - '--accesslog.format=json'
@@ -108,7 +110,7 @@ Before running this deployment
 #. You must set a valid email address in ``TODO``
 #. You must have ports 80 and 443 open on the host machine
 #. You need to create for Hub and optionally Keycloak DNS entries (``CNAME``, or ``A`` record) for the domain entered in the Setup Wizard of Hub
-#. Create a Hub deployment using the `Setup Wizard <https://cryptomator.org/hub/setup/>`_ with ``include Traeffik`` selected and merge the content with this file:
+#. Create a Hub deployment using the `Setup Wizard <https://cryptomator.org/hub/self-hosted/>`_ with ``include Traeffik`` selected and merge the content with this file:
 
   #. Copy the ``hub-internal: {}`` section of the Setup Wizard to this ``networks``
   #. Copy all services of the Setup Wizard under the ``services`` section to this ``services``

@@ -16,7 +16,7 @@ Ensure that your computer's specifications meet the system requirements required
 Install Cryptomator on Windows
 ------------------------------
 
-1. Download Cryptomator's ``.exe`` installer for Windows from our `downloads page <https://cryptomator.org/downloads>`_.
+1. Download Cryptomator's ``.exe`` installer for Windows from our `downloads page <https://cryptomator.org/downloads/>`_.
 2. Launch the ``.exe`` installer.
 3. Follow the on-screen instructions.
 
@@ -27,7 +27,7 @@ Install Cryptomator on Windows
 Install Cryptomator on macOS
 ----------------------------
 
-1. Download Cryptomator's ``.dmg`` installer for macOS from our `downloads page <https://cryptomator.org/downloads>`_.
+1. Download Cryptomator's ``.dmg`` installer for macOS from our `downloads page <https://cryptomator.org/downloads/>`_.
 2. Launch the ``.dmg`` installer.
 3. Accept the license.
 4. Drag & drop Cryptomator into the Applications folder.
@@ -46,7 +46,7 @@ Install Cryptomator on Linux
 
 Cryptomator is available on Linux via ``Flatpak``, ``PPA`` and ``AUR`` package managers, and as an AppImage (an ``.appimage`` file).
 
-The easiest and recommended way of installing Cryptomator on Linux is by downloading Cryptomator's AppImage (an ``.appimage`` file) - as it works on almost all distrubtions. 
+The easiest and recommended way of installing Cryptomator on Linux is by downloading Cryptomator's AppImage (an ``.appimage`` file) - as it works on almost all distributions. 
 Just remember to `make it executable <https://docs.appimage.org/user-guide/run-appimages.html#running-appimages>`_ before you try to run it.
 
-Visit our `downloads page <https://cryptomator.org/downloads>`_ to choose your preferred installation method.
+Visit our `downloads page <https://cryptomator.org/downloads/>`_ to choose your preferred installation method.

@@ -13,7 +13,7 @@ Please enter the credentials for your provider account or in case of Google Driv
 If your authentication was successful, some of the providers might ask you to grant Cryptomator access permission to your online files.
 Please allow this permission.
 
-In Google Drive, OneDrive and Dropox you can only create one connection between your cloud storage account and the Cryptomator app.
+In Google Drive, OneDrive and Dropbox you can only create one connection between your Cloud Service account and the Cryptomator app.
 You can't connect to (for example) two different *Dropbox* accounts.
 
 If the provider requested permission to access your online files you can remove Cryptomator permissions from your online storage account at any time.
@@ -60,7 +60,8 @@ Login OneDrive
 Login WebDAV
 ------------------
 
-You can find `here <https://community.cryptomator.org/t/webdav-urls-of-common-cloud-storage-services/75>`_ a list of the most common WebDAV URLs.
+Please see :ref:`misc/supported-cloud-services/clouds-with-webdav-support` for a non-exhaustive list of Cloud Services
+and information about accessing them with WebDAV.
 
 .. image:: ../img/android/add-webdav-login-provider-0.png
     :alt: How to handle cloud services with Android
@@ -76,9 +77,20 @@ You can find `here <https://community.cryptomator.org/t/webdav-urls-of-common-cl
 
 
 .. note::
-    While creating the WebDAV connection, please make sure to add the root of the accessible stroge and don't navigate directly into the vault.
+    While creating the WebDAV connection, please make sure to add the root of the accessible storage and don't navigate directly into the vault.
 
 .. _android/cloud-management/login-local-storage:
+
+Login S3
+------------------
+
+Generate a key that has permissions "Allow List All Bucket Names". (AWS root users have this by default and `this permission may not be necessary in the future <https://github.com/cryptomator/android/issues/339>`_.)
+
+"endpoint" refers to how the S3 API for your bucket can be reached. In the case of `official S3 <https://docs.aws.amazon.com/general/latest/gr/s3.html>`_, it would be ``s3.<region>.amazonaws.com``, for e.g. `Backblaze B2 <https://www.backblaze.com/apidocs/introduction-to-the-s3-compatible-api>`_ ``s3.<region>.backblazeb2.com``.
+
+.. image:: ../img/android/add-s3-login-provider.png
+    :alt: Android S3 connection form
+    :width: 346px
 
 Login Local Storage
 -----------------------

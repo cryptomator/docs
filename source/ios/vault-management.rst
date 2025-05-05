@@ -27,3 +27,21 @@ In order to have a guarantee that your vault stays unlocked for a certain amount
 E.g., if you choose "1 Hour" and Cryptomator gets terminated by iOS within that time frame, your vault can automatically be unlocked again using the key from the iOS keychain. If the selected time frame has passed, the key will be removed from the iOS keychain and your vault will get automatically locked.
 
 If you choose the "Indefinite" option, your vault will be kept unlocked until you have manually locked it.
+
+.. _ios/vault-management/security-considerations:
+
+Security Considerations
+-----------------------
+
+Cryptomator balances security and usability by storing certain credentials in the iOS Keychain to enable convenient features like biometric authentication and reduced password prompts. Here's how it works:
+
+* Vault Passwords: Cryptomator stores a copy of your vault password in the iOS Keychain when Touch ID or Face ID is enabled.
+* Masterkeys: Cryptomator stores a copy of the masterkey in the iOS Keychain for vaults with a specified "Unlock Duration" (anything except "Let iOS Decide Automatically").
+
+These credentials are stored with the `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly <https://developer.apple.com/documentation/security/ksecattraccessibleafterfirstunlockthisdeviceonly>`_ attribute, ensuring:
+
+1. Keychain entries are only accessible after the first unlock using your device's passcode following a reboot.
+2. Keychain entries are not transferred to a new device when restoring from a backup.
+3. Keychain entries are not synchronized to iCloud.
+
+These measures are designed to provide a secure yet convenient experience on your trusted devices. If you prefer not to store these credentials in the Keychain due to security concerns, you can opt out of using these features. However, for most users, this balance between security and usability is appropriate and safe.

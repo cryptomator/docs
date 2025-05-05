@@ -6,21 +6,19 @@ Best Practices
 Sharing of Vaults
 -----------------
 
-Always be careful when sharing your vault with other people.
+When sharing your vault or working in a team, we strongly recommend using `Cryptomator Hub <https://cryptomator.org/for-teams/>`_.
+It adds access management for your vaults and allows you to unlock vaults with your own account.
+
+Otherwise, always be careful when sharing your vault with other people.
 
 In general, keep your vault password secret.
 Nobody except yourself should know the vault password.
-Only when you use a vault together with other people, they may know your vault password.
+Sharing your vault password should be reserved for very limited personal scenarios (for example, with your spouse) and is generally not advised.
 Keep in mind that other people could pass on – with or without intent – the vault password.
 Only share your vaults with people you trust.
 
 If you share a vault with others, do not communicate the vault password on an insecure channel.
 Tell the password in person, use encrypted email or messengers or other similar secure means.
-
-Are you working in a team and do not want to share vault passwords?
-Consider using `Cryptomator Hub <https://cryptomator.org/hub/>`_.
-It adds access management for your vaults and allows you to unlock vaults with your own account.
-
 
 .. _security/best-practices/good-passwords:
 
@@ -37,6 +35,20 @@ Some of these are:
 * For each purpose, a unique password without similarities to other passwords should be used.
 
 If you fulfill these requirements, you quickly reach a point where remembering the passwords gets impossible.
-Thus, we recommend to use a password manager to generate and store the passwords.
+Thus, we recommend using a password manager to generate and store the passwords.
 By doing so, you only have to remember a few or a single secure password.
-Otherwise, we recommend to use at least 10 characters, ideally `use sentences instead of words <https://xkcd.com/936/>`_.
+Otherwise, we recommend using at least 10 characters, ideally `use sentences instead of words <https://xkcd.com/936/>`_.
+
+.. _security/best-practices/backup-strategy:
+
+Backup Strategy
+---------------
+
+Cryptomator is not a backup solution.
+Its primary and only purpose is client-side encryption.
+
+We strongly recommend maintaining your own backup strategy.
+Even with unencrypted data, regular backups are essential.
+
+Most cloud storage services offer some form of backup or file revision capabilities.
+Evaluate if those available measures are sufficient for your needs or consider implementing additional backup systems.

@@ -8,11 +8,10 @@ Volume types play an important role when handling your files.
 When you unlock a vault, Cryptomator makes decrypted files available in your file manager by mounting a virtual drive on your operating system.
 This mounting of a virtual drive is handled differently depending on the volume type chosen in Cryptomator's preferences.
 
-In general, all volume types Cryptomator offers can be categorized into three categories:
+In general, all volume types Cryptomator offers can be categorized into two categories:
 
 #. :ref:`WebDAV <desktop/volume-type/webdav>`
 #. :ref:`FUSE <desktop/volume-type/fuse>`
-#. :ref:`Other <desktop/volume-type/dokany>`
 
 
 .. _desktop/volume-type/webdav:
@@ -34,7 +33,7 @@ What is a FUSE volume type?
 ---------------------------
 
 Filesystem in Userspace (`FUSE <https://en.wikipedia.org/wiki/Filesystem_in_Userspace>`_) is a filesystem interface originally developed for Unix operating systems that let non-privileged users create their own file systems without editing kernel code.
-Which means, FUSE does not require admin privileges and is has good support across all major desktop operating systems.
+Which means, FUSE does not require admin privileges and has good support across all major desktop operating systems.
 FUSE volume type also delivers good performance when working on files.
 
 All FUSE related volume types support custom mount options, but every option must be prefixed with ``-o``.
@@ -93,22 +92,6 @@ Using WebDAV on Windows has the following drawbacks:
 
 .. Additionally, sometimes mounting fails with ``System error 67 has occurred. The network name cannot be found.`` (or its translations).
 .. If it happens, follow you can follow the guide TODO to get access again.
-
-.. _desktop/volume-type/dokany:
-
-Dokany (v1.5.1)
-^^^^^^^^^^^^^^^^
-
-.. warning::
-
-    Dokany support in Cryptomator is deprecated since version 1.7.0. We suggest switching to :ref:`desktop/volume-type/fuse/winfsp`.
-
-**Requirements:** Windows, Dokany 1.5.1 installed
-
-The `Dokany project <https://dokan-dev.github.io/>`_ aims to achieve the same goals as FUSE, but specific for Windows: Provide an interface to create your own filesystem without requiring to write your own kernel filesystem driver.
-It has to be installed separately by downloading an installer from `Dokany's releases page <https://github.com/dokan-dev/dokany/releases/tag/v1.5.1.1000>`_.
-By default, unlocked vaults are mounted to a random drive letter.
-
 
 macOS
 -----
@@ -216,5 +199,5 @@ WebDAV (HTTP Address)
 This volume type is always present and comes in handy when all other volume types fail to mount.
 It starts a local-only WebDAV server, which can be manually integrated into the system or accessed using a third-party application, like `Cyberduck <https://cyberduck.io/>`_.
 Check out the regarding manuals for your OS on how to connect to a WebDAV server.
-The address of Cryptomators local-only WebDAV server can be copied from the vault detail screen by clicking the green "Copy" button.
+The address of Cryptomator's local-only WebDAV server can be copied from the vault detail screen by clicking the green "Copy" button.
 

@@ -9,7 +9,7 @@ So, :ref:`choosing a strong password <security/best-practices/good-passwords>` i
 Additionally, a unique *recovery key* can be derived for each vault while creating its password or later.
 A *recovery key* allows you to create a new password if you forget the original one.
 Do note that the *recovery key* feature does not break encryption in any way.
-It is a human readable form of your decrypted :ref:`masterkey <security/architecture/masterkey-derivation>` and therefore independent of the current vault password and highly confidential.
+It is a human readable form of your decrypted :ref:`masterkey <security/architecture/masterkey>` and therefore independent of the current vault password and highly confidential.
 Keep it as safe as your password.
 
 All actions can be carried out using the ``Password`` tab under vault options.
@@ -107,7 +107,7 @@ If the recovery key is valid, a small message will be displayed below the entere
     By design, *only* the correct recovery key is accepted. **A valid but incorrect key won't be accepted to prevent your old data from becoming inaccessible.**
 
 Finally, assign a new password to your vault.
-It is the same process as the :ref:`vault creation <desktop/adding-vaults/3.-choose-a-passwords>`, except that no new recovery key is generated.
+It is the same process as the :ref:`vault creation <desktop/adding-vaults/4.-choose-a-password>`, except that no new recovery key is generated.
 Again, please choose a :ref:`strong password <security/best-practices/good-passwords>`.
 
 Once changed, you can unlock your vault with the new password.

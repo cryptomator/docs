@@ -25,7 +25,13 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    desktop/accessing-vaults.rst
    desktop/password-and-recovery-key.rst
    desktop/vault-management.rst
+   desktop/encrypted-file-names.rst
    desktop/volume-type.rst
+   desktop/vault-events.rst
+   desktop/error-handling.rst
+   desktop/sync-conflicts.rst
+   desktop/advanced-settings.rst
+   desktop/network.rst
 
 .. toctree::
    :hidden:
@@ -57,12 +63,12 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
 
    hub/introduction.rst
    hub/deployment.rst
-   hub/license.rst
    hub/user-group-management.rst
    hub/your-account.rst
    hub/vault-management.rst
    hub/access-vault.rst
    hub/vault-recovery.rst
+   hub/admin.rst
 
 .. toctree::
    :hidden:
@@ -71,6 +77,8 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
 
    security/security-target.rst
    security/architecture.rst
+   security/hub.rst
+   security/vault.rst
    security/best-practices.rst
 
 .. toctree::
@@ -86,4 +94,5 @@ If you are interested in the security of Cryptomator, have a look at our :ref:`s
    :caption: Misc
 
    misc/contribute.rst
+   misc/supported-cloud-services.rst
    misc/vault-format-history.rst

@@ -8,7 +8,6 @@ The account is used to authenticate your identity and to manage your trusted dev
 
 If you don't have an account, contact your local administrator to create one for you.
 
-
 .. _hub/your-account/account-key:
 
 Account Key
@@ -44,7 +43,6 @@ You can revoke the trust at any time in your profile.
 After storing your account key securely, tick the checkbox and finish the setup.
 You are now logged in to Hub and can start using it.
 
-
 .. _hub/your-account/profile:
 
 Profile Page
@@ -59,6 +57,19 @@ You can open it by clicking on your profile icon in the top right corner and sel
     :alt: Your account in Cryptomator Hub
 
 
+.. _hub/your-account/profile/change-language:
+
+Change Language
+^^^^^^^^^^^^^^^
+
+You can change the language of Cryptomator Hub to match your preference.  
+The language selection is available in the profile settings.
+
+Is your preferred language not available yet?  
+We are continuously working on adding more languages.  
+If you're interested, you can contribute translations via Crowdin:  
+`Cryptomator Hub on Crowdin <https://crowdin.com/project/cryptomator>`_.
+
 .. _hub/your-account/profile/regenerate-account-key:
 
 Regenerate Account Key
@@ -68,16 +79,42 @@ If you suspect that your old Account Key has been compromised, you can regenerat
 You will then only be able to add new devices with the new Account Key.
 Your existing devices will remain trusted.
 
-
 .. _hub/your-account/profile/authorized-devices:
 
 Authorized Devices
 ^^^^^^^^^^^^^^^^^^
+
 A device is authorized if it has been authenticated with your Account Key.
 Only on authorized devices you can log in to Hub and open vaults.
 
-If you don't trust a device anymore, you can remove it from the list of authorized devices.
+For each authorized device, you can view its name, type (e.g., browser), the date it was added, the last time it accessed a vault, and its IP address.
+If the last access values are not present this can have multiple reasons:
 
+1. The device has not accessed any vaults yet
+2. The device is not up to date and does not send the required information
+
+The device marked with ``This Device`` is the one you are currently using. This allows you to easily verify your active session and detect any unauthorized access.
+
+By managing your authorized devices, you ensure that only trusted ones remain active, giving you greater security and control over your account.
+
+If you don't trust a device anymore, you can remove it from the list of authorized devices.
+This will log out the device and revoke access to all shared vaults.
+
+.. _hub/your-account/profile/legacy-devices:
+
+Legacy Devices
+^^^^^^^^^^^^^^^^^^
+
+This section lists devices that have been authorized with an older version of Cryptomator Hub. It is only visible if you have any legacy devices.
+Legacy devices where created before the introduction of the current user key system and will be removed from your account within one of the next major updates of Hub.
+
+.. image:: ../img/hub/legacy-devices.png
+    :alt: Your legacy devices
+
+If you have any legacy device
+
+1. check if you still use them, if so, update the client version on this device which migrates it to the new format
+2. if you don't use them anymore, remove them to revoke access of this device to your accessible vaults
 
 .. _hub/your-account/profile/fingerprint:
 
