@@ -45,7 +45,7 @@ Our Windows installers are signed using a code signing certificate. You can veri
 On macOS, you can verify the code signature of the Cryptomator app using the built-in `codesign` utility. This verification confirms the app's authenticity and integrity:
 
 1. Open Terminal (found in Applications > Utilities).
-2. Run either of the following command to check the signature:
+2. Run either of the following commands to check the signature:
    ```
    codesign -dv ~/Downloads/Cryptomator-*.dmg
    codesign -dv /Applications/Cryptomator.app
