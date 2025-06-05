@@ -121,6 +121,19 @@ const config: Config = {
     ],
   ],
 
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        indexBlog: false,
+        indexPages: false,
+        docsRouteBasePath: "/",
+        hashed: true,
+      }),
+    ],
+  ],
+
   themeConfig: {
     image: 'img/og-image.png',
     navbar: {
