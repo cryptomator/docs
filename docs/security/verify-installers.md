@@ -37,5 +37,26 @@ Our Windows installers are signed using a code signing certificate. You can veri
 3. Click on Details.
 4. Click on View Certificates.
 5. Click on Details. The serial number of our certificate should be:
-    - For releases since July 14, 2022: `d77e4f8b938f56ae265cd08e9193490c`
-    - For releases from July 3, 2019 to July 3, 2022: `63c45bff1a148d60ed2994d3a2639034`
+   - For releases since July 14, 2022: `d77e4f8b938f56ae265cd08e9193490c`
+   - For releases from July 3, 2019 to July 3, 2022: `63c45bff1a148d60ed2994d3a2639034`
+
+## macOS (app) {#macos}
+
+On macOS, you can verify the code signature of the Cryptomator app using the built-in `codesign` utility. This verification confirms the app's authenticity and integrity:
+
+1. Open Terminal (found in Applications > Utilities).
+2. Run the following command to check the signature:
+   ```
+   codesign -dv /Applications/Cryptomator.app
+   ```
+3. Verify that the output includes:
+   - `TeamIdentifier=YZQJQUHA3L`
+   - The signature should be valid with no errors
+
+If the app is properly signed, you should see output similar to:
+```
+Executable=/Applications/Cryptomator.app/Contents/MacOS/Cryptomator
+Identifier=org.cryptomator
+...
+TeamIdentifier=YZQJQUHA3L
+```
