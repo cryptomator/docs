@@ -26,6 +26,11 @@
 /* Light mode only background color */
 [data-theme='light'] {
   --ifm-background-color: #f7fafc;
+  --ifm-code-background: #ffffff;
+}
+
+[data-theme='light'] pre {
+  background-color: #ffffff !important;
 }
 
 /* Custom heading font weights for Quicksand */
