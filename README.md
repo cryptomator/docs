@@ -1,64 +1,38 @@
-![Documentation Build Status](https://github.com/cryptomator/docs/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)
+# Cryptomator Documentation
 
-# Cryptomator's Documentation
-
-This is the source repository of [Cryptomator's documentation](https://docs.cryptomator.org).
+Official documentation site for Cryptomator. Built with [Docusaurus](https://docusaurus.io/).
 
 ## Contributing
 
-We prefer contributions to our documentation to be in English, but if you wish to contribute in another language, please contact us.
+We welcome contributions! Please read our [contributing guidelines](.github/CONTRIBUTING.md) for details on how to help.
 
-## Steps to Contribute
+## Quick Start
 
-- Clone this repo
-- Make your changes
-- Preview changes and clear errors by following our guide below
-- Send us a pull request
+```bash
+npm install
+npm start
+```
 
-## Ways to Preview Changes and Build Site
+Opens dev server at `http://localhost:3000` with live reload.
 
-### Using Docker
+## Structure
 
-- Install [Docker](https://www.docker.com/)
-  #### For live preview:
+- `docs/desktop/` - Desktop app documentation
+- `docs/android/` - Android app documentation  
+- `docs/ios/` - iOS app documentation
+- `docs/hub/` - Cryptomator Hub documentation
+- `docs/security/` - Encryption architecture and security details
+- `docs/misc/` - Additional resources
 
-  ```
-  docker compose up
-  ```
+## Scripts
 
-  The live preview will be available at: [http://localhost:8000/](http://localhost:8000/)
+```bash
+npm run build # Build static site
+npm run serve # Serve built site locally
+```
 
-  #### To build site:
+Other scripts can be found in `package.json`.
 
-  ```
-  docker compose exec cryptomator-docs sphinx-build -M dirhtml /source /build/dirhtml
-  ```
+## Deployment
 
-### Without Using Docker
-
-- Install [pip](https://pip.pypa.io/en/stable/installation/)
-- Install sphinx, sphinx_rtd_theme, and sphinx-autobuild
-
-  ```
-  pip install sphinx sphinx_rtd_theme sphinx-autobuild
-  ```
-
-  #### For live preview:
-
-  ```
-  make clean livehtml
-  ``` 
-
-  #### To build site:
-
-  ```
-  make clean dirhtml
-  ```
-
-<!--
-How to record `.gif`s:
-
-1. Record screen using Quicktime on #FCFCFC background
-2. Generate palette for PNG: `ffmpeg -i recording.mov -vf "fps=10,palettegen" -y palette.png`
-2. Generate GIF: `ffmpeg -i recording.mov -i palette.png -lavfi "fps=10 [x]; [x][1:v] paletteuse" -y result.gif`
--->
+Deployed to [docs.cryptomator.org](https://docs.cryptomator.org) via GitHub Pages from the `main` branch.
