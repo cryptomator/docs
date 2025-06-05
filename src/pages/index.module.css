@@ -1,0 +1,32 @@
+.heroLogo {
+  width: 160px;
+  height: 160px;
+}
+
+.heroBanner :global(.hero__title) {
+  color: white;
+}
+
+.heroBanner :global(.hero__subtitle) {
+  color: white;
+}
+
+@media screen and (max-width: 996px) {
+  .heroLogo {
+    width: 128px;
+    height: 128px;
+  }
+
+  .heroBanner :global(.hero__title) {
+    font-size: 2.75rem;
+  }
+
+  .heroBanner :global(.hero__subtitle) {
+    font-size: 1.25rem;
+  }
+
+  .heroBanner :global(.button) {
+    --ifm-button-size-multiplier: 1.1;
+    width: 100%;
+  }
+}
