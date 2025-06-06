@@ -24,7 +24,7 @@ cleartextPayload := 0xFFFFFFFFFFFFFFFF . contentKey
 ciphertextPayload, tag := aesGcm(cleartextPayload, encryptionMasterKey, headerNonce)
 ```
 
-<Image src="/img/security/file-header-encryption.png" srcset="/img/security/file-header-encryption.png 1x, /img/security/file-header-encryption@2x.png 2x" alt="File Header Encryption" width="433" height="199" />
+<Image src="/img/security/file-header-encryption.png" srcset="/img/security/file-header-encryption.png 1x, /img/security/file-header-encryption@2x.png 2x" alt="File Header Encryption" width="433" height="199" style={{backgroundColor: '#ffffff', borderRadius: 'var(--ifm-global-radius)', padding: 'var(--ifm-pre-padding)'}} />
 
 *Random per file change
 
@@ -54,7 +54,7 @@ for (int i = 0; i < length(cleartextChunks); i++) {
 ciphertextFileContent := join(ciphertextChunks[])
 ```
 
-<Image src="/img/security/file-content-encryption.png" srcset="/img/security/file-content-encryption.png 1x, /img/security/file-content-encryption@2x.png 2x" alt="File Content Encryption" width="782" height="195" />
+<Image src="/img/security/file-content-encryption.png" srcset="/img/security/file-content-encryption.png 1x, /img/security/file-content-encryption@2x.png 2x" alt="File Content Encryption" width="782" height="195" style={{backgroundColor: '#ffffff', borderRadius: 'var(--ifm-global-radius)', padding: 'var(--ifm-pre-padding)'}} />
 
 *Random per chunk change
 
@@ -94,7 +94,7 @@ Cryptomator uses [AES-SIV](https://tools.ietf.org/html/rfc5297) to encrypt names
 The directory ID of the parent folder is passed as associated data.
 This prevents undetected movement of files between directories.
 
-<Image src="/img/security/filename-encryption.png" srcset="/img/security/filename-encryption.png 1x, /img/security/filename-encryption@2x.png 2x" alt="Filename Encryption" width="614" height="220" />
+<Image src="/img/security/filename-encryption.png" srcset="/img/security/filename-encryption.png 1x, /img/security/filename-encryption@2x.png 2x" alt="Filename Encryption" width="614" height="220" style={{backgroundColor: '#ffffff', borderRadius: 'var(--ifm-global-radius)', padding: 'var(--ifm-pre-padding)'}} />
 
 *Unencrypted directory ID of the parent dir [as described above](#directory-ids)
 
