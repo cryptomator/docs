@@ -121,7 +121,7 @@ wrappedEncryptionMasterKey := aesKeyWrap(encryptionMasterKey, kek)
 wrappedMacMasterKey := aesKeyWrap(macMasterKey, kek)
 ```
 
-<Image src="/img/security/key-derivation.png" srcset="/img/security/key-derivation.png 1x, /img/security/key-derivation@2x.png 2x" alt="KEK Derivation" width="336" height="71" />
+<Image src="/img/security/key-derivation.png" srcset="/img/security/key-derivation.png 1x, /img/security/key-derivation@2x.png 2x" alt="KEK Derivation" width="336" height="71" style={{backgroundColor: '#ffffff', borderRadius: 'var(--ifm-global-radius)', padding: 'var(--ifm-pre-padding)'}} />
 
 The wrapped keys and the parameters needed to derive the KEK are then stored as integers or Base64-encoded strings in a JSON file named `masterkey.cryptomator`, which is located in the root directory of the vault.
 
@@ -139,4 +139,4 @@ The wrapped keys and the parameters needed to derive the KEK are then stored as 
 
 When unlocking a vault the KEK is used to unwrap (i.e. decrypt) the stored masterkeys.
 
-<Image src="/img/security/masterkey-decryption.png" srcset="/img/security/masterkey-decryption.png 1x, /img/security/masterkey-decryption@2x.png 2x" alt="Masterkey Decryption" width="439" height="200" />
+<Image src="/img/security/masterkey-decryption.png" srcset="/img/security/masterkey-decryption.png 1x, /img/security/masterkey-decryption@2x.png 2x" alt="Masterkey Decryption" width="439" height="200" style={{backgroundColor: '#ffffff', borderRadius: 'var(--ifm-global-radius)', padding: 'var(--ifm-pre-padding)'}} />

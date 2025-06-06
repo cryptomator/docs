@@ -9,9 +9,10 @@ interface ImageProps {
   width?: number | string;
   height?: number | string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export default function Image({ src, srcset, alt, width, height, className }: ImageProps) {
+export default function Image({ src, srcset, alt, width, height, className, style }: ImageProps) {
   const imageSrc = useBaseUrl(src);
   const isInsideGrid = React.useContext(GridContext);
   const processedSrcset = srcset
@@ -33,7 +34,7 @@ export default function Image({ src, srcset, alt, width, height, className }: Im
       className={className}
       decoding="async"
       loading="lazy"
-      style={{height: 'auto'}}
+      style={{ height: 'auto', ...style }}
     />
   );
   if (isInsideGrid) {
