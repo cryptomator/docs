@@ -1,6 +1,7 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import React from 'react';
 import { GridContext } from './GridContext';
+import { WhiteBoxContext } from './WhiteBoxContext';
 
 interface ImageProps {
   src: string;
@@ -9,12 +10,12 @@ interface ImageProps {
   width?: number | string;
   height?: number | string;
   className?: string;
-  style?: React.CSSProperties;
 }
 
-export default function Image({ src, srcset, alt, width, height, className, style }: ImageProps) {
+export default function Image({ src, srcset, alt, width, height, className }: ImageProps) {
   const imageSrc = useBaseUrl(src);
   const isInsideGrid = React.useContext(GridContext);
+  const isInsideWhiteBox = React.useContext(WhiteBoxContext);
   const processedSrcset = srcset
     ? srcset
         .split(',')
@@ -34,10 +35,10 @@ export default function Image({ src, srcset, alt, width, height, className, styl
       className={className}
       decoding="async"
       loading="lazy"
-      style={{ height: 'auto', ...style }}
+      style={{ height: 'auto' }}
     />
   );
-  if (isInsideGrid) {
+  if (isInsideGrid || isInsideWhiteBox) {
     return imageElement;
   }
   return <p>{imageElement}</p>;
