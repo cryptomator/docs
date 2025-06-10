@@ -37,6 +37,10 @@ Anyone with access to the computer with stored passwords will be able to unlock 
 
 <Image src="/img/desktop/unlock-success.png" alt="Vault unlock success dialog" width="512" height="314" />
 
+## Locking a Vault {#locking-a-vault}
+
+To lock a vault, simply click `Lock` and the virtual drive will disappear or render empty. Your files remain encrypted at the vault's location.
+
 ## Manage Files and Folders in Your Vault {#manage-files-and-folders-in-your-vault}
 
 By default, a vault's content will be accessible via an attached virtual drive on your PC.
@@ -55,10 +59,6 @@ Even though your files are shown unencrypted in the virtual drive, they are not 
 On Windows, you can choose the drive letter of the virtual drive for each vault using advanced vault options.
 :::
 
-## Locking a Vault {#locking-a-vault}
-
-To lock a vault, simply click `Lock` and the virtual drive will disappear or render empty. Your files remain encrypted at the vault's location.
-
 ## Locate Encrypted File {#locate-encrypted-file}
 
 The Locate Encrypted File feature helps users find the encrypted version of a specific file. This feature is particularly useful when vault files are versioned and the user wants to restore an older version of a file. As Cryptomator encrypts filenames and obfuscates directory structures, users first locate the encrypted file and then restore an older version of the encrypted file with the third party app.
@@ -75,3 +75,20 @@ A file manager window opens showing the encrypted folder and marking the encrypt
   <source src="/vid/locate-encrypted-file.mov" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
+
+## File System Case Sensitivity {#file-system-case-sensitivity}
+
+:::warning
+Cryptomator virtual drives are always case-sensitive. This means `Document.txt` and `document.txt` are treated as two different files, regardless of your operating system.
+:::
+
+This behavior is required for Cryptomator's deterministic [filename encryption](/docs/security/vault.md#filename-encryption) to work correctly across all platforms. While Linux users are accustomed to case-sensitive file systems, this can cause unexpected behavior on Windows and macOS where the default file systems are case-insensitive.
+
+On Windows and macOS, this difference means:
+
+1. Attempting to open `Test.dat` when the file is named `test.dat` will result in a "file not found" error
+2. You can create both `README.md` and `readme.md` in the same directory, which would normally conflict
+3. Some applications may fail when they expect case-insensitive file access
+
+Our recommendation is to avoid creating files with names that differ only in case. Make sure to test applications like backup tools or any other software that will access files in your vault to ensure they handle case-sensitive file systems correctly.
+
