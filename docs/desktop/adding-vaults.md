@@ -79,6 +79,10 @@ This is especially important if you plan to share a vault with someone.
 Additionally, we recommend sharing passwords only over a secure channel, like PGP encypted emails, or end-to-end encrypted chat apps.
 :::
 
+:::info
+Be mindful of your keyboard layout when creating passwords. Special characters and dead keys can behave differently across keyboard layouts (e.g., Dutch vs. English). This may cause password entry issues if you switch keyboard layouts later. For more information, see [Keyboard Layouts and Special Characters](/docs/security/best-practices.md#keyboard-layouts-and-special-characters).
+:::
+
 <Image src="/img/desktop/add-vault-4.png" alt="Choose a strong password for your Cryptomator vault" width="718" height="590" />
 
 :::warning
