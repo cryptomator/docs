@@ -1,70 +1,42 @@
-[![Documentation Build Status](https://readthedocs.org/projects/cryptomator/badge/?version=latest)](https://docs.cryptomator.org/en/latest/?badge=latest)
+# Cryptomator Documentation
 
-# Cryptomator's Documentation
-
-This is the source repository of [Cryptomator's documentation](https://docs.cryptomator.org).
+Official documentation site for Cryptomator. Built with [Docusaurus](https://docusaurus.io/).
 
 ## Contributing
 
-We prefer contributions to our documentation to be in English, but if you wish to contribute in another language, please contact us.
+We welcome contributions! Please read our [contributing guidelines](.github/CONTRIBUTING.md) for details on how to help.
 
-## Steps to Contribute
+## Quick Start
 
-- Clone this repo
-- Make your changes
-- Preview changes and clear errors by following our guide below
-- Send us a pull request
+```bash
+npm install
+npm start
+```
 
-## Ways to Preview Changes and Build Site
+Opens dev server at `http://localhost:3000` with live reload.
 
-### Using Docker
+## Structure
 
-- Install [Docker](https://www.docker.com/)
-- Build a Docker image as per the Dockerfile included in this repo. You just need to run the command below (don't omit the dot at the end).
+- `docs/desktop/` - Desktop app documentation
+- `docs/android/` - Android app documentation  
+- `docs/ios/` - iOS app documentation
+- `docs/hub/` - Cryptomator Hub documentation
+- `docs/security/` - Encryption architecture and security details
+- `docs/misc/` - Additional resources
 
-  ```
-  docker build -t cryptomator_docs_image .
-  ```
-  
-  Run the commands below in the repo's directory to start a Docker container based on the built image.
+## Scripts
 
-  For live preview:
+```bash
+npm run build # Build static site
+npm run serve # Serve built site locally
+```
 
-  ```
-  docker run -p 8000:8000 -v $(pwd)/source:/source -v $(pwd)/build:/build cryptomator_docs_image sphinx-autobuild -b html /source /build/html --host 0.0.0.0
-  ```
+Other scripts can be found in `package.json`.
 
-  To build site:
+## Deployment
 
-  ```
-  docker run -v $(pwd)/source:/source -v $(pwd)/build:/build cryptomator_docs_image sphinx-build -M html /source /build/html
-  ```
+Deployed to [docs.cryptomator.org](https://docs.cryptomator.org) via GitHub Pages from the `main` branch.
 
-### Without Using Docker
+## License
 
-- Install [pip](https://pip.pypa.io/en/stable/installation/)
-- Install sphinx, sphinx_rtd_theme, and sphinx-autobuild
-
-  ```
-  pip install sphinx sphinx_rtd_theme sphinx-autobuild
-  ```
-
-  For live preview:
-
-  ```
-  make clean livehtml
-  ``` 
-
-  To build site:
-
-  ```
-  make clean html
-  ``` 
-
-<!--
-How tow record `.gif`s:
-
-1. Record screen using Quicktime on #FCFCFC background
-2. Generate palette for PNG: `ffmpeg -i recording.mov -vf "fps=10,palettegen" -y palette.png`
-2. Generate GIF: `ffmpeg -i recording.mov -i palette.png -lavfi "fps=10 [x]; [x][1:v] paletteuse" -y result.gif`
--->
+This documentation is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC-BY-SA 4.0)](LICENSE.txt).

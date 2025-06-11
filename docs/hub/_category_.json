@@ -1,0 +1,8 @@
+{
+  "label": "Hub",
+  "position": 4,
+  "link": {
+    "type": "doc",
+    "id": "hub/index"
+  }
+}
