@@ -38,6 +38,21 @@ Thus, we recommend using a password manager to generate and store the passwords.
 By doing so, you only have to remember a few or a single secure password.
 Otherwise, we recommend using at least 10 characters, ideally [use sentences instead of words](https://xkcd.com/936/).
 
+### Keyboard Layouts and Special Characters {#keyboard-layouts-and-special-characters}
+
+Be aware that keyboard layout differences can affect password entry. When creating a password, consider these important points:
+
+* Use the same keyboard layout when entering your password. Characters may produce different results depending on your keyboard language setting.
+* Some keyboard layouts use "dead keys" for accented characters. For example, pressing `'` followed by `e` might produce `é` instead of `'e`. This can cause unexpected character conversion in passwords.
+* Characters like `'`, `"`, `` ` ``, `^`, and `~` may behave differently across keyboard layouts and can be particularly problematic.
+
+To avoid issues:
+
+* Test your password immediately after setting it by locking and unlocking your vault.
+* Avoid special characters that may be affected by dead keys if you frequently switch between keyboard layouts.
+* If you must use different keyboard layouts, document which layout was used when creating the password.
+* Consider using alphanumeric characters and basic symbols that remain consistent across keyboard layouts.
+
 ## Backup Strategy {#backup-strategy}
 
 Cryptomator is not a backup solution.
