@@ -65,7 +65,7 @@ The unlock procedure consists of two distinct steps that establish a key hierarc
 1. The client requests the vault access token from `/api/vaults/{vaultId}/access-token`. The server returns a JWE containing the vault's raw masterkey encrypted with the [User Public Key](#user-key-pair).
 2. The client requests its device-specific JWE from `/api/devices/{deviceId}`. This JWE contains the [User Private Key](#user-key-pair) encrypted with the [Device Public Key](#device-key-pair). The device uses its locally stored private key to decrypt this JWE, obtaining the user's private key, which is then used to decrypt the vault-specific JWE from step 1.
 
-This creates a cryptographic chain: Device Private Key → User Private Key → Vault Key. The intermediary user key layer allows vault keys to be encrypted once per user rather than once per device. When users add new devices, only a new device-specific JWE of the user key needs to be created, eliminating the need to re-encrypt all vault keys. This architecture also enables users to self-manage their devices by rotating their user key pair and re-encrypting it only for their trusted devices.
+This creates a cryptographic chain: Device Private Key → User Private Key → Vault Key. The intermediary user key layer allows vault keys to be encrypted once per user rather than once per device. When users add new devices, only a new device-specific JWE of the user key needs to be created, eliminating the need to re-encrypt all vault keys.
 
 ### Access States {#access-states}
 
