@@ -91,4 +91,3 @@ On Windows and macOS, this difference means:
 3. Some applications may fail when they expect case-insensitive file access
 
 Our recommendation is to avoid creating files with names that differ only in case. Make sure to test applications like backup tools or any other software that will access files in your vault to ensure they handle case-sensitive file systems correctly.
-
