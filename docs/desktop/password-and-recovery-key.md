@@ -34,6 +34,10 @@ In the opened window, you will be asked for:
 2. A new password. We suggest following our guide on choosing a [strong password](/docs/security/best-practices.md#good-passwords).
 3. Enter the new password again.
 
+:::info
+Be mindful of your keyboard layout when changing passwords. Special characters and dead keys can behave differently across keyboard layouts (e.g., Dutch vs. English). This may cause password entry issues if you switch keyboard layouts later. For more information, see [Keyboard Layouts and Special Characters](/docs/security/best-practices.md#keyboard-layouts-and-special-characters).
+:::
+
 In order to proceed, you must confirm that you understand your action by selecting a checkbox.
 
 Finally, click on the `Change` button to change the password.
