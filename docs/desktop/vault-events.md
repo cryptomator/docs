@@ -15,7 +15,7 @@ They are only stored in memory and are lost when the application is closed.
 
 ## Viewing Events {#viewing-events}
 
-All vault events are logged in the event view, which can be accessed from the main window. To open the event view, click the **Bell** icon in the lower left corner of the main window. If new, unread events are present, the icon displays a small red dot.
+All vault events are logged in the event view, which can be accessed from the main window. To open the event view, click the **Bell** icon in the lower-left corner of the main window. If new, unread events are present, the icon displays a small red dot.
 
 <Image src="/img/desktop/event-view.png" alt="Event view" width="236" height="369" />
 
@@ -65,7 +65,7 @@ Cryptomator encounters a filename conflict but fails to automatically resolve it
 - An I/O error occurs during the resolution process
 
 **What to do:**
-Manual intervention is required. Check file permissions, retry or free up space in the target directory. Afterwards, start the conflict resolution again by listing the decrypted directory.
+Manual intervention is required. Check file permissions, retry, or free up space in the target directory. Afterward, start the conflict resolution again by listing the decrypted directory.
 
 ## Broken File Node Event {#broken-file-node-event}
 
@@ -77,14 +77,14 @@ A path within your vault appears to be corrupted because the encrypted directory
 - Vault structure corruption has occurred
 
 **What to do:**
-Ensure the encrypted directory is properly synced. Compare the content of the encrypted directory with what appears in your cloud provider's web interface or on other devices. Restore from backup if there other sources show the same directory content . If the directory is still broken, consider deleting it to free the filesystem node.
+Ensure the encrypted directory is properly synced. Compare the content of the encrypted directory with what appears in your cloud provider's web interface or on other devices. Restore from backup if other sources show the same (incomplete) directory content. If the directory is still broken, consider deleting it to free the filesystem node.
 
 ## Broken Directory File Event {#broken-directory-file-event}
 
 A *dir.c9r* file is corrupted, either because it's empty when it shouldn't be, or because it exceeds the maximum allowed size of 1000 bytes. Directory files are critical for maintaining the vault's encrypted directory structure.
 
 **When it occurs:**
-- A *dir.c9r* file is completely empty
+- A *dir.c9r* file is empty
 - A *dir.c9r* file is larger than 1000 bytes (indicating corruption)
 - The directory file contains invalid or corrupted data
 
