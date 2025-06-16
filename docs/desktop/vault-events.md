@@ -29,7 +29,7 @@ When a vault is locked, its events are anonymized for security. Unlock the vault
 
 Cryptomator generates five types of vault events. Understanding these events helps you maintain vault health and resolve issues quickly.
 
-## Decryption Failed Event {#decryption-failed-event}
+### Decryption Failed Event {#decryption-failed-event}
 
 Cryptomator cannot decrypt an encrypted file in your vault. This indicates potential file corruption or cryptographic integrity issues.
 
@@ -42,7 +42,7 @@ Investigate the affected file by ensuring it is properly synced. Compare the fil
 
 When multiple files are affected, the entire vault's integrity may be compromised.
 
-## Conflict Resolved Event {#conflict-resolved-event}
+### Conflict Resolved Event {#conflict-resolved-event}
 
 Cryptomator automatically resolved a filename conflict within an encrypted directory. This occurs when two encrypted files have the same base name, with one having an additional suffix. For more information, see [handling sync conflicts](sync-conflicts.md).
 
@@ -54,7 +54,7 @@ Cryptomator automatically resolved a filename conflict within an encrypted direc
 **What to do:**
 Verify that both files contain the expected content and manually merge any necessary changes. This is typically the result of sync conflicts between devices.
 
-## Conflict Resolution Failed Event {#conflict-resolution-failed-event}
+### Conflict Resolution Failed Event {#conflict-resolution-failed-event}
 
 Cryptomator encounters a filename conflict but fails to automatically resolve it. This typically happens when the automatic renaming process cannot complete due to filesystem restrictions or permissions issues.
 
@@ -67,7 +67,7 @@ Cryptomator encounters a filename conflict but fails to automatically resolve it
 **What to do:**
 Manual intervention is required. Check file permissions, retry, or free up space in the target directory. Afterward, start the conflict resolution again by listing the decrypted directory.
 
-## Broken File Node Event {#broken-file-node-event}
+### Broken File Node Event {#broken-file-node-event}
 
 A path within your vault appears to be corrupted because the encrypted directory is missing required identification files. This might be structural damage to the vault's directory hierarchy.
 
@@ -79,7 +79,7 @@ A path within your vault appears to be corrupted because the encrypted directory
 **What to do:**
 Ensure the encrypted directory is properly synced. Compare the content of the encrypted directory with what appears in your cloud provider's web interface or on other devices. Restore from backup if other sources show the same (incomplete) directory content. If the directory is still broken, consider deleting it to free the filesystem node.
 
-## Broken Directory File Event {#broken-directory-file-event}
+### Broken Directory File Event {#broken-directory-file-event}
 
 A *dir.c9r* file is corrupted, either because it's empty when it shouldn't be, or because it exceeds the maximum allowed size of 1000 bytes. Directory files are critical for maintaining the vault's encrypted directory structure.
 
