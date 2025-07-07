@@ -8,6 +8,20 @@ sidebar_position: 3
 
 Cryptomator Hub facilitates asymmetric encryption to allow sharing the key material used in Cryptomator vaults between multiple parties. 
 
+## Zero-Knowledge Data Flow {#zero-knowledge-data-flow}
+
+The following diagram illustrates how Cryptomator Hub maintains zero-knowledge encryption throughout the entire data flow between users sharing a vault. This architecture ensures that neither Cryptomator Hub nor your cloud storage provider ever has access to your unencrypted data.
+
+<WhiteBox>
+  <Image src="/img/hub/data-flow.png" alt="Hub Data Flow" width="1066" />
+</WhiteBox>
+
+In this architecture, each component plays a specific role while maintaining the zero-knowledge principle. User devices handle all encryption and decryption operations locally within their [virtual file systems](architecture.md#virtual-filesystem). The encrypted vault data resides in your chosen [cloud storage provider](/docs/misc/supported-cloud-services.md), where it remains indecipherable without the proper keys.
+
+Cryptomator Hub acts solely as a key broker, managing encrypted [access tokens](#unlock-procedure) through the [User](#user-key-pair) and [Device](#device-key-pair) Key Pairs described below. The Hub never has access to [vault keys](architecture.md#masterkey) in cleartext, ensuring that even a compromised Hub instance cannot decrypt vault contents.
+
+Keycloak handles authentication through your existing identity provider, verifying user identities before granting access to encrypted vault keys. This separation of authentication from key management adds an additional security layer while enabling seamless integration with your organization's existing infrastructure.
+
 ## Key Types {#key-types}
 
 Cryptomator Hub facilitates different keys types. Here is an overview of these types and how they are interconnected:
