@@ -13,7 +13,7 @@ Cryptomator Hub facilitates asymmetric encryption to allow sharing the key mater
 The following diagram illustrates how Cryptomator Hub maintains zero-knowledge encryption throughout the entire data flow between users sharing a vault. This architecture ensures that neither Cryptomator Hub nor your cloud storage provider ever has access to your unencrypted data.
 
 <WhiteBox>
-  <Image src="/img/hub/data-flow.png" alt="Hub Data Flow" width="1066" />
+  <Image src="/img/hub/data-flow.svg" alt="Hub Data Flow" />
 </WhiteBox>
 
 In this architecture, each component plays a specific role while maintaining the zero-knowledge principle. User devices handle all encryption and decryption operations locally within their [virtual file systems](architecture.md#virtual-filesystem). The encrypted vault data resides in your chosen [cloud storage provider](/docs/misc/supported-cloud-services.md), where it remains indecipherable without the proper keys.
@@ -69,7 +69,7 @@ view it from any authorized device. Regardless it should be securely stored inde
 Vault keys are shared with users via their [User Key Pairs](#user-key-pair). Each user self-manages their devices. The [Device Key Pair](#device-key-pair) is required to decrypt the user's private key, which in turn decrypts the vault access token.
 
 <WhiteBox>
-  <Image src="/img/hub/unlock-procedure.drawio.png" alt="Hub Unlock Procedure" width="1102" />
+  <Image src="/img/hub/unlock-procedure.svg" alt="Hub Unlock Procedure" />
 </WhiteBox>
 
 ### Unlock Flow {#unlock-flow}
