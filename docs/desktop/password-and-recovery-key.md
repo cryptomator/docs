@@ -57,11 +57,12 @@ If you like to encrypt your vault files with a new, stronger password, you need 
 ## Storing Passwords {#storing-passwords}
 
 :::info
-Storing passwords in a keychain can be convenient, but it also poses a security risk if your device is compromised. Ensure that your device is secure and that you trust the keychain you are using.
+Storing passwords in a keychain can be convenient, but it also poses a security risk if your device is compromised.
+Ensure that your device is secure and that you trust the used keychain.
 :::
 
-By default Cryptomator does not store your vault's password on your hard drive.
-It is only used to unlock the vault and destroyed afterwards.
+By default, Cryptomator does not store your vault's password on your hard drive.
+It is only used to unlock the vault and is destroyed afterwards.
 
 However, you can enable the option to store the password in the system keychain.
 This is useful if you want to avoid entering the password every time you unlock the vault.
@@ -79,7 +80,7 @@ To store a password for a vault:
 2. Tick the box `Remember Password` in the unlock dialog.
 3. Enter the vault's password and click on `Unlock`.
 
-This will store the password in the selected keychain, allowing you to unlock the vault without entering the password again.
+The password will be stored in the selected keychain, allowing you to unlock the vault without entering the password again.
 Some keychains may require you to authenticate (e.g., using your system password or biometric authentication) before storing/accessing the password.
 
 The stored password can be removed at any time by opening the `Vault Options` → `Password` tab and clicking on `Remove saved password`.
@@ -95,7 +96,7 @@ Available keychains are:
 <details>
   <summary>Touch ID (macOS)</summary>
 
-  Uses the built-in macOS keychain, but requires authentication with Touch ID before accessing the password.
+  Uses the built-in macOS keychain, but requires authentication with Touch ID before you can access the password.
   The password is only stored locally on your Mac and is encrypted using the system's security features.
 
   Requires a compatible Mac with Touch ID enabled.
@@ -120,7 +121,7 @@ Available keychains are:
   Uses the GNOME keyring to store your password.
   The password is only stored locally in the default GNOME keyring.
 
-  Requires GNOME keyring to be installed and running on your Linux system with the default keyring created.
+  Requires GNOME keyring to be installed and running on your Linux system, with the default keyring present.
 </details>
 <details>
   <summary>KDE Wallet (Linux)</summary>
@@ -128,7 +129,7 @@ Available keychains are:
   Uses the KDE Wallet to store your password.
   The password is only stored locally in the default KDE Wallet.
 
-  Requires KDE Wallet to be installed and running on your Linux system with the default wallet created.
+  Requires KDE Wallet to be installed and running on your Linux system, with the default wallet present.
 </details>
 
 
