@@ -132,6 +132,11 @@ Available keychains are:
   Requires KDE Wallet to be installed and running on your Linux system, with the default wallet present.
 </details>
 
+ There are also third-party plug-ins available for Cryptomator, that allow you to store Cryptomator's vault passwords in third-party password managers:
+
+- [KeePassXC plug-in](https://plugin.purejava.org) stores Cryptomator's vault passwords in a KeePassXC database
+- [Bitwarden plug-in](https://github.com/purejava/cryptomator-bitwarden/wiki) stores the vault passwords in Bitwarden's Secrets Manager
+
 
 ## Show Recovery Key {#show-recovery-key}
 
