@@ -30,7 +30,7 @@ Anyone with access to these devices will be able to unlock your vault, and in so
 :::
 
 If your password is correct, a success message will be displayed, and the vault will be unlocked.
-You can either close the success window by clicking `Done` or click on `Reveal Vault` to show your unlocked vault in the file manager.
+You can close the success window by clicking `Done`, or click `Reveal Vault` to show the unlocked vault in your file manager.
 
 <Image src="/img/desktop/unlock-success.png" alt="Vault unlock success dialog" width="512" height="314" />
 

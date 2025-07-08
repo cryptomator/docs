@@ -62,14 +62,14 @@ Ensure that your device is secure and that you trust the used keychain.
 :::
 
 By default, Cryptomator does not store your vault's password on your hard drive.
-It is only used to unlock the vault and is destroyed afterwards.
+It is only used to unlock the vault and is destroyed afterward.
 
 However, you can enable the option to store the password in the system keychain.
 This is useful if you want to avoid entering the password every time you unlock the vault.
 
 To enable this option:
 1. Navigate to the `General` tab in the preferences.
-2. Check the box `Store passwords with…` and select your preferred keychain (e.g., macOS Keychain, Windows Hello, or GNOME Keyring).
+1. Check the box `Store passwords with …` and select your preferred keychain (e.g., macOS Keychain, Windows Hello, or GNOME Keyring).
 
 :::note
 Not all keychains are supported on all platforms. For example, macOS Keychain is only available on macOS, and Windows Hello is only available on Windows.
@@ -77,8 +77,8 @@ Not all keychains are supported on all platforms. For example, macOS Keychain is
 
 To store a password for a vault:
 1. Start the unlocking process by selecting the vault and clicking on `Unlock` in the main window.
-2. Tick the box `Remember Password` in the unlock dialog.
-3. Enter the vault's password and click on `Unlock`.
+1. Tick the box `Remember Password` in the unlock dialog.
+1. Enter the vault's password and click on `Unlock`.
 
 The password will be stored in the selected keychain, allowing you to unlock the vault without entering the password again.
 Some keychains may require you to authenticate (e.g., using your system password or biometric authentication) before storing/accessing the password.
@@ -132,10 +132,10 @@ Available keychains are:
   Requires KDE Wallet to be installed and running on your Linux system, with the default wallet present.
 </details>
 
- There are also third-party plug-ins available for Cryptomator, that allow you to store Cryptomator's vault passwords in third-party password managers:
+ There are also third-party plug-ins for Cryptomator that allow you to store vault passwords in external password managers:
 
-- [KeePassXC plug-in](https://plugin.purejava.org) stores Cryptomator's vault passwords in a KeePassXC database
-- [Bitwarden plug-in](https://github.com/purejava/cryptomator-bitwarden/wiki) stores the vault passwords in Bitwarden's Secrets Manager
+- [KeePassXC plug-in](https://plugin.purejava.org) stores Cryptomator's vault passwords in a KeePassXC database.
+- [Bitwarden plug-in](https://github.com/purejava/cryptomator-bitwarden/wiki) stores the vault passwords in Bitwarden's Secrets Manager.
 
 
 ## Show Recovery Key {#show-recovery-key}
