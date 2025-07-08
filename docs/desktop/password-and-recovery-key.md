@@ -63,7 +63,6 @@ Ensure that your device is secure and that you trust the used keychain.
 
 By default, Cryptomator does not store your vault's password on your hard drive.
 It is only used to unlock the vault and is destroyed afterward.
-
 However, you can enable the option to store the password in the system keychain.
 This is useful if you want to avoid entering the password every time you unlock the vault.
 
@@ -77,7 +76,7 @@ Not all keychains are supported on all platforms. For example, macOS Keychain is
 
 To store a password for a vault:
 1. Start the unlocking process by selecting the vault and clicking on `Unlock` in the main window.
-1. Tick the box `Remember Password` in the unlock dialog.
+1. Tick the box `Remember password` in the unlock dialog.
 1. Enter the vault's password and click on `Unlock`.
 
 The password will be stored in the selected keychain, allowing you to unlock the vault without entering the password again.

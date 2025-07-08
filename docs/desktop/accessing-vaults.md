@@ -26,7 +26,7 @@ For more information, see the [Storing Passwords](/docs/desktop/password-and-rec
 
 :::warning
 Only store your password in the system's keychain on trusted devices.
-Anyone with access to these devices will be able to unlock your vault, and in some cases, even read your password.
+Anyone with access to these devices will be able to unlock your vault, and in some cases, even read your stored password.
 :::
 
 If your password is correct, a success message will be displayed, and the vault will be unlocked.
