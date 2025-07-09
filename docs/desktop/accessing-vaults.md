@@ -12,28 +12,25 @@ You can only access decrypted files of a vault if you can unlock it. Unlocking a
 
 ## Unlocking a Vault {#unlocking-a-vault}
 
-1. Select the vault you wish to unlock.
-2. Click on the large `Unlock` button located at the center of the Cryptomator window.
+1. Select the vault you wish to unlock in the vault list.
+2. Click on the large `Unlock` button in the vault detail view of the Cryptomator window.
 3. Enter your vault's password.
-
-A confirmation will be displayed if your password is correct.
-You can either close the confirmation window by clicking `Done` or click on `Reveal Vault` to show your unlocked vault in your file manager.
+4. Click the `Unlock` button.
 
 <Image src="/img/desktop/unlock-prompt.png" alt="Vault unlock dialog" width="512" height="285" />
 
 :::note
-You can store the password in your operating system's keychain by checking the "Save Password" checkbox. There are also plug-ins available for Cryptomator, that allow you to store Cryptomator's vault passwords in third party password managers:
-
-- [KeePassXC plug-in](https://plugin.purejava.org) stores Cryptomator's vault passwords in a KeePassXC database
-- [Bitwarden plug-in](https://github.com/purejava/cryptomator-bitwarden/wiki) stores the vault passwords in Bitwarden's Secrets Manager
-
-With a saved password, you can unlock your vaults without typing a password on every unlock. It's faster.
-:::
+You can store the password in your operating system's keychain by checking the "Remember password" checkbox.
+With a saved password, you can unlock your vaults without typing a password on every unlock.
+For more information, see the [Storing Passwords](/docs/desktop/password-and-recovery-key.md#storing-passwords) section.
 
 :::warning
-Only store your password in the system's keychain on trusted devices. 
-Anyone with access to the computer with stored passwords will be able to unlock your vault, and in some cases, even find your password.
+Only store your password in the system's keychain on trusted devices.
+Anyone with access to these devices will be able to unlock your vault, and in some cases, even read your stored password.
 :::
+
+If your password is correct, a success message will be displayed, and the vault will be unlocked.
+You can close the success window by clicking `Done`, or click `Reveal Vault` to show the unlocked vault in your file manager.
 
 <Image src="/img/desktop/unlock-success.png" alt="Vault unlock success dialog" width="512" height="314" />
 

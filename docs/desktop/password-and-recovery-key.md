@@ -54,6 +54,89 @@ The password is used to derive a [KEK](https://en.wikipedia.org/wiki/Glossary_of
 If you like to encrypt your vault files with a new, stronger password, you need to create a new vault and drag the data from the old to the new one. Make sure to wipe all backups of the old vault afterwards.
 :::
 
+## Storing Passwords {#storing-passwords}
+
+:::info
+Storing passwords in a keychain can be convenient, but it also poses a security risk if your device is compromised.
+Ensure that your device is secure and that you trust the used keychain.
+:::
+
+By default, Cryptomator does not store your vault's password on your hard drive.
+It is only used to unlock the vault and is destroyed afterward.
+However, you can enable the option to store the password in the system keychain.
+This is useful if you want to avoid entering the password every time you unlock the vault.
+
+To enable this option:
+1. Navigate to the `General` tab in the preferences.
+1. Check the box `Store passwords with …` and select your preferred keychain (e.g., macOS Keychain, Windows Hello, or GNOME Keyring).
+
+:::note
+Not all keychains are supported on all platforms. For example, macOS Keychain is only available on macOS, and Windows Hello is only available on Windows.
+:::
+
+To store a password for a vault:
+1. Start the unlocking process by selecting the vault and clicking on `Unlock` in the main window.
+1. Tick the box `Remember password` in the unlock dialog.
+1. Enter the vault's password and click on `Unlock`.
+
+The password will be stored in the selected keychain, allowing you to unlock the vault without entering the password again.
+Some keychains may require you to authenticate (e.g., using your system password or biometric authentication) before storing/accessing the password.
+
+The stored password can be removed at any time by opening the `Vault Options` → `Password` tab and clicking on `Remove saved password`.
+
+Available keychains are:
+
+<details>
+  <summary>macOS Keychain (macOS)</summary>
+
+  Uses the built-in macOS keychain to store your password.
+  The password is only stored locally on your Mac and is encrypted using the system's security features.
+</details>
+<details>
+  <summary>Touch ID (macOS)</summary>
+
+  Uses the built-in macOS keychain, but requires authentication with Touch ID before you can access the password.
+  The password is only stored locally on your Mac and is encrypted using the system's security features.
+
+  Requires a compatible Mac with Touch ID enabled.
+</details>
+<details>
+  <summary>Windows Hello (Windows)</summary>
+
+  Uses the Windows Hello feature to encrypt your password.
+  The password is only stored locally on your Windows device and is encrypted using a key derived from your Windows user account.
+
+  Requires a compatible Windows device with Windows Hello enabled.
+</details>
+<details>
+  <summary>Windows Data Protection API (Windows)</summary>
+
+  Uses the Windows Data Protection API to encrypt your password.
+  The password is only stored locally on your Windows device and is encrypted using a key derived from your Windows user account.
+</details>
+<details>
+  <summary>GNOME Keyring (Linux)</summary>
+
+  Uses the GNOME keyring to store your password.
+  The password is only stored locally in the default GNOME keyring.
+
+  Requires GNOME keyring to be installed and running on your Linux system, with the default keyring present.
+</details>
+<details>
+  <summary>KDE Wallet (Linux)</summary>
+
+  Uses the KDE Wallet to store your password.
+  The password is only stored locally in the default KDE Wallet.
+
+  Requires KDE Wallet to be installed and running on your Linux system, with the default wallet present.
+</details>
+
+ There are also third-party plug-ins for Cryptomator that allow you to store vault passwords in external password managers:
+
+- [KeePassXC plug-in](https://plugin.purejava.org) stores Cryptomator's vault passwords in a KeePassXC database.
+- [Bitwarden plug-in](https://github.com/purejava/cryptomator-bitwarden/wiki) stores the vault passwords in Bitwarden's Secrets Manager.
+
+
 ## Show Recovery Key {#show-recovery-key}
 
 You can derive a recovery key during vault creation or even later as long as you know your vault's password.
