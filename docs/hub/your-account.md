@@ -82,6 +82,10 @@ By managing your authorized devices, you ensure that only trusted ones remain ac
 If you don't trust a device anymore, you can remove it from the list of authorized devices.
 This will log out the device and revoke access to all shared vaults.
 
+:::note
+Periodically review your devices and promptly remove any that are unnecessary.
+:::
+
 ### Legacy Devices {#legacy-devices}
 
 This section lists devices that have been authorized with an older version of Cryptomator Hub. It is only visible if you have any legacy devices.
