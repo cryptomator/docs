@@ -83,7 +83,7 @@ If you don't trust a device anymore, you can remove it from the list of authoriz
 This will log out the device and revoke access to all shared vaults.
 
 :::note
-Periodically review your devices and promptly remove any that are unnecessary.
+Periodically review your devices and promptly remove unused and unknown ones.
 :::
 
 ### Legacy Devices {#legacy-devices}
