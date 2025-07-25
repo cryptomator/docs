@@ -8,15 +8,16 @@ interface WhiteBoxProps {
 export default function WhiteBox({ children }: WhiteBoxProps) {
   return (
     <WhiteBoxContext.Provider value={true}>
-      <p style={{
+      <div style={{
         backgroundColor: '#ffffff',
         borderRadius: 'var(--ifm-global-radius)',
-        boxShadow: 'var(--ifm-global-shadow-lw',
+        boxShadow: 'var(--ifm-global-shadow-lw)',
         display: 'inline-block',
+        marginBottom: 'var(--ifm-leading)',
         padding: 'var(--ifm-pre-padding)',
       }}>
         {children}
-      </p>
+      </div>
     </WhiteBoxContext.Provider>
   );
 }
