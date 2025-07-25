@@ -16,7 +16,7 @@ export default function Grid({ children, className, columns = 1, columnsSmall, c
   const largeColumns = columnsLarge ?? defaultColumns;
   const gridId = React.useId();
   return (
-    <p>
+    <div style={{ marginBottom: 'var(--ifm-leading)' }}>
       <style>
         {`
           .grid-${gridId} {
@@ -44,6 +44,6 @@ export default function Grid({ children, className, columns = 1, columnsSmall, c
           {children}
         </div>
       </GridContext.Provider>
-    </p>
+    </div>
   );
 }
