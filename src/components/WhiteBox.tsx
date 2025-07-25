@@ -11,7 +11,7 @@ export default function WhiteBox({ children }: WhiteBoxProps) {
       <div style={{
         backgroundColor: '#ffffff',
         borderRadius: 'var(--ifm-global-radius)',
-        boxShadow: 'var(--ifm-global-shadow-lw',
+        boxShadow: 'var(--ifm-global-shadow-lw)',
         display: 'inline-block',
         marginBottom: 'var(--ifm-leading)',
         padding: 'var(--ifm-pre-padding)',
