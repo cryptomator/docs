@@ -132,10 +132,3 @@ If a user resets their account, their [User Key Pair](/docs/security/hub.md#user
 Additionally, any existing trust chains that included the user will be broken, requiring re-verification to restore trust.
 :::
 
-## User Avatars {#user-avatars}
-
-Cryptomator Hub supports user avatars. As an administrator, you can enable this feature in the administration area by creating a user "picture" profile attribute in the "User Profile" setting in the Realm in Keycloak. See [Keycloak Documentation](https://www.keycloak.org/ui-customization/avatars#_setting_a_picture_attribute_from_the_admin_console) for more information.
-
-When enabled, users can define their avatar in their Keycloak profile page. The avatar is then displayed in Cryptomator Hub, for example in the vault member list.
-The avatar needs to be provided as a URL (e.g. https://path_to_image.png) or as a Base64 encoded data image (e.g. `data:image/svg+xml;base64,content`).
-
