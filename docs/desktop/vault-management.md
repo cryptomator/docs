@@ -23,7 +23,10 @@ The vault is **not** deleted from your PC by removing it from the list. If you w
 
 You can change the order of the vaults in the list by dragging them.
 
-<Image src="/img/desktop/move-vaults.gif" alt="How to reorder vaults" width="678" height="526" />
+<video width="760" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="/img/desktop/reorder-vaults.mov" type="video/mp4;codecs=hvc1" />
+    <source src="/img/desktop/reorder-vaults.webm" type="video/webm"/>
+</video>
 
 ## Vault Options {#vault-options}
 
