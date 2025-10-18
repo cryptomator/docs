@@ -6,18 +6,18 @@ sidebar_position: 20
 
 # Vault Recovery
 
-If a vault can’t be opened because important files are missing, Cryptomator can help you recover it.
-This feature is designed to restore access to your encrypted files safely and easily — even if your vault configuration or masterkey files were lost or damaged.
+If a vault cannot be opened anymore due to missing configuration files, Cryptomator can help you recover it.
+This feature is designed to restore access to your encrypted files crypted files in a safe and easy way your vault configuration or masterkey files were lost or damaged.
 
 :::note
 Vault Recovery does not restore your encrypted files.
-It recreates missing configuration files such as `vault.cryptomator` and `masterkey.cryptomator` so that Cryptomator can recognize and unlock your vault again.
+It only recreates missing configuration files such as `vault.cryptomator` and `masterkey.cryptomator` so that Cryptomator can recognize and unlock your vault again.
 :::
 
-1. [`Recover Masterkey file…`](#recover-masterkey-file) - If your masterkey file went missing…
-2. [`Recover Vault config file…`](#recover-vault-config) - If your vault config file went missing…
-3. [`Recover Masterkey and Vault config files…`](#recover-full) - If your vault config and masterkey file went missing…
-4. [`Add a vault with missing config files and restore them…`](#add-recover-vault) - If you want to add a vault where your config and/or masterkey file went missing…
+1. [`Recover Masterkey file…`](#recover-masterkey-file) - If the masterkey file went missing.
+2. [`Recover Vault config file…`](#recover-vault-config) - If the vault config file went missing.
+3. [`Recover Masterkey and Vault config files…`](#recover-full) - If the vault config and masterkey file went missing.
+4. [`Add a vault with missing config files and restore them…`](#add-recover-vault) - If you want to add a vault where the config and/or masterkey file went missing.
 
 ## Recover Masterkey file {#recover-masterkey-file}
 
@@ -40,9 +40,7 @@ In the vault list, the vault is marked with an exclamation mark.
 In Vault Details, you’ll see `Vault config is missing.`.
 Here you can click `Restore vault config` to start the recovery.
 
-Choose one of the options:
-- Use Recovery Key
-- Use Password
+You either need the Recovery Key or the vault password for the recovery process.
 
 You’ll be guided through the recovery.
 During the process, you must enter the Expert Settings.
