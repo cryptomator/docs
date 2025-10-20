@@ -21,6 +21,11 @@ You can restore your vault even if essential files are missing:
 3. [`Recover Masterkey and Vault config files…`](#recover-full) - If the vault config and masterkey file went missing.
 4. [`Add a vault with missing config files and restore them…`](#add-recover-vault) - If you want to add a vault where the config and/or masterkey file went missing.
 
+:::warning
+Recovery of missing files is only supported starting with Vault Format 8 (introduced in Cryptomator 1.6.0).
+Vaults created with older formats (e.g., Vault Format 7 or earlier) are not compatible with these recovery options.
+For details, see the [Vault Format History](/docs/misc/vault-format-history.md).
+:::
 ## Recover Masterkey file {#recover-masterkey-file}
 
 If the file `masterkey.cryptomator` is missing from your vault folder, Cryptomator will still recognize the folder as a normal vault.
