@@ -49,9 +49,7 @@ Here you can click `Restore vault config` to start the recovery.
 
 You either need the Recovery Key or the vault password for the recovery process.
 
-You’ll be guided through the recovery.
-During the process, you must enter the Expert Settings.
-After confirming, Cryptomator restores the `vault.cryptomator` file and you can open the vault as usual.
+You’ll be guided through the recovery, and you can open the vault as usual.
 
 ## Recover Masterkey and Vault config files {#recover-full}
 :::note
