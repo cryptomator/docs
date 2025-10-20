@@ -6,7 +6,7 @@ sidebar_position: 20
 
 # Vault Recovery
 
-If a vault cannot be opened anymore due to missing configuration files, Cryptomator can help you recover it.
+If a vault can't be opened anymore due to missing configuration files, Cryptomator can help you recover it.
 This feature is designed to restore access to your encrypted files crypted files in a safe and easy way your vault configuration or masterkey files were lost or damaged.
 
 :::note
