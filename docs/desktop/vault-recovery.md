@@ -14,6 +14,8 @@ Vault Recovery does not restore your encrypted files.
 It only recreates missing configuration files such as `vault.cryptomator` and `masterkey.cryptomator` so that Cryptomator can recognize and unlock your vault again.
 :::
 
+You can restore your vault even if essential files are missing:
+
 1. [`Recover Masterkey file…`](#recover-masterkey-file) - If the masterkey file went missing.
 2. [`Recover Vault config file…`](#recover-vault-config) - If the vault config file went missing.
 3. [`Recover Masterkey and Vault config files…`](#recover-full) - If the vault config and masterkey file went missing.
