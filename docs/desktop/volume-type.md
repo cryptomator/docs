@@ -91,8 +91,11 @@ By default, unlocked vaults are mounted to `/Volumes`.
 Info on custom mount options is available at [macFUSE wiki](https://github.com/macfuse/macfuse/wiki/Mount-options).
 
 :::note
-Apple has deprecated the OS APIs used by macFUSE since macOS 12.3, which requires additional steps during installation.
+macFUSE has been relying on kernel extensions. Apple has deprecated kernel extensions with macOS 12.3, which requires additional steps during installation.
+
 Despite this, macFUSE remains the most stable option due to its maturity.
+
+Furthermore, macFUSE has already released [experimental support for FSKit](https://github.com/macfuse/macfuse/issues/1025#issuecomment-2850724070), which will eventually replace the older VFS API.
 :::
 
 ### FUSE-T (Experimental) {#fuse-t}
