@@ -81,22 +81,29 @@ Using WebDAV on Windows has the following drawbacks:
 
 **Requirements:** macOS, macFUSE installed
 
-:::warning
-Apple has deprecated the OS APIs used by macFUSE since macOS 12.3 and made installation difficult. We recommend you to use FUSE-T and only fallback to macFUSE, if there are any errors.
-:::
-
-macFUSE volume type depends on a library provided by the [macFUSE project](https://osxfuse.github.io/).
+macFUSE is the most mature FUSE implementation for macOS.
+If you're comfortable with booting into recovery mode once to enable loading of kernel extensions, this is the recommended option for best compatibility and stability.
+macFUSE volume type depends on a library provided by the [macFUSE project](https://macfuse.github.io/).
 It is not included with Cryptomator due to license restrictions.
-However, you can install the latest version from [macFUSE's release page](https://github.com/osxfuse/osxfuse/releases).
+You can install the latest version from [macFUSE's release page](https://github.com/macfuse/macfuse/releases), following the [installation guide](https://github.com/macfuse/macfuse/wiki/Getting-Started).
 
 By default, unlocked vaults are mounted to `/Volumes`.
-Info on custom mount options is available at [macFUSE wiki](https://github.com/osxfuse/osxfuse/wiki/Mount-options).
+Info on custom mount options is available at [macFUSE wiki](https://github.com/macfuse/macfuse/wiki/Mount-options).
+
+:::note
+macFUSE has been relying on kernel extensions. Apple has deprecated kernel extensions with macOS 12.3, which requires additional steps during installation.
+
+Despite this, macFUSE remains the most stable option due to its maturity.
+
+Furthermore, macFUSE has already released [experimental support for FSKit](https://github.com/macfuse/macfuse/issues/1025#issuecomment-2850724070), which will eventually replace the older VFS API.
+:::
 
 ### FUSE-T (Experimental) {#fuse-t}
 
 **Requirements:** macOS, FUSE-T installed
 
-This volume type depends on a library provided by the new [FUSE-T project](https://www.fuse-t.org/).
+FUSE-T is a newer alternative that runs entirely in user space, avoiding the need for kernel extensions.
+This volume type depends on a library provided by the [FUSE-T project](https://www.fuse-t.org/).
 You can install it using brew:
 
 ```shell
@@ -107,16 +114,19 @@ brew install fuse-t
 By default, unlocked vaults are mounted to `~/Cryptomator/`.
 Info on custom mount options is available at [wiki of the FUSE-T project](https://github.com/macos-fuse-t/fuse-t/wiki#supported-mount-options).
 
-:::note
-FUSE-T is a new project, so support for it is currently marked as experimental. Be sure to keep FUSE-T up to date to benefit from the latest improvements.
+:::warning
+FUSE-T is less mature than macFUSE and some users have reported occasional malfunctions.
+Consider using macFUSE if you experience issues.
 :::
 
 ### WebDAV (AppleScript) {#webdav-applescript}
 
 **Requirements:** macOS
 
-WebDAV on macOS utilizes the scripting language [AppleScript](https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html) to mount/unmount the virtual drive.
+WebDAV requires no additional software installation and utilizes the scripting language [AppleScript](https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html) to mount/unmount the virtual drive.
 By default, unlocked vaults are mounted to `/Volumes`.
+While sufficient for most file operations, the experience may feel less polished due to security warnings about the localhost connection not being secure.
+These warnings are expected since no certificate authority will issue TLS certificates for localhost.
 
 ## Linux-Based OS {#linux-based-os}
 
