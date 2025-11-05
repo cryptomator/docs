@@ -19,7 +19,7 @@ It helps with the following scenarios:
 1. The vault config file is missing or damaged - [`Recover Vault config file`](#recover-vault-config)
 1. The masterkey and the vault config files are missing or damaged - [`Recover Masterkey and Vault config files`](#recover-full)
 
-If the damaged vault is not yet added to Cryptomator, you start the recovery during the import process, see [`Add a vault with missing config files and restore them`](#add-recover-vault).
+If the damaged vault has not yet been added to Cryptomator, you start the recovery during the import process, see [`Add a vault with missing config files and restore them`](#add-recover-vault).
 
 :::warning
 Recovery of missing files is only supported starting with Vault Format 8 (introduced in Cryptomator 1.6.0).
