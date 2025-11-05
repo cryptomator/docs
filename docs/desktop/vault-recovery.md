@@ -68,7 +68,7 @@ You’ll be guided through the process and on success, you can open the vault as
 
 ## Add a vault with missing config files and restore them {#add-recover-vault}
 
-If a vault has no configuration files and is yet not added to Cryptomator, you recover it during the import process.
+If a vault has no configuration files and has not yet been added to Cryptomator, you recover it during the import process.
 
 Open the main window and click the plus `+` button.
 In the context menu, choose `Recover Existing Vault…`.
