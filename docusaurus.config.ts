@@ -60,7 +60,7 @@ const config: Config = {
         'data-website-id': process.env.NODE_ENV === 'development' 
           ? 'cdd42f46-583d-4463-9ab2-8adcfe989c21' // Local development
           : '2df416f9-7a9c-4e58-9a45-7106f7e0a139', // Production
-        integrity: 'sha384-gW+82edTiLqRoEvPbT3xKDCYZ5M02YXbW4tA3gbojZWiiMYNJZb4YneJrS4ri3Rn',
+        integrity: 'sha384-Q95rrKF8xfjIcmlXaIpdy4TBPCfIWGL+bP6+P8FtU4EHXQBDPEWLYGl8kypvDKFt',
         crossorigin: 'anonymous',
         defer: 'defer',
       },
