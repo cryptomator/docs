@@ -120,9 +120,21 @@ const config: Config = {
       },
     ],
     [
-      'docusaurus-plugin-llms',
+      '@signalwire/docusaurus-plugin-llms-txt',
       {
-        generateMarkdownFiles: true,
+        content: {
+          enableLlmsFullTxt: true,
+          excludeRoutes: [
+            '/',
+            '/search/',
+            '/android/',
+            '/desktop/',
+            '/ios/',
+            '/hub/',
+            '/misc/',
+            '/security/',
+          ],
+        },
       },
     ],
   ],
