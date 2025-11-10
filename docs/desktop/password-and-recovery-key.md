@@ -130,6 +130,14 @@ Available keychains are:
 
   Requires KDE Wallet to be installed and running on your Linux system, with the default wallet present.
 </details>
+<details>
+  <summary>Secret Service (Linux)</summary>
+
+  Uses the KDE Wallet or the GNOME keyring to store your password.
+  The password is only stored locally in the default KDE Wallet or the default GNOME keyring. Secret Service is the successor of KDE Wallet and GNOME keyring, as it works for both.
+
+  Requires KDE Wallet or GNOME keyring to be installed and running on your Linux system, with the default wallet, respectively keyring present.
+</details>
 
  There are also third-party plug-ins for Cryptomator that allow you to store vault passwords in external password managers:
 
