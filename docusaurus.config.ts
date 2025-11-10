@@ -119,6 +119,12 @@ const config: Config = {
         ],
       },
     ],
+    [
+      'docusaurus-plugin-llms',
+      {
+        // Zero config - generates both llms.txt and llms-full.txt
+      },
+    ],
   ],
 
   themes: [
