@@ -46,7 +46,7 @@ networks:
 
 services:
   traefik:
-    image: traefik:v3.0
+    image: traefik:v3
     command:
       # Provider
       - '--providers.docker'
