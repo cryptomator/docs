@@ -68,7 +68,7 @@ This is useful if you want to avoid entering the password every time you unlock 
 
 To enable this option:
 1. Navigate to the `General` tab in the preferences.
-1. Check the box `Store passwords with …` and select your preferred keychain (e.g., macOS Keychain, Windows Hello, or GNOME Keyring).
+2. Check the box `Store passwords with …` and select your preferred keychain (e.g., macOS Keychain, Windows Hello, or GNOME Keyring).
 
 :::note
 Not all keychains are supported on all platforms. For example, macOS Keychain is only available on macOS, and Windows Hello is only available on Windows.
@@ -76,8 +76,8 @@ Not all keychains are supported on all platforms. For example, macOS Keychain is
 
 To store a password for a vault:
 1. Start the unlocking process by selecting the vault and clicking on `Unlock` in the main window.
-1. Tick the box `Remember password` in the unlock dialog.
-1. Enter the vault's password and click on `Unlock`.
+2. Tick the box `Remember password` in the unlock dialog.
+3. Enter the vault's password and click on `Unlock`.
 
 The password will be stored in the selected keychain, allowing you to unlock the vault without entering the password again.
 Some keychains may require you to authenticate (e.g., using your system password or biometric authentication) before storing/accessing the password.
@@ -92,6 +92,7 @@ Available keychains are:
   Uses the built-in macOS keychain to store your password.
   The password is only stored locally on your Mac and is encrypted using the system's security features.
 </details>
+
 <details>
   <summary>Touch ID (macOS)</summary>
 
@@ -100,20 +101,23 @@ Available keychains are:
 
   Requires a compatible Mac with Touch ID enabled.
 </details>
+
 <details>
   <summary>Windows Hello (Windows)</summary>
 
-  Uses the Windows Hello feature to encrypt your password.
-  The password is only stored locally on your Windows device and is encrypted using a key derived from your Windows user account.
+  Uses Windows Hello to encrypt your password.
+  The password is only stored locally on your Windows device and is protected by your device’s hardware-backed security, such as the TPM (Trusted Platform Module).
 
   Requires a compatible Windows device with Windows Hello enabled.
 </details>
+
 <details>
   <summary>Windows Data Protection API (Windows)</summary>
 
   Uses the Windows Data Protection API to encrypt your password.
   The password is only stored locally on your Windows device and is encrypted using a key derived from your Windows user account.
 </details>
+
 <details>
   <summary>GNOME Keyring (Linux)</summary>
 
@@ -122,6 +126,7 @@ Available keychains are:
 
   Requires GNOME keyring to be installed and running on your Linux system, with the default keyring present.
 </details>
+
 <details>
   <summary>KDE Wallet (Linux)</summary>
 
@@ -131,11 +136,10 @@ Available keychains are:
   Requires KDE Wallet to be installed and running on your Linux system, with the default wallet present.
 </details>
 
- There are also third-party plug-ins for Cryptomator that allow you to store vault passwords in external password managers:
+There are also third-party plug-ins for Cryptomator that allow you to store vault passwords in external password managers:
 
 - [KeePassXC plug-in](https://plugin.purejava.org) stores Cryptomator's vault passwords in a KeePassXC database.
 - [Bitwarden plug-in](https://github.com/purejava/cryptomator-bitwarden/wiki) stores the vault passwords in Bitwarden's Secrets Manager.
-
 
 ## Show Recovery Key {#show-recovery-key}
 
@@ -143,7 +147,7 @@ You can derive a recovery key during vault creation or even later as long as you
 To increase security, Cryptomator does not store the recovery key on your hard drive and always derives it on the fly.
 
 :::warning
-A recovery key can reset a vault's current password. 
+A recovery key can reset a vault's current password.
 So, treat it like a password and ensure only trusted people have access to it.
 :::
 
@@ -155,7 +159,7 @@ To derive a recovery key:
 
 A new window will open displaying a sequence of words (i.e., the recovery key).
 
-<Image src="/img/desktop/recoverykey.png" alt="This shows your recoverykey" width="512" height="494" />
+<Image src="/img/desktop/recoverykey.png" alt="This shows your recovery key" width="512" height="494" />
 
 You can copy it to your clipboard and store it in a secure password manager, or print it on paper.
 
@@ -169,7 +173,7 @@ We cannot reset the password of a vault for you in any way. Only you can reset a
 Type or paste your recovery key in the new window.
 
 :::note
-Cryptomator offers an auto completion feature to make things easier when typing a recovery key. It's helpful if your recovery key is printed on paper or stored it somewhere where you cannot copy it. The feature will kick in automatically once you start typing the first few letters of a word.
+Cryptomator offers an auto completion feature to make things easier when typing a recovery key. It's helpful if your recovery key is printed on paper or stored somewhere where you cannot copy it. The feature will kick in automatically once you start typing the first few letters of a word.
 :::
 
 <Image src="/img/desktop/recoverykey-recover-enter.png" alt="Autocompletion during recovery key entry" width="512" height="384" />
