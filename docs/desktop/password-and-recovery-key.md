@@ -1,8 +1,8 @@
----
+
 id: password-and-recovery-key
 title: Password and Recovery Key
 sidebar_position: 5
----
+
 
 # Password and Recovery Key
 
@@ -22,7 +22,7 @@ You can access it by selecting a vault, lock it if necessary, and click on `Vaul
 
 <Image src="/img/desktop/vault-options-password.png" alt="Vault options allowing you to enter a recovery key" width="512" height="448" />
 
-## Change Password {#change-password}
+Change Password {#change-password}
 
 To change the password of an existing vault, you need to know its current one or have a recovery key (see reset password section).
 
@@ -34,21 +34,20 @@ In the opened window, you will be asked for:
 2. A new password. We suggest following our guide on choosing a [strong password](/docs/security/best-practices.md#good-passwords).
 3. Enter the new password again.
 
-:::info
+info
 Be mindful of your keyboard layout when changing passwords. Special characters and dead keys can behave differently across keyboard layouts (e.g., Dutch vs. English). This may cause password entry issues if you switch keyboard layouts later. For more information, see [Keyboard Layouts and Special Characters](/docs/security/best-practices.md#keyboard-layouts-and-special-characters).
-:::
+
 
 In order to proceed, you must confirm that you understand your action by selecting a checkbox.
 
 Finally, click on the `Change` button to change the password.
-
-:::note
+note
 The `Change` button is activated only if the new password fields match and the checkbox is selected.
-:::
+
 
 <Image src="/img/desktop/change-password-prompt.png" alt="After entering your current password, enter your new one and confirm it" width="512" height="528" />
 
-:::info
+info
 The password is used to derive a [KEK](https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys), which is then used to encrypt further keys. The KEK changes, but the keys encrypted with the KEK will stay the same. The actual files will not get re-encrypted, meaning you can not upgrade a weak passphrase to a stronger one once the data has been synced to a service that allows recovery of older versions of the masterkey file.
 
 If you like to encrypt your vault files with a new, stronger password, you need to create a new vault and drag the data from the old to the new one. Make sure to wipe all backups of the old vault afterwards.
@@ -56,10 +55,10 @@ If you like to encrypt your vault files with a new, stronger password, you need 
 
 ## Storing Passwords {#storing-passwords}
 
-:::info
+info
 Storing passwords in a keychain can be convenient, but it also poses a security risk if your device is compromised.
 Ensure that your device is secure and that you trust the used keychain.
-:::
+
 
 By default, Cryptomator does not store your vault's password on your hard drive.
 It is only used to unlock the vault and is destroyed afterward.
@@ -70,9 +69,9 @@ To enable this option:
 1. Navigate to the `General` tab in the preferences.
 1. Check the box `Store passwords with …` and select your preferred keychain (e.g., macOS Keychain, Windows Hello, or GNOME Keyring).
 
-:::note
+note
 Not all keychains are supported on all platforms. For example, macOS Keychain is only available on macOS, and Windows Hello is only available on Windows.
-:::
+
 
 To store a password for a vault:
 1. Start the unlocking process by selecting the vault and clicking on `Unlock` in the main window.
@@ -104,7 +103,7 @@ Available keychains are:
   <summary>Windows Hello (Windows)</summary>
 
   Uses the Windows Hello feature to encrypt your password.
-  The password is only stored locally on your Windows device and is encrypted using a key derived from your Windows user account.
+  The password is only stored locally on your Windows device and is encrypted using a key derived from your TPM
 
   Requires a compatible Windows device with Windows Hello enabled.
 </details>
@@ -142,10 +141,10 @@ Available keychains are:
 You can derive a recovery key during vault creation or even later as long as you know your vault's password.
 To increase security, Cryptomator does not store the recovery key on your hard drive and always derives it on the fly.
 
-:::warning
+warning
 A recovery key can reset a vault's current password. 
 So, treat it like a password and ensure only trusted people have access to it.
-:::
+
 
 To derive a recovery key:
 
@@ -167,10 +166,9 @@ We cannot reset the password of a vault for you in any way. Only you can reset a
 2. Click on `Recover Password`.
 
 Type or paste your recovery key in the new window.
-
-:::note
+note
 Cryptomator offers an auto completion feature to make things easier when typing a recovery key. It's helpful if your recovery key is printed on paper or stored it somewhere where you cannot copy it. The feature will kick in automatically once you start typing the first few letters of a word.
-:::
+
 
 <Image src="/img/desktop/recoverykey-recover-enter.png" alt="Autocompletion during recovery key entry" width="512" height="384" />
 
@@ -178,9 +176,9 @@ If the recovery key is valid, a small message will be displayed below the entere
 
 <Image src="/img/desktop/recoverykey-recover-valid.png" alt="A valid recovery key has been entered" width="512" height="384" />
 
-:::info
+info
 By design, *only* the correct recovery key is accepted. **A valid but incorrect key won't be accepted to prevent your old data from becoming inaccessible.**
-:::
+
 
 Finally, assign a new password to your vault.
 It is the same process as the [vault creation](adding-vaults.md#choose-a-password), except that no new recovery key is generated.
