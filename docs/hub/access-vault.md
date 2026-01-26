@@ -29,21 +29,7 @@ Cryptomator should open your default browser for authentication. If you're not a
 
 <Image src="/img/hub/unlock-authenticate.png" alt="After your browser asks for credentials, enter your username and password" width="1280" height="567" />
 
-### 3. Account Setup {#account-setup}
-
-If this is the first time you log into Hub, Cryptomator and Cryptomator Hub requests you to [set up your account](your-account.md#account-setup).
-
-Desktop
-
-<Image src="/img/hub/unlock-setup-required-desktop.png" alt="Cryptomator requests to setup your user account" width="715" height="541" />
-
-Hub
-
-<Image src="/img/hub/unlock-setup-required-hub.png" alt="Hub requests to setup your user account" width="1280" height="382" />
-
-When you finished the account setup in Hub, unlock the vault again.
-
-### 4. Register Device {#register-device}
+### 3. Register Device {#register-device}
 
 If you just did setup your account, a vault owner needs to grant you access for the requested vault as described [here](vault-management.md#update-permissions). Retry unlocking the vault after the vault owner granted you access.
 
@@ -63,7 +49,7 @@ Enter a name for the device to identify it later on and the [Account Key](your-a
 
 After that, you will see a confirmation dialog, unlock the vault again.
 
-### 5. Vault Unlocked {#vault-unlocked}
+### 4. Vault Unlocked {#vault-unlocked}
 
 You are all set up and an unlock should be successful from now on. You can then reveal the vault's contents as usual.
 
