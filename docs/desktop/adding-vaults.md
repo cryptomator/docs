@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Adding Vaults
 
-You will be presented with two options when adding a vault:
+You will be presented with three options when adding a vault:
 
 1. [`Create New Vault…`](#create-a-new-vault) - Choose this if you wish to create a new vault.
 2. [`Open Existing Vault…`](#open-an-existing-vault) - Choose this if you already have a vault and wish to open it.
