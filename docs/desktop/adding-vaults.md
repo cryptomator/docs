@@ -10,6 +10,7 @@ You will be presented with two options when adding a vault:
 
 1. [`Create New Vault…`](#create-a-new-vault) - Choose this if you wish to create a new vault.
 2. [`Open Existing Vault…`](#open-an-existing-vault) - Choose this if you already have a vault and wish to open it.
+3. [`Recover Existing Vault…`](/docs/desktop/vault-recovery.md#add-recover-vault) - Choose this if you have a vault with missing configuration files that hasn’t yet been added and you want to restore it.
 
 <Image src="/img/desktop/create-or-open-vault.png" alt="Create a new or open an existing vault" width="762" height="610" />
 
