@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ## How Can You Help Us? {#how-can-you-help-us}
 
-Cryptomator is an open source project and wouldn't be possible without contributions from users who support the idea.
+Cryptomator is an open-source project and wouldn't be possible without contributions from users who support the idea.
 
 There are several ways you can help us:
 
