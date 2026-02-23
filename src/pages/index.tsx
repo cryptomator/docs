@@ -15,7 +15,12 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary text--center', styles.heroBanner)}>
       <div className="container">
-        <Logo 
+        <div>
+          <Link to="/coming-soon" className={styles.announcementPill}>
+            ✨ Coming Soon →
+          </Link>
+        </div>
+        <Logo
           className={styles.heroLogo}
           role="img"
           aria-label="Cryptomator Logo"
