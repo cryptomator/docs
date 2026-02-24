@@ -15,4 +15,4 @@ These features are currently in **early access** and will be fully available in 
 
 ## Desktop 1.19.0
 
-- Files-in-use {/* TODO: Replace with link once docs are created */}
+- [Files-in-use](/desktop/files-in-use) — Bla bla
