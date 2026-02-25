@@ -80,6 +80,24 @@ The following events are logged:
 - **Reset User Account** – A user [reset their account](your-account.md#reset-account).
 - **User Keys Change** – A user changed their keys. This happens when, e.g., the user [finished the account setup](your-account.md#account-setup) or when the `Account Key Changed`.
 
+
+#### Emergency Access {#event-type-emergency-access}
+
+:::info Early Access
+This feature is currently in **early access** and will be fully available in an upcoming release.
+:::
+
+- **Emergency Access Setup** – A vault owner set up or updated Emergency Access for a vault (for example by assigning council members and key shares in Vault Details).
+- **Emergency Access Settings Updated** – An admin changed global Emergency Access settings in Admin.
+- **Emergency Access Recovery Started** – A council member started an Emergency Access recovery process.
+- **Emergency Access Recovery Approved** – A council member approved a running recovery process by submitting their recovered key share.
+- **Emergency Access Recovery Completed** – A council member completed a recovery process after enough key shares were collected.
+- **Emergency Access Recovery Aborted** – A council member aborted a running recovery process.
+
+:::note
+When a council member starts a process, they automatically contribute their own key share. This logs both `Emergency Access Recovery Started` and `Emergency Access Recovery Approved`.
+:::
+
 #### Legacy {#event-type-legacy}
 
 - **Claim Vault Ownership** – A user claimed vault ownership. This event is logged when a vault created with hub pre 1.3.0 is claimed by the vault creator using the `Vault Admin Password`.
@@ -132,3 +150,26 @@ If a user resets their account, their [User Key Pair](/docs/security/hub.md#user
 Additionally, any existing trust chains that included the user will be broken, requiring re-verification to restore trust.
 :::
 
+
+## Emergency Access
+
+This configuration defines default Emergency Access values for new or updated vaults.
+
+<Image src="/img/hub/admin-emergency-access.png" alt="Emergency Access" width="1440" height="658" />
+
+Enable `Enable Emergency Access` and configure:
+
+* `Required Keys`: Number of required key shares
+* `Keyholders`: Default council members (only activated users)
+* Optional: `Let vault owners choose different keyholders`
+* Optional: `At least` (minimum members if owners can choose a different council)
+
+:::warning
+A council without redundancy (`Required Keys == number of council members`) is possible, but not recommended.
+:::
+
+:::info Enterprise Feature
+The following Audit Log feature is available only in the **Enterprise Edition**:
+
+- Emergency Access Audit Logs
+:::
