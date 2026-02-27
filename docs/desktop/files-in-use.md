@@ -23,6 +23,12 @@ You can run into concurrent edits when:
 
 If another user is currently editing a file, Cryptomator can block opening that file for writing on your side.
 
+:::note
+The usage information is passed with the to-be-edited files.
+Therefore, it only works when the vault accessed directly (i.e. network share) or file synchronization is turned on.
+In the latter requires, it takes around 10s to be present on other devices (depending on the sync app).
+:::
+
 ## What You Will See {#what-you-will-see}
 
 If a file is currently in use by someone else, Cryptomator shows a notification in the app.
