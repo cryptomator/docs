@@ -34,19 +34,19 @@ This means another device or user has an active edit session for that file.
 
 In most cases, the best action is to wait until the other person finishes editing and then try again.
 
-You can also choose to ignore the lock and continue.
+You can also choose to ignore the use status and continue.
 Use this only if you are sure it is safe, because forcing access can overwrite someone else's newer changes.
 
-We recommend the following sequence when receiving a "File is locked" notification:
+We recommend the following sequence when receiving a "File is in use" notification:
 1. Ask the person shown in the notification whether they are still editing the file.
-1. If they already closed the file but it is still locked, use "Ignore lock".
-1. Use "Ignore lock" without checking with teammates only in exceptional situations.
+1. If they already closed the file but it is still shown as "in use", use "Ignore use status".
+1. Open a used file without checking with teammates only in exceptional situations.
 1. In that case, create a backup copy first to avoid losing edits.
 
-## Stale Locks {#stale-locks}
+## Stale Use Status {#stale-use-status}
 
-A lock is treated as stale after some time without file updates (around 10min).
-If Cryptomator detects that a lock is stale, access is possible again.
+The use status becomes stale after some time without file updates (around 10min).
+If Cryptomator detects that the use status is stale, access is possible again.
 This helps in cases such as device sleep, crashes, or interrupted sessions.
 
 ## Related Topics {#related-topics}
