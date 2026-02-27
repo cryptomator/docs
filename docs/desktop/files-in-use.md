@@ -7,7 +7,7 @@ sidebar_position: 18
 # Files in Use
 
 :::info
-This feature is only available for [Cryptomator Hub](/hub/introduction) vaults.
+This feature is only available for [Cryptomator Hub](/docs/hub/introduction.md) vaults.
 :::
 
 When multiple people work in a shared vault, two users might try to edit the same file at the same time.
@@ -24,9 +24,9 @@ You can run into concurrent edits when:
 If another user is currently editing a file, Cryptomator can block opening that file for writing on your side.
 
 :::note
-The usage information is passed with the to-be-edited files.
-Therefore, it only works when the vault accessed directly (i.e. network share) or file synchronization is turned on.
-In the latter requires, it takes around 10s to be present on other devices (depending on the sync app).
+The usage information is passed with the files being edited.
+Therefore, it requires either the vault residing on shared storage (for example, a network share) or file synchronization.
+In the latter case, it takes around 10s until the status is synchronized to other devices (depending on the sync app).
 :::
 
 ## What You Will See {#what-you-will-see}
@@ -45,16 +45,16 @@ Use this only if you are sure it is safe, because forcing access can overwrite s
 
 We recommend the following sequence when receiving a "File is in use" notification:
 1. Ask the person shown in the notification whether they are still editing the file.
-1. If they already closed the file but it is still shown as "in use", use "Ignore use status".
-1. Open a used file without checking with teammates only in exceptional situations.
+1. If they already closed the file but it is still shown as "in use", use "Ignore Use Status".
+1. Open a file marked as in use without checking with teammates only in exceptional situations.
 1. In that case, create a backup copy first to avoid losing edits.
 
 ## Stale Use Status {#stale-use-status}
 
-The use status becomes stale after some time without file updates (around 10min).
-If Cryptomator detects that the use status is stale, access is possible again.
+The use status is cleared after some time without file updates (around 10 min).
+If this happens, access is possible again.
 This helps in cases such as device sleep, crashes, or interrupted sessions.
 
 ## Related Topics {#related-topics}
 
-- [Synchronization Conflicts](/desktop/sync-conflicts)
+- [Synchronization Conflicts](/docs/desktop/sync-conflicts.md)
