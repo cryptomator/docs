@@ -60,7 +60,7 @@ Users that are no longer part of the vault are shown as `Removed`.
 
 The `Change Council` process allows you to select a new council.
 
-The minimal required number of members are configured in the [Admin settings](admin.md#emergency-access).
+The minimum required number of members is configured in the [Admin settings](admin.md#emergency-access).
 
 <Image src="/img/hub/emergency_access_change_council_start.png" alt="Emergency Access Vault List" width="2560" height="1080" />
 
