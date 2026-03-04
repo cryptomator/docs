@@ -84,7 +84,7 @@ The following events are logged:
 #### Emergency Access {#event-type-emergency-access}
 
 :::info Early Access
-This feature is currently in **early access** and will be fully available in an upcoming release.
+This feature is currently in **early access** and will be fully available in version 1.5.0.
 :::
 
 - **Emergency Access Setup** – A vault owner set up or updated Emergency Access for a vault (for example by assigning council members and key shares in Vault Details).
