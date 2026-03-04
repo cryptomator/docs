@@ -157,7 +157,7 @@ Additionally, any existing trust chains that included the user will be broken, r
 This feature is currently in **early access** and will be fully available in an upcoming release.
 :::
 
-This configuration defines default Emergency Access values for new or updated vaults.
+This configuration defines default [Emergency Access](emergency-access.md) values for new or updated vaults.
 
 <Image src="/img/hub/admin-emergency-access.png" alt="Emergency Access" width="1440" height="658" />
 
