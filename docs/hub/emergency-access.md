@@ -81,10 +81,12 @@ Approve a running process in three steps:
 2. Click `Approve now` to open the `Approve Emergency Access` dialog.
 3. Review the details and click `Approve` to submit your key share.
 
-You can also inspect details before approving:
+<Image src="/img/hub/emergency_access_vault_list_change_council_approve_dialog.png" alt="Emergency Access Vault List Approve Dialog" width="2560" height="1080" />
 
-* Hover (or click) the segment ring area on the left side of the process button to open the process details popover.
-* The popover shows:
+After submitting your share, the button shows `Waiting for other approvals`. You can track the ongoing process progress in the same process button and its details popover.
+
+
+You can also inspect details before approving. Hover (or click) the segment ring area on the left side of the process button to open the process details popover. The popover shows:
 
 * process type and required key shares
 * current progress
@@ -92,10 +94,6 @@ You can also inspect details before approving:
 * per-member status (`Added` / `Pending`)
 
 <Image src="/img/hub/emergency_access_vault_list_hover_process.png" alt="Emergency Access Vault List Hover Process" width="2560" height="1080" />
-
-<Image src="/img/hub/emergency_access_vault_list_change_council_approve_dialog.png" alt="Emergency Access Vault List Approve Dialog" width="2560" height="1080" />
-
-After submitting your share, the button shows `Waiting for other approvals`. You can track the ongoing process progress in the same process button and its details popover.
 
 ## Complete a Recovery Process
 
