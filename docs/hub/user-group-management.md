@@ -163,18 +163,23 @@ The avatar can be provided as a URL to an image (e.g., `https://example.com/avat
 
 If no profile picture is set, a generated avatar based on the user's name will be displayed.
 
-## Enterprise: External Identity Management {#enterprise-external-iam}
+## External Identity Management {#enterprise-external-iam}
+
+:::info Enterprise Feature
+Connecting external identity and access management (IAM) solutions is available as an Enterprise feature. 
+
+Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
+:::
 
 <Image src="/img/hub/access-keycloak-link.png" alt="Accessing Keycloak via Hub" width="1440" height="653" />
 
-:::info Enterprise Feature
-Connecting external identity and access management (IAM) solutions is available as an Enterprise feature. This allows you to:
+Connecting Cryptomator Hub to an external identity manager allows you to:
 
 - Synchronize users and groups from LDAP or Active Directory
 - Delegate authentication via OpenID Connect or SAML
 - Keep your user management centralized in your existing IAM
 
-You can access the Keycloak management interface from the admin section of Hub. There you can perform all user and group related tasks, such as
+You can access the Keycloak management interface from the admin section of Hub. There you can perform all user- and group-related tasks, such as
 [creating new users](https://www.keycloak.org/docs/latest/server_admin/index.html#proc-creating-user_server_administration_guide),
 [deleting users](https://www.keycloak.org/docs/latest/server_admin/index.html#proc-deleting-user_server_administration_guide) or
 [managing groups](https://www.keycloak.org/docs/latest/server_admin/index.html#proc-managing-groups_server_administration_guide).
@@ -182,7 +187,6 @@ You can access the Keycloak management interface from the admin section of Hub. 
 Setting up LDAP synchronization is described in the [Keycloak documentation](https://www.keycloak.org/docs/latest/server_admin/#_ldap).
 For OpenID Connect and SAML, the Keycloak documentation provides [general information](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker).
 
-Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
 
 :::warning
 Regardless of your IAM setup, your Hub instance always contains two system users: `admin` and `syncer`. **Do not edit or delete them!** These accounts are required for administration and synchronization tasks.
