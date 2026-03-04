@@ -14,64 +14,81 @@ This feature is currently in **early access** and will be fully available in an 
 Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
 :::
 
-Emergency Access allows a defined council to restore access to a vault using key splitting based on **Shamir's Secret Sharing**. A process can only be completed once enough council members approve it.
+Emergency Access restores access to a vault inside Cryptomator Hub in case of account loss or ownership issues.
+Its process requires a group of trusted users (the "council") to approve the recovery.
+When enough approvals are collected, the emergency change is completed and vault management access is restored.
+Technically, this is implemented using key splitting based on **[Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_secret_sharing)**.
 
-## Define Emergency Access During Vault Creation
+## Setup Emergency Access
 
-When creating a new vault, there is a dedicated step called `Define Emergency Access Conditions`. For the full vault creation workflow, see [Vault Management](vault-management.md#create-a-vault).
+The feature can be activated for new and existing vaults:
 
-## Define Emergency Access for Existing Vaults
+* **New vaults:** During vault creation, use the `Define Emergency Access Conditions` step.
+  For the full workflow, see [Vault Management](vault-management.md#create-a-vault).
+* **Existing vaults:** Open `Vault Details` and [configure Emergency Access](vault-management.md#emergency-access-council).
 
-For existing vaults, Emergency Access can be configured or updated in `Vault Details`. See [Setup/Fix Emergency Access Council](vault-management.md#emergency-access-council).
+## Starting a Recovery Process
 
-## Start a Recovery Process
+To start, open the `Emergency Access` page, select the vault, and start the desired process.
+
+<Image src="/img/hub/emergency_access_vault_list.png" alt="Emergency Access Vault List" width="2560" height="1080" />
 
 There are two process types:
 
 1. `Change Permissions`: Change vault owners/members
 2. `Change Council`: Change Emergency Access council and threshold
 
-Open the `Emergency Access` page, select the vault, and start the desired process type.
+:::info
+Only one running process per type is allowed for the same vault.
+:::
 
-<Image src="/img/hub/emergency_access_vault_list.png" alt="Emergency Access Vault List" width="2560" height="1080" />
+Use this quick guide to choose the right process:
 
-Only one running process per type is allowed for a vault.
+| If you want to... | Start this process |
+| --- | --- |
+| Give vault access to different users (owners/members) | `Change Permissions` |
+| Remove access from specific users | `Change Permissions` |
+| Replace council members who approve emergency operations | `Change Council` |
+
 
 ### Change Permissions
 
-When starting `Change Permissions`, you select:
+The `Change Permissions` process allows you to select new vault `Owners` or `Members`.
 
-* future `Owners`
-* future `Members`
-
-Users that are no longer part of the selected set are shown as `Removed`.
+Users that are no longer part of the vault are shown as `Removed`.
 
 <Image src="/img/hub/emergency_access_change_permissions_start.png" alt="Emergency Access Vault List" width="2560" height="1080" />
 
 
 ### Change Council
 
-When starting `Change Council`, you select:
+The `Change Council` process allows you to select a new council.
 
-* the new council members that should hold emergency key shares
-
-The required keys are defined by the configuration in the [Admin settings](admin.md#emergency-access).
+The minimal required number of members are configured in the [Admin settings](admin.md#emergency-access).
 
 <Image src="/img/hub/emergency_access_change_council_start.png" alt="Emergency Access Vault List" width="2560" height="1080" />
 
 :::note
-When starting a process, the initiating user usually adds the first key share automatically.
+When starting this process, the initiating user is automatically added to the new council
 :::
 
 ## Approve a Recovery Process
 
-In the `Emergency Access` vault list, a running process shows a split process button.
-If a council member has not yet added their share, the right side of the button shows `Approve now`.
+In the `Emergency Access` vault list, a running process shows a process button.
+If a council member has not yet added their share, the button includes `Approve now`.
 
 <Image src="/img/hub/emergency_access_vault_list_change_council_approve_now.png" alt="Emergency Access Vault List Approve Now" width="2560" height="1080" />
 
-Hover (or click) the **left side** of the process button (the segment ring area) to open the process details popover.
-This popover shows:
+Approve a running process in three steps:
+
+1. Open the vault in `Emergency Access`.
+2. Click `Approve now` to open the `Approve Emergency Access` dialog.
+3. Review the details and click `Approve` to submit your key share.
+
+You can also inspect details before approving:
+
+* Hover (or click) the segment ring area on the left side of the process button to open the process details popover.
+* The popover shows:
 
 * process type and required key shares
 * current progress
@@ -79,9 +96,6 @@ This popover shows:
 * per-member status (`Added` / `Pending`)
 
 <Image src="/img/hub/emergency_access_vault_list_hover_process.png" alt="Emergency Access Vault List Hover Process" width="2560" height="1080" />
-
-To approve, click the **right side** of the process button (`Approve now`) to open the `Approve Emergency Access` dialog.
-In this dialog, review the process details and click `Approve` to submit your key share.
 
 <Image src="/img/hub/emergency_access_vault_list_change_council_approve_dialog.png" alt="Emergency Access Vault List Approve Dialog" width="2560" height="1080" />
 
@@ -115,9 +129,12 @@ Running processes can be canceled in the dialog using `Abort this Process`.
 
 The following warning states can appear in the Emergency Access list:
 
-* `No Vault Council Member anymore`: The user is still part of a running process but no longer part of the current vault council
-* `Broken Emergency Access`: Too few valid shares remain (for example after council members reset their accounts)
-* `No Redundancy`: No fault tolerance in the council
+* `No Vault Council Member anymore`: The user is still part of a running process but no longer part of the current vault council.
+  What to do: Ask a current council member to start a new process with the correct council composition.
+* `Broken Emergency Access`: Too few valid shares remain (for example after council members reset their accounts).
+  What to do: Reconfigure the council in vault details and ensure enough active council members can provide shares.
+* `No Redundancy`: No fault tolerance in the council.
+  What to do: Increase the number of council members or reduce the required threshold so one unavailable user does not block recovery.
 
 ## Audit Log Events
 
