@@ -7,7 +7,7 @@ sidebar_position: 9
 # Emergency Access
 
 :::info Early Access
-This feature is currently in **early access** and will be fully available in an upcoming release.
+This feature is currently in **early access** and will be fully available in version 1.5.0.
 :::
 
 Emergency Access restores access to a vault inside Cryptomator Hub in case of account loss or ownership issues.

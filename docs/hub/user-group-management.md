@@ -7,7 +7,7 @@ sidebar_position: 3
 # User & Group Management
 
 :::info Early Access
-This feature is currently in **early access** and will be fully available in an upcoming release.
+This feature is currently in **early access** and will be fully available in version 1.5.0.
 :::
 
 Users and groups are managed directly in the Cryptomator Hub admin interface. As an administrator, you can create, edit, and delete users and groups, assign roles, and manage group memberships.

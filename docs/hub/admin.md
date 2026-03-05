@@ -154,7 +154,7 @@ Additionally, any existing trust chains that included the user will be broken, r
 ## Emergency Access {#emergency-access}
 
 :::info Early Access
-This feature is currently in **early access** and will be fully available in an upcoming release.
+This feature is currently in **early access** and will be fully available in version 1.5.0.
 :::
 
 This configuration defines default [Emergency Access](emergency-access.md) values for new or updated vaults.

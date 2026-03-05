@@ -53,7 +53,7 @@ Select the council members who should participate in emergency recovery and revi
 Click `Next` to continue to the recovery key step.
 
 :::info Early Access
-Emergency Access is currently in **early access** and will be fully available in an upcoming release.
+Emergency Access is currently in **early access** and will be fully available in version 1.5.0.
 :::
 
 :::info Enterprise Feature
@@ -148,7 +148,7 @@ To show the vault recovery key, click on the `Show Recovery Key` button in the [
 ### Setup/Fix Emergency Access Council {#emergency-access-council}
 
 :::info Early Access
-Emergency Access is currently in **early access** and will be fully available in an upcoming release.
+Emergency Access is currently in **early access** and will be fully available in version 1.5.0.
 :::
 
 To configure [Emergency Access](emergency-access.md) for a vault, click `Setup Emergency Access Council` in the [vault details](#vault-details). If Emergency Access is already configured but needs correction, click `Fix Emergency Access Council`. This opens a dialog where you define the council members and confirm with `Grant`.
