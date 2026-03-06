@@ -65,21 +65,22 @@ The minimum required number of members is configured in the [Admin settings](adm
 <Image src="/img/hub/emergency_access_change_council_start.png" alt="Emergency Access Vault List" width="2560" height="1080" />
 
 :::note
-When starting this process, the initiating user is automatically added to the new council
+When starting this process, the initiating user automatically approves the process.
 :::
 
 ## Approve a Recovery Process
 
-In the `Emergency Access` vault list, a running process shows a process button.
-If a council member has not yet added their share, the button includes `Approve now`.
+To view or approve open Emergency Access processes, open the `Emergency Access` list.
+If for a vault an Emergency Access process is open, the vault is displayed with a process button.
+If you didn't approved the process, the button includes `Approve now`.
 
 <Image src="/img/hub/emergency_access_vault_list_change_council_approve_now.png" alt="Emergency Access Vault List Approve Now" width="2560" height="1080" />
 
 Approve a running process in three steps:
 
-1. Open the vault in `Emergency Access`.
+1. Open the vault in the `Emergency Access` list.
 2. Click `Approve now` to open the `Approve Emergency Access` dialog.
-3. Review the details and click `Approve` to submit your key share.
+3. Review the details and click `Approve`. 
 
 <Image src="/img/hub/emergency_access_vault_list_change_council_approve_dialog.png" alt="Emergency Access Vault List Approve Dialog" width="2560" height="1080" />
 
@@ -88,7 +89,7 @@ After submitting your share, the button shows `Waiting for other approvals`. You
 
 You can also inspect details before approving. Hover (or click) the segment ring area on the left side of the process button to open the process details popover. The popover shows:
 
-* process type and required key shares
+* process type and required approvals
 * current progress
 * process council members
 * per-member status (`Added` / `Pending`)
@@ -107,8 +108,8 @@ Click `Complete now` to open the `Complete Emergency Access` dialog. In this dia
 
 Results by type:
 
-* `Choose Vault Members`: Vault roles are updated and required access grants are redistributed
-* `Change Emergency Access Council`: The recovery key is re-split using the new council configuration
+* `Choose Vault Members`: Vault roles are updated and required access grants are redistributed.
+* `Change Emergency Access Council`: The old council is replaced by the new council.
 
 After successful completion, the process is removed.
 
