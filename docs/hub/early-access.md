@@ -1,14 +1,12 @@
 ---
-id: index
-title: Coming Soon
-sidebar_position: 1
+id: early-access
+title: Early Access
+sidebar_position: 10
 ---
 
-# Coming Soon
+# Early Access
 
-These features are currently in **early access** and will be fully available in upcoming releases.
-
-## Hub 1.5.0
+These features are currently in **early access** and will be fully available in version 1.5.0.
 
 - [User & Group Management](/hub/user-group-management) — Manage users, groups, roles, and permissions directly in Hub
 - [Emergency Access](/hub/emergency-access) - Restore access to a vault in case of account loss or ownership issues
