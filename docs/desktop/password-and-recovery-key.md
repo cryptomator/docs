@@ -169,7 +169,7 @@ We cannot reset the password of a vault for you in any way. Only you can reset a
 Type or paste your recovery key in the new window.
 
 :::note
-Cryptomator offers an auto completion feature to make things easier when typing a recovery key. It's helpful if your recovery key is printed on paper or stored it somewhere where you cannot copy it. The feature will kick in automatically once you start typing the first few letters of a word.
+Cryptomator offers an auto completion feature to make things easier when typing a recovery key. It's helpful if your recovery key is printed on paper or stored somewhere where you cannot copy it. The feature will kick in automatically once you start typing the first few letters of a word.
 :::
 
 <Image src="/img/desktop/recoverykey-recover-enter.png" alt="Autocompletion during recovery key entry" width="512" height="384" />
