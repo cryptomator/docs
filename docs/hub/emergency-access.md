@@ -45,6 +45,7 @@ Use this quick guide to choose the right process:
 | Give vault access to different users (owners/members) | `Choose Vault Members` |
 | Remove access from specific users | `Choose Vault Members` |
 | Replace council members who approve emergency operations | `Change Emergency Access Council` |
+| Change how many council approvals are required (threshold) | Configurable in the [admin settings](../admin#emergency-access) |
 
 :::note
 Starting a process automatically approves the process.
