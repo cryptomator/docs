@@ -14,7 +14,7 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  url: 'https://docs.cryptomator.org',
+  url: process.env.SITE_URL || 'https://docs.cryptomator.org',
   baseUrl: '/',
 
   // GitHub pages deployment config.
@@ -62,8 +62,8 @@ const config: Config = {
       tagName: 'script',
       attributes: {
         src: 'https://umami.skymatic.de/script.js',
-        'data-website-id': process.env.NODE_ENV === 'development' 
-          ? 'cdd42f46-583d-4463-9ab2-8adcfe989c21' // Local development
+        'data-website-id': process.env.NODE_ENV === 'development' || process.env.SITE_URL
+          ? 'cdd42f46-583d-4463-9ab2-8adcfe989c21' // Local development / Staging
           : '2df416f9-7a9c-4e58-9a45-7106f7e0a139', // Production
         integrity: 'sha384-6PHtXKae10+dZuA/fcmjkSTDco+NPBE5fZ4eS/Em2lVIsS6FdDZIgs06MBJLEcSW',
         crossorigin: 'anonymous',
