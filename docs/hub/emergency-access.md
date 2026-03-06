@@ -31,8 +31,8 @@ To start, open the `Emergency Access` page, select the vault, and start the desi
 
 There are two process types:
 
-1. `Change Permissions`: Change vault owners/members
-2. `Change Council`: Change Emergency Access council and threshold
+1. `Change Emergency Access Council`: Change Emergency Access council and threshold
+2. `Choose Vault Members`: Choose vault owners/members
 
 :::info
 Only one running process per type is allowed for the same vault.
@@ -42,23 +42,23 @@ Use this quick guide to choose the right process:
 
 | If you want to... | Start this process |
 | --- | --- |
-| Give vault access to different users (owners/members) | `Change Permissions` |
-| Remove access from specific users | `Change Permissions` |
-| Replace council members who approve emergency operations | `Change Council` |
+| Give vault access to different users (owners/members) | `Choose Vault Members` |
+| Remove access from specific users | `Choose Vault Members` |
+| Replace council members who approve emergency operations | `Change Emergency Access Council` |
 
 
-### Change Permissions
+### Choose Vault Members
 
-The `Change Permissions` process allows you to select new vault `Owners` or `Members`.
+The `Choose Vault Members` process allows you to select new vault `Owners` or `Members`.
 
 Users that are no longer part of the vault are shown as `Removed`.
 
 <Image src="/img/hub/emergency_access_change_permissions_start.png" alt="Emergency Access Vault List" width="2560" height="1080" />
 
 
-### Change Council
+### Change Emergency Access Council
 
-The `Change Council` process allows you to select a new council.
+The `Change Emergency Access Council` process allows you to select a new council.
 
 The minimum required number of members is configured in the [Admin settings](admin.md#emergency-access).
 
@@ -107,8 +107,8 @@ Click `Complete now` to open the `Complete Emergency Access` dialog. In this dia
 
 Results by type:
 
-* `Change Permissions`: Vault roles are updated and required access grants are redistributed
-* `Change Council`: The recovery key is re-split using the new council configuration
+* `Choose Vault Members`: Vault roles are updated and required access grants are redistributed
+* `Change Emergency Access Council`: The recovery key is re-split using the new council configuration
 
 After successful completion, the process is removed.
 
