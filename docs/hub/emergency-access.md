@@ -46,6 +46,10 @@ Use this quick guide to choose the right process:
 | Remove access from specific users | `Choose Vault Members` |
 | Replace council members who approve emergency operations | `Change Emergency Access Council` |
 
+:::note
+Starting a process automatically approves the process.
+:::
+
 
 ### Choose Vault Members
 
@@ -64,15 +68,11 @@ The minimum required number of members is configured in the [Admin settings](adm
 
 <Image src="/img/hub/emergency_access_change_council_start.png" alt="Emergency Access Vault List" width="2560" height="1080" />
 
-:::note
-When starting this process, the initiating user automatically approves the process.
-:::
-
 ## Approve a Recovery Process
 
-To view or approve open Emergency Access processes, open the `Emergency Access` list.
-If for a vault an Emergency Access process is open, the vault is displayed with a process button.
-If you didn't approved the process, the button includes `Approve now`.
+To view or approve running Emergency Access processes, open the `Emergency Access` list.
+If for a vault an Emergency Access process is running, the vault is displayed with a process button.
+If you haven't approved the process, the button includes `Approve now`.
 
 <Image src="/img/hub/emergency_access_vault_list_change_council_approve_now.png" alt="Emergency Access Vault List Approve Now" width="2560" height="1080" />
 
@@ -80,7 +80,7 @@ Approve a running process in three steps:
 
 1. Open the vault in the `Emergency Access` list.
 2. Click `Approve now` to open the `Approve Emergency Access` dialog.
-3. Review the details and click `Approve`. 
+3. Review the details and click `Approve`.
 
 <Image src="/img/hub/emergency_access_vault_list_change_council_approve_dialog.png" alt="Emergency Access Vault List Approve Dialog" width="2560" height="1080" />
 
