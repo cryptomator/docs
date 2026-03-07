@@ -16,8 +16,8 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary text--center', styles.heroBanner)}>
       <div className="container">
         <div>
-          <Link to="/coming-soon" className={styles.announcementPill}>
-            ✨ Coming Soon →
+          <Link to="/hub/early-access" className={styles.announcementPill}>
+            ✨ Upcoming Hub Features →
           </Link>
         </div>
         <Logo

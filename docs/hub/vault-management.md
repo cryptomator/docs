@@ -28,9 +28,9 @@ Alternatively, you can also access the list by clicking on the `Vaults` tab in t
 :::note Emergency Access Status in Vault List (Enterprise only, early access)
 In the `Vault List`, owners can see the Emergency Access status directly via badges:
 
-* `Council missing`: No council is configured on the vault
-* `Broken Emergency Access`: Too few valid shares remain (for example after council members reset their accounts)
-* `No Redundancy`: No fault tolerance in the council
+* `Council missing`: No council is configured for the vault
+* `Broken Emergency Access`: Not enough valid council members (for example after council members reset their accounts)
+* `Insufficient Emergency Access`: No fault tolerance in the council
 :::
 
 ## Create a Vault {#create-a-vault}
@@ -102,11 +102,11 @@ Open the [vault details](#vault-details) page to manage a vault.
 
 * `Shared with` members list
 * `Update Permissions` button (only clickable if necessary)
-* `Edit Vault Metadata` button            
+* `Edit Vault Metadata` button
 * `Download Vault Template` button
 * `Show Recovery Key` button
-* `Setup Emergency Access Council` button (Enterprise only and only visible if necessary)
-* `Fix Emergency Access Council` button (Enterprise only and only visible if necessary)
+* `Setup Emergency Access Council` button (only visible if necessary)
+* `Fix Emergency Access Council` button (and only visible if necessary)
 * `Archive Vault` button
 
 ### Share a Vault {#share-a-vault}
