@@ -87,15 +87,15 @@ The following events are logged:
 This feature is currently in **early access** and will be fully available in version 1.5.0.
 :::
 
-- **Emergency Access Setup** – A vault owner set up or updated Emergency Access for a vault (for example by assigning council members and key shares in Vault Details).
-- **Emergency Access Settings Updated** – An admin changed global Emergency Access settings in Admin.
+- **Emergency Access Setup** – A vault owner set up or updated the Emergency Access configuration for a vault (e.g. by assigning council members in Vault Details).
+- **Emergency Access Settings Updated** – An admin changed the global Emergency Access settings.
 - **Emergency Access Recovery Started** – A council member started an Emergency Access recovery process.
-- **Emergency Access Recovery Approved** – A council member approved a running recovery process by submitting their recovered key share.
-- **Emergency Access Recovery Completed** – A council member completed a recovery process after enough key shares were collected.
+- **Emergency Access Recovery Approved** – A council member approved a running recovery process.
+- **Emergency Access Recovery Completed** – A council member completed a recovery process.
 - **Emergency Access Recovery Aborted** – A council member aborted a running recovery process.
 
 :::note
-When a council member starts a process, they automatically contribute their own key share. This logs both `Emergency Access Recovery Started` and `Emergency Access Recovery Approved`.
+When a council member starts a recovery process both `Emergency Access Recovery Started` and `Emergency Access Recovery Approved` is logged.
 :::
 
 #### Legacy {#event-type-legacy}
