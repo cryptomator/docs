@@ -34,7 +34,7 @@ The default proxy server differs depending on the operating system:
 | macOS   | Use system proxy      |
 | Windows | Use system proxy      |
 
-To change the proxy server, you need to edit [Cryptomator.cfg](advanced-settings.md#locating-the-system-wide-advanced-configuration).
+To change the proxy server, you need to edit `Cryptomator.cfg` located in the installation/app directory.
 Open the file in a text editor, search for the line:
 
 ```
