@@ -6,8 +6,8 @@ sidebar_position: 12
 
 # Admin Configuration
 
-The admin configuration allows device or system administrators to configure environment properties for Cryptomator to ensure for all device users Cryptomator runs in the desired context.
-It is a key-value-file stored in the system and is retained between updates.
+The admin configuration allows device or system administrators to define environment properties for Cryptomator so it runs in the desired context for all users on a device.
+It is a system-level key-value file that persists across updates.
 
 ## Location of the Admin Configuration {#location-of-admin-configuration}
 
