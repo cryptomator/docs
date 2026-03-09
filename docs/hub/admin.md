@@ -83,16 +83,12 @@ The following events are logged:
 
 #### Emergency Access {#event-type-emergency-access}
 
-:::info Early Access
-This feature is currently in **early access** and will be fully available in version 1.5.0.
-:::
-
 - **Emergency Access Setup** – A vault owner set up or updated the Emergency Access configuration for a vault (e.g. by assigning council members in Vault Details).
-- **Emergency Access Settings Updated** – An admin changed the global Emergency Access settings.
-- **Emergency Access Recovery Started** – A council member started an Emergency Access recovery process.
-- **Emergency Access Recovery Approved** – A council member approved a running recovery process.
-- **Emergency Access Recovery Completed** – A council member completed a recovery process.
-- **Emergency Access Recovery Aborted** – A council member aborted a running recovery process.
+- **Emergency Access Settings Updated** – An admin changed the [global Emergency Access settings](#emergency-access-emergency-access).
+- **Emergency Access Recovery Started** – A council member [started](emergency-access.md#starting-a-recovery-process) an Emergency Access recovery process.
+- **Emergency Access Recovery Approved** – A council member [approved](emergency-access.md#approve-a-recovery-process) a running recovery process.
+- **Emergency Access Recovery Completed** – A council member [completed](emergency-access.md#complete-a-recovery-process) a recovery process.
+- **Emergency Access Recovery Aborted** – A council member [aborted](emergency-access.md#abort-a-recovery-process) a running recovery process.
 
 :::note
 When a council member starts a recovery process, both `Emergency Access Recovery Started` and `Emergency Access Recovery Approved` are logged.
@@ -154,7 +150,11 @@ Additionally, any existing trust chains that included the user will be broken, r
 ## Emergency Access {#emergency-access}
 
 :::info Early Access
-This feature is currently in **early access** and will be fully available in version 1.5.0.
+Emergency Access is currently in **early access** and will be fully available in version 1.5.0.
+:::
+
+:::info Enterprise Feature
+Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
 :::
 
 This configuration defines default [Emergency Access](emergency-access.md) values for new or updated vaults.
@@ -170,10 +170,4 @@ Activate `Enable Emergency Access` and configure:
 
 :::warning
 A council without redundancy (`Required Keys == number of council members`) is possible, but not recommended.
-:::
-
-:::info Enterprise Feature
-The following Audit Log feature is available only in the **Enterprise Edition**:
-
-- Emergency Access Audit Logs
 :::
