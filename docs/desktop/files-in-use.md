@@ -26,7 +26,7 @@ If another user is currently editing a file, Cryptomator can block opening that 
 :::note
 The usage information is passed with the files being edited.
 Therefore, it requires either the vault residing on shared storage (for example, a network share) or file synchronization.
-In the latter case, it takes around 10s until the status is synchronized to other devices (depending on the sync app).
+In the latter case, it takes around 10 seconds until the status is synchronized to other devices (depending on the sync app).
 :::
 
 ## What You Will See {#what-you-will-see}
@@ -46,7 +46,7 @@ Use this only if you are sure it is safe, because forcing access can overwrite s
 We recommend the following sequence when receiving a "File is in use" notification:
 1. Ask the person shown in the notification whether they are still editing the file.
 1. If they already closed the file but it is still shown as "in use", use "Ignore Use Status".
-1. Open a file marked as in use without checking with teammates only in exceptional situations.
+1. Only open a file marked as in use without checking with teammates in exceptional situations.
 1. In that case, create a backup copy first to avoid losing edits.
 
 ## Stale Use Status {#stale-use-status}

@@ -15,7 +15,7 @@ It is a system-level key-value file that persists across updates.
 Editing the *admin configuration* may require elevated privileges (i.e. admin or root permissions).
 :::
 
-The storage location of the Admin configuration file `config.properties` depends on the OS. The following table shows for each OS the storage path:
+The storage location of the admin configuration file `config.properties` depends on the OS. The following table shows the storage path for each OS:
 
 
 | OS      | Default Path                                                 |

@@ -95,7 +95,7 @@ This feature is currently in **early access** and will be fully available in ver
 - **Emergency Access Recovery Aborted** – A council member aborted a running recovery process.
 
 :::note
-When a council member starts a recovery process both `Emergency Access Recovery Started` and `Emergency Access Recovery Approved` is logged.
+When a council member starts a recovery process, both `Emergency Access Recovery Started` and `Emergency Access Recovery Approved` are logged.
 :::
 
 #### Legacy {#event-type-legacy}
@@ -161,7 +161,7 @@ This configuration defines default [Emergency Access](emergency-access.md) value
 
 <Image src="/img/hub/admin-emergency-access.png" alt="Emergency Access" width="1440" height="658" />
 
-Enable `Enable Emergency Access` and configure:
+Activate `Enable Emergency Access` and configure:
 
 * `Required Keys`: Number of required key shares
 * `Keyholders`: Default council members (only activated users)

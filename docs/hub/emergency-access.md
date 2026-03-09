@@ -15,7 +15,7 @@ Its process requires a group of trusted users (the "council") to approve the rec
 When enough approvals are collected, the emergency change is completed and vault management access is restored.
 Technically, this is implemented using key splitting based on **[Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_secret_sharing)**.
 
-## Setup Emergency Access
+## Set Up Emergency Access
 
 The feature can be activated for new and existing vaults:
 
@@ -45,7 +45,7 @@ Use this quick guide to choose the right process:
 | Give vault access to different users (owners/members) | `Choose Vault Members` |
 | Remove access from specific users | `Choose Vault Members` |
 | Replace council members who approve emergency operations | `Change Emergency Access Council` |
-| Change how many council approvals are required (threshold) | Configurable in the [admin settings](../admin#emergency-access) |
+| Change how many council approvals are required (threshold) | Configurable in the [admin settings](admin.md#emergency-access) |
 
 :::note
 Starting a process automatically approves the process.
@@ -72,7 +72,7 @@ The minimum required number of members is configured in the [Admin settings](adm
 ## Approve a Recovery Process
 
 To view or approve running Emergency Access processes, open the `Emergency Access` list.
-If for a vault an Emergency Access process is running, the vault is displayed with a process button.
+If an Emergency Access process is running for a vault, the vault is displayed with a process button.
 If you haven't approved the process, the button includes `Approve now`.
 
 <Image src="/img/hub/emergency_access_vault_list_change_council_approve_now.png" alt="Emergency Access Vault List Approve Now" width="2560" height="1080" />
