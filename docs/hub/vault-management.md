@@ -25,6 +25,14 @@ Alternatively, you can also access the list by clicking on the `Vaults` tab in t
 * As an admin of the Hub instance, you can see all vaults, but you can only access those that you have been granted access to.
 :::
 
+:::note Emergency Access Status in Vault List (Enterprise only, early access)
+In the `Vault List`, owners can see the Emergency Access status directly via badges:
+
+* `Council missing`: No council is configured for the vault
+* `Broken Emergency Access`: Not enough valid council members (for example after council members reset their accounts)
+* `Insufficient Emergency Access`: No fault tolerance in the council
+:::
+
 ## Create a Vault {#create-a-vault}
 
 :::note
@@ -36,6 +44,25 @@ Every vault has a name and optionally a description.
 Fill out the form and continue the process by clicking the `Next` button in the right corner.
 
 <Image src="/img/hub/create-vault.png" alt="Create a vault" width="2560" height="836" />
+
+If the [Emergency Access](emergency-access.md) feature is enabled, the following step appears:
+
+Here, the conditions for Emergency Access are defined for the new vault.
+If the administrator allows custom council selection, you can adjust the default council.
+Select the council members who should participate in emergency recovery and review the example recovery scenario.
+Click `Next` to continue to the recovery key step.
+
+:::info Early Access
+Emergency Access is currently in **early access** and will be fully available in version 1.5.0.
+:::
+
+:::info Enterprise Feature
+Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
+:::
+
+
+<Image src="/img/hub/create-vault-emergency-access.png" alt="Define Emergency Access Conditions" width="2560" height="1352" />
+
 
 In the next step, the vault *recovery key* is displayed.
 It can [restore access to the vault data](vault-recovery.md) in case of an emergency, e.g. if Cryptomator Hub is down.
@@ -75,9 +102,11 @@ Open the [vault details](#vault-details) page to manage a vault.
 
 * `Shared with` members list
 * `Update Permissions` button (only clickable if necessary)
-* `Edit Vault Metatdata` button
+* `Edit Vault Metadata` button
 * `Download Vault Template` button
 * `Show Recovery Key` button
+* `Setup Emergency Access Council` button (only visible if necessary)
+* `Fix Emergency Access Council` button (and only visible if necessary)
 * `Archive Vault` button
 
 ### Share a Vault {#share-a-vault}
@@ -115,6 +144,18 @@ Download the vault template only once! If you download it multiple times, you wi
 ### Show Recovery Key {#show-recovery-key}
 
 To show the vault recovery key, click on the `Show Recovery Key` button in the [vault details](#vault-details). It shows the same recovery key shown during vault creation. You can use it to [restore access to the vault data](vault-recovery.md) in case of an emergency, e.g. if Cryptomator Hub is down. Store it at a safe location.
+
+### Setup/Fix Emergency Access Council {#emergency-access-council}
+
+:::info Early Access
+Emergency Access is currently in **early access** and will be fully available in version 1.5.0.
+:::
+
+:::info Enterprise Feature
+Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
+:::
+
+To configure [Emergency Access](emergency-access.md) for a vault, click `Setup Emergency Access Council` in the [vault details](#vault-details). If Emergency Access is already configured but needs correction, click `Fix Emergency Access Council`. This opens a dialog where you define the council members and confirm with `Grant`.
 
 ### Archive Vault {#archive-vault}
 

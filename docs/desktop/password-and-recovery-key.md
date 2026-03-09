@@ -130,6 +130,14 @@ Available keychains are:
 
   Requires KDE Wallet to be installed and running on your Linux system, with the default wallet present.
 </details>
+<details>
+  <summary>Secret Service (Linux)</summary>
+
+  Uses the KDE Wallet or the GNOME keyring to store your password.
+  The password is only stored locally in the default KDE Wallet or the default GNOME keyring. Secret Service is the successor of KDE Wallet and GNOME keyring, as it works for both.
+
+  Requires KDE Wallet or GNOME keyring to be installed and running on your Linux system, with the default wallet or keyring present.
+</details>
 
  There are also third-party plug-ins for Cryptomator that allow you to store vault passwords in external password managers:
 
@@ -169,7 +177,7 @@ We cannot reset the password of a vault for you in any way. Only you can reset a
 Type or paste your recovery key in the new window.
 
 :::note
-Cryptomator offers an auto completion feature to make things easier when typing a recovery key. It's helpful if your recovery key is printed on paper or stored it somewhere where you cannot copy it. The feature will kick in automatically once you start typing the first few letters of a word.
+Cryptomator offers an auto completion feature to make things easier when typing a recovery key. It's helpful if your recovery key is printed on paper or stored somewhere where you cannot copy it. The feature will kick in automatically once you start typing the first few letters of a word.
 :::
 
 <Image src="/img/desktop/recoverykey-recover-enter.png" alt="Autocompletion during recovery key entry" width="512" height="384" />
