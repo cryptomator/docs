@@ -81,10 +81,10 @@ The following events are logged:
 - **User Keys Change** – A user changed their keys. This happens when, e.g., the user [finished the account setup](your-account.md#account-setup) or when the `Account Key Changed`.
 
 
-#### Emergency Access {#event-type-emergency-access}
+#### Emergency Access (Enterprise Only) {#event-type-emergency-access}
 
 - **Emergency Access Setup** – A vault owner set up or updated the Emergency Access configuration for a vault (e.g. by assigning council members in Vault Details).
-- **Emergency Access Settings Updated** – An admin changed the [global Emergency Access settings](#emergency-access-emergency-access).
+- **Emergency Access Settings Updated** – An admin changed the [global Emergency Access settings](#emergency-access).
 - **Emergency Access Recovery Started** – A council member [started](emergency-access.md#starting-a-recovery-process) an Emergency Access recovery process.
 - **Emergency Access Recovery Approved** – A council member [approved](emergency-access.md#approve-a-recovery-process) a running recovery process.
 - **Emergency Access Recovery Completed** – A council member [completed](emergency-access.md#complete-a-recovery-process) a recovery process.
