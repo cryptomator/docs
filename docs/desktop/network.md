@@ -20,7 +20,7 @@ Depending on the OS, the required trusted root certificates are loaded from diff
 | :------ | :---------------------------------------------------------------------------------------------------------------------------------------------- |
 | Linux   | PKCS#12 file `/etc/cryptomator/certs.p12`; If the file does not exist, the JDK default trust store is used. [^1]                                |
 | macOS   | System keychain                                                                                                                                 |
-| Windows | Certificate store "Trusted Root Certification Authorities", with registry path `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\ROOT\` |
+| Windows | Certificate store "Trusted Root Certification Authorities", with registry path `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\ROOT\`. Additionally, the JDK default trust store is used. [^1] |
 
 [^1]: For more information about the location and contained certificates, see [JEP 319](https://openjdk.org/jeps/319).
 
@@ -34,14 +34,14 @@ The default proxy server differs depending on the operating system:
 | macOS   | Use system proxy      |
 | Windows | Use system proxy      |
 
-To change the proxy server, you need to edit [Cryptomator.cfg](advanced-settings.md#locating-the-system-wide-advanced-configuration).
+To change the proxy server, you need to edit `Cryptomator.cfg` located in the installation/app directory.
 Open the file in a text editor, search for the line:
 
 ```
 java-options=-Djava.net.useSystemProxies=true
 ```
 
-and *if it exists*, only replace the word `true` with `false`.
+and *if it exists*, replace `true` with `false`.
 
 In the second step, add the following lines to the end of the file:
 

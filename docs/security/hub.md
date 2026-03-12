@@ -8,6 +8,20 @@ sidebar_position: 3
 
 Cryptomator Hub facilitates asymmetric encryption to allow sharing the key material used in Cryptomator vaults between multiple parties. 
 
+## Zero-Knowledge Data Flow {#zero-knowledge-data-flow}
+
+The following diagram illustrates how Cryptomator Hub maintains zero-knowledge encryption throughout the entire data flow between users sharing a vault. This architecture ensures that neither Cryptomator Hub nor your cloud storage provider ever has access to your unencrypted data.
+
+<WhiteBox>
+  <Image src="/img/hub/data-flow.svg" alt="Hub Data Flow" />
+</WhiteBox>
+
+In this architecture, each component plays a specific role while maintaining the zero-knowledge principle. User devices handle all encryption and decryption operations locally within their [virtual file systems](architecture.md#virtual-filesystem). The encrypted vault data resides in your chosen [cloud storage provider](/docs/misc/supported-cloud-services.md), where it remains indecipherable without the proper keys.
+
+Cryptomator Hub acts solely as a key broker, managing encrypted [access tokens](#unlock-procedure) through the [User](#user-key-pair) and [Device](#device-key-pair) Key Pairs described below. The Hub never has access to [vault keys](architecture.md#masterkey) in cleartext, ensuring that even a compromised Hub instance cannot decrypt vault contents.
+
+Keycloak handles authentication through your existing identity provider, verifying user identities before granting access to encrypted vault keys. This separation of authentication from key management adds an additional security layer while enabling seamless integration with your organization's existing infrastructure.
+
 ## Key Types {#key-types}
 
 Cryptomator Hub facilitates different keys types. Here is an overview of these types and how they are interconnected:
@@ -49,3 +63,37 @@ When an Account Key is suspected of being compromised, it can and should be re-g
 The Account Key itself is stored as an [ECDH-ES-encrypted JWE](https://datatracker.ietf.org/doc/html/rfc7518.html#section-4.6), allowing its owner to
 view it from any authorized device. Regardless it should be securely stored independently.
 :::
+
+## Unlock Procedure {#unlock-procedure}
+
+Vault keys are shared with users via their [User Key Pairs](#user-key-pair). Each user self-manages their devices. The [Device Key Pair](#device-key-pair) is required to decrypt the user's private key, which in turn decrypts the vault access token.
+
+<WhiteBox>
+  <Image src="/img/hub/unlock-procedure.svg" alt="Hub Unlock Procedure" />
+</WhiteBox>
+
+### Unlock Flow {#unlock-flow}
+
+The unlock procedure consists of two distinct steps that establish a key hierarchy between devices, users, and vaults:
+
+1. The client requests the vault access token from `/api/vaults/{vaultId}/access-token`. The server returns a JWE containing the vault's raw masterkey encrypted with the [User Public Key](#user-key-pair).
+2. The client requests its device-specific JWE from `/api/devices/{deviceId}`. This JWE contains the [User Private Key](#user-key-pair) encrypted with the [Device Public Key](#device-key-pair). The device uses its locally stored private key to decrypt this JWE, obtaining the user's private key, which is then used to decrypt the vault-specific JWE from step 1.
+
+This creates a cryptographic chain: Device Private Key → User Private Key → Vault Key. The intermediary user key layer allows vault keys to be encrypted once per user rather than once per device. When users add new devices, only a new device-specific JWE of the user key needs to be created, eliminating the need to re-encrypt all vault keys.
+
+### Access States {#access-states}
+
+When retrieving the vault access token from `/api/vaults/{vaultId}/access-token`:
+
+* `200 OK`: Successful retrieval of encrypted vault key
+* `402 Payment Required`: License needs upgrade
+* `403 Forbidden`: User lacks permission to access the vault
+* `410 Gone`: Vault has been archived
+* `449 Retry With`: User account exists but hasn't been properly initialized (missing key pair)
+
+When retrieving the user's encrypted private key from `/api/devices/{deviceId}`:
+
+* `200 OK`: Device is registered and authorized
+* `404 Not Found`: Device needs to be set up
+
+We still keep the legacy API endpoint `/api/vaults/{vaultId}/keys/{deviceId}` for compatibility reasons for a while. However, it will only work for existing data. Any newly registered device can only be unlocked using the new workflow.

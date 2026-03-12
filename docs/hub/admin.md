@@ -80,6 +80,20 @@ The following events are logged:
 - **Reset User Account** – A user [reset their account](your-account.md#reset-account).
 - **User Keys Change** – A user changed their keys. This happens when, e.g., the user [finished the account setup](your-account.md#account-setup) or when the `Account Key Changed`.
 
+
+#### Emergency Access (Enterprise Only) {#event-type-emergency-access}
+
+- **Emergency Access Setup** – A vault owner set up or updated the Emergency Access configuration for a vault (e.g. by assigning council members in Vault Details).
+- **Emergency Access Settings Updated** – An admin changed the [global Emergency Access settings](#emergency-access).
+- **Emergency Access Recovery Started** – A council member [started](emergency-access.md#starting-a-recovery-process) an Emergency Access recovery process.
+- **Emergency Access Recovery Approved** – A council member [approved](emergency-access.md#approve-a-recovery-process) a running recovery process.
+- **Emergency Access Recovery Completed** – A council member [completed](emergency-access.md#complete-a-recovery-process) a recovery process.
+- **Emergency Access Recovery Aborted** – A council member [aborted](emergency-access.md#abort-a-recovery-process) a running recovery process.
+
+:::note
+When a council member starts a recovery process, both `Emergency Access Recovery Started` and `Emergency Access Recovery Approved` are logged.
+:::
+
 #### Legacy {#event-type-legacy}
 
 - **Claim Vault Ownership** – A user claimed vault ownership. This event is logged when a vault created with hub pre 1.3.0 is claimed by the vault creator using the `Vault Admin Password`.
@@ -130,4 +144,30 @@ With the **Fingerprint Verification Preciseness** property, the minimum length o
 :::note
 If a user resets their account, their [User Key Pair](/docs/security/hub.md#user-key-pair) is regenerated, invalidating all previously established trust relationships regarding this user.  
 Additionally, any existing trust chains that included the user will be broken, requiring re-verification to restore trust.
+:::
+
+
+## Emergency Access {#emergency-access}
+
+:::info Early Access
+Emergency Access is currently in **early access** and will be fully available in version 1.5.0.
+:::
+
+:::info Enterprise Feature
+Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
+:::
+
+This configuration defines default [Emergency Access](emergency-access.md) values for new or updated vaults.
+
+<Image src="/img/hub/admin-emergency-access.png" alt="Emergency Access" width="1440" height="658" />
+
+Activate `Enable Emergency Access` and configure:
+
+* `Required Keys`: Number of required key shares
+* `Keyholders`: Default council members (only activated users)
+* Optional: `Let vault owners choose different keyholders`
+* Optional: `At least` (minimum members if owners can choose a different council)
+
+:::warning
+A council without redundancy (`Required Keys == number of council members`) is possible, but not recommended.
 :::

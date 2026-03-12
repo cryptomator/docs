@@ -139,6 +139,10 @@ The wrapped keys and the parameters needed to derive the KEK are then stored as 
 }
 ```
 
+:::note
+When calculating the `versionMac`, the `version` value must be converted to a 32-bit unsigned integer and then encoded as a 4-byte big-endian representation before computing the HMAC-SHA256, regardless of the system's native byte order.
+:::
+
 When unlocking a vault the KEK is used to unwrap (i.e. decrypt) the stored masterkeys.
 
 <WhiteBox>
