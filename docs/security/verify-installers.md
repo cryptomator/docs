@@ -44,7 +44,7 @@ Our Windows installers are signed using a code signing certificate. You can veri
    - Version 1.18.0: `3300052c3561155e2baf361702000000052c35`
    - Versions 1.6.11 to 1.17.1: `00d77e4f8b938f56ae265cd08e9193490c`
    - Versions 1.4.12 to 1.6.10: `63c45bff1a148d60ed2994d3a2639034`
-   - Versions up to 1.4.11: not signed
+   - Versions up to 1.4.11: `1a360f3933964c71f14e8754d94615d4`
 
 ## macOS (app) {#macos}
 
