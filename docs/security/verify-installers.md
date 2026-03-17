@@ -34,16 +34,17 @@ Our Windows installers are signed using a code signing certificate. You can veri
 
 1. Right click on the file and click on Properties.
 2. Select the Digital Signatures tab: It should show one or more signatures by `Skymatic GmbH` under Embedded Signatures.
-   - For releases since 1.17.1, the `exe` release artifact will have two signatures, and the `msi` release artifact will have one signature.
+   - For releases since 1.18.0, the `exe` release artifact will have two signatures, and the `msi` release artifact will have one signature.
 3. Click on the first signature, and then click Details.
 4. Click on View Certificates.
-5. Click the Details tab. The serial number of our certificate should be:
-   - For release version 1.19.1: `33000852bd6c3a151ff92180ee0000000852bd`
-   - For release version 1.19.0: `3300083c47651e1daeb99b00eb000000083c47`
-   - For release version 1.18.1: `330007d28ad57305892a81cac600000007d28a`
-   - For release version 1.18.0: `3300052c3561155e2baf361702000000052c35`
-   - For releases since July 14, 2022 to July 8, 2025 (version 1.17.1): `d77e4f8b938f56ae265cd08e9193490c`
-   - For releases from July 3, 2019 to July 3, 2022: `63c45bff1a148d60ed2994d3a2639034`
+5. Click the Details tab. The serial number of our main certificate depends on the Cryptomator version:
+   - Version 1.19.1: `33000852bd6c3a151ff92180ee0000000852bd`
+   - Version 1.19.0: `3300083c47651e1daeb99b00eb000000083c47`
+   - Version 1.18.1: `330007d28ad57305892a81cac600000007d28a`
+   - Version 1.18.0: `3300052c3561155e2baf361702000000052c35`
+   - Versions 1.6.11 to 1.17.1: `00d77e4f8b938f56ae265cd08e9193490c`
+   - Versions 1.4.12 to 1.6.10: `63c45bff1a148d60ed2994d3a2639034`
+   - Versions up to 1.4.11: not signed
 
 ## macOS (app) {#macos}
 
