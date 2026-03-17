@@ -32,12 +32,12 @@ Our Windows installers are signed using a code signing certificate. You can veri
 
 <Image src="/img/security/verify-win-installer.png" srcset=" /img/security/verify-win-installer 1x, /img/security/verify-win-installer@2x.png 2x" alt="How to check the code signing certificate on Windows" width="1316" height="767" />
 
-1. Right click on the file and click on Properties.
+1. Right-click on the file and click on Properties.
 2. Select the Digital Signatures tab: It should show one or more signatures by `Skymatic GmbH` under Embedded Signatures.
    - For releases since 1.18.0, the `exe` release artifact will have two signatures, and the `msi` release artifact will have one signature.
 3. Click on the first signature, and then click Details.
 4. Click on View Certificates.
-5. Click the Details tab. The serial number of our main certificate depends on the Cryptomator version:
+5. Click the Details tab. Different Cryptomator versions are signed with different certificates. The following list shows for each version the certificate serial number:
    - Version 1.19.1: `33000852bd6c3a151ff92180ee0000000852bd`
    - Version 1.19.0: `3300083c47651e1daeb99b00eb000000083c47`
    - Version 1.18.1: `330007d28ad57305892a81cac600000007d28a`
