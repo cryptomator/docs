@@ -57,6 +57,8 @@ The following property keys are supported.
 | `cryptomator.p12Path=[FilePath]`                              | The path to the device key.                                                                                                                                     |
 | `cryptomator.mountPointsDir=[DirPath]`                        | The directory where Cryptomator mounts vaults if no per-vault location has been set.                                                                             |
 | `cryptomator.disableUpdateCheck=[Boolean]`                    | Whether to disable automatic update checks (`true`) or allow them (`false`). Defaults to false.                                                                      |
+| `cryptomator.hub.allowedHosts=[UrlList]` | List of hosts that Cryptomator is allowed to connect to during Hub unlock. List entries are comma separated and each host url consists of `scheme:host:port` (`port` is optional). For example `https://hub1.example.com,https://hub2.example.com:4432` |
+| `cryptomator.hub.enableTrustOnFirstUse=[Boolean]`             | Whether Cryptomator shall ask the user to trust unknown Hub hosts (`true`) or disallow connection attempts (`false`). A Hub host is considered unknown unless it is well-known (`*.cryptomator.cloud`), listed in `cryptomator.hub.allowedHosts`, or has already been allowed by the user. Defaults to true |
 
 
 ## Substitutions {#substitutions}
