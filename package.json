@@ -32,6 +32,10 @@
     "@docusaurus/types": "3.9.2",
     "typescript": "~5.9.3"
   },
+  "overrides": {
+    "copy-webpack-plugin": "14.0.0",
+    "css-minimizer-webpack-plugin": "8.0.0"
+  },
   "browserslist": {
     "production": [
       ">0.5%",
