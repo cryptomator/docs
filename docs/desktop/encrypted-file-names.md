@@ -43,6 +43,18 @@ The actual directory structure of the vault on your hard drive/cloud will look l
 While this increases security, it also makes it impossible to see the original file names and directory structure without decrypting them first.
 When you need to know the original name of a file (e.g. to restore an older version), you can use the `Decrypt File Name` feature to decrypt the file name.
 
+## Locate Encrypted File {#locate-encrypted-file}
+
+The Locate Encrypted File feature helps users find the encrypted version of a specific file. This feature is particularly useful when vault files are versioned and the user wants to restore an older version of a file. As Cryptomator encrypts filenames and obfuscates directory structures, users first locate the encrypted file and then restore an older version of the encrypted file with the third party app.
+
+1. Unlock the desired vault.
+2. Click on the `Locate Encrypted File` button.
+3. Select the file within the vault.
+
+As an alternative for clicking the button, you can directly drag & drop a file onto the button.
+
+A file manager window opens showing the encrypted folder and marking the encrypted file.
+
 ## Decrypting File Names {#decrypting-file-names}
 
 :::note
@@ -67,3 +79,12 @@ If you have not dropped any files, the table is empty.
 You can click inside the empty table to select files with a file picker dialog.
 
 Once the table has content, you can select single cells and copy their content with the OS specific keyboard copy shortcut.
+
+## Video Walkthrough
+
+The following video demonstrates both features in action: first, **Locate Encrypted File** to find the encrypted counterpart of a file, and then **Decrypt File Name** to resolve an encrypted file name back to its original name.
+
+<video controls autoplay loop muted style={{width: '100%', maxWidth: '1280px', height: 'auto'}}>
+  <source src="/vid/file-names.mov" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
