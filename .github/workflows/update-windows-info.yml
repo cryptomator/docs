@@ -31,6 +31,10 @@ jobs:
       - name: Download MSI
         run: |
           MSI_URL=$(jq -r '[.[] | select(.name | endswith(".msi"))][0].browser_download_url // "null"' <<< "$ASSETS_JSON")
+          if [[ "$MSI_URL" == "null" || -z "$MSI_URL" ]]; then
+            echo "No MSI asset found in repository_dispatch payload." >&2
+            exit 1
+          fi
           curl --silent --fail-with-body --proto "=https" -L -H "Accept: application/vnd.github+json" $MSI_URL --output cryptomator.msi
         env:
           ASSETS_JSON: ${{ toJson(github.event.client_payload.release.assets ) }}
@@ -49,18 +53,18 @@ jobs:
           }
           $Content = $UpdatedContent
 
-          $MarkedRow = (Get-Content -Path $DocPath | Where-Object { $_.TrimStart().StartsWith('|') -and $_.EndsWith($env:AUTOMATION_MARKER) } | Select-Object -First 1)
+          $MarkedRow = (Get-Content -Path $DocPath | Where-Object { $_.TrimStart().StartsWith('|') -and $_.Contains($env:AUTOMATION_MARKER) } | Select-Object -First 1)
           if ($null -eq $MarkedRow) {
             throw 'Failed to find the marked Windows certificate table row in verify-installers.md.'
           }
 
-          $PreviousRow = $MarkedRow.Substring(0, $MarkedRow.IndexOf($env:AUTOMATION_MARKER)).TrimEnd()
-          $NewRow = '|  ' + $env:DESKTOP_VERSION + '  | `' + $Thumbprint + '` | ' + $env:AUTOMATION_MARKER
+          $PreviousRow = $MarkedRow.Substring(0, $MarkedRow.IndexOf($env:AUTOMATION_MARKER)).TrimEnd() + " |"
+          $NewRow = "|  $env:DESKTOP_VERSION  |" + '`' + $Thumbprint + '`' + "$env:AUTOMATION_MARKER |"
           $Content = $Content.Replace($MarkedRow, $NewRow + "`r`n" + $PreviousRow)
 
           Set-Content -Path $DocPath -Value $Content
         env:
-          AUTOMATION_MARKER: '<!-- AUTOMATION MARKER FOR WORKFLOW update-desktop.yml -->'
+          AUTOMATION_MARKER: '<!-- AUTOMATION MARKER FOR WORKFLOW -->'
       - name: Commit and push
         id: commit-and-push
         run: |
