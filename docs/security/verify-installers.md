@@ -32,7 +32,7 @@ Our Windows installers are signed using a code signing certificate. You can veri
 
 1. Open Terminal or PowerShell (found in Windows Start menu).
 2. Run either of the following commands to check the signature of the corresponding file:
-   ```powershell
+   ```pwsh
    Get-AuthenticodeSignature -FilePath "~\Downloads\Cryptomator-*.msi"
    Get-AuthenticodeSignature -FilePath "~\Downloads\Cryptomator-*.exe"
    ```
@@ -44,7 +44,7 @@ Our Windows installers are signed using a code signing certificate. You can veri
 *for older releases, see [below](#windows-all-versions).
 
 If the installer is properly signed, you should see output similar to:
-```
+```text
 SignerCertificate                Status    StatusMessage           Path
 -----------------                ------    -------------           ----
 BB0E...                          Valid     Signature verified.     Cryptomator-1.19.1-x64.msi
@@ -62,6 +62,7 @@ You can also inspect the certificate manually:
 ### Certificate thumbprints for all Cryptomator versions {#windows-all-versions}
 
 Every Cryptomator installer is signed with a certificate. A certificate is identified by its thumbprint. The signing certificate changed over time and the following table shows for each version the certificate thumbprint:
+
 | Version(s)          | Certificate Thumbprint                     |
 |---------------------|--------------------------------------------|
 |  1.19.2             | `20F30D7C5B1AB3ACAFA4AB27874ACBC4B47B0697`<!-- AUTOMATION MARKER FOR WORKFLOW --> |
