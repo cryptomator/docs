@@ -42,6 +42,7 @@ The actual directory structure of the vault on your hard drive/cloud will look l
 
 While this increases security, it also makes it impossible to see the original file names and directory structure without decrypting them first.
 When you need to know the original name of a file (e.g. to restore an older version), you can use the `Decrypt File Name` feature to decrypt the file name.
+Conversely, if you need to find the encrypted counterpart of a file inside the vault, use the `Locate Encrypted File` feature.
 
 ## Locate Encrypted File {#locate-encrypted-file}
 
@@ -55,30 +56,32 @@ As an alternative for clicking the button, you can directly drag & drop a file o
 
 A file manager window opens showing the encrypted folder and marking the encrypted file.
 
-## Decrypting File Names {#decrypting-file-names}
+## Decrypt File Names {#decrypting-file-names}
 
 :::note
 Due to technical reasons, given only an encrypted file Cryptomator can only decrypt its name.
 It cannot compute its cleartext path.
 :::
 
-You can access this feature from the unlocked view of a vault in the Cryptomator main window.
-On the bottom of the unlocked view, drop files on the `Decrypt File Name` zone or click on it.
-A modal window with the encrypted-decrypted-mapping opens.
+The Decrypt File Name feature helps users resolve encrypted file names back to their original cleartext names. This feature is particularly useful when vault files are versioned and the user wants to identify a specific encrypted file. As Cryptomator encrypts filenames, users provide the encrypted file to map it back to its original name.
+
+1. Unlock the desired vault.
+2. Click on the `Decrypt File Name` zone at the bottom of the unlocked view.
+3. Select the encrypted file.
+
+As an alternative for clicking the zone, you can directly drag & drop files onto it.
 
 <Image src="/img/desktop/vault-detail-unlocked.png" alt="Vault detail view in the unlocked state" width="495" height="381" />
 
-The encrypted-decrypted-table has an action bar at the top with two buttons:
-* Clipboard button to copy the whole table as a CSV into the system clipboard
-* Trash button to clear the table
+A modal window opens showing a two-column table with the encrypted names on the right and their decrypted, original names on the left.
 
 <Image src="/img/desktop/decrypt-file-names.png" alt="Decrypt file names window" width="311" height="385" />
 
-Encrypted file names and their corresponding decrypted, original name are shown inside a two column table, with the encrypted names on the right.
-If you have not dropped any files, the table is empty.
-You can click inside the empty table to select files with a file picker dialog.
+The action bar at the top of the table provides two buttons:
+* Clipboard button to copy the whole table as CSV into the system clipboard
+* Trash button to clear the table
 
-Once the table has content, you can select single cells and copy their content with the OS specific keyboard copy shortcut.
+Select single cells and copy their content with the OS-specific keyboard shortcut.
 
 ## Video Walkthrough
 
