@@ -46,7 +46,7 @@ Conversely, if you need to find the encrypted counterpart of a file inside the v
 
 ## Locate Encrypted File {#locate-encrypted-file}
 
-The Locate Encrypted File feature helps users find the encrypted version of a specific file. This feature is particularly useful when vault files are versioned and the user wants to restore an older version of a file. As Cryptomator encrypts filenames and obfuscates directory structures, users first locate the encrypted file and then restore an older version of the encrypted file with the third-party app.
+The Locate Encrypted File feature helps you find the encrypted version of a specific file from inside the vault. This comes in handy when vault files are versioned and you want to restore an older version of a file. As Cryptomator encrypts file names and obfuscates directory structures, first locate the encrypted file and then restore an older version of the encrypted file with a third-party app.
 
 1. Unlock the desired vault.
 2. Click on the `Locate Encrypted File` button.
@@ -59,11 +59,11 @@ A file manager window opens showing the encrypted folder and marking the encrypt
 ## Decrypt File Names {#decrypting-file-names}
 
 :::note
-Due to technical reasons, given only an encrypted file Cryptomator can only decrypt its name.
-It cannot compute its cleartext path.
+Due to technical reasons, Cryptomator can only decrypt the name of an encrypted file if that file is provided by itself.
+It cannot determine the file's cleartext path.
 :::
 
-The Decrypt File Name feature helps users resolve encrypted file names back to their original cleartext names. This feature is particularly useful when vault files are versioned and the user wants to identify a specific encrypted file. As Cryptomator encrypts filenames, users provide the encrypted file to map it back to its original name.
+The Decrypt File Name feature helps you resolve encrypted file names back to their original cleartext names. To map encrypted files back to their cleartext names, just drag and drop the files onto the button in the unlocked vault section of the main app.
 
 1. Unlock the desired vault.
 2. Click on the `Decrypt File Name` zone at the bottom of the unlocked view.
@@ -73,7 +73,7 @@ As an alternative for clicking the zone, you can directly drag & drop files onto
 
 <Image src="/img/desktop/vault-detail-unlocked.png" alt="Vault detail view in the unlocked state" width="495" height="381" />
 
-A modal window opens showing a two-column table with the encrypted names on the right and their decrypted, original names on the left.
+A modal window opens showing a two-column table with the encrypted names on the left and their decrypted, cleartext names on the right.
 
 <Image src="/img/desktop/decrypt-file-names.png" alt="Decrypt file names window" width="311" height="385" />
 
