@@ -46,7 +46,7 @@ Conversely, if you need to find the encrypted counterpart of a file inside the v
 
 ## Locate Encrypted File {#locate-encrypted-file}
 
-The Locate Encrypted File feature helps users find the encrypted version of a specific file. This feature is particularly useful when vault files are versioned and the user wants to restore an older version of a file. As Cryptomator encrypts filenames and obfuscates directory structures, users first locate the encrypted file and then restore an older version of the encrypted file with the third party app.
+The Locate Encrypted File feature helps users find the encrypted version of a specific file. This feature is particularly useful when vault files are versioned and the user wants to restore an older version of a file. As Cryptomator encrypts filenames and obfuscates directory structures, users first locate the encrypted file and then restore an older version of the encrypted file with the third-party app.
 
 1. Unlock the desired vault.
 2. Click on the `Locate Encrypted File` button.
