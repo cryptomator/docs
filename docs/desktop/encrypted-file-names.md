@@ -7,11 +7,59 @@ sidebar_position: 7
 # Encrypted File Names
 
 :::info
-Neither file name nor directory structure encryption can be disabled.
+File name and directory structure encryption **cannot** be disabled.
 :::
 
-Cryptomator protects your files by not only encrypting their content, but also their names and the overall directory structure of the vault.
-For example, if you have a directory structure inside your vault like this:
+Cryptomator protects your files by not only encrypting their content, but also their names and the overall directory structure of the vault. As a result, encrypted files and folders inside the vault storage location do not reveal the original names or layout (for an example see [below](#technical-example)).
+
+This matters whenever you need to match a cleartext file in your unlocked vault with its encrypted counterpart in the vault storage location, for example when restoring an older version from a cloud provider or backup tool.
+
+The app offers two features to reveal the mapping between the cleartext and the encrypted files:
+* `Locate Encrypted File`:  You have the cleartext file in the unlocked vault and want to find its encrypted counterpart in the vault storage location.
+* `Decrypt File Name`: You have an encrypted vault file and want to know its original cleartext name.
+
+<Image src="/img/desktop/encrypted-file-names-vault-detail-unlocked.png" alt="Vault detail view in the unlocked state" width="495" height="381" />
+
+## Locate Encrypted File {#locate-encrypted-file}
+
+The Locate Encrypted File feature helps you find the encrypted counterpart of a file from inside the vault. This comes in handy when you want to restore an older version of a file. As Cryptomator encrypts file names and obfuscates directory structures, first locate the encrypted file and then restore an older version of the encrypted file with your third-party app.
+
+1. Unlock the desired vault.
+2. Click on the `Locate Encrypted File` button.
+3. Select the file within the vault.
+
+As an alternative for clicking the button, you can directly drag & drop a file onto the button.
+
+A file manager window opens showing the encrypted folder and marking the encrypted file inside the vault storage location.
+
+## Decrypt File Name {#decrypt-file-name}
+
+The Decrypt File Name feature helps you resolve encrypted file names back to their original cleartext names.
+
+1. Unlock the desired vault.
+2. Click on the `Decrypt File Name` zone at the bottom of the unlocked view.
+3. Select the encrypted file.
+
+As an alternative for clicking the zone, you can directly drag & drop files onto it.
+
+A modal window opens showing a two-column table with the encrypted names on the left and their decrypted, cleartext names on the right.
+
+<Image src="/img/desktop/decrypt-file-names.png" alt="Decrypt file names window" width="311" height="385" />
+
+The action bar at the top of the table provides two buttons:
+* Clipboard button to copy the whole table as CSV into the system clipboard
+* Trash button to clear the table
+
+You can select single cells and copy their content with the OS-specific keyboard shortcut.
+
+:::note
+For technical reasons, Cryptomator can only decrypt the *file name* of a given encrypted file.
+It cannot tell where that file is located in the unlocked vault.
+:::
+
+## Technical Example
+
+If you have a directory structure inside your vault like this:
 
 ```
 .
@@ -40,30 +88,13 @@ The actual directory structure of the vault on your hard drive/cloud will look l
 └─ vault.cryptomator
 ```
 
-While this increases security, it also makes it impossible to see the original file names and directory structure without decrypting them first.
-When you need to know the original name of a file (e.g. to restore an older version), you can use the `Decrypt File Name` feature to decrypt the file name.
+This is why you cannot identify files in the vault storage location by name alone without decrypting them first. For more information about the vault encryption scheme read [the specification](/docs/security/vault.md).
 
-## Decrypting File Names {#decrypting-file-names}
+## Video Walkthrough
 
-:::note
-Due to technical reasons, given only an encrypted file Cryptomator can only decrypt its name.
-It cannot compute its cleartext path.
-:::
+The following video demonstrates both features in action: first, **Locate Encrypted File** to find the encrypted counterpart of a file, and then **Decrypt File Name** to resolve an encrypted file name back to its original name.
 
-You can access this feature from the unlocked view of a vault in the Cryptomator main window.
-On the bottom of the unlocked view, drop files on the `Decrypt File Name` zone or click on it.
-A modal window with the encrypted-decrypted-mapping opens.
-
-<Image src="/img/desktop/vault-detail-unlocked.png" alt="Vault detail view in the unlocked state" width="495" height="381" />
-
-The encrypted-decrypted-table has an action bar at the top with two buttons:
-* Clipboard button to copy the whole table as a CSV into the system clipboard
-* Trash button to clear the table
-
-<Image src="/img/desktop/decrypt-file-names.png" alt="Decrypt file names window" width="311" height="385" />
-
-Encrypted file names and their corresponding decrypted, original name are shown inside a two column table, with the encrypted names on the right.
-If you have not dropped any files, the table is empty.
-You can click inside the empty table to select files with a file picker dialog.
-
-Once the table has content, you can select single cells and copy their content with the OS specific keyboard copy shortcut.
+<video controls autoplay loop muted style={{width: '100%', maxWidth: '1280px', height: 'auto'}}>
+  <source src="/vid/file-names.mov" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
