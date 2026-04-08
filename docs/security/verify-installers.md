@@ -28,24 +28,53 @@ If shown, you can ignore the following warning:
 
 ## Windows (exe, msi) {#windows}
 
-Our Windows installers are signed using a code signing certificate. You can verify the signature in five simple steps:
+Our Windows installers are signed using a code signing certificate. You can verify the signature in three simple steps:
 
-<Image src="/img/security/verify-win-installer.png" srcset=" /img/security/verify-win-installer 1x, /img/security/verify-win-installer@2x.png 2x" alt="How to check the code signing certificate on Windows" width="1316" height="767" />
+1. Open Terminal or PowerShell (found in Windows Start menu).
+2. Run either of the following commands to check the signature of the corresponding file:
+   ```pwsh
+   Get-AuthenticodeSignature -FilePath "~\Downloads\Cryptomator-*.msi"
+   Get-AuthenticodeSignature -FilePath "~\Downloads\Cryptomator-*.exe"
+   ```
+3. Verify that the output includes:
+   - Column `SignerCertificate` with value <!-- AUTOMATION MARKER FOR WORKFLOW -->`20F30D7C5B1AB3ACAFA4AB27874ACBC4B47B0697`(*)
+   - Column `Status` with value `Valid`
+   - no errors
 
-1. Right-click on the file and click on Properties.
+*for older releases, see [below](#windows-all-versions).
+
+If the installer is properly signed, you should see output similar to:
+```text
+SignerCertificate                Status    StatusMessage           Path
+-----------------                ------    -------------           ----
+BB0E...                          Valid     Signature verified.     Cryptomator-1.19.1-x64.msi
+```
+
+You can also inspect the certificate manually:
+1. Right-click on the cryptomator installer file and click on Properties.
 2. Select the Digital Signatures tab: It should show one or more signatures by `Skymatic GmbH` under Embedded Signatures.
    - For releases since 1.18.0, the `exe` release artifact will have two signatures, and the `msi` release artifact will have one signature.
 3. Click on the first signature, and then click Details.
-4. Click on View Certificates.
-5. Click the Details tab. Different Cryptomator versions are signed with different certificates. The following list shows for each version the certificate serial number:
-   - Version 1.19.2: `33000890b1b9dff7ee6e525b2d0000000890b1`
-   - Version 1.19.1: `33000852bd6c3a151ff92180ee0000000852bd`
-   - Version 1.19.0: `3300083c47651e1daeb99b00eb000000083c47`
-   - Version 1.18.1: `330007d28ad57305892a81cac600000007d28a`
-   - Version 1.18.0: `3300052c3561155e2baf361702000000052c35`
-   - Versions 1.6.11 to 1.17.1: `00d77e4f8b938f56ae265cd08e9193490c`
-   - Versions 1.4.12 to 1.6.10: `63c45bff1a148d60ed2994d3a2639034`
-   - Versions up to 1.4.11: `1a360f3933964c71f14e8754d94615d4`
+4. Click on View Certificates and select the field `Thumbprint`.
+
+<Image src="/img/security/verify-win-installer.png" srcset=" /img/security/verify-win-installer 1x, /img/security/verify-win-installer@2x.png 2x" alt="How to check the code signing certificate on Windows" width="1316" height="767" />
+
+### Certificate thumbprints for all Cryptomator versions {#windows-all-versions}
+
+Every Cryptomator installer is signed with a certificate. A certificate is identified by its thumbprint. The signing certificate changed over time and the following table shows for each version the certificate thumbprint:
+
+| Version(s)          | Certificate Thumbprint                     |
+|---------------------|--------------------------------------------|
+|  1.19.2             | `20F30D7C5B1AB3ACAFA4AB27874ACBC4B47B0697`<!-- AUTOMATION MARKER FOR WORKFLOW --> |
+|  1.19.1             | `BB0EEBF8E92E4584DF4B6AE4F9577B60BEB5DF4C` |
+|  1.19.0             | `14524B1F8A3A1CA8B24B769C7C6DC92851120B22` |
+|  1.18.1             | `53FA929F6D50D5E2AE59A7C9A9750D373AFF7D40` |
+|  1.18.0             | `4DC9A70B94F731562A9C37B4391C4FD5BEC72C94` |
+|  1.6.11 to 1.17.1   | `5FC94CE149E5B511E621F53A060AC67CBD446B3A` |
+|  1.4.12 to 1.6.10   | `FF52240075AD7D14AF25629FDF69635357C7D14B` |
+|  up to 1.4.11       | `6FDEC9DFCFE59E6BAEE64B7ED97F00E120E70D97` |
+
+
 
 ## macOS (app) {#macos}
 
