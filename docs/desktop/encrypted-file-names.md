@@ -18,7 +18,7 @@ The app offers two features to reveal the mapping between the cleartext and the 
 * `Locate Encrypted File`:  You have the cleartext file in the unlocked vault and want to find its encrypted counterpart in the vault storage location.
 * `Decrypt File Name`: You have an encrypted vault file and want to know its original cleartext name.
 
-<Image src="/img/desktop/vault-detail-unlocked.png" alt="Vault detail view in the unlocked state" width="495" height="381" />
+<Image src="/img/desktop/encrypted-file-names-vault-detail-unlocked.png" alt="Vault detail view in the unlocked state" width="495" height="381" />
 
 ## Locate Encrypted File {#locate-encrypted-file}
 
