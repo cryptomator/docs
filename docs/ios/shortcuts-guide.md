@@ -12,7 +12,7 @@ For a shortcut to run smoothly, the vault must be unlocked during the execution 
 
 In addition, you should know that some Cryptomator shortcut actions build on each other. For example, the "Save File" action requires a folder inside a vault as an input, which can be obtained using the "Get Folder" action.
 
-## Automatic Photo Upload {#automatic-photo-upload}
+## Automatic Photo Upload {/* #automatic-photo-upload */}
 
 With Cryptomator's integration in Shortcuts, you can build an action to automatically upload your photos to a Cryptomator vault. You can either follow these step-by-step instructions or use the following shortcut to get started:
 
@@ -58,7 +58,7 @@ Congratulations, you have just created your first shortcut with Cryptomator acti
 
 2. Executing a shortcut with a lot of photos (>1,000) can take much longer than executing it with 2x500 photos. To our knowledge, this seems to be a limitation of the Shortcuts app. Therefore, try to limit the number of photos using the available filters. One possible filter is to consider only the photos of the last 2-7 days for a shortcut that is executed daily.
 
-## Photo to PDF (Advanced Example) {#photo-to-pdf}
+## Photo to PDF (Advanced Example) {/* #photo-to-pdf */}
 
 Another example, inspired by community member JB, is to convert the latest photo to a PDF and save it in a vault under a chosen path. This example is a bit more advanced, but it shows how you can combine different actions to create a more complex automation. You can either follow these step-by-step instructions or use the following shortcut to get started:
 

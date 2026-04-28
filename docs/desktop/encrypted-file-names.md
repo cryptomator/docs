@@ -20,7 +20,7 @@ The app offers two features to reveal the mapping between the cleartext and the 
 
 <Image src="/img/desktop/encrypted-file-names-vault-detail-unlocked.png" alt="Vault detail view in the unlocked state" width="495" height="381" />
 
-## Locate Encrypted File {#locate-encrypted-file}
+## Locate Encrypted File {/* #locate-encrypted-file */}
 
 The Locate Encrypted File feature helps you find the encrypted counterpart of a file from inside the vault. This comes in handy when you want to restore an older version of a file. As Cryptomator encrypts file names and obfuscates directory structures, first locate the encrypted file and then restore an older version of the encrypted file with your third-party app.
 
@@ -32,7 +32,7 @@ As an alternative for clicking the button, you can directly drag & drop a file o
 
 A file manager window opens showing the encrypted folder and marking the encrypted file inside the vault storage location.
 
-## Decrypt File Name {#decrypt-file-name}
+## Decrypt File Name {/* #decrypt-file-name */}
 
 The Decrypt File Name feature helps you resolve encrypted file names back to their original cleartext names.
 

@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Cryptomator was designed to solve privacy issues when saving files to cloud storages.
 
-## What Cryptomator Is {#what-cryptomator-is}
+## What Cryptomator Is {/* #what-cryptomator-is */}
 
 Cryptomator is a client-side encryption tool for cloud storage services.
 
@@ -16,7 +16,7 @@ The risk that the cloud provider or third parties access the data stored in the 
 Only people who know the vault password are able to read the files in the vault or change the file contents undetected.
 This is true for file contents as well as for filenames.
 
-## What Cryptomator Encrypts {#what-cryptomator-encrypts}
+## What Cryptomator Encrypts {/* #what-cryptomator-encrypts */}
 
 Cryptomator encrypts:
 
@@ -26,7 +26,7 @@ Cryptomator encrypts:
 
 For technical details on how these elements are encrypted, see [Vault Cryptography](vault.md).
 
-## What Cryptomator Is Not {#what-cryptomator-is-not}
+## What Cryptomator Is Not {/* #what-cryptomator-is-not */}
 
 In addition, you have to keep in mind what Cryptomator is not.
 
@@ -42,7 +42,7 @@ Cryptomator is not a [steganography tool](https://en.wikipedia.org/wiki/Steganog
 
 To protect against such risks, other methods, like complete disk encryption, immediate installation of system and software updates, and the use of applicable antivirus software, is required.
 
-## What Cryptomator Does Not Encrypt {#what-cryptomator-does-not-encrypt}
+## What Cryptomator Does Not Encrypt {/* #what-cryptomator-does-not-encrypt */}
 
 To allow a working synchronization with the cloud, there are some metadata that Cryptomator does not encrypt.
 These are:
@@ -51,9 +51,9 @@ These are:
 * number of files and folders in a vault and in the folders, and
 * size of the stored files.
 
-## Accepted Risks {#accepted-risks}
+## Accepted Risks {/* #accepted-risks */}
 
-### Filename Swapping Within Same Directory {#filename-swapping-within-same-directory}
+### Filename Swapping Within Same Directory {/* #filename-swapping-within-same-directory */}
 
 An attacker with write access to your cloud storage could swap encrypted filenames within the same directory. While the contents of the files remain secure and any tampering with file contents would be detected, the swapped filenames would not be detected.
 

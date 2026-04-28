@@ -15,21 +15,21 @@ Android and iOS work analogously.
 
 As described in [open an existing vault](/docs/desktop/adding-vaults.md#open-an-existing-vault), you should have already added the vault to the vault list, e.g., by selecting the `vault.cryptomator` file.
 
-## Unlocking a Vault {#unlocking-a-vault}
+## Unlocking a Vault {/* #unlocking-a-vault */}
 
-### 1. Click Unlock {#click-unlock}
+### 1. Click Unlock {/* #click-unlock */}
 
 To unlock the vault, click on the large `Unlock` button in the center of Cryptomator's main window.
 
 <Image src="/img/hub/unlock-click-unlock.png" alt="Click 'Unlock' to unlock a Hub vault with the Desktop app" width="715" height="541" />
 
-### 2. Authenticate {#authenticate}
+### 2. Authenticate {/* #authenticate */}
 
 Cryptomator should open your default browser for authentication. If you're not already logged in, you need to provide your user credentials, e.g., by entering your username and password or by inserting your key when WebAuthn is enabled.
 
 <Image src="/img/hub/unlock-authenticate.png" alt="After your browser asks for credentials, enter your username and password" width="1280" height="567" />
 
-### 3. Register Device {#register-device}
+### 3. Register Device {/* #register-device */}
 
 If you just did setup your account, a vault owner needs to grant you access for the requested vault as described [here](vault-management.md#update-permissions). Retry unlocking the vault after the vault owner granted you access.
 
@@ -49,7 +49,7 @@ Enter a name for the device to identify it later on and the [Account Key](your-a
 
 After that, you will see a confirmation dialog, unlock the vault again.
 
-### 4. Vault Unlocked {#vault-unlocked}
+### 4. Vault Unlocked {/* #vault-unlocked */}
 
 You are all set up and an unlock should be successful from now on. You can then reveal the vault's contents as usual.
 

@@ -8,7 +8,7 @@ sidebar_position: 4
 
 This section shows you how to work with a vault like view its content, move files or access it with other applications.
 
-## Unlock Vault {#unlock-vault}
+## Unlock Vault {/* #unlock-vault */}
 
 If you want to access the data inside a vault, you have to unlock it by selecting it.
 
@@ -32,7 +32,7 @@ After providing the credentials, the vault gets unlocked and opened.
 
 You're now able to edit the content of the vault.
 
-## Lock Vault {#lock-vault}
+## Lock Vault {/* #lock-vault */}
 
 To lock an unlocked vault, there are several ways to do this:
 
@@ -57,7 +57,7 @@ All of the possibilities will result in the locked vault.
 The auto-lock timeout specified in the settings will lock the vault if Cryptomator is in background. Furthermore if not changed in settings, the vault gets locked if the screen turns off.
 :::
 
-## View and Edit File {#view-and-edit-file}
+## View and Edit File {/* #view-and-edit-file */}
 
 Start the view and edit process by clicking on a file.
 Finish the editing or viewing using the back button of the device until you're back in Cryptomator.
@@ -67,7 +67,7 @@ If the content has changed, the upload process starts.
   <Image src="/img/android/edit-file.gif" alt="How to edit a file with Android" width="540" height="1110" />
 </MobileGrid>
 
-## Rename File or Folder {#rename-file-or-folder}
+## Rename File or Folder {/* #rename-file-or-folder */}
 
 To change the name of a specific file or folder in Cryptomator, you select the `V` ① next to the file or folder  and choose *Rename* ②.
 
@@ -83,7 +83,7 @@ Choose a new name and confirm using the `RENAME` button.
   <Image src="/img/android/rename-vault-4-finish.png" alt="How to rename a vault with Android" width="1080" height="2220" />
 </MobileGrid>
 
-## Move File or Folder {#move-file-or-folder}
+## Move File or Folder {/* #move-file-or-folder */}
 
 To move a file or a folder into another folder, you select the `V` next to the file or folder ① and choose *Move* ②.
 
@@ -112,7 +112,7 @@ While moving, you can use the ③ button to create a new folder in the current f
   <Image src="/img/android/move-file-5-move-folder-hint.png" alt="How to move a file or folder with Android" width="810" height="1665" />
 </MobileGrid>
 
-## Delete File or Folder {#delete-file-or-folder}
+## Delete File or Folder {/* #delete-file-or-folder */}
 
 To delete a specific file or folder in Cryptomator, you select the `V` next to the file or folder ① and choose *Delete* ②.
 
@@ -133,7 +133,7 @@ Confirm the deletion process using the `DELETE` button.
 By deleting a folder, all subfolders and files inside are deleted recursively.
 :::
 
-## Export File or Folder {#export-file-or-folder}
+## Export File or Folder {/* #export-file-or-folder */}
 
 To export a specific file or folder in Cryptomator, you select the `V` next to the file or folder ① and choose *Export* ②.
 
@@ -150,7 +150,7 @@ Choose the target location where the file or folder should be exported to.
   <Image src="/img/android/export-file-4-finish.png" alt="How to export a file or folder with Android" width="1080" height="2220" />
 </MobileGrid>
 
-## Share File with Other App {#share-file-with-other-app}
+## Share File with Other App {/* #share-file-with-other-app */}
 
 To share a specific file or folder in Cryptomator with another app, you select the `V` next to the file or folder ① and choose Share ②.
 
@@ -169,7 +169,7 @@ Choose the target app in which you will use the file or folder.
 By sharing a file or folder from Cryptomator with Cryptomator, you can copy content from one vault to another one.
 :::
 
-## Share File with Cryptomator {#share-file-with-cryptomator}
+## Share File with Cryptomator {/* #share-file-with-cryptomator */}
 
 You can share files from another app with Cryptomator.
 We use as example the Files app from Android.
@@ -195,7 +195,7 @@ Then the encryption and upload starts.
   <Image src="/img/android/share-with-cm-4-finish.png" alt="How to share a file or folder with Android" width="1080" height="2220" />
 </MobileGrid>
 
-## Search in Folder {#search-in-folder}
+## Search in Folder {/* #search-in-folder */}
 
 Search for files or folders within the same folder using the magnifier ①.
 
@@ -222,13 +222,13 @@ In the settings there are two options that influence the behavior of the search:
 
 For more information, see the Settings chapter.
 
-## Sort Folder by… {#sort-folder-by}
+## Sort Folder by… {/* #sort-folder-by */}
 
 <MobileGrid>
   <Image src="/img/android/sort.gif" alt="How to sort the content of a folder with Android" width="540" height="1110" />
 </MobileGrid>
 
-## Fast Scroll {#fast-scroll}
+## Fast Scroll {/* #fast-scroll */}
 
 <MobileGrid>
   <Image src="/img/android/fast-scroll.gif" alt="How to scroll fast through the content of a folder with Android" width="540" height="1110" />

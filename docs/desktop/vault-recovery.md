@@ -27,7 +27,7 @@ Vaults created with older formats (e.g., Vault Format 7 or earlier) are not comp
 For details, see the [Vault Format History](/docs/misc/vault-format-history.md).
 :::
 
-## Recover Masterkey file {#recover-masterkey-file}
+## Recover Masterkey file {/* #recover-masterkey-file */}
 
 If the file `masterkey.cryptomator` is missing from your vault folder, Cryptomator will still recognize the folder as a normal vault.
 
@@ -40,7 +40,7 @@ In this dialog, you can:
 For the latter case, you need the vault recovery key to restore the masterkey file.
 You’ll be guided through the recovery process and on success, you can unlock the vault as usual.
 
-## Recover Vault config file {#recover-vault-config}
+## Recover Vault config file {/* #recover-vault-config */}
 
 If the file `vault.cryptomator` is missing, Cryptomator can recreate it using either your vault password or your recovery key.
 
@@ -51,7 +51,7 @@ Here you can click `Restore vault config` to start the recovery process.
 You either need the Recovery Key or the vault password to restore the vault config file.
 You’ll be guided through the process and on success, you can open the vault as usual.
 
-## Recover Masterkey and Vault config files {#recover-full}
+## Recover Masterkey and Vault config files {/* #recover-full */}
 :::note
 If the vault is created with Cryptomator Hub, you can’t restore the missing config files yourself.
 Please contact the vault owner, who can recreate the configuration file for you.
@@ -66,7 +66,7 @@ Here you can click “Restore vault config” to start the recovery process.
 You need the Recovery Key to restore the vault config file.
 You’ll be guided through the process and on success, you can open the vault as usual.
 
-## Add a vault with missing config files and restore them {#add-recover-vault}
+## Add a vault with missing config files and restore them {/* #add-recover-vault */}
 
 If a vault has no configuration files and has not yet been added to Cryptomator, you recover it during the import process.
 

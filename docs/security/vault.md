@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # Vault Cryptography
 
-## File Header Encryption {#file-header-encryption}
+## File Header Encryption {/* #file-header-encryption */}
 
 The file header stores certain metadata, which is needed for file content encryption.
 It consists of 68 bytes.
@@ -29,7 +29,7 @@ ciphertextPayload, tag := aesGcm(cleartextPayload, encryptionMasterKey, headerNo
   <WhiteBoxCaption>*Random per file change</WhiteBoxCaption>
 </WhiteBox>
 
-## File Content Encryption {#file-content-encryption}
+## File Content Encryption {/* #file-content-encryption */}
 
 This is where your actual file contents get encrypted.
 
@@ -60,7 +60,7 @@ ciphertextFileContent := join(ciphertextChunks[])
   <WhiteBoxCaption>*Random per chunk change</WhiteBoxCaption>
 </WhiteBox>
 
-## Directory IDs {#directory-ids}
+## Directory IDs {/* #directory-ids */}
 
 Each directory has a unique ID that is required during filename encryption.
 For historical reasons, the directory ID is a string, even though any byte sequence would do the job.
@@ -88,7 +88,7 @@ dirPath := vaultRoot + '/d/' + substr(dirIdHash, 0, 2) + '/' + substr(dirIdHash,
 Regardless of the hierarchy of cleartext paths, ciphertext directories are always stored in a flattened structure.
 All directories will therefore effectively be siblings (or cousins, to be precise).
 
-## Filename Encryption {#filename-encryption}
+## Filename Encryption {/* #filename-encryption */}
 
 The cleartext name of a file gets encoded using UTF-8 in [Normalization Form C](https://unicode.org/reports/tr15/#Norm*Forms) to get a unique binary representation.
 
@@ -144,7 +144,7 @@ Becomes a ciphertext directory structure like this:
 └─ vault.cryptomator
 ```
 
-## Name Shortening {#name-shortening}
+## Name Shortening {/* #name-shortening */}
 
 :::note
 This layer doesn't provide any additional security.
@@ -201,7 +201,7 @@ A vault containing several nodes with very long names might result in a cipherte
 └─ vault.cryptomator
 ```
 
-## Backup Directory IDs {#backup-directory-ids}
+## Backup Directory IDs {/* #backup-directory-ids */}
 
 :::note
 This layer is optional and not required for a complete implementation of the Cryptomator Encryption Scheme.

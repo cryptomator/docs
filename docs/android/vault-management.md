@@ -13,7 +13,7 @@ Only Cryptomator can decrypt the vault's contents when you unlock it using your 
 Cryptomator for Android supports various storage locations including local device storage, Dropbox, Google Drive, OneDrive, and any cloud service that offers WebDAV access.
 This allows you to securely access your encrypted files from anywhere while maintaining full control over your data.
 
-## Create a New Vault {#create-a-new-vault}
+## Create a New Vault {/* #create-a-new-vault */}
 
 To create a new vault, click on the plus sign ① and choose *Create new vault* ② in the next screen.
 
@@ -75,7 +75,7 @@ You will find it now on the start page of your Cryptomator app, where you can op
   <Image src="/img/android/create-new-vault-9-finish.png" alt="How to create a new vault with Android" width="1080" height="2220" />
 </MobileGrid>
 
-## Add Existing Vaults {#add-existing-vaults}
+## Add Existing Vaults {/* #add-existing-vaults */}
 
 To add an existing vault, click on the plus sign ① and choose *Add existing vault* ② in the next screen.
 
@@ -120,7 +120,7 @@ You will find it now on the start page of your Cryptomator app, where you can op
   <Image src="/img/android/add-existing-vault-8-finish.png" alt="How to add a vault with Android" width="1080" height="2220" />
 </MobileGrid>
 
-## Remove Vaults {#remove-vaults}
+## Remove Vaults {/* #remove-vaults */}
 
 If you want a specific vault to stop being displayed in Cryptomator, you select the `V` next to the vault ① and choose *Remove* ②.
 
@@ -141,7 +141,7 @@ By removing a vault, it is only removed from the list but not deleted in the clo
 You can re-add the vault afterwards.
 :::
 
-## Change Vault Password {#change-vault-password}
+## Change Vault Password {/* #change-vault-password */}
 
 If you want change the password of a specific vault in Cryptomator, you select the `V` next to the vault ① and choose *Change password* ②.
 
@@ -177,7 +177,7 @@ The actual files will not get re-encrypted, meaning you can not upgrade a weak p
 
 If you like to encrypt your vault files with a new, stronger password, you need to create a new vault and copy the data from the old to the new one. Make sure to wipe all backups of the old vault afterwards.
 
-## Rename Vault {#rename-vault}
+## Rename Vault {/* #rename-vault */}
 
 If you want to change the name of a specific vault in Cryptomator, you select the `V` next to the vault ① and choose *Rename* ②.
 
@@ -193,7 +193,7 @@ Choose a new name and confirm using the `RENAME` button.
   <Image src="/img/android/rename-vault-4-finish.png" alt="How to rename a vault with Android" width="1080" height="2220" />
 </MobileGrid>
 
-## Change Vault Position {#change-vault-position}
+## Change Vault Position {/* #change-vault-position */}
 
 If you want to change the position of a specific vault in the vault list in Cryptomator, long-press on the vault and drag it to the desired position in the pressed state:
 

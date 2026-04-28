@@ -22,27 +22,27 @@ You can't connect to (for example) two different *Dropbox* accounts.
 If the provider requested permission to access your online files you can remove Cryptomator permissions from your online storage account at any time.
 Please keep in mind that Cryptomator then cannot connect to your vault anymore.
 
-## Login Dropbox {#login-dropbox}
+## Login Dropbox {/* #login-dropbox */}
 
 <MobileGrid>
   <Image src="/img/android/add-dropbox-login-provider-0.png" alt="How to handle cloud services with Android" width="1080" height="1920" />
   <Image src="/img/android/add-dropbox-login-provider-1.png" alt="How to handle cloud services with Android" width="1080" height="1920" />
 </MobileGrid>
 
-## Login Google Drive {#login-google-drive}
+## Login Google Drive {/* #login-google-drive */}
 
 <MobileGrid>
   <Image src="/img/android/add-googledrive-login-provider.png" alt="How to handle cloud services with Android" width="1080" height="2220" />
 </MobileGrid>
 
-## Login OneDrive {#login-onedrive}
+## Login OneDrive {/* #login-onedrive */}
 
 <MobileGrid>
   <Image src="/img/android/add-onedrive-login-provider-0.png" alt="How to handle cloud services with Android" width="1080" height="2220" />
   <Image src="/img/android/add-onedrive-login-provider-1.png" alt="How to handle cloud services with Android" width="1080" height="2220" />
 </MobileGrid>
 
-## Login WebDAV {#login-webdav}
+## Login WebDAV {/* #login-webdav */}
 
 Please see [Cloud Services With WebDAV Support](/docs/misc/supported-cloud-services.md#cloud-services-with-webdav-support) for a non-exhaustive list of Cloud Services and information about accessing them with WebDAV.
 
@@ -56,7 +56,7 @@ Please see [Cloud Services With WebDAV Support](/docs/misc/supported-cloud-servi
 While creating the WebDAV connection, please make sure to add the root of the accessible storage and don't navigate directly into the vault.
 :::
 
-## Login S3 {#login-s3}
+## Login S3 {/* #login-s3 */}
 
 Generate a key that has permissions "Allow List All Bucket Names". (AWS root users have this by default and [this permission may not be necessary in the future](https://github.com/cryptomator/android/issues/339).)
 
@@ -66,7 +66,7 @@ Generate a key that has permissions "Allow List All Bucket Names". (AWS root use
   <Image src="/img/android/add-s3-login-provider.png" alt="Android S3 connection form" width="1080" height="2520" />
 </MobileGrid>
 
-## Login Local Storage {#login-local-storage}
+## Login Local Storage {/* #login-local-storage */}
 
 The following pictures describes how to setup a location to access vaults stored on the internal storage of the device (the same applies for vaults located e.g. on a SD card):
 

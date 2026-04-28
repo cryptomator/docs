@@ -22,7 +22,7 @@ You can access it by selecting a vault, lock it if necessary, and click on `Vaul
 
 <Image src="/img/desktop/vault-options-password.png" alt="Vault options allowing you to enter a recovery key" width="512" height="448" />
 
-## Change Password {#change-password}
+## Change Password {/* #change-password */}
 
 To change the password of an existing vault, you need to know its current one or have a recovery key (see reset password section).
 
@@ -54,7 +54,7 @@ The password is used to derive a [KEK](https://en.wikipedia.org/wiki/Glossary_of
 If you like to encrypt your vault files with a new, stronger password, you need to create a new vault and drag the data from the old to the new one. Make sure to wipe all backups of the old vault afterwards.
 :::
 
-## Storing Passwords {#storing-passwords}
+## Storing Passwords {/* #storing-passwords */}
 
 :::info
 Storing passwords in a keychain can be convenient, but it also poses a security risk if your device is compromised.
@@ -145,7 +145,7 @@ Available keychains are:
 - [Bitwarden plug-in](https://github.com/purejava/cryptomator-bitwarden/wiki) stores the vault passwords in Bitwarden's Secrets Manager.
 
 
-## Show Recovery Key {#show-recovery-key}
+## Show Recovery Key {/* #show-recovery-key */}
 
 You can derive a recovery key during vault creation or even later as long as you know your vault's password.
 To increase security, Cryptomator does not store the recovery key on your hard drive and always derives it on the fly.
@@ -167,7 +167,7 @@ A new window will open displaying a sequence of words (i.e., the recovery key).
 
 You can copy it to your clipboard and store it in a secure password manager, or print it on paper.
 
-## Reset Password {#reset-password}
+## Reset Password {/* #reset-password */}
 
 We cannot reset the password of a vault for you in any way. Only you can reset a vault's password, assuming you have its recovery key. Keep it ready before you proceed.
 

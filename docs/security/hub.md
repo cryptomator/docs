@@ -8,7 +8,7 @@ sidebar_position: 3
 
 Cryptomator Hub facilitates asymmetric encryption to allow sharing the key material used in Cryptomator vaults between multiple parties. 
 
-## Zero-Knowledge Data Flow {#zero-knowledge-data-flow}
+## Zero-Knowledge Data Flow {/* #zero-knowledge-data-flow */}
 
 The following diagram illustrates how Cryptomator Hub maintains zero-knowledge encryption throughout the entire data flow between users sharing a vault. This architecture ensures that neither Cryptomator Hub nor your cloud storage provider ever has access to your unencrypted data.
 
@@ -22,11 +22,11 @@ Cryptomator Hub acts solely as a key broker, managing encrypted [access tokens](
 
 Keycloak handles authentication through your existing identity provider, verifying user identities before granting access to encrypted vault keys. This separation of authentication from key management adds an additional security layer while enabling seamless integration with your organization's existing infrastructure.
 
-## Key Types {#key-types}
+## Key Types {/* #key-types */}
 
 Cryptomator Hub facilitates different keys types. Here is an overview of these types and how they are interconnected:
 
-### User Key Pair {#user-key-pair}
+### User Key Pair {/* #user-key-pair */}
 
 During first login, every user will generate a new EC key pair. The private key is then encrypted using both the [Account Key](#account-key) as well as the [Device Key](#device-key-pair) of every single device owned by this user.
 
@@ -34,7 +34,7 @@ The purpose of the user key is to access secrets that have been shared with this
 
 If users wish to rotate their keys, e.g. when a device may be compromised, they can simply re-roll the key pair, re-encrypt secrets that they whish to keep access to and delete the old key pair.
 
-### Device Key Pair {#device-key-pair}
+### Device Key Pair {/* #device-key-pair */}
 
 Every device requires a key pair, which is generated on first use. The private key is securely stored on-device and not intended to ever leave it. For example,
 on web browsers the private key is [non-extractable](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/generateKey#extractable) and stored in the browser's IndexedDB.
@@ -49,7 +49,7 @@ The sole purpose of the device key is to decrypt the [User Key](#user-key-pair),
 
 Users can invalidate devices by simply deleting the device-specific JWE and rotating their user key.
 
-### Account Key {#account-key}
+### Account Key {/* #account-key */}
 
 When users attempt to access their account from a new device, there is no device-specific JWE yet. Instead they can then use the Account Key to decrypt the [User Key](#user-key-pair). The Account Key acts as a password to derive a key for a [PBES2-encrypted JWE](https://datatracker.ietf.org/doc/html/rfc7518.html#section-4.8).
 
@@ -64,7 +64,7 @@ The Account Key itself is stored as an [ECDH-ES-encrypted JWE](https://datatrack
 view it from any authorized device. Regardless it should be securely stored independently.
 :::
 
-## Unlock Procedure {#unlock-procedure}
+## Unlock Procedure {/* #unlock-procedure */}
 
 Vault keys are shared with users via their [User Key Pairs](#user-key-pair). Each user self-manages their devices. The [Device Key Pair](#device-key-pair) is required to decrypt the user's private key, which in turn decrypts the vault access token.
 
@@ -72,7 +72,7 @@ Vault keys are shared with users via their [User Key Pairs](#user-key-pair). Eac
   <Image src="/img/hub/unlock-procedure.svg" alt="Hub Unlock Procedure" />
 </WhiteBox>
 
-### Unlock Flow {#unlock-flow}
+### Unlock Flow {/* #unlock-flow */}
 
 The unlock procedure consists of two distinct steps that establish a key hierarchy between devices, users, and vaults:
 
@@ -81,7 +81,7 @@ The unlock procedure consists of two distinct steps that establish a key hierarc
 
 This creates a cryptographic chain: Device Private Key → User Private Key → Vault Key. The intermediary user key layer allows vault keys to be encrypted once per user rather than once per device. When users add new devices, only a new device-specific JWE of the user key needs to be created, eliminating the need to re-encrypt all vault keys.
 
-### Access States {#access-states}
+### Access States {/* #access-states */}
 
 When retrieving the vault access token from `/api/vaults/{vaultId}/access-token`:
 

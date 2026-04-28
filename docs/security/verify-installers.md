@@ -8,7 +8,7 @@ sidebar_position: 6
 
 If you are not sure whether an alleged Cryptomator installer is legitimate, you can verify its authenticity and integrity.
 
-## GPG Signature {#gpg-signature}
+## GPG Signature {/* #gpg-signature */}
 
 All Cryptomator release artifacts include a `.asc` signature file that you can use to verify authenticity and integrity using GPG. This method works on Windows, Linux, and macOS (with GPG installed). Download both the installer and the corresponding `.asc` signature file, then verify in the following steps:
 
@@ -26,7 +26,7 @@ If shown, you can ignore the following warning:
 
 `gpg: WARNING: This key is not certified with a trusted signature!`
 
-## Windows (exe, msi) {#windows}
+## Windows (exe, msi) {/* #windows */}
 
 Our Windows installers are signed using a code signing certificate. You can verify the signature in three simple steps:
 
@@ -59,7 +59,7 @@ You can also inspect the certificate manually:
 
 <Image src="/img/security/verify-win-installer.png" srcset=" /img/security/verify-win-installer 1x, /img/security/verify-win-installer@2x.png 2x" alt="How to check the code signing certificate on Windows" width="1316" height="767" />
 
-### Certificate thumbprints for all Cryptomator versions {#windows-all-versions}
+### Certificate thumbprints for all Cryptomator versions {/* #windows-all-versions */}
 
 Every Cryptomator installer is signed with a certificate. A certificate is identified by its thumbprint. The signing certificate changed over time and the following table shows for each version the certificate thumbprint:
 
@@ -76,7 +76,7 @@ Every Cryptomator installer is signed with a certificate. A certificate is ident
 
 
 
-## macOS (app) {#macos}
+## macOS (app) {/* #macos */}
 
 On macOS, you can verify the code signature of the Cryptomator app using the built-in `codesign` utility. This verification confirms the app's authenticity and integrity:
 

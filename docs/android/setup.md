@@ -21,7 +21,7 @@ If you have access to the *Google Play Store* on your device, **we recommend usi
 
 Otherwise, please keep reading.
 
-## Differences Between Variants and How to Choose {#differences-between-variants-and-how-to-choose}
+## Differences Between Variants and How to Choose {/* #differences-between-variants-and-how-to-choose */}
 
 While all variants of the Cryptomator for Android app have the same key functionality, you should make sure to pick the perfect variant for you:
 
@@ -40,7 +40,7 @@ for the best user experience and maximum flexibility.
 
 To learn more about the supported Cloud Services, please see [Supported Cloud Services](/docs/misc/supported-cloud-services.md).
 
-## Google Play Store {#google-play-store}
+## Google Play Store {/* #google-play-store */}
 
 :::note
 You can buy and download the *Google Play Store variant* of Cryptomator here:
@@ -53,7 +53,7 @@ After buying the app using the *Google Play Store,* it can be used with any numb
 
 Sometimes the *Google Play Store* has problems to recognize that the app was already bought and asks you to buy again the app, see this topic to recover from this problem: [On how many devices can the app be installed using Google Play Store?](https://community.cryptomator.org/t/on-how-many-devices-can-the-app-be-installed-using-google-play-store/6129)
 
-## APK Store {#apk-store}
+## APK Store {/* #apk-store */}
 
 :::note
 You can buy a license for the app and download the *APK Store variant* of Cryptomator here:
@@ -68,7 +68,7 @@ This variant does include an automatic updater that periodically checks if there
 
 As this variant is not bought using the *Google Play Store* you need to buy a license key from the [APK Store](https://cryptomator.org/android/) on our website. After Cryptomator is installed, you have to enter this key. This can be done by copying and pasting the license into the field when asked for it or by clicking on the link starting with `cryptomator://license/YOUR_LICENSE_KEY`.
 
-## Cryptomator F-Droid Repository {#cryptomator-f-droid-repository}
+## Cryptomator F-Droid Repository {/* #cryptomator-f-droid-repository */}
 
 :::note
 You can buy a license for the *Cryptomator F-Droid repository variant* of Cryptomator here:
@@ -85,7 +85,7 @@ repository to the F-Droid app by opening this link on the device or by scanning 
 
 As with the *APK Store variant,* since this app variant is not purchased via the *Google Play Store,* you need to buy a license key from the [APK Store](https://cryptomator.org/android/) on our website. After Cryptomator is installed, you have to enter this key. This can be done by copying and pasting the license into the field when asked for it or by clicking on the link starting with `cryptomator://license/YOUR_LICENSE_KEY`.
 
-## Main F-Droid Repository {#main-f-droid-repository}
+## Main F-Droid Repository {/* #main-f-droid-repository */}
 
 :::note
 You can buy a license for the *Main F-Droid repository variant* of Cryptomator here:
@@ -101,7 +101,7 @@ The *Main F-Droid repository variant* can be installed directly from the [Main F
 
 Unlike all other variants of Cryptomator for Android, this variant has its own package name: `org.cryptomator.lite`. It means that you cannot, intentionally or unintentionally, simply switch between this and the other variants. It requires to setup the app again. The reason we decided to do this is that other Cryptomator variants already exist in some popular F-Droid repositories, and if we hadn’t decided to do this, there could have been an unwanted variant switch.
 
-## Accrescent {#accrescent}
+## Accrescent {/* #accrescent */}
 
 :::note
 You can buy a license for the *Accrescent* variant of Cryptomator here:
@@ -115,11 +115,11 @@ You can download the *Accrescent* variant of Cryptomator here:
 
 As this variant is not bought using the *Google Play Store* you need to buy a license key from the [APK Store](https://cryptomator.org/android/) on our website. After Cryptomator is installed, you have to enter this key. This can be done by copying and pasting the license into the field when asked for it or by clicking on the link starting with `cryptomator://license/YOUR_LICENSE_KEY`.
 
-## Requirements {#requirements}
+## Requirements {/* #requirements */}
 
 Requires Android 8.0 or later.
 
-## Update Rollout {#update-rollout}
+## Update Rollout {/* #update-rollout */}
 
 The timing of the update depends on your installed variant:
 

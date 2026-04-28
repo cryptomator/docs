@@ -12,7 +12,7 @@ Cryptomator Hub can be deployed to a Kubernetes cluster or a Docker host. The fo
 Cryptomator Hub is also offered as a hosted solution, including 99.5%-uptime guarantee and regular backups! Visit [cryptomator.org](https://cryptomator.org/for-teams/) for more information.
 :::
 
-## Summary {#summary}
+## Summary {/* #summary */}
 
 1. Decide, on which web addresses you want to deploy Hub and Keycloak
 1. Set up DNS and TLS termination
@@ -22,18 +22,18 @@ Cryptomator Hub is also offered as a hosted solution, including 99.5%-uptime gua
 Afterwards you're done.
 You can now login to Cryptomator Hub and start [creating vaults](vault-management.md) or [add users](user-group-management.md).
 
-## Hardware Requirements {#hardware-requirements}
+## Hardware Requirements {/* #hardware-requirements */}
 
 Currently, we are evaluating the system requirements for Cryptomator Hub. If you can provide data, please send us an email to hub@cryptomator.org.
 
-## Setup Wizard {#setup-wizard}
+## Setup Wizard {/* #setup-wizard */}
 
 To get started, use the [Setup Wizard](https://cryptomator.org/hub/self-hosted/) to generate the necessary configuration files.
 
 Cryptomator Hub depends on [Keycloak](https://www.keycloak.org/), an open-source identity and access management solution.
 In the Setup Wizard, you will have the option to choose between deploying Keycloak alongside Hub or specifying an URL to an existing Keycloak installation.
 
-## Reverse Proxy {#reverse-proxy}
+## Reverse Proxy {/* #reverse-proxy */}
 
 Cryptomator Hub must be used behind a reverse proxy such as Traefik or Nginx. In the [Setup Wizard](https://cryptomator.org/hub/self-hosted/) you can already add rules for some reverse proxies like Traefik. As mentioned there, you will still need a running Traefik deployment.
 
@@ -114,7 +114,7 @@ Before running this deployment
 
 Troubleshooting: If you encounter problems, check the log files in `logs/traffik.log` and `logs/access.log`. Make sure you entered `srv` as `Public Network` in the Setup Wizard of Hub.
 
-## Backup {#backup}
+## Backup {/* #backup */}
 
 Cryptomator Hub and Keycloak both write to the connected Postgres database. So the best and easiest way is to backup it cyclically using e.g. a Cron Job. Depending on your deployment, here is a sample command that you can run on the host system to backup the entire databases to a file using the Postgres container, which you than could import in a similar way:
 

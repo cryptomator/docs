@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Contribute
 
-## How Can You Help Us? {#how-can-you-help-us}
+## How Can You Help Us? {/* #how-can-you-help-us */}
 
 Cryptomator is an open-source project and wouldn't be possible without contributions from users who support the idea.
 
@@ -20,7 +20,7 @@ There are several ways you can help us:
 * By becoming a [sponsor](https://cryptomator.org/sponsors/),
 * Or by [donating](https://cryptomator.org/donate/) to the maintainers.
 
-## Before You Start {#before-you-start}
+## Before You Start {/* #before-you-start */}
 
 If you plan to help, please stick to our [Code of Conduct](https://github.com/cryptomator/cryptomator/blob/develop/.github/CODE_OF_CONDUCT.md).
 

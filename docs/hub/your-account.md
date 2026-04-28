@@ -11,7 +11,7 @@ The account is used to authenticate your identity and to manage your trusted dev
 
 If you don't have an account, contact your local administrator to create one for you.
 
-## Account Key {#account-key}
+## Account Key {/* #account-key */}
 
 Every account has a private *Account Key*.
 The Account Key is used for authorizing browsers or apps which try to connect to Hub.
@@ -23,7 +23,7 @@ You can view your account key in your [profile](#profile-page) on trusted browse
 If you lose your account key, you have two options: If you have access to an authorized browser, you can view it on the [profile page](#profile-page) or otherwise, you can [reset your account](#reset-account).
 :::
 
-## Account Setup {#account-setup}
+## Account Setup {/* #account-setup */}
 
 The very first time you log in to Cryptomator Hub, you're asked to set up your account.
 This is a one-time process that takes just a minute.
@@ -39,7 +39,7 @@ You can revoke the trust at any time in your profile.
 After storing your account key securely, tick the checkbox and finish the setup.
 You are now logged in to Hub and can start using it.
 
-## Profile Page {#profile-page}
+## Profile Page {/* #profile-page */}
 
 On the profile page, you can manage your account.
 It shows your account key and fingerprint, lists your trusted devices and more.
@@ -48,7 +48,7 @@ You can open it by clicking on your profile icon in the top right corner and sel
 
 <Image src="/img/hub/profile-view.png" alt="Your account in Cryptomator Hub" width="1878" height="1066" />
 
-### Change Language {#change-language}
+### Change Language {/* #change-language */}
 
 You can change the language of Cryptomator Hub to match your preference.
 The language selection is available in the profile settings.
@@ -58,13 +58,13 @@ We are continuously working on adding more languages.
 If you're interested, you can contribute translations via Crowdin:
 [Cryptomator Hub on Crowdin](https://crowdin.com/project/cryptomator).
 
-### Regenerate Account Key {#regenerate-account-key}
+### Regenerate Account Key {/* #regenerate-account-key */}
 
 If you suspect that your old Account Key has been compromised, you can regenerate it.
 You will then only be able to add new devices with the new Account Key.
 Your existing devices will remain trusted.
 
-### Authorized Devices {#authorized-devices}
+### Authorized Devices {/* #authorized-devices */}
 
 A device is authorized if it has been authenticated with your Account Key.
 Only on authorized devices you can log in to Hub and open vaults.
@@ -86,7 +86,7 @@ This will log out the device and revoke access to all shared vaults.
 Periodically review your devices and promptly remove unused and unknown ones.
 :::
 
-### Legacy Devices {#legacy-devices}
+### Legacy Devices {/* #legacy-devices */}
 
 This section lists devices that have been authorized with an older version of Cryptomator Hub. It is only visible if you have any legacy devices.
 Legacy devices where created before the introduction of the current user key system and will be removed from your account within one of the next major updates of Hub.
@@ -98,12 +98,12 @@ If you have any legacy device
 1. check if you still use them, if so, update the client version on this device which migrates it to the new format
 2. if you don't use them anymore, remove them to revoke access of this device to your accessible vaults
 
-### User Key Fingerprint {#user-key-fingerprint}
+### User Key Fingerprint {/* #user-key-fingerprint */}
 
 The fingerprint can be used to verify the identity of the user, for example when [updating the permissions](vault-management.md#update-permissions) of a vault.
 It will only change if you [reset your account](#reset-account).
 
-## Reset Account {#reset-account}
+## Reset Account {/* #reset-account */}
 If you lose your account key and can't access any trusted browser, you can reset your account when logging in from a new device.
 All already authorized devices will be removed and access to shared vaults will be revoked.
 After the reset, you can log in to Hub from a new browser and set up your account again.

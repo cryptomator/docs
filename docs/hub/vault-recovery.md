@@ -13,7 +13,7 @@ Cryptomator Hub vaults can be recovered in two different ways:
 1. [Online Recovery](#online-recovery) - Reestablishes Hub controlled access management for a vault in case the vault admin password got lost
 2. [Offline Recovery](#offline-recovery) - Restores vault data access of a hub managed vault in case of a disaster (e.g. Cryptomator Hub is down and immediate data access is needed)
 
-## Online Recovery {#online-recovery}
+## Online Recovery {/* #online-recovery */}
 
 This recovery method should be used, if the vault admin password got lost.
 In the process, a new Hub vault with the same key material as the "to-be-recovered" vault is created.
@@ -49,7 +49,7 @@ If successful, a new vault has been created. Proceed as follows:
 Afterwards, you can manage vault data access over the newly created vault in Hub.
 You will need to regrant permission to the vault members, and then the vault can be unlocked by the team.
 
-## Offline Recovery {#offline-recovery}
+## Offline Recovery {/* #offline-recovery */}
 
 This recovery method should only be used in an emergency, i.e. immediate data access is needed but Cryptomator Hub not reachable.
 In the process, the authentication needed to unlock the vault is changed from Hub- to password-based by creating/changing vault configuration files.
@@ -91,7 +91,7 @@ After the conversion, when unlocking the vault, you are prompted for a password 
 
 <Image src="/img/hub/vault-offlinerecovery-step5.png" alt="Unlock converted Vault" width="827" height="711" />
 
-## Reversing Offline Conversion {#reversing-offline-conversion}
+## Reversing Offline Conversion {/* #reversing-offline-conversion */}
 
 You can reverse the offline conversion.
 In order to do that, remove the following files:

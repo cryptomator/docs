@@ -8,7 +8,7 @@ sidebar_position: 14
 
 This page contains solutions for common issues you might encounter when using Cryptomator on desktop platforms.
 
-## Log File Locations {#log-file-locations}
+## Log File Locations {/* #log-file-locations */}
 
 Cryptomator creates log files to help with troubleshooting when issues occur.
 The default locations for these log files vary by operating system:
@@ -23,7 +23,7 @@ The log files are named with the pattern `cryptomatorX.log`, where `X` is a numb
 The most recent log file is always `cryptomator0.log`.
 
 
-## Debug Mode {#debug-mode}
+## Debug Mode {/* #debug-mode */}
 
 Debug mode enables additional diagnostic logging to help troubleshoot issues with Cryptomator. When debug mode is active, the application records more detailed information about its operations in the log files.
 
@@ -40,6 +40,6 @@ Cryptomator will now run in debug mode. The app indicates this by showing a red 
 The additional debug information is written to your log files.
 Once you have reproduced the issue you're investigating, disable debug mode by unchecking the option to return to normal logging levels.
 
-## Known Issues {#known-issues}
+## Known Issues {/* #known-issues */}
 
 For a list of known issues, please refer to the [Cryptomator Community](https://community.cryptomator.org/c/help/known-issues/16) or [GitHub Issues page](https://github.com/cryptomator/cryptomator/issues).

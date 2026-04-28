@@ -10,7 +10,7 @@ A *vault* is where your files are stored encrypted.
 For your operating system or other apps, a vault is a just a normal directory containing some encrypted files.
 Only Cryptomator can decrypt the vault's contents when you unlock it using a password.
 
-## Remove Vaults {#remove-vaults}
+## Remove Vaults {/* #remove-vaults */}
 
 To remove a vault from the vault list, right click on a vault, and click remove. 
 This is only possible if the vault is locked.
@@ -19,7 +19,7 @@ This is only possible if the vault is locked.
 The vault is **not** deleted from your PC by removing it from the list. If you wish to permanently delete your encrypted files, you need to delete the vault directory using the file manager.
 :::
 
-## Reorder Vaults {#reorder-vaults}
+## Reorder Vaults {/* #reorder-vaults */}
 
 You can change the order of the vaults in the list by dragging them.
 
@@ -28,7 +28,7 @@ You can change the order of the vaults in the list by dragging them.
     <source src="/img/desktop/reorder-vaults.webm" type="video/webm"/>
 </video>
 
-## Vault Options {#vault-options}
+## Vault Options {/* #vault-options */}
 
 Each vault has its own settings which can be customized under vault options.
 To open a vault's settings, select a vault, lock it, and click on `Vault Options`.

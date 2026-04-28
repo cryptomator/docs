@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Vault Management
 
-## Unlock Duration {#unlock-duration}
+## Unlock Duration {/* #unlock-duration */}
 
 With the vault setting "Unlock Duration", you can specify for how long you want your vault to stay unlocked when idle. The following options are:
 
@@ -30,7 +30,7 @@ E.g., if you choose "1 Hour" and Cryptomator gets terminated by iOS within that 
 
 If you choose the "Indefinite" option, your vault will be kept unlocked until you have manually locked it.
 
-## Security Considerations {#security-considerations}
+## Security Considerations {/* #security-considerations */}
 
 Cryptomator balances security and usability by storing certain credentials in the iOS Keychain to enable convenient features like biometric authentication and reduced password prompts. Here's how it works:
 

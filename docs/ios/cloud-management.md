@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # Cloud Management
 
-## WebDAV {#webdav}
+## WebDAV {/* #webdav */}
 
 Please see [Cloud Services With WebDAV Support](/docs/misc/supported-cloud-services.md#cloud-services-with-webdav-support) for a non-exhaustive list of Cloud Services and information about accessing them with WebDAV.
 
@@ -22,7 +22,7 @@ To resolve this:
 3. Ensure your cloud provider has WebDAV enabled (some require enabling it in account settings)
 4. If using 2FA, you might need to generate an app-specific password for WebDAV access
 
-## Other File Provider {#other-file-provider}
+## Other File Provider {/* #other-file-provider */}
 
 This option allows you to add a vault from any supported [file provider](https://developer.apple.com/documentation/fileprovider/). Default implementations by Apple are iCloud Drive and On My iPhone/iPad. Inside the Files app, you can also add custom connections to SMB-compatible servers.
 

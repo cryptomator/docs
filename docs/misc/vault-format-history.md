@@ -9,7 +9,7 @@ sidebar_position: 3
 Cryptomator vaults need to adhere to a structure and format (as described in [Security Architecture](/docs/security/architecture.md)) that may change over time.
 In order to identify the correct format, the masterkey file contains a version number, which represents the vault format.
 
-## Format 8 {#format-8}
+## Format 8 {/* #format-8 */}
 
 Introduced in Cryptomator 1.6.0 on 2021-10-19.
 The following changes are:
@@ -17,7 +17,7 @@ The following changes are:
 * Decoupled vault configuration from key derivation by introducing new vault configuration file named `vault.cryptomator`. It is a JWT containing basic information about the vault and specification what key to use.
 * `version` inside `masterkey.cryptomator` is now deprecated.
 
-## Format 7 {#format-7}
+## Format 7 {/* #format-7 */}
 
 Introduced in Cryptomator 1.5.0 on 2020-04-16.
 The following changes are:
@@ -59,14 +59,14 @@ This is an example of the vault structure:
 └─ masterkey.cryptomator.DFD9B248.bkup
 ```
 
-## Format 6 {#format-6}
+## Format 6 {/* #format-6 */}
 
 Introduced in Cryptomator 1.3.0 on 2017-07-01.
 The following changes are:
 
 * Password is normalized in NFC.
 
-## Format 5 {#format-5}
+## Format 5 {/* #format-5 */}
 
 Introduced in Cryptomator 1.2.0 on 2016-09-19.
 The following changes are:
@@ -77,7 +77,7 @@ File sizes can be determined in `O(1)` instead of having to read and decrypt the
 This allows showing file sizes in the directory listing without having to download each file first.
 The file size in the header is now unused and filled with `0xFFFFFFFFFFFFFFFF`.
 
-## Format 4 {#format-4}
+## Format 4 {/* #format-4 */}
 
 Introduced in Cryptomator 1.1.1 on 2016-07-08.
 The following changes are:
@@ -107,7 +107,7 @@ This is an example of the vault structure:
 └─ masterkey.cryptomator.bkup
 ```
 
-## Format 3 {#format-3}
+## Format 3 {/* #format-3 */}
 
 Introduced in Cryptomator 1.0.0 on 2016-03-09.
 

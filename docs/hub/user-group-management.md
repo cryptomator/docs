@@ -14,9 +14,9 @@ Users and groups are managed directly in the Cryptomator Hub admin interface. As
 
 Access the user and group management from the navigation bar in the admin area.
 
-## User Management {#user-management}
+## User Management {/* #user-management */}
 
-### User List {#user-list}
+### User List {/* #user-list */}
 
 The user list displays all users in your Hub instance. You can search for users by name or email and see key metrics for each user:
 
@@ -26,7 +26,7 @@ The user list displays all users in your Hub instance. You can search for users 
 
 <Image src="/img/hub/user-list.png" alt="User list overview" width="1440" height="600" />
 
-### Create User {#create-user}
+### Create User {/* #create-user */}
 
 To create a new user, click the "Create User" button in the user list. Fill in the following fields:
 
@@ -42,7 +42,7 @@ To create a new user, click the "Create User" button in the user list. Fill in t
 
 After creation, the user can log in with their credentials and complete the [account setup](your-account.md#account-setup).
 
-### Edit User {#edit-user}
+### Edit User {/* #edit-user */}
 
 To edit a user, navigate to the user's detail page and click "Edit". You can modify:
 
@@ -57,7 +57,7 @@ To edit a user, navigate to the user's detail page and click "Edit". You can mod
 Username cannot be changed after user creation.
 :::
 
-### Delete User {#delete-user}
+### Delete User {/* #delete-user */}
 
 To delete a user, you can either click the delete button in the user list or navigate to the user's detail page and click on the options button next to the "Edit" button, then select "Delete". A confirmation dialog will appear. Deleting a user will:
 
@@ -69,7 +69,7 @@ To delete a user, you can either click the delete button in the user list or nav
 This action cannot be undone.
 :::
 
-### User Details {#user-details}
+### User Details {/* #user-details */}
 
 The user detail page shows comprehensive information about a user:
 
@@ -80,11 +80,11 @@ The user detail page shows comprehensive information about a user:
 
 <Image src="/img/hub/user-detail.png" alt="User detail view" width="1440" height="800" />
 
-## Group Management {#group-management}
+## Group Management {/* #group-management */}
 
 Groups allow you to organize users and grant vault access to multiple users at once.
 
-### Group List {#group-list}
+### Group List {/* #group-list */}
 
 The group list displays all groups with:
 
@@ -93,7 +93,7 @@ The group list displays all groups with:
 
 <Image src="/img/hub/group-list.png" alt="Group list overview" width="1440" height="600" />
 
-### Create Group {#create-group}
+### Create Group {/* #create-group */}
 
 To create a new group, click the "Create Group" button. Fill in:
 
@@ -102,11 +102,11 @@ To create a new group, click the "Create Group" button. Fill in:
 
 <Image src="/img/hub/group-create.png" alt="Create group form" width="800" height="400" />
 
-### Edit Group {#edit-group}
+### Edit Group {/* #edit-group */}
 
 To edit a group, navigate to the group's detail page and click "Edit". You can modify the group name and profile picture URL.
 
-### Delete Group {#delete-group}
+### Delete Group {/* #delete-group */}
 
 To delete a group, you can either click the delete button in the group list or navigate to the group's detail page and click on the options button next to the "Edit" button, then select "Delete". A confirmation dialog will appear. Deleting a group will:
 
@@ -117,7 +117,7 @@ To delete a group, you can either click the delete button in the group list or n
 This action cannot be undone.
 :::
 
-### Group Details {#group-details}
+### Group Details {/* #group-details */}
 
 The group detail page shows:
 
@@ -126,7 +126,7 @@ The group detail page shows:
 
 <Image src="/img/hub/group-detail.png" alt="Group detail view" width="1440" height="800" />
 
-### Manage Group Members {#manage-group-members}
+### Manage Group Members {/* #manage-group-members */}
 
 From the group detail page, you can:
 
@@ -139,7 +139,7 @@ From the group detail page, you can:
 Subgroups are not supported at this time.
 :::
 
-## Roles {#roles}
+## Roles {/* #roles */}
 
 There are three roles in Cryptomator Hub:
 
@@ -151,11 +151,11 @@ There are three roles in Cryptomator Hub:
 
 Roles are assigned when creating or editing a user. The `user` role is assigned by default to all users.
 
-### Create Vault Role {#create-vault-role}
+### Create Vault Role {/* #create-vault-role */}
 
 By default, only users with the `admin` role can create vaults. To allow other users to create vaults, assign the `create-vault` role to them when creating or editing the user.
 
-## User Avatars {#user-avatars}
+## User Avatars {/* #user-avatars */}
 
 Users can have profile pictures displayed throughout Hub (e.g., in vault member lists). As an administrator, you can set the profile picture URL when creating or editing a user.
 
@@ -163,7 +163,7 @@ The avatar can be provided as a URL to an image (e.g., `https://example.com/avat
 
 If no profile picture is set, a generated avatar based on the user's name will be displayed.
 
-## External Identity Management {#enterprise-external-iam}
+## External Identity Management {/* #enterprise-external-iam */}
 
 :::info Enterprise Feature
 Connecting external identity and access management (IAM) solutions is available as an Enterprise feature. 

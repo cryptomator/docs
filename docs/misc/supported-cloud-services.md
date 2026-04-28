@@ -24,7 +24,7 @@ If possible, *we therefore recommend that you access your data using the native 
 
 The following sections will provide you with an overview of [natively supported Cloud Services](#natively-supported-cloud-services), as well as information about [selected Cloud Services with WebDAV support](#cloud-services-with-webdav-support) and a list of [incompatible Cloud Services](#incompatible-cloud-services).
 
-## Natively Supported Cloud Services (Recommended) {#natively-supported-cloud-services}
+## Natively Supported Cloud Services (Recommended) {/* #natively-supported-cloud-services */}
 
 The following Cloud Services are natively supported by Cryptomator for Android and/or Cryptomator for iOS.
 
@@ -53,7 +53,7 @@ The following Cloud Services are natively supported by Cryptomator for Android a
 
 [^webdav-list]: Please see [Cloud Services with WebDAV support](#cloud-services-with-webdav-support) for a non-exhaustive list of Cloud Services and information about accessing them with WebDAV.
 
-## Cloud Services With WebDAV Support {#cloud-services-with-webdav-support}
+## Cloud Services With WebDAV Support {/* #cloud-services-with-webdav-support */}
 
 The following *non-exhaustive* table lays out information about Cloud Services that can be accessed using WebDAV by both Cryptomator for Android and Cryptomator for iOS.
 
@@ -110,7 +110,7 @@ The following *non-exhaustive* table lays out information about Cloud Services t
 
 [^yandex]: Yandex.Disk: WebDAV requires an app-specific password when 2FA is enabled.
 
-## Incompatible Cloud Services {#incompatible-cloud-services}
+## Incompatible Cloud Services {/* #incompatible-cloud-services */}
 
 The Cloud Services listed in the following *non-exhaustive* table can currently **not** be used natively or via WebDAV.
 

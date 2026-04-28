@@ -10,7 +10,7 @@ You can only access decrypted files of a vault if you can unlock it. Unlocking a
 
 <Image src="/img/desktop/vault-detail-locked.png" alt="Cryptomator window showing a locked vault" width="762" height="610" />
 
-## Unlocking a Vault {#unlocking-a-vault}
+## Unlocking a Vault {/* #unlocking-a-vault */}
 
 1. Select the vault you wish to unlock in the vault list.
 2. Click on the large `Unlock` button in the vault detail view of the Cryptomator window.
@@ -34,11 +34,11 @@ You can close the success window by clicking `Done`, or click `Reveal Vault` to 
 
 <Image src="/img/desktop/unlock-success.png" alt="Vault unlock success dialog" width="512" height="314" />
 
-## Locking a Vault {#locking-a-vault}
+## Locking a Vault {/* #locking-a-vault */}
 
 To lock a vault, simply click `Lock` and the virtual drive will disappear or render empty. Your files remain encrypted at the vault's location.
 
-## Manage Files and Folders in Your Vault {#manage-files-and-folders-in-your-vault}
+## Manage Files and Folders in Your Vault {/* #manage-files-and-folders-in-your-vault */}
 
 By default, a vault's content will be accessible via an attached virtual drive on your PC.
 So, you can manage files and folders in your unlocked vault just like you do on any other hard drive or USB drive.
@@ -56,11 +56,11 @@ Even though your files are shown unencrypted in the virtual drive, they are not 
 On Windows, you can choose the drive letter of the virtual drive for each vault using advanced vault options.
 :::
 
-## Locate Encrypted File {#locate-encrypted-file}
+## Locate Encrypted File {/* #locate-encrypted-file */}
 
 See [Locate Encrypted File](/docs/desktop/encrypted-file-names.md#locate-encrypted-file) in the Encrypted File Names section.
 
-## File System Case Sensitivity {#file-system-case-sensitivity}
+## File System Case Sensitivity {/* #file-system-case-sensitivity */}
 
 :::warning
 Cryptomator virtual drives are always case-sensitive. This means `Document.txt` and `document.txt` are treated as two different files, regardless of your operating system.

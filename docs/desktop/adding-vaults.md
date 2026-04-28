@@ -14,17 +14,17 @@ You will be presented with three options when adding a vault:
 
 <Image src="/img/desktop/create-or-open-vault.png" alt="Create a new or open an existing vault" width="762" height="610" />
 
-## Create a New Vault {#create-a-new-vault}
+## Create a New Vault {/* #create-a-new-vault */}
 
 If you chose to create a new vault, the wizard will guide you through a simple 6-step vault creation process.
 
-### 1. Choose a Name {#choose-a-name}
+### 1. Choose a Name {/* #choose-a-name */}
 
 Start by choosing a name for your vault.
 
 <Image src="/img/desktop/add-vault-1.png" alt="Choosing &quot;My first Vault&quot; as a vault name" width="718" height="590" />
 
-### 2. Choose a Storage Location {#choose-a-storage-location}
+### 2. Choose a Storage Location {/* #choose-a-storage-location */}
 
 Next, you need to choose a directory on your PC where your vault's encrypted data will be stored.
 If you wish to sync the encrypted data to your cloud storage, then choose a cloud-synced directory.
@@ -41,7 +41,7 @@ You might not see the same options, depending on which cloud services are instal
 
 <Image src="/img/desktop/add-vault-2.png" alt="Choosing Dropbox as a storage location for my vault" width="718" height="590" />
 
-### 3. Expert Settings {#expert-settings}
+### 3. Expert Settings {/* #expert-settings */}
 
 The **Expert Settings** screen provides advanced configuration options for your vault. These settings are intended for users who require greater control over how their data is encrypted and stored.
 
@@ -68,7 +68,7 @@ Refer to [Name Shortening](/docs/security/vault.md#name-shortening) for addition
 Adjusting the maximum length of encrypted file names may affect compatibility with certain filesystems. Ensure you thoroughly test these settings before enabling them for critical data.
 :::
 
-### 4. Choose a Password {#choose-a-password}
+### 4. Choose a Password {/* #choose-a-password */}
 
 Now it is time to choose a [strong password](/docs/security/best-practices.md#good-passwords) for your vault.
 Cryptomator requires at least 8 characters, but we recommend you to use longer phrases such as pass-sentences.
@@ -94,7 +94,7 @@ So, store your password in a secure password manager or just don't forget it.
 However, you can reset a vault's password by yourself if you have its *recovery key*.
 :::
 
-### 5. Show Recovery Key (Optional Step) {#show-recovery-key}
+### 5. Show Recovery Key (Optional Step) {/* #show-recovery-key */}
 
 A recovery key allows you to reset your password if you ever forget it.
 
@@ -110,7 +110,7 @@ Keep it as safe as your password.
 
 For more details, take a look at [how a recovery key works](password-and-recovery-key.md#reset-password).
 
-### 6. Done {#done}
+### 6. Done {/* #done */}
 
 That's it.
 You have successfully created a new vault.
@@ -119,7 +119,7 @@ You can now unlock this vault using your password and start adding files into it
 
 <Image src="/img/desktop/add-vault-6.png" alt="Showing the recovery key" width="718" height="590" />
 
-## Open an Existing Vault {#open-an-existing-vault}
+## Open an Existing Vault {/* #open-an-existing-vault */}
 
 To open an existing vault, you need to locate the `masterkey.cryptomator` file of the vault you wish to open.
 
