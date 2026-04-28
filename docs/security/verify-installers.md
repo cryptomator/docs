@@ -37,7 +37,7 @@ Our Windows installers are signed using a code signing certificate. You can veri
    Get-AuthenticodeSignature -FilePath "~\Downloads\Cryptomator-*.exe"
    ```
 3. Verify that the output includes:
-   - Column `SignerCertificate` with value <!-- AUTOMATION MARKER FOR WORKFLOW -->`20F30D7C5B1AB3ACAFA4AB27874ACBC4B47B0697`(*)
+   - Column `SignerCertificate` with value {/* AUTOMATION MARKER FOR WORKFLOW */}`20F30D7C5B1AB3ACAFA4AB27874ACBC4B47B0697`(*)
    - Column `Status` with value `Valid`
    - no errors
 
@@ -65,7 +65,7 @@ Every Cryptomator installer is signed with a certificate. A certificate is ident
 
 | Version(s)          | Certificate Thumbprint                     |
 |---------------------|--------------------------------------------|
-|  1.19.2             | `20F30D7C5B1AB3ACAFA4AB27874ACBC4B47B0697`<!-- AUTOMATION MARKER FOR WORKFLOW --> |
+|  1.19.2             | `20F30D7C5B1AB3ACAFA4AB27874ACBC4B47B0697`{/* AUTOMATION MARKER FOR WORKFLOW */} |
 |  1.19.1             | `BB0EEBF8E92E4584DF4B6AE4F9577B60BEB5DF4C` |
 |  1.19.0             | `14524B1F8A3A1CA8B24B769C7C6DC92851120B22` |
 |  1.18.1             | `53FA929F6D50D5E2AE59A7C9A9750D373AFF7D40` |

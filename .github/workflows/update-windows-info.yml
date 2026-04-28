@@ -64,7 +64,7 @@ jobs:
 
           Set-Content -Path $DocPath -Value $Content
         env:
-          AUTOMATION_MARKER: '<!-- AUTOMATION MARKER FOR WORKFLOW -->'
+          AUTOMATION_MARKER: '{/* AUTOMATION MARKER FOR WORKFLOW */}'
       - name: Commit and push
         id: commit-and-push
         run: |

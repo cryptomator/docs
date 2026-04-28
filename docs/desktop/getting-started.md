@@ -11,8 +11,8 @@ You can create new vaults (or add existing ones) using the [`+`](adding-vaults.m
 
 <Image src="/img/desktop/empty-vault-list.png" alt="Empty vault list" width="762" height="610" />
 
-<!-- Tutorial Video
+{/* Tutorial Video
 ## Tutorial Video
 
 [![Cryptomator Tutorial: Get Started](https://img.youtube.com/vi/g9A0zihHZ14/0.jpg)](https://www.youtube.com/watch?v=g9A0zihHZ14)
--->
+*/}
