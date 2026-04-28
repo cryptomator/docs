@@ -35,6 +35,18 @@ We follow git flow for contributions:
 - Break up long sections with headings and lists
 - Link to related documentation when relevant
 
+## Adding or upgrading dependencies
+
+`pnpm-workspace.yaml` sets `minimumReleaseAge: 4320` (3 days). pnpm
+will refuse to resolve any package version younger than that — most
+malicious releases are detected and unpublished within hours, so the
+delay protects us at near-zero cost.
+
+If you genuinely need a fresh release sooner (e.g. a security fix
+just published), add the specific package/version to
+`minimumReleaseAgeExclude` in `pnpm-workspace.yaml` and call it out
+in the PR description.
+
 ## Code of Conduct
 
 Help us keep Cryptomator open and inclusive. Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).

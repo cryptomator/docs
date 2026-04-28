@@ -1,3 +1,8 @@
 allowBuilds:
   '@swc/core': false
   core-js: false
+
+# Refuse to install package versions younger than 3 days (4320 minutes).
+# Most malicious releases are detected and unpublished within hours; the
+# cooldown means our installs never see them.
+minimumReleaseAge: 4320
