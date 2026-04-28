@@ -24,7 +24,7 @@ Cryptomator encrypts:
 * file and folder names, and
 * the directory structure is obfuscated.
 
-For technical details on how these elements are encrypted, see [Vault Cryptography](vault.md).
+For technical details on how these elements are encrypted, see [Vault Cryptography](vault.mdx).
 
 ## What Cryptomator Is Not {/* #what-cryptomator-is-not */}
 

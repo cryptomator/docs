@@ -75,7 +75,7 @@ Enter the recovery key for the vault you want to restore. If you enter a recover
 
 <Image src="/img/hub/vault-offlinerecovery-step2.png" alt="Convert vault enter recovery key" width="827" height="711" />
 
-In the next step choose a [good password](/docs/security/best-practices.md#good-passwords) used for unlocking the vault.
+In the next step choose a [good password](/docs/security/best-practices.mdx#good-passwords) used for unlocking the vault.
 Cryptomator requires at least 8 characters but we recommend you to use a longer phrases such as pass-sentences.
 The bar below the password field estimates the strength of your password.
 

@@ -24,8 +24,8 @@ Technically, this is implemented using key splitting based on **[Shamir's Secret
 The feature can be activated for new and existing vaults:
 
 * **New vaults:** During vault creation, use the `Define Emergency Access Conditions` step.
-  For the full workflow, see [Vault Management](vault-management.md#create-a-vault).
-* **Existing vaults:** Open `Vault Details` and [configure Emergency Access](vault-management.md#emergency-access-council).
+  For the full workflow, see [Vault Management](vault-management.mdx#create-a-vault).
+* **Existing vaults:** Open `Vault Details` and [configure Emergency Access](vault-management.mdx#emergency-access-council).
 
 ## Starting a Recovery Process
 
@@ -49,7 +49,7 @@ Use this quick guide to choose the right process:
 | Give vault access to different users (owners/members) | `Choose Vault Members` |
 | Remove access from specific users | `Choose Vault Members` |
 | Replace council members who approve emergency operations | `Change Emergency Access Council` |
-| Change how many council approvals are required (threshold) | Configurable in the [admin settings](admin.md#emergency-access) |
+| Change how many council approvals are required (threshold) | Configurable in the [admin settings](admin.mdx#emergency-access) |
 
 :::note
 Starting a process automatically approves the process.
@@ -69,7 +69,7 @@ Users that are no longer part of the vault are shown as `Removed`.
 
 The `Change Emergency Access Council` process allows you to select a new council.
 
-The minimum required number of members is configured in the [Admin settings](admin.md#emergency-access).
+The minimum required number of members is configured in the [Admin settings](admin.mdx#emergency-access).
 
 <Image src="/img/hub/emergency_access_change_council_start.png" alt="Emergency Access Vault List" width="2560" height="1080" />
 
@@ -138,4 +138,4 @@ The following warning states can appear in the Emergency Access list:
 
 ## Audit Log Events
 
-See [Emergency Access Audit Log events](admin.md#event-type-emergency-access).
+See [Emergency Access Audit Log events](admin.mdx#event-type-emergency-access).

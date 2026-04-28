@@ -40,7 +40,7 @@ To create a new user, click the "Create User" button in the user list. Fill in t
 
 <Image src="/img/hub/user-create.png" alt="Create user form" width="800" height="700" />
 
-After creation, the user can log in with their credentials and complete the [account setup](your-account.md#account-setup).
+After creation, the user can log in with their credentials and complete the [account setup](your-account.mdx#account-setup).
 
 ### Edit User {/* #edit-user */}
 
@@ -76,7 +76,7 @@ The user detail page shows comprehensive information about a user:
 - **Groups**: All groups the user is a member of
 - **Accessible Vaults**: Vaults the user has access to (directly or through group membership)
 - **Devices**: All registered devices of the user
-- **Legacy Devices**: Devices registered with older Hub versions (see [Legacy Devices](your-account.md#legacy-devices))
+- **Legacy Devices**: Devices registered with older Hub versions (see [Legacy Devices](your-account.mdx#legacy-devices))
 
 <Image src="/img/hub/user-detail.png" alt="User detail view" width="1440" height="800" />
 

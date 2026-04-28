@@ -8,7 +8,7 @@ sidebar_position: 6
 
 The Shortcuts integration of Cryptomator allows you to build different automations in the [Shortcuts app](https://support.apple.com/guide/shortcuts/welcome/ios). With that, you can automate recurring tasks quickly and easily.
 
-For a shortcut to run smoothly, the vault must be unlocked during the execution of the shortcut. For automations, you should set the unlock duration to "Indefinite" in the [settings of your vault](vault-management.md#unlock-duration).
+For a shortcut to run smoothly, the vault must be unlocked during the execution of the shortcut. For automations, you should set the unlock duration to "Indefinite" in the [settings of your vault](vault-management.mdx#unlock-duration).
 
 In addition, you should know that some Cryptomator shortcut actions build on each other. For example, the "Save File" action requires a folder inside a vault as an input, which can be obtained using the "Get Folder" action.
 

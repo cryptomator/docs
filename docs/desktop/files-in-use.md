@@ -7,7 +7,7 @@ sidebar_position: 18
 # Files in Use
 
 :::info
-This feature is only available for [Cryptomator Hub](/docs/hub/introduction.md) vaults.
+This feature is only available for [Cryptomator Hub](/docs/hub/introduction.mdx) vaults.
 :::
 
 When multiple people work in a shared vault, two users might try to edit the same file at the same time.
@@ -57,4 +57,4 @@ This helps in cases such as device sleep, crashes, or interrupted sessions.
 
 ## Related Topics {/* #related-topics */}
 
-- [Synchronization Conflicts](/docs/desktop/sync-conflicts.md)
+- [Synchronization Conflicts](/docs/desktop/sync-conflicts.mdx)

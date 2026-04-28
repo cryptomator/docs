@@ -32,13 +32,13 @@ Choose between *Dropbox*, *Google Drive*, *OneDrive* (works also with *OneDrive 
 
 If your desired provider is not listed and offers WebDAV access, please select *WebDAV* as the storage location of your vault.
 
-Please see [Cloud Services With WebDAV Support](/docs/misc/supported-cloud-services.md#cloud-services-with-webdav-support) for a non-exhaustive list of Cloud Services and information about accessing them with WebDAV.
+Please see [Cloud Services With WebDAV Support](/docs/misc/supported-cloud-services.mdx#cloud-services-with-webdav-support) for a non-exhaustive list of Cloud Services and information about accessing them with WebDAV.
 
 <MobileGrid>
   <Image src="/img/android/create-new-vault-2-select-provider.png" alt="How to create a new vault with Android" width="1080" height="2220" />
 </MobileGrid>
 
-If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the [Cloud Management](cloud-management.md) chapter and continue later here.
+If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the [Cloud Management](cloud-management.mdx) chapter and continue later here.
 
 Now that you've established a connection, you'll add the existing vault.
 
@@ -64,7 +64,7 @@ Basically, you have the whole Unicode for choosing a password including non-prin
 
 :::warning
 You have to remember this password at all times because there is **no way to access your data if you forget your password**.
-Choose a [good password](/docs/security/best-practices.md#good-passwords) to make your data secure.
+Choose a [good password](/docs/security/best-practices.mdx#good-passwords) to make your data secure.
 :::
 
 After you have confirmed your password, the vault is created.
@@ -90,13 +90,13 @@ Choose between *Dropbox*, *Google Drive*, *OneDrive* (works also with *OneDrive 
 
 If your desired provider is not listed and offers WebDAV access, please select *WebDAV* as the storage location of your vault.
 
-Please see [Cloud Services With WebDAV Support](/docs/misc/supported-cloud-services.md#cloud-services-with-webdav-support) for a non-exhaustive list of Cloud Services and information about accessing them with WebDAV.
+Please see [Cloud Services With WebDAV Support](/docs/misc/supported-cloud-services.mdx#cloud-services-with-webdav-support) for a non-exhaustive list of Cloud Services and information about accessing them with WebDAV.
 
 <MobileGrid>
   <Image src="/img/android/add-existing-vault-2-select-provider.png" alt="How to add a vault with Android" width="1080" height="2220" />
 </MobileGrid>
 
-If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the [Cloud Management](cloud-management.md) chapter and continue later here.
+If not already done, you have to create the connection between the Cryptomator app and your storage provider account. Please follow the instructions in the [Cloud Management](cloud-management.mdx) chapter and continue later here.
 
 Now that you've established a connection, you'll add the existing vault.
 
@@ -159,7 +159,7 @@ Basically, you have the whole Unicode for choosing a password including non-prin
 
 :::warning
 You have to remember this password at all times because there is **no way to access your data if you forget your password**.
-Choose a [good password](/docs/security/best-practices.md#good-passwords) to make your data secure.
+Choose a [good password](/docs/security/best-practices.mdx#good-passwords) to make your data secure.
 :::
 
 Start the process using the `CHANGE PASSWORD` button.

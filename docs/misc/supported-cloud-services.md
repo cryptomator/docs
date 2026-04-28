@@ -41,13 +41,13 @@ The following Cloud Services are natively supported by Cryptomator for Android a
 | Spaces provided by other apps [^file-providers] | ✅ | ✅ |
 | WebDAV [^webdav-list] | ✅ | ✅ |
 
-[^android-recommendation]: **We recommend using the** [**Google Play Store variant**](/docs/android/setup.md#google-play-store) **of Cryptomator for Android users** for the best experience. Please see [here](/docs/android/setup.md#differences-between-variants-and-how-to-choose) for more information about the different Cryptomator for Android variants and the reasoning behind those.
+[^android-recommendation]: **We recommend using the** [**Google Play Store variant**](/docs/android/setup.mdx#google-play-store) **of Cryptomator for Android users** for the best experience. Please see [here](/docs/android/setup.mdx#differences-between-variants-and-how-to-choose) for more information about the different Cryptomator for Android variants and the reasoning behind those.
 
-[^no-fdroid-main]: Not supported by the [Main F-Droid repo variant](/docs/android/setup.md#main-f-droid-repository) because this Cloud Service requires an API key.
+[^no-fdroid-main]: Not supported by the [Main F-Droid repo variant](/docs/android/setup.mdx#main-f-droid-repository) because this Cloud Service requires an API key.
 
-[^no-fdroid-cryptomator]: Not supported by the [Cryptomator F-Droid repo variant](/docs/android/setup.md#cryptomator-f-droid-repository) because this Cloud Service requires proprietary dependencies.
+[^no-fdroid-cryptomator]: Not supported by the [Cryptomator F-Droid repo variant](/docs/android/setup.mdx#cryptomator-f-droid-repository) because this Cloud Service requires proprietary dependencies.
 
-[^no-accrescent]: Not supported by the [Accrescent variant](/docs/android/setup.md#accrescent) because this Cloud Service requires proprietary dependencies.
+[^no-accrescent]: Not supported by the [Accrescent variant](/docs/android/setup.mdx#accrescent) because this Cloud Service requires proprietary dependencies.
 
 [^file-providers]: Some Android and iOS apps integrate into the operating system's file manager with their own storage spaces to allow seamless access to their files via so called "File Providers." Cryptomator generally supports saving vaults in those spaces, but is dependent on those apps explicitly supporting access by other apps like Cryptomator. For more technical information about this see [here](https://github.com/cryptomator/android/issues/553) for Android and [here](https://github.com/cryptomator/ios/issues/51) for iOS.
 

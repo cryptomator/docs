@@ -7,11 +7,11 @@ sidebar_position: 15
 # Common Errors
 
 This page collects errors users frequently run into and their known solutions.
-For general diagnostic steps such as collecting log files or enabling debug mode, see [Troubleshooting](troubleshooting.md).
+For general diagnostic steps such as collecting log files or enabling debug mode, see [Troubleshooting](troubleshooting.mdx).
 
 ## Vault Appears Read-Only on Windows {/* #read-only-vault-windows */}
 
-**Symptoms:** On Windows with a [WinFsp](volume-type.md#winfsp) volume type, an unlocked vault behaves as if it were read-only. Copying or pasting files fails with "Permission denied", and new files or folders cannot be created or modified inside the vault.
+**Symptoms:** On Windows with a [WinFsp](volume-type.mdx#winfsp) volume type, an unlocked vault behaves as if it were read-only. Copying or pasting files fails with "Permission denied", and new files or folders cannot be created or modified inside the vault.
 
 **Cause:** This occurs on Windows systems where multiple Active Directory or Microsoft Entra accounts are signed in simultaneously. WinFsp cannot map the current Windows user to the owner of the mounted vault, so the operating system rejects all write operations. See [winfsp/winfsp#387](https://github.com/winfsp/winfsp/issues/387#issuecomment-1130260210) for technical background.
 

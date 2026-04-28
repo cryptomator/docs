@@ -100,7 +100,7 @@ If you have any legacy device
 
 ### User Key Fingerprint {/* #user-key-fingerprint */}
 
-The fingerprint can be used to verify the identity of the user, for example when [updating the permissions](vault-management.md#update-permissions) of a vault.
+The fingerprint can be used to verify the identity of the user, for example when [updating the permissions](vault-management.mdx#update-permissions) of a vault.
 It will only change if you [reset your account](#reset-account).
 
 ## Reset Account {/* #reset-account */}

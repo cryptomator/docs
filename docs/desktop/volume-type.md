@@ -61,7 +61,7 @@ By default, unlocked vaults are mounted to a random drive letter, either as a ne
 Info on custom mount options is available at [WinFsp repository](https://github.com/winfsp/winfsp/blob/c61679a35d041d843173fa3b2eba106b5ab7b01f/src/dll/fuse/fuse.c#L628-L654).
 
 :::note
-Vaults mounted to a drive letter are only accessible to the current user. If you want to access the vault as a different/elevated user, you have to use WinFsp (Local Drive) and [mount to a directory](vault-management.md#vault-options).
+Vaults mounted to a drive letter are only accessible to the current user. If you want to access the vault as a different/elevated user, you have to use WinFsp (Local Drive) and [mount to a directory](vault-management.mdx#vault-options).
 :::
 
 ### WebDAV (Windows Explorer) {/* #webdav-windows-explorer */}
@@ -141,7 +141,7 @@ By default, unlocked vaults are mounted to `~/.local/share/Cryptomator/mnt`, but
 Info on custom mount options is available at [man page for mount.fuse](https://man7.org/linux/man-pages/man8/mount.fuse3.8.html).
 
 :::note
-`allow_root` and `allow_other` cannot be used as [custom mount flags](vault-management.md#vault-options) without enabling (uncommenting) `user_allow_other` option in **/etc/fuse.conf** configuration file.
+`allow_root` and `allow_other` cannot be used as [custom mount flags](vault-management.mdx#vault-options) without enabling (uncommenting) `user_allow_other` option in **/etc/fuse.conf** configuration file.
 :::
 
 ### WebDAV (gio) {/* #webdav-gio */}

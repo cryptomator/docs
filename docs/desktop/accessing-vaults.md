@@ -22,7 +22,7 @@ You can only access decrypted files of a vault if you can unlock it. Unlocking a
 :::note
 You can store the password in your operating system's keychain by checking the "Remember password" checkbox.
 With a saved password, you can unlock your vaults without typing a password on every unlock.
-For more information, see the [Storing Passwords](/docs/desktop/password-and-recovery-key.md#storing-passwords) section.
+For more information, see the [Storing Passwords](/docs/desktop/password-and-recovery-key.mdx#storing-passwords) section.
 
 :::warning
 Only store your password in the system's keychain on trusted devices.
@@ -43,7 +43,7 @@ To lock a vault, simply click `Lock` and the virtual drive will disappear or ren
 By default, a vault's content will be accessible via an attached virtual drive on your PC.
 So, you can manage files and folders in your unlocked vault just like you do on any other hard drive or USB drive.
 
-Alternatively, a vault's content can be accessed via a directory or a WebDAV server by changing its [volume type](volume-type.md).
+Alternatively, a vault's content can be accessed via a directory or a WebDAV server by changing its [volume type](volume-type.mdx).
 Click on `Reveal Drive` in the Cryptomator window to open the mount location using the default file manager (Windows Explorer, Finder, …).
 
 :::note
@@ -58,7 +58,7 @@ On Windows, you can choose the drive letter of the virtual drive for each vault 
 
 ## Locate Encrypted File {/* #locate-encrypted-file */}
 
-See [Locate Encrypted File](/docs/desktop/encrypted-file-names.md#locate-encrypted-file) in the Encrypted File Names section.
+See [Locate Encrypted File](/docs/desktop/encrypted-file-names.mdx#locate-encrypted-file) in the Encrypted File Names section.
 
 ## File System Case Sensitivity {/* #file-system-case-sensitivity */}
 
@@ -66,7 +66,7 @@ See [Locate Encrypted File](/docs/desktop/encrypted-file-names.md#locate-encrypt
 Cryptomator virtual drives are always case-sensitive. This means `Document.txt` and `document.txt` are treated as two different files, regardless of your operating system.
 :::
 
-This behavior is required for Cryptomator's deterministic [filename encryption](/docs/security/vault.md#filename-encryption) to work correctly across all platforms. While Linux users are accustomed to case-sensitive file systems, this can cause unexpected behavior on Windows and macOS where the default file systems are case-insensitive.
+This behavior is required for Cryptomator's deterministic [filename encryption](/docs/security/vault.mdx#filename-encryption) to work correctly across all platforms. While Linux users are accustomed to case-sensitive file systems, this can cause unexpected behavior on Windows and macOS where the default file systems are case-insensitive.
 
 On Windows and macOS, this difference means:
 

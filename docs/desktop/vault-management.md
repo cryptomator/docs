@@ -52,7 +52,7 @@ You can select this option if the vault is unlocked as soon as Cryptomator start
 2. Mounting - Settings that manage how and where a vault is mounted.
 
 :::note
-The mount options depend on the selected [volume type](volume-type.md).
+The mount options depend on the selected [volume type](volume-type.mdx).
 :::
 
 <Image src="/img/desktop/vault-options-mounting.png" alt="Vault options for mounting" width="512" height="448" />
@@ -61,4 +61,4 @@ The mount options depend on the selected [volume type](volume-type.md).
 
 <Image src="/img/desktop/vault-options-password.png" alt="Vault options regarding the password" width="512" height="448" />
 
-Take a look at the [Volume Type](volume-type.md) and [Password And Recovery Key](password-and-recovery-key.md) sections to understand how vault mounting and passwords work.
+Take a look at the [Volume Type](volume-type.mdx) and [Password And Recovery Key](password-and-recovery-key.mdx) sections to understand how vault mounting and passwords work.

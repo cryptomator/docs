@@ -9,7 +9,7 @@ sidebar_position: 13
 In general, Cryptomator does not require a network connection to function.
 
 If the network connection is present, it is used for optional features, i.e. update checks and searching the error database for solutions.
-The only exception is when unlocking [Cryptomator Hub](/docs/hub/introduction.md) vaults, then a network connection to the hub server is required.
+The only exception is when unlocking [Cryptomator Hub](/docs/hub/introduction.mdx) vaults, then a network connection to the hub server is required.
 All network connections to the internet are using HTTPS with at least TLS 1.2.
 
 ## Trust Certificate Management {/* #trust-certificate-management */}

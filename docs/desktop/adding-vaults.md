@@ -10,7 +10,7 @@ You will be presented with three options when adding a vault:
 
 1. [`Create New Vault…`](#create-a-new-vault) - Choose this if you wish to create a new vault.
 2. [`Open Existing Vault…`](#open-an-existing-vault) - Choose this if you already have a vault and wish to open it.
-3. [`Recover Existing Vault…`](/docs/desktop/vault-recovery.md#add-recover-vault) - Choose this if you have a vault with missing configuration files that hasn’t yet been added and you want to restore it.
+3. [`Recover Existing Vault…`](/docs/desktop/vault-recovery.mdx#add-recover-vault) - Choose this if you have a vault with missing configuration files that hasn’t yet been added and you want to restore it.
 
 <Image src="/img/desktop/create-or-open-vault.png" alt="Create a new or open an existing vault" width="762" height="610" />
 
@@ -60,7 +60,7 @@ One of the primary expert settings allows you to configure the maximum length of
 - **Default Behavior**: Cryptomator automatically shortens file names to comply with filesystem constraints.
 - **Custom Configuration**: If specific requirements must be met, you can manually set the maximum allowed length for encrypted file names.
 
-Refer to [Name Shortening](/docs/security/vault.md#name-shortening) for additional details. 
+Refer to [Name Shortening](/docs/security/vault.mdx#name-shortening) for additional details. 
 
 <Image src="/img/desktop/add-vault-3.png" alt="Expert settings" width="718" height="590" />
 
@@ -70,7 +70,7 @@ Adjusting the maximum length of encrypted file names may affect compatibility wi
 
 ### 4. Choose a Password {/* #choose-a-password */}
 
-Now it is time to choose a [strong password](/docs/security/best-practices.md#good-passwords) for your vault.
+Now it is time to choose a [strong password](/docs/security/best-practices.mdx#good-passwords) for your vault.
 Cryptomator requires at least 8 characters, but we recommend you to use longer phrases such as pass-sentences.
 The bar below the password field will help you estimate the strength of your password.
 
@@ -81,7 +81,7 @@ Additionally, we recommend sharing passwords only over a secure channel, like PG
 :::
 
 :::info
-Be mindful of your keyboard layout when creating passwords. Special characters and dead keys can behave differently across keyboard layouts (e.g., Dutch vs. English). This may cause password entry issues if you switch keyboard layouts later. For more information, see [Keyboard Layouts and Special Characters](/docs/security/best-practices.md#keyboard-layouts-and-special-characters).
+Be mindful of your keyboard layout when creating passwords. Special characters and dead keys can behave differently across keyboard layouts (e.g., Dutch vs. English). This may cause password entry issues if you switch keyboard layouts later. For more information, see [Keyboard Layouts and Special Characters](/docs/security/best-practices.mdx#keyboard-layouts-and-special-characters).
 :::
 
 <Image src="/img/desktop/add-vault-4.png" alt="Choose a strong password for your Cryptomator vault" width="718" height="590" />
@@ -108,7 +108,7 @@ Remember, a recovery key is just like your password, its purpose is to gain acce
 Keep it as safe as your password.
 :::
 
-For more details, take a look at [how a recovery key works](password-and-recovery-key.md#reset-password).
+For more details, take a look at [how a recovery key works](password-and-recovery-key.mdx#reset-password).
 
 ### 6. Done {/* #done */}
 

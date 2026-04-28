@@ -36,7 +36,7 @@ In the `Vault List`, owners can see the Emergency Access status directly via bad
 ## Create a Vault {/* #create-a-vault */}
 
 :::note
-Creating vaults require the `create-vault` role. [Here](user-group-management.md#roles) you can read more about roles.
+Creating vaults require the `create-vault` role. [Here](user-group-management.mdx#roles) you can read more about roles.
 :::
 
 To create a vault in Hub, navigate to the vault list and click on the `Create Vault` button in the top right corner.
@@ -45,7 +45,7 @@ Fill out the form and continue the process by clicking the `Next` button in the 
 
 <Image src="/img/hub/create-vault.png" alt="Create a vault" width="2560" height="836" />
 
-If the [Emergency Access](emergency-access.md) feature is enabled, the following step appears:
+If the [Emergency Access](emergency-access.mdx) feature is enabled, the following step appears:
 
 Here, the conditions for Emergency Access are defined for the new vault.
 If the administrator allows custom council selection, you can adjust the default council.
@@ -65,14 +65,14 @@ Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about
 
 
 In the next step, the vault *recovery key* is displayed.
-It can [restore access to the vault data](vault-recovery.md) in case of an emergency, e.g. if Cryptomator Hub is down.
+It can [restore access to the vault data](vault-recovery.mdx) in case of an emergency, e.g. if Cryptomator Hub is down.
 Store it at a safe location, tick the checkbox and complete the setup by clicking the `Create Vault` button at the bottom
 
 <Image src="/img/hub/create-vault-recoverykey.png" alt="Save vault recoverykey" width="2560" height="1352" />
 
 :::warning
 The recovery key is **highly confidential**.
-It is a human readable form of the vault [masterkey](/docs/security/architecture.md#masterkey), which is used to encrypt your data and independent of the key management in Cryptomator Hub.
+It is a human readable form of the vault [masterkey](/docs/security/architecture.mdx#masterkey), which is used to encrypt your data and independent of the key management in Cryptomator Hub.
 :::
 
 When the setup is finished, you have the opportunity to download the initial vault template and place it in your desired cloud storage location.
@@ -122,7 +122,7 @@ To change user's ownership of a vault, click on the three dots next to the user'
 
 ### Update Permissions {/* #update-permissions */}
 
-If members of the vault have finished the [first login](your-account.md#account-setup) or reset user accounts, a vault owner must explicitly grant access to these users.
+If members of the vault have finished the [first login](your-account.mdx#account-setup) or reset user accounts, a vault owner must explicitly grant access to these users.
 Only then, the user can unlock the vault with its device.
 
 As a vault owner, you can see that an update is necessary when the `Update Permissions` button is clickable.
@@ -143,7 +143,7 @@ Download the vault template only once! If you download it multiple times, you wi
 
 ### Show Recovery Key {/* #show-recovery-key */}
 
-To show the vault recovery key, click on the `Show Recovery Key` button in the [vault details](#vault-details). It shows the same recovery key shown during vault creation. You can use it to [restore access to the vault data](vault-recovery.md) in case of an emergency, e.g. if Cryptomator Hub is down. Store it at a safe location.
+To show the vault recovery key, click on the `Show Recovery Key` button in the [vault details](#vault-details). It shows the same recovery key shown during vault creation. You can use it to [restore access to the vault data](vault-recovery.mdx) in case of an emergency, e.g. if Cryptomator Hub is down. Store it at a safe location.
 
 ### Setup/Fix Emergency Access Council {/* #emergency-access-council */}
 
@@ -155,7 +155,7 @@ Emergency Access is currently in **early access** and will be fully available in
 Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
 :::
 
-To configure [Emergency Access](emergency-access.md) for a vault, click `Setup Emergency Access Council` in the [vault details](#vault-details). If Emergency Access is already configured but needs correction, click `Fix Emergency Access Council`. This opens a dialog where you define the council members and confirm with `Grant`.
+To configure [Emergency Access](emergency-access.mdx) for a vault, click `Setup Emergency Access Council` in the [vault details](#vault-details). If Emergency Access is already configured but needs correction, click `Fix Emergency Access Council`. This opens a dialog where you define the council members and confirm with `Grant`.
 
 ### Archive Vault {/* #archive-vault */}
 
@@ -190,14 +190,14 @@ The verification process is logged in the audit log with event type `Signed Iden
 
 `signature still valid` means that the `identity` has still the same key. If the user account gets reset after verification, this message changes to `was valid; signed key changed by now` and the user needs to get verified again.
 
-You can read more details about Web of Trust and how to configure its settings in the [Admin section of Hub](admin.md#web-of-trust).
+You can read more details about Web of Trust and how to configure its settings in the [Admin section of Hub](admin.mdx#web-of-trust).
 
 ## Import a Vault {/* #import-a-vault */}
 
 If you have a existing, password-based Cryptomator vault and want to switch to centralized, password-less user access management, you can import the vault in Cryptomator Hub.
-For a successful import, the [recovery key](/docs/desktop/password-and-recovery-key.md#show-recovery-key) of the vault and write access to its storage location is needed
+For a successful import, the [recovery key](/docs/desktop/password-and-recovery-key.mdx#show-recovery-key) of the vault and write access to its storage location is needed
 
 The import is done via the Hub vault recovery feature.
-Follow the [vault online recovery guide](vault-recovery.md#online-recovery) and use the recovery key of the password-based vault in the process.
+Follow the [vault online recovery guide](vault-recovery.mdx#online-recovery) and use the recovery key of the password-based vault in the process.
 Don't forget to replace the vault config file `vault.cryptomator` at the vault storage location at the end.
 Finally, to ensure that the vault cannot be unlocked with its old password anymore, remove the file `masterkey.cryptomator` and all backup files (ending with `.bkup`).

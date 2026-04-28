@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Vault Format History
 
-Cryptomator vaults need to adhere to a structure and format (as described in [Security Architecture](/docs/security/architecture.md)) that may change over time.
+Cryptomator vaults need to adhere to a structure and format (as described in [Security Architecture](/docs/security/architecture.mdx)) that may change over time.
 In order to identify the correct format, the masterkey file contains a version number, which represents the vault format.
 
 ## Format 8 {/* #format-8 */}

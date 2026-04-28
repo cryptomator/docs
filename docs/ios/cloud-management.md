@@ -8,7 +8,7 @@ sidebar_position: 2
 
 ## WebDAV {/* #webdav */}
 
-Please see [Cloud Services With WebDAV Support](/docs/misc/supported-cloud-services.md#cloud-services-with-webdav-support) for a non-exhaustive list of Cloud Services and information about accessing them with WebDAV.
+Please see [Cloud Services With WebDAV Support](/docs/misc/supported-cloud-services.mdx#cloud-services-with-webdav-support) for a non-exhaustive list of Cloud Services and information about accessing them with WebDAV.
 
 :::note
 While creating the WebDAV connection, please make sure to add the root of the accessible storage and don't navigate directly into the vault.
@@ -18,7 +18,7 @@ If you encounter the `Request method not supported by the target resource.` erro
 
 To resolve this:
 1. Verify you're using the correct WebDAV URL for your cloud service
-2. Check the [list of supported cloud services](/docs/misc/supported-cloud-services.md#cloud-services-with-webdav-support) for the correct WebDAV URLs
+2. Check the [list of supported cloud services](/docs/misc/supported-cloud-services.mdx#cloud-services-with-webdav-support) for the correct WebDAV URLs
 3. Ensure your cloud provider has WebDAV enabled (some require enabling it in account settings)
 4. If using 2FA, you might need to generate an app-specific password for WebDAV access
 

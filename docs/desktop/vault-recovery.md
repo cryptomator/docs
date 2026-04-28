@@ -24,7 +24,7 @@ If the damaged vault has not yet been added to Cryptomator, you start the recove
 :::warning
 Recovery of missing files is only supported starting with Vault Format 8 (introduced in Cryptomator 1.6.0).
 Vaults created with older formats (e.g., Vault Format 7 or earlier) are not compatible with these recovery options.
-For details, see the [Vault Format History](/docs/misc/vault-format-history.md).
+For details, see the [Vault Format History](/docs/misc/vault-format-history.mdx).
 :::
 
 ## Recover Masterkey file {/* #recover-masterkey-file */}

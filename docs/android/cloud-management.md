@@ -44,7 +44,7 @@ Please keep in mind that Cryptomator then cannot connect to your vault anymore.
 
 ## Login WebDAV {/* #login-webdav */}
 
-Please see [Cloud Services With WebDAV Support](/docs/misc/supported-cloud-services.md#cloud-services-with-webdav-support) for a non-exhaustive list of Cloud Services and information about accessing them with WebDAV.
+Please see [Cloud Services With WebDAV Support](/docs/misc/supported-cloud-services.mdx#cloud-services-with-webdav-support) for a non-exhaustive list of Cloud Services and information about accessing them with WebDAV.
 
 <MobileGrid>
   <Image src="/img/android/add-webdav-login-provider-0.png" alt="How to handle cloud services with Android" width="810" height="1665" />

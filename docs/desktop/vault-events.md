@@ -44,7 +44,7 @@ When multiple files are affected, the entire vault's integrity may be compromise
 
 ### Conflict Resolved Event {/* #conflict-resolved-event */}
 
-Cryptomator automatically resolved a filename conflict within an encrypted directory. This occurs when two encrypted files have the same base name, with one having an additional suffix. For more information, see [handling sync conflicts](sync-conflicts.md).
+Cryptomator automatically resolved a filename conflict within an encrypted directory. This occurs when two encrypted files have the same base name, with one having an additional suffix. For more information, see [handling sync conflicts](sync-conflicts.mdx).
 
 **When it occurs:**
 - Two files with conflicting encrypted names exist in the same directory

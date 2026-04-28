@@ -88,7 +88,7 @@ The actual directory structure of the vault on your hard drive/cloud will look l
 └─ vault.cryptomator
 ```
 
-This is why you cannot identify files in the vault storage location by name alone without decrypting them first. For more information about the vault encryption scheme read [the specification](/docs/security/vault.md).
+This is why you cannot identify files in the vault storage location by name alone without decrypting them first. For more information about the vault encryption scheme read [the specification](/docs/security/vault.mdx).
 
 ## Video Walkthrough
 

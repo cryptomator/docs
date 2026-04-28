@@ -13,7 +13,7 @@ You can download the version for your OS from [cryptomator.org](https://cryptoma
 This section describes exemplarily how to unlock a vault in the Desktop app.
 Android and iOS work analogously.
 
-As described in [open an existing vault](/docs/desktop/adding-vaults.md#open-an-existing-vault), you should have already added the vault to the vault list, e.g., by selecting the `vault.cryptomator` file.
+As described in [open an existing vault](/docs/desktop/adding-vaults.mdx#open-an-existing-vault), you should have already added the vault to the vault list, e.g., by selecting the `vault.cryptomator` file.
 
 ## Unlocking a Vault {/* #unlocking-a-vault */}
 
@@ -31,7 +31,7 @@ Cryptomator should open your default browser for authentication. If you're not a
 
 ### 3. Register Device {/* #register-device */}
 
-If you just did setup your account, a vault owner needs to grant you access for the requested vault as described [here](vault-management.md#update-permissions). Retry unlocking the vault after the vault owner granted you access.
+If you just did setup your account, a vault owner needs to grant you access for the requested vault as described [here](vault-management.mdx#update-permissions). Retry unlocking the vault after the vault owner granted you access.
 
 <Image src="/img/hub/unlock-access-denied.png" alt="Access is denied since it has not been granted by a vault owner yet" width="715" height="541" />
 
@@ -45,7 +45,7 @@ Hub
 
 <Image src="/img/hub/unlock-register-device-hub.png" alt="Hub requests device registration" width="1280" height="374" />
 
-Enter a name for the device to identify it later on and the [Account Key](your-account.md#account-key) which was generated during the account setup. You can also find it in the [account settings](your-account.md#profile-page).
+Enter a name for the device to identify it later on and the [Account Key](your-account.mdx#account-key) which was generated during the account setup. You can also find it in the [account settings](your-account.mdx#profile-page).
 
 After that, you will see a confirmation dialog, unlock the vault again.
 

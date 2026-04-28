@@ -9,12 +9,12 @@ sidebar_position: 5
 This section explains how to change a password for a vault, show its recovery key, and reset a password.
 But, before that, let's understand how Cryptomator encrypts a vault using a password and what a recovery key is.
 The security of your vault is only as good as its password because Cryptomator encrypts your vault using a key derived from your password.
-So, [choosing a strong password](/docs/security/best-practices.md#good-passwords) is very important.
+So, [choosing a strong password](/docs/security/best-practices.mdx#good-passwords) is very important.
 
 Additionally, a unique *recovery key* can be derived for each vault while creating its password or later.
 A *recovery key* allows you to create a new password if you forget the original one.
 Do note that the *recovery key* feature does not break encryption in any way.
-It is a human readable form of your decrypted [masterkey](/docs/security/architecture.md#masterkey) and therefore independent of the current vault password and highly confidential.
+It is a human readable form of your decrypted [masterkey](/docs/security/architecture.mdx#masterkey) and therefore independent of the current vault password and highly confidential.
 Keep it as safe as your password.
 
 All actions can be carried out using the `Password` tab under vault options.
@@ -31,11 +31,11 @@ Navigate to the `Vault Options` → `Password` tab, and click on `Change Passwor
 In the opened window, you will be asked for:
 
 1. The vault's current password.
-2. A new password. We suggest following our guide on choosing a [strong password](/docs/security/best-practices.md#good-passwords).
+2. A new password. We suggest following our guide on choosing a [strong password](/docs/security/best-practices.mdx#good-passwords).
 3. Enter the new password again.
 
 :::info
-Be mindful of your keyboard layout when changing passwords. Special characters and dead keys can behave differently across keyboard layouts (e.g., Dutch vs. English). This may cause password entry issues if you switch keyboard layouts later. For more information, see [Keyboard Layouts and Special Characters](/docs/security/best-practices.md#keyboard-layouts-and-special-characters).
+Be mindful of your keyboard layout when changing passwords. Special characters and dead keys can behave differently across keyboard layouts (e.g., Dutch vs. English). This may cause password entry issues if you switch keyboard layouts later. For more information, see [Keyboard Layouts and Special Characters](/docs/security/best-practices.mdx#keyboard-layouts-and-special-characters).
 :::
 
 In order to proceed, you must confirm that you understand your action by selecting a checkbox.
@@ -191,8 +191,8 @@ By design, *only* the correct recovery key is accepted. **A valid but incorrect 
 :::
 
 Finally, assign a new password to your vault.
-It is the same process as the [vault creation](adding-vaults.md#choose-a-password), except that no new recovery key is generated.
-Again, please choose a [strong password](/docs/security/best-practices.md#good-passwords).
+It is the same process as the [vault creation](adding-vaults.mdx#choose-a-password), except that no new recovery key is generated.
+Again, please choose a [strong password](/docs/security/best-practices.mdx#good-passwords).
 
 Once changed, you can unlock your vault with the new password.
 

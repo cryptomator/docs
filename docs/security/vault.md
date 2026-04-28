@@ -211,7 +211,7 @@ Its sole purpose is to increase data recoverability in case of missing or damage
 
 By obfuscating the hierarchy of cleartext paths using `dir.c9r` files, which contain [directory IDs](#directory-ids), the directory structure is more vulnerable to problems like incomplete synchronization or bit rotting.
 
-When a directory file is missing or damaged, the `dirPath` cannot be computed, which effectively makes the directory content inaccessible in the [virtual filesystem](architecture.md#virtual-filesystem).
+When a directory file is missing or damaged, the `dirPath` cannot be computed, which effectively makes the directory content inaccessible in the [virtual filesystem](architecture.mdx#virtual-filesystem).
 In theory, the contents of the encrypted content of these files can be recovered.
 But since the [filename encryption](#filename-encryption) is dependent on the directory ID of the parent folder, which is only stored in the directory file, names of all items (files, directories, or symlinks) are lost.
 

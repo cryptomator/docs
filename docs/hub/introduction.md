@@ -17,12 +17,12 @@ If you are…
 
 …an **administrator**:
 
-* [User & Group management](user-group-management.md) - how to manage users and groups.
-* [License](admin.md#license) - how to manage your Hub license.
-* [Deployment](deployment.md) - how to deploy Cryptomator Hub.
+* [User & Group management](user-group-management.mdx) - how to manage users and groups.
+* [License](admin.mdx#license) - how to manage your Hub license.
+* [Deployment](deployment.mdx) - how to deploy Cryptomator Hub.
 
 …a **user**:
 
-* [Your Account](your-account.md) - how to manage your own account.
-* [Managing Vaults](vault-management.md) - how to manage vaults.
-* [Working with Vaults](access-vault.md) - how to use Hub vaults with Cryptomator apps to encrypt your data.
+* [Your Account](your-account.mdx) - how to manage your own account.
+* [Managing Vaults](vault-management.mdx) - how to manage vaults.
+* [Working with Vaults](access-vault.mdx) - how to use Hub vaults with Cryptomator apps to encrypt your data.

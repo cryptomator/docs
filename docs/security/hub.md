@@ -16,9 +16,9 @@ The following diagram illustrates how Cryptomator Hub maintains zero-knowledge e
   <Image src="/img/hub/data-flow.svg" alt="Hub Data Flow" />
 </WhiteBox>
 
-In this architecture, each component plays a specific role while maintaining the zero-knowledge principle. User devices handle all encryption and decryption operations locally within their [virtual file systems](architecture.md#virtual-filesystem). The encrypted vault data resides in your chosen [cloud storage provider](/docs/misc/supported-cloud-services.md), where it remains indecipherable without the proper keys.
+In this architecture, each component plays a specific role while maintaining the zero-knowledge principle. User devices handle all encryption and decryption operations locally within their [virtual file systems](architecture.mdx#virtual-filesystem). The encrypted vault data resides in your chosen [cloud storage provider](/docs/misc/supported-cloud-services.mdx), where it remains indecipherable without the proper keys.
 
-Cryptomator Hub acts solely as a key broker, managing encrypted [access tokens](#unlock-procedure) through the [User](#user-key-pair) and [Device](#device-key-pair) Key Pairs described below. The Hub never has access to [vault keys](architecture.md#masterkey) in cleartext, ensuring that even a compromised Hub instance cannot decrypt vault contents.
+Cryptomator Hub acts solely as a key broker, managing encrypted [access tokens](#unlock-procedure) through the [User](#user-key-pair) and [Device](#device-key-pair) Key Pairs described below. The Hub never has access to [vault keys](architecture.mdx#masterkey) in cleartext, ensuring that even a compromised Hub instance cannot decrypt vault contents.
 
 Keycloak handles authentication through your existing identity provider, verifying user identities before granting access to encrypted vault keys. This separation of authentication from key management adds an additional security layer while enabling seamless integration with your organization's existing infrastructure.
 
