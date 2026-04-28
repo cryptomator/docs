@@ -25,7 +25,7 @@ Alternatively, you can also access the list by clicking on the `Vaults` tab in t
 * As an admin of the Hub instance, you can see all vaults, but you can only access those that you have been granted access to.
 :::
 
-:::note Emergency Access Status in Vault List (Enterprise only, early access)
+:::note[Emergency Access Status in Vault List (Enterprise only, early access)]
 In the `Vault List`, owners can see the Emergency Access status directly via badges:
 
 * `Council missing`: No council is configured for the vault
@@ -52,11 +52,11 @@ If the administrator allows custom council selection, you can adjust the default
 Select the council members who should participate in emergency recovery and review the example recovery scenario.
 Click `Next` to continue to the recovery key step.
 
-:::info Early Access
+:::info[Early Access]
 Emergency Access is currently in **early access** and will be fully available in version 1.5.0.
 :::
 
-:::info Enterprise Feature
+:::info[Enterprise Feature]
 Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
 :::
 
@@ -147,11 +147,11 @@ To show the vault recovery key, click on the `Show Recovery Key` button in the [
 
 ### Setup/Fix Emergency Access Council {/* #emergency-access-council */}
 
-:::info Early Access
+:::info[Early Access]
 Emergency Access is currently in **early access** and will be fully available in version 1.5.0.
 :::
 
-:::info Enterprise Feature
+:::info[Enterprise Feature]
 Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
 :::
 

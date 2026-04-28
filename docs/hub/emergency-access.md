@@ -6,11 +6,11 @@ sidebar_position: 9
 
 # Emergency Access
 
-:::info Early Access
+:::info[Early Access]
 This feature is currently in **early access** and will be fully available in version 1.5.0.
 :::
 
-:::info Enterprise Feature
+:::info[Enterprise Feature]
 Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
 :::
 

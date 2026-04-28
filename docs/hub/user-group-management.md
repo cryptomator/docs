@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # User & Group Management
 
-:::info Early Access
+:::info[Early Access]
 This feature is currently in **early access** and will be fully available in version 1.5.0.
 :::
 
@@ -165,7 +165,7 @@ If no profile picture is set, a generated avatar based on the user's name will b
 
 ## External Identity Management {/* #enterprise-external-iam */}
 
-:::info Enterprise Feature
+:::info[Enterprise Feature]
 Connecting external identity and access management (IAM) solutions is available as an Enterprise feature. 
 
 Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.

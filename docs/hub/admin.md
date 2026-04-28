@@ -149,11 +149,11 @@ Additionally, any existing trust chains that included the user will be broken, r
 
 ## Emergency Access {/* #emergency-access */}
 
-:::info Early Access
+:::info[Early Access]
 Emergency Access is currently in **early access** and will be fully available in version 1.5.0.
 :::
 
-:::info Enterprise Feature
+:::info[Enterprise Feature]
 Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
 :::
 

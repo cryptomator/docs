@@ -27,7 +27,7 @@ The most recent log file is always `cryptomator0.log`.
 
 Debug mode enables additional diagnostic logging to help troubleshoot issues with Cryptomator. When debug mode is active, the application records more detailed information about its operations in the log files.
 
-:::warning Privacy Consideration
+:::warning[Privacy Consideration]
 With debug mode enabled, _every accessed file and listed directory inside the vault is written in clear text to the log file_. This creates a record of your file and folder names, which may compromise privacy. Only enable debug mode when actively troubleshooting an issue, and remember to disable it afterward.
 :::
 
