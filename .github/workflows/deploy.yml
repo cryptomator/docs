@@ -15,22 +15,24 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: 'pnpm'
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
       - name: Build production
-        run: npm run build
+        run: pnpm run build
       - name: Upload Prod Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           name: prod-site
           path: './build'
       - name: Build staging
-        run: npm run build
+        run: pnpm run build
         env:
           SITE_URL: https://docs.staging.cryptomator.org
       - name: Add robots.txt for staging

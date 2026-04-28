@@ -6,8 +6,9 @@ Thank you for helping improve Cryptomator's documentation!
 
 1. Fork the repository
 2. Clone your fork: `git clone <your-fork-url>`
-3. Install dependencies: `npm install`
-4. Start development server: `npm start`
+3. Enable Corepack so the pinned pnpm version is used: `corepack enable`
+4. Install dependencies: `pnpm install`
+5. Start development server: `pnpm start`
 
 ## Making Changes
 
