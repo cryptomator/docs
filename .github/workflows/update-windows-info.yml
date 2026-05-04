@@ -1,4 +1,4 @@
-name: Updates verify-installers.md after desktop release
+name: Updates verify-installers.mdx after desktop release
 
 on:
   repository_dispatch:
@@ -38,24 +38,24 @@ jobs:
           curl --silent --fail-with-body --proto "=https" -L -H "Accept: application/vnd.github+json" $MSI_URL --output cryptomator.msi
         env:
           ASSETS_JSON: ${{ toJson(github.event.client_payload.release.assets ) }}
-      - name: Update verify-installers.md
+      - name: Update verify-installers.mdx
         shell: pwsh
         run: |
           $Thumbprint = (Get-AuthenticodeSignature -FilePath 'cryptomator.msi' -ErrorAction Stop).SignerCertificate.Thumbprint
 
-          $DocPath = 'docs/security/verify-installers.md'
+          $DocPath = 'docs/security/verify-installers.mdx'
           $Content = Get-Content -Path $DocPath -Raw
 
           $CurrentThumbprintRegex = [regex] ([regex]::Escape($env:AUTOMATION_MARKER) + '`[A-F0-9]+`')
           $UpdatedContent = $CurrentThumbprintRegex.Replace($Content, ($env:AUTOMATION_MARKER + '`' + $Thumbprint + '`'), 1)
           if ($UpdatedContent -eq $Content) {
-            throw 'Failed to update the current Windows thumbprint in verify-installers.md.'
+            throw 'Failed to update the current Windows thumbprint in verify-installers.mdx.'
           }
           $Content = $UpdatedContent
 
           $MarkedRow = (Get-Content -Path $DocPath | Where-Object { $_.TrimStart().StartsWith('|') -and $_.Contains($env:AUTOMATION_MARKER) } | Select-Object -First 1)
           if ($null -eq $MarkedRow) {
-            throw 'Failed to find the marked Windows certificate table row in verify-installers.md.'
+            throw 'Failed to find the marked Windows certificate table row in verify-installers.mdx.'
           }
 
           $PreviousRow = $MarkedRow.Substring(0, $MarkedRow.IndexOf($env:AUTOMATION_MARKER)).TrimEnd() + " |"
@@ -71,7 +71,7 @@ jobs:
           git config user.name "cryptobot"
           git config user.email "cryptobot@users.noreply.github.com"
           git config push.autoSetupRemote true
-          git stage docs/security/verify-installers.md
+          git stage docs/security/verify-installers.mdx
           if git diff --cached --quiet; then
             echo "No changes to commit"
             echo "changed=false" >> "$GITHUB_OUTPUT"
