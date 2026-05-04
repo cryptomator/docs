@@ -4,9 +4,10 @@
   "private": true,
   "packageManager": "pnpm@10.33.2",
   "scripts": {
+    "preinstall": "node scripts/check-pm.js",
     "docusaurus": "docusaurus",
-    "start": "docusaurus start --port 8000",
-    "build": "docusaurus build",
+    "start": "node scripts/check-pm.js && docusaurus start --port 8000",
+    "build": "node scripts/check-pm.js && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
