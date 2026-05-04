@@ -13,7 +13,7 @@ This repo uses [pnpm](https://pnpm.io/) (pinned via `packageManager` in
 [Corepack](https://nodejs.org/api/corepack.html): `corepack enable`.
 
 ```bash
-pnpm install
+pnpm install --frozen-lockfile
 pnpm start
 ```
 
