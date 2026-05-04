@@ -3,6 +3,7 @@ allowBuilds:
   core-js: false
 
 strictDepBuilds: true
+blockExoticSubdeps: true
 
 # Refuse to install package versions younger than 3 days (4320 minutes).
 # Most malicious releases are detected and unpublished within hours; the
