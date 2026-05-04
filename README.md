@@ -31,8 +31,8 @@ Opens dev server at `http://localhost:3000` with live reload.
 ## Scripts
 
 ```bash
-pnpm run build # Build static site
-pnpm run serve # Serve built site locally
+pnpm build # Build static site
+pnpm serve # Serve built site locally
 ```
 
 Other scripts can be found in `package.json`.
