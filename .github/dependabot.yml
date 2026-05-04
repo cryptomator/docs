@@ -1,0 +1,38 @@
+version: 2
+
+# Reviewed dependency upgrades. Replaces ad-hoc `pnpm up --latest` with
+# Dependabot PRs that go through normal review.
+#
+# - npm ecosystem covers pnpm-lock.yaml (Dependabot understands pnpm).
+# - github-actions ecosystem covers third-party actions in workflows;
+#   they are part of the same supply chain and need the same review.
+# - cooldown.default-days mirrors pnpm-workspace.yaml `minimumReleaseAge`
+#   (3 days) so Dependabot does not propose a version pnpm would refuse
+#   to install.
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    cooldown:
+      default-days: 3
+    groups:
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    cooldown:
+      default-days: 3
+    groups:
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch

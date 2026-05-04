@@ -47,6 +47,12 @@ just published), add the specific package/version to
 `minimumReleaseAgeExclude` in `pnpm-workspace.yaml` and call it out
 in the PR description.
 
+Routine upgrades land via Dependabot (configured in
+`.github/dependabot.yml`), which opens monthly grouped PRs for npm
+dependencies and GitHub Actions. Please don't run `pnpm up --latest`
+on the default branch — review the Dependabot PR instead, or open a
+PR with explicit version pins and a changelog link.
+
 ## Code of Conduct
 
 Help us keep Cryptomator open and inclusive. Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
