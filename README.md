@@ -13,11 +13,11 @@ This repo uses [pnpm](https://pnpm.io/) (pinned via `packageManager` in
 [Corepack](https://nodejs.org/api/corepack.html): `corepack enable`.
 
 ```bash
-pnpm install --frozen-lockfile
+pnpm install
 pnpm start
 ```
 
-Opens dev server at `http://localhost:3000` with live reload.
+Opens dev server at `http://localhost:8000` with live reload.
 
 ## Structure
 

@@ -33,11 +33,11 @@ bad_resolutions=$(yq '
 
 # Check 2: every importer-level specifier/version must be a plain semver
 # range, not a non-registry protocol.
-bad_specs=$(yq '
-  [.importers // {} | .. | (.specifier? // "")
-     | select(test("^(git\+|git://|github:|file:|link:|workspace:|https?://)"))]
-  + [.importers // {} | .. | (.version? // "")
-     | select(test("^(git\+|git://|github:|file:|link:|workspace:|https?://)"))]
+BAD_PROTOCOL_REGEX='^(git\+|git://|github:|file:|link:|workspace:|https?://)'
+
+bad_specs=$(REGEX="$BAD_PROTOCOL_REGEX" yq '
+  [.importers // {} | .. | (.specifier? // "") | select(test(strenv(REGEX)))]
+  + [.importers // {} | .. | (.version? // "") | select(test(strenv(REGEX)))]
 ' "$LOCK_FILE")
 
 failed=0
