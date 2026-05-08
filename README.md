@@ -8,12 +8,16 @@ We welcome contributions! Please read our [contributing guidelines](.github/CONT
 
 ## Quick Start
 
+This repo uses [pnpm](https://pnpm.io/) (pinned via `packageManager` in
+`package.json`). The easiest way to get a matching version is to enable
+[Corepack](https://nodejs.org/api/corepack.html): `corepack enable`.
+
 ```bash
-npm install
-npm start
+pnpm install
+pnpm start
 ```
 
-Opens dev server at `http://localhost:3000` with live reload.
+Opens dev server at `http://localhost:8000` with live reload.
 
 ## Structure
 
@@ -27,8 +31,8 @@ Opens dev server at `http://localhost:3000` with live reload.
 ## Scripts
 
 ```bash
-npm run build # Build static site
-npm run serve # Serve built site locally
+pnpm build # Build static site
+pnpm serve # Serve built site locally
 ```
 
 Other scripts can be found in `package.json`.

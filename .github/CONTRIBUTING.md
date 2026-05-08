@@ -6,8 +6,9 @@ Thank you for helping improve Cryptomator's documentation!
 
 1. Fork the repository
 2. Clone your fork: `git clone <your-fork-url>`
-3. Install dependencies: `npm install`
-4. Start development server: `npm start`
+3. Enable Corepack so the pinned pnpm version is used: `corepack enable`
+4. Install dependencies: `pnpm install`
+5. Start development server: `pnpm start`
 
 ## Making Changes
 
@@ -33,6 +34,24 @@ We follow git flow for contributions:
 - Use consistent formatting and style
 - Break up long sections with headings and lists
 - Link to related documentation when relevant
+
+## Adding or upgrading dependencies
+
+`pnpm-workspace.yaml` sets `minimumReleaseAge: 4320` (3 days). pnpm
+will refuse to resolve any package version younger than that — most
+malicious releases are detected and unpublished within hours, so the
+delay protects us at near-zero cost.
+
+If you genuinely need a fresh release sooner (e.g. a security fix
+just published), add the specific package/version to
+`minimumReleaseAgeExclude` in `pnpm-workspace.yaml` and call it out
+in the PR description.
+
+Routine upgrades land via Dependabot (configured in
+`.github/dependabot.yml`), which opens monthly grouped PRs for npm
+dependencies and GitHub Actions. Please don't run `pnpm up --latest`
+on the default branch — review the Dependabot PR instead, or open a
+PR with explicit version pins and a changelog link.
 
 ## Code of Conduct
 
