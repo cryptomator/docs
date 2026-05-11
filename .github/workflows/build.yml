@@ -14,7 +14,7 @@ on:
         value: ${{jobs.build.outputs.artifact-id}}
 
 env:
-  SITE_URL: ${{ inputs.site-url || 'https://docs.cryptomator.org'}}
+  SITE_URL: ${{ inputs.site-url || 'https://docs.staging.cryptomator.org'}}
 
 jobs:
   build:
