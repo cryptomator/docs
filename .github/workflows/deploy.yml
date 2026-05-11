@@ -8,42 +8,10 @@ on:
 jobs:
   # BUILD
   build:
-    name: Build Site
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-      - name: Setup Pages
-        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
-      - name: Verify lockfile has no non-registry sources
-        run: scripts/check-lockfile.sh
-      - name: Setup pnpm
-        uses: pnpm/action-setup@8912a9102ac27614460f54aedde9e1e7f9aec20d # v6.0.5
-      - name: Setup Node.js
-        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
-        with:
-          node-version: '20'
-          cache: 'pnpm'
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-      - name: Build production
-        run: pnpm run build
-      - name: Upload Prod Pages artifact
-        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
-        with:
-          name: prod-site
-          path: './build'
-      - name: Build staging
-        run: pnpm run build
-        env:
-          SITE_URL: https://docs.staging.cryptomator.org
-      - name: Add robots.txt for staging
-        run: 'echo -e "User-agent: *\nDisallow: /" > build/robots.txt'
-      - name: Upload Staging artifact
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: staging-site
-          path: './build'
+    name: Build site
+    uses: ./.github/workflows/build.yml
+    with:
+      site-url: ${{ github.ref == 'refs/heads/main' && 'https://docs.cryptomator.org' || 'https://docs.staging.cryptomator.org' }}
 
   # DEPLOY PROD
   deploy-prod:
@@ -55,6 +23,17 @@ jobs:
       pages: write
       id-token: write
     steps:
+      - name: Download build
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          artifact-ids: ${{ needs.build.outputs.artifact-id }}
+          path: ./build
+          merge-multiple: true
+      - name: Upload Prod Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          name: prod-site
+          path: './build'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
@@ -74,8 +53,11 @@ jobs:
       - name: Download build
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
-          name: staging-site
+          artifact-ids: ${{ needs.build.outputs.artifact-id }}
           path: ./public
+          merge-multiple: true
+      - name: Add robots.txt for staging
+        run: 'echo -e "User-agent: *\nDisallow: /" > public/robots.txt'
       - name: Deploy to Staging Repository
         uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
         with:
