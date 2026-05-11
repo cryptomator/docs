@@ -1,0 +1,15 @@
+# map of package matchers to explicitly allow (true) or disallow (false) script execution
+allowBuilds:
+  '@swc/core': false
+  core-js: false
+
+# deny any execution of any (unreviewed) build scripts
+strictDepBuilds: true
+
+# only direct dependencies (listed in package.json) may use exotic sources (like git or tarball URLs)
+blockExoticSubdeps: true
+
+# Refuse to install package versions younger than 3 days (4320 minutes).
+# Most malicious releases are detected and unpublished within hours; the
+# cooldown means our installs never see them.
+minimumReleaseAge: 4320
