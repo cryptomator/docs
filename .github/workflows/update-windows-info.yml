@@ -37,7 +37,7 @@ jobs:
           fi
           curl --silent --fail-with-body --proto "=https" -L -H "Accept: application/vnd.github+json" $MSI_URL --output cryptomator.msi
         env:
-          ASSETS_JSON: ${{ toJson(github.event.client_payload.release.assets ) }}
+          ASSETS_JSON: ${{ toJson(github.event.client_payload.release ) }}
       - name: Update verify-installers.mdx
         shell: pwsh
         run: |
