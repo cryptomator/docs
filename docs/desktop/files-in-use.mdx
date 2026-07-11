@@ -15,21 +15,19 @@ The **Files in Use** feature helps prevent accidental overwrites in this situati
 
 ## When This Feature Applies {/* #when-this-feature-applies */}
 
-You can run into concurrent edits when:
-
-- a Cryptomator Hub vault is used by multiple team members
-- the vault is synced across multiple devices
-- the vault is accessed over a network share
-
-If another user is currently editing a file, Cryptomator can block opening that file for writing on your side.
+You can run into concurrent edits when a vault is shared across multiple devices or the vault is
+accessed over a network share. If another user is currently editing a file, Cryptomator can block opening that
+file for writing on your side.
 
 :::note
-The usage information is passed with the files being edited.
-Therefore, it requires either the vault residing on shared storage (for example, a network share) or file synchronization.
-In the latter case, it takes around 10 seconds until the status is synchronized to other devices (depending on the sync app).
+The app tracks who's using each file by storing usage information in small files.
+Depending on your setup, it might take a short time (~10 seconds) until such an info file is synced to other devices.
 :::
 
 ## What You Will See {/* #what-you-will-see */}
+
+In your sync client/on the server you will see files with a `.c9u` file extension.
+Each `.c9u`-file contains the usage information for a single encrypted file.
 
 If a file is currently in use by someone else, Cryptomator shows a notification in the app.
 This means another device or user has an active edit session for that file.
