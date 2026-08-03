@@ -69,11 +69,18 @@ Vaults mounted to a drive letter are only accessible to the current user. If you
 **Requirements:** Windows
 
 WebDAV on Windows uses the [`net use`](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/gg651155(v=ws.11)) command to mount/unmount the virtual drive.
-By default, unlocked vaults are mounted as a network drive and assigned a random drive letter.
-Using WebDAV on Windows has the following drawbacks:
+The unlocked vaults is displayed as a network drive and assigned to a random drive letter.
 
-* The size of transferred files is restricted to a maximum of 4 GB.
-* The total space and free space of the network drive are shown to be the same as the total space and free space of the C: drive, which is technically incorrect.
+:::info
+
+WebDAV on Windows has the following drawbacks:
+
+* The maximum file of 4 GB: Files bigger than 4GB cannot be copied into or out of the vault.
+* Files with an absolute path longer than 260 characters cannot be accessed
+* The total space and free space of the vault are always reported to be the same as the total space and free space of the C: drive (even if not true)
+
+:::
+
 
 ## macOS {/* #macos */}
 
