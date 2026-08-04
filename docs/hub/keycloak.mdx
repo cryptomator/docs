@@ -1,0 +1,135 @@
+---
+id: keycloak
+title: Keycloak
+sidebar_position: 10
+---
+
+# Keycloak
+
+Cryptomator Hub delegates authentication and user management to [Keycloak](https://www.keycloak.org/), an open-source identity and access management solution. Hub ships with a preconfigured realm named `cryptomator` that contains the clients Hub needs and the realm roles `user`, `create-vaults`, and `admin`.
+
+This page describes the Keycloak configuration tasks that are specific to running Hub. For everything else, refer to the [Keycloak documentation](https://www.keycloak.org/documentation).
+
+:::info[Enterprise Feature]
+Connecting external identity and access management (IAM) solutions is available as an Enterprise feature.
+
+Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
+:::
+
+:::warning
+Your Hub instance always contains the two system users `admin` and `syncer`. **Do not edit or delete them!** These accounts are required for administration and synchronization tasks.
+:::
+
+## Connecting an External Identity Provider {/* #connecting-an-external-identity-provider */}
+
+You can connect Hub to your existing identity provider so that users authenticate with the credentials they already have. Keycloak supports two fundamentally different approaches, and the choice affects when users become visible in Hub.
+
+With user federation over LDAP or Active Directory, Keycloak reads the directory directly. All users and groups exist in Hub right after the first synchronization, which means you can assign vault permissions before anyone has logged in.
+
+With identity brokering over OpenID Connect or SAML, Keycloak redirects users to the external provider. Users only appear in Hub after their first successful login, so you cannot grant vault access to someone who has never signed in.
+
+### LDAP and Active Directory {/* #ldap-and-active-directory */}
+
+To federate users from an LDAP directory, add an LDAP provider under *User federation* in the `cryptomator` realm and enter the connection URL, the bind credentials, and the base DN of your directory. The [Keycloak documentation on LDAP](https://www.keycloak.org/docs/latest/server_admin/#_ldap) describes the individual settings.
+
+Hub additionally requires two mappers on the LDAP provider:
+
+1. Add a *group-ldap-mapper* so that directory groups are imported into Keycloak. Without it, only users are synchronized and you cannot assign vault permissions to groups.
+2. Add a *hardcoded-ldap-role-mapper* that assigns the realm role `user` to every imported user. Users without this role cannot log in to Hub.
+
+Once both mappers are in place, run *Sync all users* on the LDAP provider. Afterwards, verify the setup by logging in to Hub — not Keycloak — with one of the imported accounts.
+
+### OpenID Connect {/* #openid-connect */}
+
+To delegate authentication to an OpenID Connect provider such as Microsoft Entra ID, add an OpenID Connect provider under *Identity providers* in the `cryptomator` realm and enter the discovery endpoint, client ID, and client secret issued by your provider.
+
+Note that users are created lazily. Keycloak only knows an account after that person has logged in through the external provider for the first time.
+
+### Mapping Groups to Roles {/* #mapping-groups-to-roles */}
+
+Group memberships are not part of the token by default, so you have to enable them on both sides.
+
+In Microsoft Entra ID, open your app registration, go to *Manage* → *Manifest*, and set `"groupMembershipClaims": "All"`. Other providers have an equivalent setting that adds a `groups` claim to the token.
+
+In Keycloak, open your identity provider and add one *Claim to Role* mapper per group you want to map. Set the claim to `groups` and the claim value to the group's identifier — for Entra ID this is the **Object ID** of the group, not its display name. Then select the realm role to assign, typically `user` for regular members and `admin` for administrators.
+
+These mappers are evaluated lazily as well. A role is only assigned when the affected user logs in.
+
+### Using the Identity Provider as Default Login {/* #using-the-identity-provider-as-default-login */}
+
+By default, Keycloak shows a login form with the external provider as an additional button. You can skip that screen and redirect users straight to your provider by entering its alias as the default identity provider in the browser authentication flow, as described in the [Keycloak documentation](https://www.keycloak.org/docs/latest/server_admin/index.html#default_identity_provider).
+
+:::warning
+Once the login form is hidden, local accounts can no longer sign in through the regular flow. Make sure at least one account that you can reach through the external provider holds the `admin` role, otherwise you lock yourself out of Keycloak administration.
+:::
+
+### Skipping the Account Creation Screen {/* #skipping-the-account-creation-screen */}
+
+When a user logs in through an external provider for the first time, Keycloak asks them to review and confirm their profile. To remove this step:
+
+1. Select *Authentication* in the left panel.
+2. Click the three dots next to *first broker login* and choose *Duplicate*. Give the copy a descriptive name such as `first oidc broker login`.
+3. Open the duplicated flow and set *Review Profile* in the first section to *Alternative*.
+4. Select *Identity providers* in the left panel and open your identity provider.
+5. Scroll down to *First login flow*, select the duplicated flow, and save.
+
+:::note
+On hosted Hub instances you cannot create authentication flows yourself, but you can select any flow that already exists.
+:::
+
+### Customizing the Username {/* #customizing-the-username */}
+
+Keycloak derives the username of brokered accounts from the email address reported by the identity provider. If you need a different scheme, add a *Username Template Importer* mapper to your identity provider and set its target to `LOCAL`.
+
+The template describes how the username is composed. For example, `${ALIAS}.${CLAIM.sub}` uses the alias of the identity provider, a dot, and the `sub` claim of the token.
+
+Keycloak currently supports the modifiers `toUpperCase`, `toLowerCase`, and `getEmailLocalPart`. Regular expressions are [not yet implemented](https://github.com/keycloak/keycloak/issues/10107).
+
+The mapper takes effect the next time the affected user logs in.
+
+## Restricting Access to Hub {/* #restricting-access-to-hub */}
+
+If your identity provider serves more people than should have access to Hub, you can filter them out at the point where Keycloak accepts the external login.
+
+Open your identity provider in the `cryptomator` realm, enable *Verify essential claim*, and enter the claim name and the value that identifies an authorized user. Logins that do not carry this claim are rejected before the account is created, so unauthorized users never show up in Hub and never consume a license seat.
+
+Users who are turned away see an error screen after logging in with their external credentials.
+
+If your identity provider is a Keycloak instance as well, create the claim as follows:
+
+1. Create a client role for Hub in the identity provider's realm.
+2. Open *Client scopes* and select the client's *dedicated* scope.
+3. Add a *User Client Role* mapper and make sure *Add to ID token* is enabled. Without it, the claim never reaches Hub's Keycloak.
+4. Assign the client role to every user or group that should have access to Hub.
+
+## Session Timeouts {/* #session-timeouts */}
+
+Keycloak offers a large number of [timeouts](https://www.keycloak.org/docs/latest/server_admin/#_timeouts). Three of them determine how long users stay signed in to Hub.
+
+*Access Token Lifespan* defines how long an issued token remains valid and therefore how often Hub refreshes it in the background. *SSO Session Idle* defines how long a session survives without any token refresh, for example while the browser is closed. *SSO Session Max* is the absolute upper bound after which the user is signed out regardless of activity.
+
+An example makes the interaction clearer. With an access token lifespan of 10 seconds and an SSO session idle of 30 seconds, closing the browser tab for 20 seconds and reopening it yields a new token. Closing it for 40 seconds signs the user out, because the session expired while no refresh happened.
+
+:::tip
+If users complain about being signed out too often, *SSO Session Idle* is usually the setting to increase.
+:::
+
+## Migrating to Another Identity Provider {/* #migrating-to-another-identity-provider */}
+
+Hub identifies users by the IDs that Keycloak assigns to them, and vault permissions are bound to those IDs. When you switch from one identity provider to another, you therefore have to link the new external identity to the existing Keycloak account instead of creating a new one. Done correctly, users keep their vault access and do not have to set up their account again.
+
+### Linking Accounts Manually {/* #linking-accounts-manually */}
+
+If you know the user ID and the username in the new identity provider, open the existing user in Keycloak, switch to *Identity provider links*, and add the link directly. The same can be done through the [Keycloak Admin REST API](https://www.keycloak.org/docs-api/latest/rest-api/index.html#FederatedIdentityRepresentation), which is the better option for larger user bases.
+
+### Linking Accounts During Login {/* #linking-accounts-during-login */}
+
+Users can also link their own accounts. When someone logs in through the new provider with an email address that already exists in Keycloak, Keycloak offers to add the login to the existing account. Choosing *Add existing account* prompts them to authenticate once with the old provider, after which both identities point to the same account.
+
+If the old provider has already been shut down, set a password on the affected accounts beforehand. Users can then confirm the link with username and password instead of the old provider. When the account has a verified email address, confirmation by email works as well; both alternatives are reachable through *Try Another Way* on the login screen.
+
+### Forcing the Migration {/* #forcing-the-migration */}
+
+As long as both providers are offered on the login screen, nothing stops users from continuing to sign in with the old one, and their accounts are never migrated. Set the new provider as the [default identity provider](#using-the-identity-provider-as-default-login) to send everyone through the new login and trigger the linking automatically.
+
+Once every account is linked, you can remove the old identity provider from the realm.

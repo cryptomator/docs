@@ -1,7 +1,7 @@
 ---
 id: deployment
 title: Deployment
-sidebar_position: 2
+sidebar_position: 11
 ---
 
 # Deployment
@@ -32,6 +32,8 @@ To get started, use the [Setup Wizard](https://cryptomator.org/hub/self-hosted/)
 
 Cryptomator Hub depends on [Keycloak](https://www.keycloak.org/), an open-source identity and access management solution.
 In the Setup Wizard, you will have the option to choose between deploying Keycloak alongside Hub or specifying an URL to an existing Keycloak installation.
+
+Once Hub is up and running, see [Keycloak](keycloak.mdx) for configuration tasks such as connecting an external identity provider or adjusting session timeouts.
 
 ## Reverse Proxy {/* #reverse-proxy */}
 
@@ -114,6 +116,82 @@ Before running this deployment
 
 Troubleshooting: If you encounter problems, check the log files in `logs/traffik.log` and `logs/access.log`. Make sure you entered `srv` as `Public Network` in the Setup Wizard of Hub.
 
+## Trusting a Private Certificate Authority {/* #trusting-a-private-certificate-authority */}
+
+If Hub connects to a Keycloak instance whose TLS certificate was not issued by a well-known certificate authority, you have to make the issuing CA known to Hub. Hub runs on the JVM, which uses its own trust store and ignores the certificates trusted by the host system.
+
+Start by preparing a file `rootWithIntermediates.pem` that contains the root certificate and all intermediate certificates that are not publicly available, in PEM format. Then create a PKCS12 trust store from it:
+
+```bash
+keytool -importcert \
+    -alias keycloak-ca-chain \
+    -file rootWithIntermediates.pem \
+    -keystore keycloak-truststore.p12 \
+    -storepass changeit \
+    -noprompt
+```
+
+Replace `changeit` with a password of your own. You can verify the result with `keytool -list -v -keystore keycloak-truststore.p12 -storepass changeit`.
+
+Hub reads the trust store from the Java system properties `javax.net.ssl.trustStore` and `javax.net.ssl.trustStorePassword`, which you pass as arguments to the application command.
+
+In Docker Compose, mount the file into the container and override the command:
+
+```yaml
+services:
+  hub:
+    image: ghcr.io/cryptomator/hub:latest
+    command: >
+      ./application
+      -Djavax.net.ssl.trustStore=/etc/certs/keycloak-truststore.p12
+      -Djavax.net.ssl.trustStorePassword=changeit
+    volumes:
+      - './certs/keycloak-truststore.p12:/etc/certs/keycloak-truststore.p12:ro'
+```
+
+In Kubernetes, store the trust store in a secret and mount it as a volume. Encode the file with `base64 -w0 keycloak-truststore.p12` and add the output to a secret:
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: hub
+  name: instance-secrets
+type: Opaque
+data:
+  keycloak-truststore-p12: BASE64_ENCODED_TRUSTSTORE
+```
+
+Then reference it in the deployment:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cryptomator-hub
+  namespace: hub
+spec:
+  template:
+    spec:
+      containers:
+        - name: cryptomator-hub
+          image: ghcr.io/cryptomator/hub:latest
+          command: ['./application']
+          args:
+            - '-Djavax.net.ssl.trustStore=/etc/certs/keycloak-truststore-p12'
+            - '-Djavax.net.ssl.trustStorePassword=changeit'
+          volumeMounts:
+            - name: keycloak-truststore-p12
+              mountPath: /etc/certs
+              readOnly: true
+```
+
+:::note
+Quarkus also offers the configuration options `QUARKUS_OIDC_CERTIFICATE_CHAIN_TRUST_STORE_FILE` and `QUARKUS_OIDC_CERTIFICATE_CHAIN_TRUST_STORE_PASSWORD`. These do not work for this purpose, so use the Java system properties shown above.
+:::
+
+If the Cryptomator desktop app also needs to talk to that Hub instance, the same applies there. Add `java-options=-Djavax.net.ssl.trustStore=/path/to/your/truststore` to the `Cryptomator.cfg` file in the installation directory.
+
 ## Backup {/* #backup */}
 
 Cryptomator Hub and Keycloak both write to the connected Postgres database. So the best and easiest way is to backup it cyclically using e.g. a Cron Job. Depending on your deployment, here is a sample command that you can run on the host system to backup the entire databases to a file using the Postgres container, which you than could import in a similar way:
@@ -138,3 +216,55 @@ If you also back up the deployment script, you can restore the entire solution t
 :::note
 Make sure this backup is moved to another secure location.
 :::
+
+## Restore {/* #restore */}
+
+To bring a Hub deployment back to the state of a backup, replace the `hub` database with the contents of the dump. The following steps use Docker Compose; adjust the commands accordingly if you deploy to Kubernetes.
+
+1. Create a fresh backup of the entire Postgres cluster, including the Keycloak database, so that you can return to the current state if something goes wrong.
+1. Stop Hub with `docker compose stop hub`. Keycloak and Postgres keep running.
+1. Connect to Postgres with `docker compose exec -ti postgres psql -U postgres`.
+1. Rename the existing database with `ALTER DATABASE hub RENAME TO hub_backup;` so that it remains available as an additional safety net.
+1. Create an empty database with `CREATE DATABASE hub WITH ENCODING 'UTF8'; GRANT ALL PRIVILEGES ON DATABASE hub TO hub;` and leave the shell with `exit`.
+1. Import the dump with `docker compose exec -T postgres psql -U hub -d hub -v ON_ERROR_STOP=1 < backup.sql`.
+1. Start Hub again with `docker compose start hub`.
+
+Once you have confirmed that Hub works as expected, you can drop the `hub_backup` database.
+
+:::warning
+Hub and Keycloak reference each other by user ID. If you restore the Hub database from a backup, restore the Keycloak database from the same point in time as well. Otherwise users may exist in one system but not in the other.
+:::
+
+## Changing the Database Password {/* #changing-the-database-password */}
+
+Change the password in Postgres first, then update the deployment. Connect to the Postgres container with `docker exec -it POSTGRES_CONTAINER_NAME /bin/ash` or `kubectl exec -it deployments/postgres -n NAMESPACE -- /bin/ash`, open the database with `psql -h localhost -d hub -U hub`, and run `\password` to set a new password for the Hub database user.
+
+Afterwards, set the environment variable `QUARKUS_DATASOURCE_PASSWORD` in your Hub deployment to the new password and restart Hub.
+
+:::note
+Keycloak uses its own database user. Changing the Hub password does not affect it.
+:::
+
+## Verifying Container Images {/* #verifying-container-images */}
+
+The Hub and Keycloak container images are published together with build provenance attestations, which allow you to confirm that an image was built by the official GitHub Actions workflow and has not been tampered with.
+
+The following example verifies the Keycloak image using [regctl](https://github.com/regclient/regclient) and [cosign](https://github.com/sigstore/cosign):
+
+```bash
+KC_VERSION=26.1.3
+regctl manifest get --format raw-body ghcr.io/cryptomator/keycloak:${KC_VERSION} > manifest.json
+DIGEST="sha256-$(sha256sum manifest.json | awk '{ print $1 }')"
+regctl artifact get ghcr.io/cryptomator/keycloak:${DIGEST} > bundle.json
+cosign verify-blob-attestation \
+    --bundle bundle.json \
+    --new-bundle-format \
+    --certificate-oidc-issuer="https://token.actions.githubusercontent.com" \
+    --certificate-identity-regexp="^https://github.com/cryptomator/hub/.github/workflows/keycloak.yml@refs/heads/release/keycloak-${KC_VERSION}" \
+    manifest.json
+```
+
+A successful run prints `Verified OK`.
+
+The Hub image itself is attested by the `build.yml` workflow of the same repository. To verify it, use the corresponding image name and adjust `--certificate-identity-regexp` to that workflow and the Git reference the release was built from.
+
