@@ -2,6 +2,9 @@
   // This file is not used in compilation. It is here just for a nice editor experience.
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
+    // @docusaurus/tsconfig still sets the deprecated `baseUrl`, which TypeScript 7.0 removes.
+    // Drop this once Docusaurus ships a base config without it, then move to TypeScript 7.
+    "ignoreDeprecations": "6.0",
     "baseUrl": "."
   },
   "exclude": [".docusaurus", "build"]
