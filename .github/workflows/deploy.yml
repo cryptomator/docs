@@ -59,7 +59,7 @@ jobs:
       - name: Add robots.txt for staging
         run: 'echo -e "User-agent: *\nDisallow: /" > public/robots.txt'
       - name: Deploy to Staging Repository
-        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           personal_token: ${{ secrets.CRYPTOBOT_DEPLOY_STAGING_DOCS }}
           external_repository: cryptomator/docs-staging
