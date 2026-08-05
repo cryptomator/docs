@@ -116,82 +116,6 @@ Before running this deployment
 
 Troubleshooting: If you encounter problems, check the log files in `logs/traffik.log` and `logs/access.log`. Make sure you entered `srv` as `Public Network` in the Setup Wizard of Hub.
 
-## Trusting a Private Certificate Authority {/* #trusting-a-private-certificate-authority */}
-
-If Hub connects to a Keycloak instance whose TLS certificate was not issued by a well-known certificate authority, you have to make the issuing CA known to Hub. Hub runs on the JVM, which uses its own trust store and ignores the certificates trusted by the host system.
-
-Start by preparing a file `rootWithIntermediates.pem` that contains the root certificate and all intermediate certificates that are not publicly available, in PEM format. Then create a PKCS12 trust store from it:
-
-```bash
-keytool -importcert \
-    -alias keycloak-ca-chain \
-    -file rootWithIntermediates.pem \
-    -keystore keycloak-truststore.p12 \
-    -storepass changeit \
-    -noprompt
-```
-
-Replace `changeit` with a password of your own. You can verify the result with `keytool -list -v -keystore keycloak-truststore.p12 -storepass changeit`.
-
-Hub reads the trust store from the Java system properties `javax.net.ssl.trustStore` and `javax.net.ssl.trustStorePassword`, which you pass as arguments to the application command.
-
-In Docker Compose, mount the file into the container and override the command:
-
-```yaml
-services:
-  hub:
-    image: ghcr.io/cryptomator/hub:latest
-    command: >
-      ./application
-      -Djavax.net.ssl.trustStore=/etc/certs/keycloak-truststore.p12
-      -Djavax.net.ssl.trustStorePassword=changeit
-    volumes:
-      - './certs/keycloak-truststore.p12:/etc/certs/keycloak-truststore.p12:ro'
-```
-
-In Kubernetes, store the trust store in a secret and mount it as a volume. Encode the file with `base64 -w0 keycloak-truststore.p12` and add the output to a secret:
-
-```yaml
-apiVersion: v1
-kind: Secret
-metadata:
-  namespace: hub
-  name: instance-secrets
-type: Opaque
-data:
-  keycloak-truststore-p12: BASE64_ENCODED_TRUSTSTORE
-```
-
-Then reference it in the deployment:
-
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: cryptomator-hub
-  namespace: hub
-spec:
-  template:
-    spec:
-      containers:
-        - name: cryptomator-hub
-          image: ghcr.io/cryptomator/hub:latest
-          command: ['./application']
-          args:
-            - '-Djavax.net.ssl.trustStore=/etc/certs/keycloak-truststore-p12'
-            - '-Djavax.net.ssl.trustStorePassword=changeit'
-          volumeMounts:
-            - name: keycloak-truststore-p12
-              mountPath: /etc/certs
-              readOnly: true
-```
-
-:::note
-Quarkus also offers the configuration options `QUARKUS_OIDC_CERTIFICATE_CHAIN_TRUST_STORE_FILE` and `QUARKUS_OIDC_CERTIFICATE_CHAIN_TRUST_STORE_PASSWORD`. These do not work for this purpose, so use the Java system properties shown above.
-:::
-
-If the Cryptomator desktop app also needs to talk to that Hub instance, the same applies there. Add `java-options=-Djavax.net.ssl.trustStore=/path/to/your/truststore` to the `Cryptomator.cfg` file in the installation directory.
-
 ## Backup {/* #backup */}
 
 Cryptomator Hub and Keycloak both write to the connected Postgres database. So the best and easiest way is to backup it cyclically using e.g. a Cron Job. Depending on your deployment, here is a sample command that you can run on the host system to backup the entire databases to a file using the Postgres container, which you than could import in a similar way:
@@ -268,3 +192,78 @@ A successful run prints `Verified OK`.
 
 The Hub image itself is attested by the `build.yml` workflow of the same repository. To verify it, use the corresponding image name and adjust `--certificate-identity-regexp` to that workflow and the Git reference the release was built from.
 
+## Trusting a Private Certificate Authority {/* #trusting-a-private-certificate-authority */}
+
+If Hub connects to a Keycloak instance whose TLS certificate was not issued by a well-known certificate authority, you have to make the issuing CA known to Hub. Hub runs on the JVM, which uses its own trust store and ignores the certificates trusted by the host system.
+
+Start by preparing a file `rootWithIntermediates.pem` that contains the root certificate and all intermediate certificates that are not publicly available, in PEM format. Then create a PKCS12 trust store from it:
+
+```bash
+keytool -importcert \
+    -alias keycloak-ca-chain \
+    -file rootWithIntermediates.pem \
+    -keystore keycloak-truststore.p12 \
+    -storepass changeit \
+    -noprompt
+```
+
+Replace `changeit` with a password of your own. You can verify the result with `keytool -list -v -keystore keycloak-truststore.p12 -storepass changeit`.
+
+Hub reads the trust store from the Java system properties `javax.net.ssl.trustStore` and `javax.net.ssl.trustStorePassword`, which you pass as arguments to the application command.
+
+In Docker Compose, mount the file into the container and override the command:
+
+```yaml
+services:
+  hub:
+    image: ghcr.io/cryptomator/hub:latest
+    command: >
+      ./application
+      -Djavax.net.ssl.trustStore=/etc/certs/keycloak-truststore.p12
+      -Djavax.net.ssl.trustStorePassword=changeit
+    volumes:
+      - './certs/keycloak-truststore.p12:/etc/certs/keycloak-truststore.p12:ro'
+```
+
+In Kubernetes, store the trust store in a secret and mount it as a volume. Encode the file with `base64 -w0 keycloak-truststore.p12` and add the output to a secret:
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: hub
+  name: instance-secrets
+type: Opaque
+data:
+  keycloak-truststore-p12: BASE64_ENCODED_TRUSTSTORE
+```
+
+Then reference it in the deployment:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cryptomator-hub
+  namespace: hub
+spec:
+  template:
+    spec:
+      containers:
+        - name: cryptomator-hub
+          image: ghcr.io/cryptomator/hub:latest
+          command: ['./application']
+          args:
+            - '-Djavax.net.ssl.trustStore=/etc/certs/keycloak-truststore-p12'
+            - '-Djavax.net.ssl.trustStorePassword=changeit'
+          volumeMounts:
+            - name: keycloak-truststore-p12
+              mountPath: /etc/certs
+              readOnly: true
+```
+
+:::note
+Quarkus also offers the configuration options `QUARKUS_OIDC_CERTIFICATE_CHAIN_TRUST_STORE_FILE` and `QUARKUS_OIDC_CERTIFICATE_CHAIN_TRUST_STORE_PASSWORD`. These do not work for this purpose, so use the Java system properties shown above.
+:::
+
+If the Cryptomator desktop app also needs to talk to that Hub instance, the same applies there. Add `java-options=-Djavax.net.ssl.trustStore=/path/to/your/truststore` to the `Cryptomator.cfg` file in the installation directory.

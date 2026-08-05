@@ -16,10 +16,6 @@ Connecting external identity and access management (IAM) solutions is available 
 Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
 :::
 
-:::warning
-Your Hub instance always contains the two system users `admin` and `syncer`. **Do not edit or delete them!** These accounts are required for administration and synchronization tasks.
-:::
-
 ## Connecting an External Identity Provider {/* #connecting-an-external-identity-provider */}
 
 You can connect Hub to your existing identity provider so that users authenticate with the credentials they already have. Keycloak supports two fundamentally different approaches, and the choice affects when users become visible in Hub.
@@ -27,17 +23,6 @@ You can connect Hub to your existing identity provider so that users authenticat
 With user federation over LDAP or Active Directory, Keycloak reads the directory directly. All users and groups exist in Hub right after the first synchronization, which means you can assign vault permissions before anyone has logged in.
 
 With identity brokering over OpenID Connect or SAML, Keycloak redirects users to the external provider. Users only appear in Hub after their first successful login, so you cannot grant vault access to someone who has never signed in.
-
-### LDAP and Active Directory {/* #ldap-and-active-directory */}
-
-To federate users from an LDAP directory, add an LDAP provider under *User federation* in the `cryptomator` realm and enter the connection URL, the bind credentials, and the base DN of your directory. The [Keycloak documentation on LDAP](https://www.keycloak.org/docs/latest/server_admin/#_ldap) describes the individual settings.
-
-Hub additionally requires two mappers on the LDAP provider:
-
-1. Add a *group-ldap-mapper* so that directory groups are imported into Keycloak. Without it, only users are synchronized and you cannot assign vault permissions to groups.
-2. Add a *hardcoded-ldap-role-mapper* that assigns the realm role `user` to every imported user. Users without this role cannot log in to Hub.
-
-Once both mappers are in place, run *Sync all users* on the LDAP provider. Afterwards, verify the setup by logging in to Hub — not Keycloak — with one of the imported accounts.
 
 ### OpenID Connect {/* #openid-connect */}
 
@@ -54,6 +39,17 @@ In Microsoft Entra ID, open your app registration, go to *Manage* → *Manifest*
 In Keycloak, open your identity provider and add one *Claim to Role* mapper per group you want to map. Set the claim to `groups` and the claim value to the group's identifier — for Entra ID this is the **Object ID** of the group, not its display name. Then select the realm role to assign, typically `user` for regular members and `admin` for administrators.
 
 These mappers are evaluated lazily as well. A role is only assigned when the affected user logs in.
+
+### LDAP and Active Directory {/* #ldap-and-active-directory */}
+
+To federate users from an LDAP directory, add an LDAP provider under *User federation* in the `cryptomator` realm and enter the connection URL, the bind credentials, and the base DN of your directory. The [Keycloak documentation on LDAP](https://www.keycloak.org/docs/latest/server_admin/#_ldap) describes the individual settings.
+
+Hub additionally requires two mappers on the LDAP provider:
+
+1. Add a *group-ldap-mapper* so that directory groups are imported into Keycloak. Without it, only users are synchronized and you cannot assign vault permissions to groups.
+2. Add a *hardcoded-ldap-role-mapper* that assigns the realm role `user` to every imported user. Users without this role cannot log in to Hub.
+
+Once both mappers are in place, run *Sync all users* on the LDAP provider. Afterwards, verify the setup by logging in to Hub — not Keycloak — with one of the imported accounts.
 
 ### Using the Identity Provider as Default Login {/* #using-the-identity-provider-as-default-login */}
 
@@ -72,10 +68,6 @@ When a user logs in through an external provider for the first time, Keycloak as
 3. Open the duplicated flow and set *Review Profile* in the first section to *Alternative*.
 4. Select *Identity providers* in the left panel and open your identity provider.
 5. Scroll down to *First login flow*, select the duplicated flow, and save.
-
-:::note
-On hosted Hub instances you cannot create authentication flows yourself, but you can select any flow that already exists.
-:::
 
 ### Customizing the Username {/* #customizing-the-username */}
 
