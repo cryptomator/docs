@@ -1,7 +1,7 @@
 ---
 id: user-group-management
 title: User & Group Management
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # User & Group Management
@@ -187,8 +187,4 @@ You can access the Keycloak management interface from the admin section of Hub. 
 Setting up LDAP synchronization is described in the [Keycloak documentation](https://www.keycloak.org/docs/latest/server_admin/#_ldap).
 For OpenID Connect and SAML, the Keycloak documentation provides [general information](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker).
 
-
-:::warning
-Regardless of your IAM setup, your Hub instance always contains two system users: `admin` and `syncer`. **Do not edit or delete them!** These accounts are required for administration and synchronization tasks.
-:::
-
+The [Keycloak](keycloak.mdx) page covers the configuration steps that are specific to Hub, such as [connecting an external identity provider](keycloak.mdx#connecting-an-external-identity-provider), [restricting who may access Hub](keycloak.mdx#restricting-access-to-hub), and [migrating to another identity provider](keycloak.mdx#migrating-to-another-identity-provider).
