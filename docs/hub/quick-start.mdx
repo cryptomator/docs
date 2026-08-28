@@ -1,0 +1,75 @@
+---
+id: quick-start
+title: Quick Start
+sidebar_position: 2
+---
+
+# Quick Start
+
+Want to see Cryptomator Hub in action before rolling it out to your team? This guide gets a test instance running on your own machine in about **20 minutes**. No domain, no TLS certificates, no reverse proxy.
+
+What you end up with is a playground, not a production system. It only listens on `localhost`, uses plain HTTP, and comes with default passwords. When you are ready for the real thing, head over to the [Production Deployment](deployment.mdx).
+
+:::tip
+Not keen on running Hub yourself at all? We also offer Hub as a [managed service](https://cryptomator.org/for-teams/).
+:::
+
+## Before You Start {/* #before-you-start */}
+
+You need:
+
+* A machine with [Docker](https://docs.docker.com/get-docker/) installed, including Docker Compose (`docker compose version` should print a version number).
+* Ports `8080` and `8180` free on that machine.
+* About 1 GB of free RAM for the three containers (Hub, Keycloak, and Postgres).
+
+## Start Hub {/* #start-hub */}
+
+We provide a ready-made Compose file that runs Hub on `http://localhost:8080` and Keycloak on `http://localhost:8180`, with an admin account `admin` / `admin`. Nothing to configure.
+
+Open a terminal in an empty directory, download the file, and start the stack:
+
+```bash
+curl -fsSLO https://raw.githubusercontent.com/cryptomator/hub/2.0.0/deploy/compose/local/compose.yaml
+docker compose up -d
+```
+
+Docker now pulls the images and starts the containers. Keycloak takes a minute or two to initialize on first start, so grab a coffee. You can watch the progress with:
+
+```bash
+docker compose ps
+```
+
+Once all services report `healthy`, you are good to go.
+
+## Log In {/* #log-in */}
+
+Open [http://localhost:8080](http://localhost:8080) in your browser and log in with `admin` / `admin`.
+
+Two things happen on your first login:
+
+1. Keycloak asks you to choose a new password for the admin account.
+1. Hub walks you through the [account setup](your-account.mdx#account-setup) and shows you your *Account Key*. Save it somewhere safe, then finish the setup.
+
+That's it, you are in. Try [creating a vault](vault-management.mdx#create-a-vault), [adding a user](user-group-management.mdx#create-user), or [unlocking the vault](access-vault.mdx) from the Cryptomator desktop app with `http://localhost:8080` as the Hub address.
+
+:::note
+Keycloak's admin console is available at [http://localhost:8180](http://localhost:8180), also with `admin` / `admin`. You don't need it for this tutorial, but it's where user federation and identity providers are configured later on. See [Keycloak](keycloak.mdx) for details.
+:::
+
+## Clean Up {/* #clean-up */}
+
+To stop Hub but keep your data:
+
+```bash
+docker compose stop
+```
+
+To remove everything, including the database:
+
+```bash
+docker compose down -v
+```
+
+## Next Steps {/* #next-steps */}
+
+Liked what you saw? Deploying Hub for your team requires a public address, TLS, and a plan for backups. The [Production Deployment](deployment.mdx) guide covers all of that.
