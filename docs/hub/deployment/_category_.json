@@ -1,0 +1,8 @@
+{
+  "label": "Deployment Cookbook",
+  "position": 12,
+  "link": {
+    "type": "doc",
+    "id": "hub/deployment/index"
+  }
+}

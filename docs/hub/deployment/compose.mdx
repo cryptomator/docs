@@ -1,0 +1,54 @@
+---
+title: Docker Compose
+sidebar_position: 3
+description: Run Hub on a single Docker host behind Traefik.
+---
+
+# Docker Compose
+
+We maintain example Compose files in the [Hub repository](https://github.com/cryptomator/hub/tree/develop/deploy/compose). The production example runs Hub, Keycloak, and PostgreSQL behind a [Traefik](https://traefik.io/) reverse proxy that obtains a TLS certificate from Let's Encrypt.
+
+## Prerequisites {/* #compose-prerequisites */}
+
+* Docker with Docker Compose 2.23.1 or newer (`docker compose version`).
+* Ports 80 and 443 of the host reachable from the internet (Let's Encrypt HTTP challenge) and from your users.
+* DNS records for the Hub and Keycloak hostnames pointing to the host.
+
+## Deploy {/* #compose-deploy */}
+
+Download the production example into an empty directory:
+
+{/* TODO: verify once deploy/compose/prod is published */}
+```bash
+curl -fsSLO https://raw.githubusercontent.com/cryptomator/hub/2.0.0/deploy/compose/prod/compose.yaml
+```
+
+Open `compose.yaml` and replace every placeholder before starting the stack:
+
+1. The two public hostnames, in all places they appear (see [Configuration](#compose-configuration)).
+1. The email address for Let's Encrypt.
+1. All passwords and secrets: the PostgreSQL admin password, the database passwords of `hub` and `keycloak`, the Keycloak bootstrap admin password, the Hub admin password, and the secret of the `cryptomatorhub-system` client. Generate them, e.g. with `openssl rand -hex 32`.
+
+Then start everything:
+
+```bash
+docker compose up -d
+```
+
+Keycloak takes a minute or two on first start to import the realm. Once all services are healthy, open the Hub URL, sign in as `admin` with the password you chose, and enter your license.
+
+## Configuration {/* #compose-configuration */}
+
+You can find a reference table of all settings alongside the example in [the project's GitHub repository](https://github.com/cryptomator/hub/tree/2.0.0/deploy/compose/prod).
+
+:::danger[Never publish service ports]
+Traefik is the only service in the example with a `ports:` section. Do not add `ports:` to `hub`, `keycloak`, or `postgres`, not even "just for testing" or bound to a non-standard port.
+
+Doing so exposes unencrypted logins, tokens, and the database to the network. Traefik reaches the services over the internal Compose network; if you need to inspect a service, use `docker compose exec` or an SSH tunnel instead.
+:::
+
+## Upgrading {/* #compose-upgrading */}
+
+[Back up the database](../operations.mdx#backup) first. Image versions are pinned in `compose.yaml`; to upgrade, change the tags and run `docker compose up -d`. Hub applies its database migrations automatically at start. For Keycloak, follow the [Keycloak upgrade guide](https://www.keycloak.org/docs/latest/upgrading/).
+
+PostgreSQL minor updates (e.g. `18.6` → `18.7`) are drop-in. A major update (`18` → `19`) is not: the data directory must be migrated with `pg_upgrade` or a dump and restore, see the [PostgreSQL upgrade notes](https://www.postgresql.org/docs/current/upgrading.html).
