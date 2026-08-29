@@ -1,0 +1,51 @@
+---
+id: backup-restore
+title: Backup & Restore
+sidebar_position: 13
+---
+
+# Backup & Restore
+
+All state of Cryptomator Hub lives in the PostgreSQL database: the `hub` database holds vaults, keys, and the audit log, the `keycloak` database holds users, groups, and credentials. Back up both, and always do so before upgrading.
+
+## Backup {/* #backup */}
+
+The easiest way is a logical dump of the entire PostgreSQL instance with `pg_dumpall`, run regularly, e.g. from a cron job on the host.
+
+Docker Compose:
+
+```bash
+docker compose exec -u postgres postgres pg_dumpall > "$(date +%F)-hub-backup.sql"
+```
+
+Kubernetes:
+
+```bash
+kubectl exec -n cryptomator hub-pg-0 -- pg_dumpall -U postgres > "$(date +%F)-hub-backup.sql"
+```
+
+On Kubernetes you can alternatively snapshot the volume `data-hub-pg-0` with your storage provider.
+
+See the [PostgreSQL documentation](https://www.postgresql.org/docs/current/app-pg-dumpall.html) for more information on `pg_dumpall`. If you also back up your `compose.yaml` or Helm values, you can restore the entire installation in minutes.
+
+:::note
+Make sure the backup is moved to another secure location.
+:::
+
+## Restore {/* #restore */}
+
+To bring a Hub deployment back to the state of a backup, replace the `hub` database with the contents of the dump. The following steps use Docker Compose; the Kubernetes equivalents are noted where they differ.
+
+1. Create a fresh backup of the entire PostgreSQL instance, including the Keycloak database, so that you can return to the current state if something goes wrong.
+1. Stop Hub with `docker compose stop hub`. Keycloak and PostgreSQL keep running. (Kubernetes: `kubectl scale -n cryptomator deployment/hub-hub --replicas=0`)
+1. Connect to PostgreSQL with `docker compose exec -ti postgres psql -U postgres`. (Kubernetes: `kubectl exec -ti -n cryptomator hub-pg-0 -- psql -U postgres`)
+1. Rename the existing database with `ALTER DATABASE hub RENAME TO hub_backup;` so that it remains available as an additional safety net.
+1. Create an empty database with `CREATE DATABASE hub WITH ENCODING 'UTF8'; GRANT ALL PRIVILEGES ON DATABASE hub TO hub;` and leave the shell with `exit`.
+1. Import the dump with `docker compose exec -T postgres psql -U hub -d hub -v ON_ERROR_STOP=1 < backup.sql`. (Kubernetes: `kubectl exec -i -n cryptomator hub-pg-0 -- psql -U hub -d hub -v ON_ERROR_STOP=1 < backup.sql`)
+1. Start Hub again with `docker compose start hub`. (Kubernetes: `kubectl scale -n cryptomator deployment/hub-hub --replicas=1`)
+
+Once you have confirmed that Hub works as expected, you can drop the `hub_backup` database.
+
+:::warning
+Hub and Keycloak reference each other by user ID. If you restore the Hub database from a backup, restore the Keycloak database from the same point in time as well. Otherwise users may exist in one system but not in the other.
+:::
