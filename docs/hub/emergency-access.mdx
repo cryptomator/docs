@@ -1,7 +1,7 @@
 ---
 id: emergency-access
 title: Emergency Access
-sidebar_position: 9
+sidebar_position: 10
 ---
 
 # Emergency Access
@@ -15,7 +15,7 @@ Its process requires a group of trusted users (the "council") to approve the rec
 When enough approvals are collected, the emergency change is completed and vault management access is restored.
 Technically, this is implemented using key splitting based on **[Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_secret_sharing)**.
 
-## Set Up Emergency Access
+## Set Up Emergency Access {/* #set-up-emergency-access */}
 
 The feature can be activated for new and existing vaults:
 
@@ -23,7 +23,7 @@ The feature can be activated for new and existing vaults:
   For the full workflow, see [Vault Management](vault-management.mdx#create-a-vault).
 * **Existing vaults:** Open `Vault Details` and [configure Emergency Access](vault-management.mdx#emergency-access-council).
 
-## Starting a Recovery Process
+## Starting a Recovery Process {/* #starting-a-recovery-process */}
 
 To start, open the `Emergency Access` page, select the vault, and start the desired process.
 
@@ -52,7 +52,7 @@ Starting a process automatically approves the process.
 :::
 
 
-### Choose Vault Members
+### Choose Vault Members {/* #choose-vault-members */}
 
 The `Choose Vault Members` process allows you to select new vault `Owners` or `Members`.
 
@@ -61,7 +61,7 @@ Users that are no longer part of the vault are shown as `Removed`.
 <Image src="/img/hub/emergency_access_change_permissions_start.png" alt="Emergency Access Vault List" width="2560" height="1080" />
 
 
-### Change Emergency Access Council
+### Change Emergency Access Council {/* #change-emergency-access-council */}
 
 The `Change Emergency Access Council` process allows you to select a new council.
 
@@ -69,7 +69,7 @@ The minimum required number of members is configured in the [Admin settings](adm
 
 <Image src="/img/hub/emergency_access_change_council_start.png" alt="Emergency Access Vault List" width="2560" height="1080" />
 
-## Approve a Recovery Process
+## Approve a Recovery Process {/* #approve-a-recovery-process */}
 
 To view or approve running Emergency Access processes, open the `Emergency Access` list.
 If an Emergency Access process is running for a vault, the vault is displayed with a process button.
@@ -97,7 +97,7 @@ You can also inspect details before approving. Hover (or click) the segment ring
 
 <Image src="/img/hub/emergency_access_vault_list_hover_process.png" alt="Emergency Access Vault List Hover Process" width="2560" height="1080" />
 
-## Complete a Recovery Process
+## Complete a Recovery Process {/* #complete-a-recovery-process */}
 
 As soon as enough shares are available, the process button in the `Emergency Access` vault list shows `Complete now`.
 
@@ -114,14 +114,14 @@ Results by type:
 
 After successful completion, the process is removed.
 
-## Abort a Recovery Process
+## Abort a Recovery Process {/* #abort-a-recovery-process */}
 
 Running processes can be canceled in the dialog using `Abort this Process`.
 
 <Image src="/img/hub/emergency_access_vault_list_change_council_abort_dialog.png" alt="Emergency Access Vault List Abort Dialog" width="2560" height="1080" />
 
 
-## Typical States and Notes
+## Typical States and Notes {/* #typical-states-and-notes */}
 
 The following warning states can appear in the Emergency Access list:
 
@@ -132,6 +132,6 @@ The following warning states can appear in the Emergency Access list:
 * `No Redundancy`: No fault tolerance in the council.
   What to do: Increase the number of council members or reduce the required threshold so one unavailable user does not block recovery.
 
-## Audit Log Events
+## Audit Log Events {/* #audit-log-events */}
 
 See [Emergency Access Audit Log events](admin.mdx#event-type-emergency-access).
