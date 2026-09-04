@@ -1,7 +1,7 @@
 ---
 id: vault-management
 title: Vault Management
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Vault Management
@@ -18,14 +18,14 @@ Here, all vaults which are shared with you, are listed.
 After signing in, Hub redirects you to this list.
 Alternatively, you can also access the list by clicking on the `Vaults` tab in the navigation bar.
 
-<Image src="/img/hub/vaultlist.png" alt="List vaults" width="2560" height="1080" />
+<Image src="/img/hub/vaultlist.png" alt="List vaults" width="2880" height="1800" />
 
 :::note
 * As a user, you will only see the vaults that you have access to.
 * As an admin of the Hub instance, you can see all vaults, but you can only access those that you have been granted access to.
 :::
 
-:::note[Emergency Access Status in Vault List (Enterprise only, early access)]
+:::note[Emergency Access Status in Vault List (Enterprise only)]
 In the `Vault List`, owners can see the Emergency Access status directly via badges:
 
 * `Council missing`: No council is configured for the vault
@@ -39,11 +39,11 @@ In the `Vault List`, owners can see the Emergency Access status directly via bad
 Creating vaults require the `create-vault` role. [Here](user-group-management.mdx#roles) you can read more about roles.
 :::
 
-To create a vault in Hub, navigate to the vault list and click on the `Create Vault` button in the top right corner.
+To create a vault in Hub, navigate to the vault list and click `Add` → `Create New` in the top right corner.
 Every vault has a name and optionally a description.
 Fill out the form and continue the process by clicking the `Next` button in the right corner.
 
-<Image src="/img/hub/create-vault.png" alt="Create a vault" width="2560" height="836" />
+<Image src="/img/hub/create-vault.png" alt="Create a vault" width="2880" height="1280" />
 
 If the [Emergency Access](emergency-access.mdx) feature is enabled, the following step appears:
 
@@ -52,23 +52,19 @@ If the administrator allows custom council selection, you can adjust the default
 Select the council members who should participate in emergency recovery and review the example recovery scenario.
 Click `Next` to continue to the recovery key step.
 
-:::info[Early Access]
-Emergency Access is currently in **early access** and will be fully available in version 2.0.0.
-:::
-
 :::info[Enterprise Feature]
 Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
 :::
 
 
-<Image src="/img/hub/create-vault-emergency-access.png" alt="Define Emergency Access Conditions" width="2560" height="1352" />
+<Image src="/img/hub/create-vault-emergency-access.png" alt="Define Emergency Access Conditions" width="2880" height="1640" />
 
 
 In the next step, the vault *recovery key* is displayed.
 It can [restore access to the vault data](vault-recovery.mdx) in case of an emergency, e.g. if Cryptomator Hub is down.
 Store it at a safe location, tick the checkbox and complete the setup by clicking the `Create Vault` button at the bottom
 
-<Image src="/img/hub/create-vault-recoverykey.png" alt="Save vault recoverykey" width="2560" height="1352" />
+<Image src="/img/hub/create-vault-recoverykey.png" alt="Save vault recoverykey" width="2880" height="1640" />
 
 :::warning
 The recovery key is **highly confidential**.
@@ -79,7 +75,7 @@ When the setup is finished, you have the opportunity to download the initial vau
 You can unlock the vault and place data inside with [Cryptomator](https://cryptomator.org/downloads/).
 If you skip this step, you can download the template [later](#download-vault-template).
 
-<Image src="/img/hub/create-vault-download.png" alt="Download vault template" width="2560" height="884" />
+<Image src="/img/hub/create-vault-download.png" alt="Download vault template" width="2880" height="1240" />
 
 ## Vault Details {/* #vault-details */}
 
@@ -89,11 +85,11 @@ The details are displayed on the right side.
 
 With the user role, you have access to the following details:
 
-<Image src="/img/hub/vault-details-user.png" alt="Display vault details as user" width="2560" height="1520" />
+<Image src="/img/hub/vault-details-user.png" alt="Display vault details as user" width="2880" height="1800" />
 
 With the owner role, you have access to the following sections:
 
-<Image src="/img/hub/vault-details-owner.png" alt="Display vault details as vault owner" width="2880" height="1720" />
+<Image src="/img/hub/vault-details-owner.png" alt="Display vault details as vault owner" width="2880" height="1800" />
 
 ### Manage Vault {/* #manage-vault */}
 
@@ -114,7 +110,7 @@ Open the [vault details](#vault-details) page to manage a vault.
 If a user should have access to this vault, you need to share it with the user.
 Click in the search field of the `Shared with` section, select it from the results list and click the `Add` button.
 
-<Image src="/img/hub/vault-details-search.png" alt="Add a user or group in the vault details" width="2880" height="1720" />
+<Image src="/img/hub/vault-details-search.png" alt="Add a user or group in the vault details" width="2880" height="1800" />
 
 ### Change Ownership {/* #change-ownership */}
 
@@ -127,7 +123,7 @@ Only then, the user can unlock the vault with its device.
 
 As a vault owner, you can see that an update is necessary when the `Update Permissions` button is clickable.
 
-<Image src="/img/hub/update-permission.png" alt="Update permissions in the vault details" width="2880" height="1720" />
+<Image src="/img/hub/update-permission.png" alt="Update permissions in the vault details" width="2880" height="1800" />
 
 ### Edit Vault Metadata {/* #edit-vault-metadata */}
 
@@ -146,10 +142,6 @@ Download the vault template only once! If you download it multiple times, you wi
 To show the vault recovery key, click on the `Show Recovery Key` button in the [vault details](#vault-details). It shows the same recovery key shown during vault creation. You can use it to [restore access to the vault data](vault-recovery.mdx) in case of an emergency, e.g. if Cryptomator Hub is down. Store it at a safe location.
 
 ### Setup/Fix Emergency Access Council {/* #emergency-access-council */}
-
-:::info[Early Access]
-Emergency Access is currently in **early access** and will be fully available in version 2.0.0.
-:::
 
 :::info[Enterprise Feature]
 Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
@@ -172,17 +164,17 @@ The WoT state of a user is displayed in the vault details page. The state can be
 * **Unverified**: There is no trust chain between you and the specific user. Indicated with a red shield. You can change this by verifying the user.
 * **Verified**: There is a trust chain between you and the specific user. Indicated with a green shield. You or a user you trust has verified the user.
 
-To verify `alice`, click on the red shield icon and select `Check Identity…`
+To verify `carol`, click on the red shield icon and select `Check Identity…`
 
-<Image src="/img/hub/wot-carol-unverified.png" alt="Carol is unverified regarding its Web of Trust state" width="2880" height="1720" />
+<Image src="/img/hub/wot-carol-unverified.png" alt="Carol is unverified regarding her Web of Trust state" width="2880" height="1800" />
 
-While verifiying a user, you need to enter the first characters of the user's public key fingerprint. This fingerprint is displayed in user coresponding user profile page.
+While verifying a user, you need to enter the first characters of the user's public key fingerprint. This fingerprint is displayed in the user's profile page.
 
-<Image src="/img/hub/wot-carol-verify.png" alt="Verify Alice regarding its Web of Trust state" width="2880" height="1720" />
+<Image src="/img/hub/wot-carol-verify.png" alt="Verify Carol regarding her Web of Trust state" width="2880" height="1800" />
 
-`alice` is now verified
+`carol` is now verified
 
-<Image src="/img/hub/wot-carol-verified.png" alt="Alice is verified regarding its Web of Trust state" width="2880" height="1720" />
+<Image src="/img/hub/wot-carol-verified.png" alt="Carol is verified regarding her Web of Trust state" width="2880" height="1800" />
 
 The verification process is logged in the audit log with event type `Signed Identity`
 

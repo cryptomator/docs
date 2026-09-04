@@ -1,0 +1,79 @@
+---
+id: user-guide
+title: User Guide
+sidebar_position: 1
+description: From your first login to an unlocked vault — set up your account, create a vault, invite teammates, and unlock it with Cryptomator.
+---
+
+# User Guide
+
+This guide walks you through your first steps in Cryptomator Hub, from logging in for the first time to working with an unlocked vault, in about **15 minutes**.
+
+As a worked example, meet Bob: he just joined the design agency Acme, and his administrator Alice sent him the Hub URL and his login credentials.
+Bob will set up his account, create a vault called *Client Projects*, share it with his colleague Carol and the *Designers* group, and unlock it with the Cryptomator desktop app.
+
+## Before You Start {/* #before-you-start */}
+
+You need:
+
+* The URL of your organization's Hub instance and login credentials, both provided by your administrator.
+* The [Cryptomator app](https://cryptomator.org/downloads/?utm_source=docs.cryptomator.org&utm_medium=referral&utm_campaign=user-guide) for your OS. This guide uses the desktop app; Android and iOS work analogously, see [Working with Vaults](../access-vault.mdx).
+* The `create-vaults` role to create a vault yourself. If the `Add` button in the vault list stays grayed out for you, ask your administrator for the [role](../user-group-management.mdx#roles) — or skip that section and continue with a vault someone shared with you.
+
+## Set Up Your Account {/* #set-up-your-account */}
+
+Bob opens the Hub URL, logs in with his credentials, and Hub greets him with a one-time account setup.
+
+<Image src="/img/hub/account-setup.png" alt="Account setup on first login" width="512" height="565" text-align="center" />
+
+The setup generates his personal *Account Key*.
+It is what links further browsers and Cryptomator apps to his account later, so he copies it into his password manager before finishing the setup.
+
+After finishing the setup, Bob lands on the vault list — Acme's is still empty.
+The `Add` button in the top right corner is the starting point for the next section: `Create New` opens the vault creation wizard.
+
+<Image src="/img/hub/vaultlist-empty.png" alt="Empty vault list with the Add button in the top right corner" width="2880" height="1280" />
+
+For more details, read [Account Setup](../your-account.mdx#account-setup) and [Account Key](../your-account.mdx#account-key).
+
+## Create a Vault {/* #create-a-vault */}
+
+Time for the first vault:
+
+1. In the vault list, Bob clicks `Add` → `Create New` and names the vault *Client Projects*.
+2. He follows the creation wizard and stores the displayed recovery key in his password manager — it restores access to the vault data if Hub is ever unavailable.
+3. In the last step, he downloads the vault template (a zip file, exactly once) and unzips it into the cloud storage folder the team already shares.
+
+<Image src="/img/hub/create-vault.png" alt="Create a vault" width="2880" height="1280" />
+
+For more details, read [Create a Vault](../vault-management.mdx#create-a-vault), [Show Recovery Key](../vault-management.mdx#show-recovery-key), and [Download Vault Template](../vault-management.mdx#download-vault-template).
+
+## Add Members {/* #add-members */}
+
+The vault is Bob's alone so far.
+In the vault details, he clicks into the search field of the `Shared with` section, picks Carol, and clicks `Add`.
+He then adds the *Designers* group the same way, so future team members get access automatically through their group membership.
+
+<Image src="/img/hub/vault-details-search.png" alt="Add a user or group in the vault details" width="2880" height="1800" />
+
+:::note
+When a member completes their account setup (or resets their account), a vault owner has to confirm the access once via the `Update Permissions` button before that member can unlock the vault.
+:::
+
+For more details, read [Share a Vault](../vault-management.mdx#share-a-vault), [Update Permissions](../vault-management.mdx#update-permissions), and [Web of Trust](../vault-management.mdx#web-of-trust) for verifying the identity of vault members.
+
+## Unlock the Vault {/* #unlock-the-vault */}
+
+To work with the encrypted data, Bob opens the Cryptomator desktop app, adds the vault by selecting the `vault.cryptomator` file from the shared cloud folder, and clicks `Unlock`.
+His browser opens for authentication, and since this is the first unlock from this device, Hub asks him to register it with a device name and his Account Key.
+After that, the vault unlocks, and Bob can reveal and edit the *Client Projects* files as usual.
+
+<Image src="/img/hub/user-guide-unlock-success-desktop.png" alt="Desktop shows unlock successful" width="715" height="541" />
+
+For more details, read [Unlocking a Vault](../access-vault.mdx#unlocking-a-vault), in particular [Register Device](../access-vault.mdx#register-device).
+
+## Next Steps {/* #next-steps */}
+
+* Lost access to a vault or Hub itself? See [Vault Recovery](../vault-recovery.mdx).
+* Review and revoke your registered browsers and apps under [Authorized Devices](../your-account.mdx#authorized-devices).
+* Curious how the zero-knowledge key management works? Read the [security architecture](/docs/security/hub.mdx).

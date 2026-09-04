@@ -1,7 +1,7 @@
 ---
 id: access-vault
 title: Working with Vaults
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # Working with Vaults
@@ -21,29 +21,25 @@ As described in [open an existing vault](/docs/desktop/adding-vaults.mdx#open-an
 
 To unlock the vault, click on the large `Unlock` button in the center of Cryptomator's main window.
 
-<Image src="/img/hub/unlock-click-unlock.png" alt="Click 'Unlock' to unlock a Hub vault with the Desktop app" width="715" height="541" />
+<Image src="/img/hub/unlock-auth-desktop-app.png" alt="Click 'Unlock' to unlock a Hub vault with the Desktop app" width="715" height="541" />
 
 ### 2. Authenticate {/* #authenticate */}
 
 Cryptomator should open your default browser for authentication. If you're not already logged in, you need to provide your user credentials, e.g., by entering your username and password or by inserting your key when WebAuthn is enabled.
 
-<Image src="/img/hub/unlock-authenticate.png" alt="After your browser asks for credentials, enter your username and password" width="1280" height="567" />
+<Image src="/img/hub/unlock-authenticate.png" alt="After your browser asks for credentials, enter your username and password" width="1440" height="620" />
 
 ### 3. Register Device {/* #register-device */}
-
-If you just setup your account, a vault owner needs to grant you access for the requested vault as described [here](vault-management.mdx#update-permissions). Retry unlocking the vault after the vault owner granted you access.
-
-<Image src="/img/hub/unlock-access-denied.png" alt="Access is denied since it has not been granted by a vault owner yet" width="715" height="541" />
 
 If you connect to Hub with this device for the first time, you need to register it.
 
 Desktop
 
-<Image src="/img/hub/unlock-register-device-desktop.png" alt="Register your device by entering the setup code and a name for it" width="715" height="541" />
+<Image src="/img/hub/unlock-register-device-desktop-app.png" alt="Register your device by entering the setup code and a name for it" width="715" height="541" />
 
 Hub
 
-<Image src="/img/hub/unlock-register-device-hub.png" alt="Hub requests device registration" width="1280" height="374" />
+<Image src="/img/hub/unlock-register-device-hub.png" alt="Hub shows the new device view during unlock" width="512" height="184" />
 
 Enter a name for the device to identify it later on and the [Account Key](your-account.mdx#account-key) which was generated during the account setup. You can also find it in the [account settings](your-account.mdx#profile-page).
 
@@ -55,7 +51,7 @@ You are all set up and an unlock should be successful from now on. You can then 
 
 Desktop
 
-<Image src="/img/hub/unlock-successfull-desktop.png" alt="Desktop shows unlock successful" width="715" height="541" />
+<Image src="/img/hub/unlock-success-desktop-app.png" alt="Desktop shows unlock successful" width="715" height="541" />
 
 Hub
 
