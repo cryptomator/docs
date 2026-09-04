@@ -10,12 +10,12 @@ This section contains instructions for recovering Cryptomator Hub vaults using t
 
 Cryptomator Hub vaults can be recovered in two different ways:
 
-1. [Online Recovery](#online-recovery) - Reestablishes Hub controlled access management for a vault in case the vault admin password got lost
+1. [Online Recovery](#online-recovery) - Reestablishes Hub controlled access management for a vault in case it can no longer be managed in Hub
 2. [Offline Recovery](#offline-recovery) - Restores vault data access of a hub managed vault in case of a disaster (e.g. Cryptomator Hub is down and immediate data access is needed)
 
 ## Online Recovery {/* #online-recovery */}
 
-This recovery method should be used, if the vault admin password got lost.
+This recovery method should be used if a vault can no longer be managed in Hub, for example because it lost all its owners or was accidentally removed from Hub.
 In the process, a new Hub vault with the same key material as the "to-be-recovered" vault is created.
 The membership information of the old vault cannot be migrated, hence all users/groups need to be added manually afterwards.
 
@@ -27,17 +27,18 @@ Requirements:
 
 In Cryptomator Hub navigate to the vault list, click `Add` and `Recover Existing`
 
-<Image src="/img/hub/vault-onlinerecovery-step1.png" alt="Vault list add drop down" width="1280" height="622" />
+<Image src="/img/hub/vault-onlinerecovery-step1.png" alt="Vault list add drop down" width="1440" height="640" />
 
 Enter the recovery key for the vault you want to restore. If you enter a recovery key from a different vault, the recovery will not work.
 
-Proceed with `Restore Vault`.
+Proceed with `Recover Vault`.
 
-<Image src="/img/hub/vault-onlinerecovery-step2.png" alt="Vault enter recovery key" width="1280" height="572" />
+<Image src="/img/hub/vault-onlinerecovery-step2.png" alt="Vault enter recovery key" width="1440" height="620" />
 
-Enter a new vault name, description and vault admin password. The new vault admin password is required to grant or revoke access to the vault.
+Enter a name and an optional description for the new vault.
+As its creator, you become the owner of the recovered vault and can grant or revoke access to it.
 
-<Image src="/img/hub/vault-onlinerecovery-step3.png" alt="Creating a vault using recovery key" width="1280" height="388" />
+<Image src="/img/hub/vault-onlinerecovery-step3.png" alt="Creating a vault using recovery key" width="1440" height="700" />
 
 If successful, a new vault has been created. Proceed as follows:
 
@@ -69,7 +70,7 @@ Requirements:
 Open the Cryptomator desktop app,  right-click on the vault you want to restore in the vault list, click `Show vault options` in the opened context menu.
 In the opening window, select the `Recovery`, read the label description and click the `Convert to Password-Based Vault` button.
 
-<Image src="/img/hub/vault-offlinerecovery-step1.png" alt="Vault recovery convert to Password-Based-Vault" width="827" height="711" />
+<Image src="/img/hub/vault-offline-recovery-step1.png" alt="Vault recovery convert to Password-Based-Vault" width="827" height="711" />
 
 Enter the recovery key for the vault you want to restore. If you enter a recovery key from a different vault, the recovery will not work. Proceed with `Next`.
 
@@ -79,17 +80,11 @@ In the next step choose a [good password](/docs/security/best-practices.mdx#good
 Cryptomator requires at least 8 characters but we recommend you to use a longer phrases such as pass-sentences.
 The bar below the password field estimates the strength of your password.
 
-<Image src="/img/hub/vault-offlinerecovery-step3.png" alt="Convert vault enter new password" width="827" height="711" />
+<Image src="/img/hub/vault-offline-recovery-step3.png" alt="Convert vault enter new password" width="827" height="711" />
 
 If the conversion was successful, a success message is shown.
 You can close the dialog box.
-This vault is now converted to a password-based vault.
-
-<Image src="/img/hub/vault-offlinerecovery-step4.png" alt="Convert vault successful" width="827" height="711" />
-
-After the conversion, when unlocking the vault, you are prompted for a password and only the one chosen in the previous step leads to a successful unlock.
-
-<Image src="/img/hub/vault-offlinerecovery-step5.png" alt="Unlock converted Vault" width="827" height="711" />
+This vault is now converted to a password-based vault and can be unlocked with the above chosen password.
 
 ## Reversing Offline Conversion {/* #reversing-offline-conversion */}
 
