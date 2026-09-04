@@ -37,7 +37,7 @@ The [Deployment Cookbook](../deployment/index.mdx#recipes) offers three recipes:
 * [Rancher](../deployment/rancher.mdx) — the same Helm chart installed through the Rancher UI.
 
 Acme has no Kubernetes cluster and 20 users fit comfortably on one virtual machine, so Alice picks Docker Compose.
-The rest of this guide follows that path; with one of the other recipes, only the deploy section differs.
+The rest of this guide follows that path.
 
 ## Deploy with Docker Compose {/* #deploy-with-docker-compose */}
 
@@ -49,7 +49,7 @@ For more details, read [Prerequisites](../deployment/compose.mdx#compose-prerequ
 
 ## Set Up Backups {/* #set-up-backups */}
 
-All of Hub's state lives in PostgreSQL: vaults, keys, and the audit log in the `hub` database, users and credentials in the `keycloak` database.
+All of Hub's state lives in PostgreSQL: vaults, encrypted keys, and the audit log in the `hub` database, users and credentials in the `keycloak` database.
 Alice schedules a nightly `pg_dumpall` via cron and moves the dumps off the VM.
 Then she does what most people skip: she [restores](../operations.mdx#restore) one dump onto a scratch instance to confirm the backup actually works — a backup that has never been restored is a hope, not a backup.
 
