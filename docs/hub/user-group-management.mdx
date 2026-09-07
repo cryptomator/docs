@@ -1,14 +1,10 @@
 ---
 id: user-group-management
 title: User & Group Management
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # User & Group Management
-
-:::info[Early Access]
-This feature is currently in **early access** and will be fully available in version 2.0.0.
-:::
 
 Users and groups are managed directly in the Cryptomator Hub admin interface. As an administrator, you can create, edit, and delete users and groups, assign roles, and manage group memberships.
 
@@ -24,7 +20,10 @@ The user list displays all users in your Hub instance. You can search for users 
 - Number of **group** memberships
 - Number of registered **devices**
 
-<Image src="/img/hub/user-list.png" alt="User list overview" width="1440" height="600" />
+
+<Image src="/img/hub/user-list.png" alt="User list overview." width="2880" height="1800" />
+
+
 
 ### Create User {/* #create-user */}
 
@@ -38,9 +37,22 @@ To create a new user, click the "Create User" button in the user list. Fill in t
 - **Roles**: Assign roles to the user (see [Roles](#roles))
 - **Password**: Set an initial password for the user
 
-<Image src="/img/hub/user-create.png" alt="Create user form" width="800" height="700" />
+<Image src="/img/hub/user-create.png" alt="Create user form" width="2240" height="2064" />
 
 After creation, the user can log in with their credentials and complete the [account setup](your-account.mdx#account-setup).
+
+### User Details {/* #user-details */}
+
+The user detail page shows comprehensive information about a user:
+
+- **Groups**: All groups the user is a member of
+- **Accessible Vaults**: Vaults the user has access to (directly or through group membership)
+- **Devices**: All registered devices of the user
+- **Legacy Devices**: Devices registered with older Hub versions (see [Legacy Devices](your-account.mdx#legacy-devices))
+
+
+<Image src="/img/hub/user-detail.png" alt="User detail view" width="2880" height="1800" />
+
 
 ### Edit User {/* #edit-user */}
 
@@ -69,17 +81,6 @@ To delete a user, you can either click the delete button in the user list or nav
 This action cannot be undone.
 :::
 
-### User Details {/* #user-details */}
-
-The user detail page shows comprehensive information about a user:
-
-- **Groups**: All groups the user is a member of
-- **Accessible Vaults**: Vaults the user has access to (directly or through group membership)
-- **Devices**: All registered devices of the user
-- **Legacy Devices**: Devices registered with older Hub versions (see [Legacy Devices](your-account.mdx#legacy-devices))
-
-<Image src="/img/hub/user-detail.png" alt="User detail view" width="1440" height="800" />
-
 ## Group Management {/* #group-management */}
 
 Groups allow you to organize users and grant vault access to multiple users at once.
@@ -91,7 +92,9 @@ The group list displays all groups with:
 - Number of **members**
 - Number of accessible **vaults**
 
-<Image src="/img/hub/group-list.png" alt="Group list overview" width="1440" height="600" />
+
+
+<Image src="/img/hub/group-list.png" alt="Group list overview" width="2880" height="1800" />
 
 ### Create Group {/* #create-group */}
 
@@ -100,7 +103,8 @@ To create a new group, click the "Create Group" button. Fill in:
 - **Profile Picture URL**: Optional URL to a group picture
 - **Name**: A descriptive name for the group
 
-<Image src="/img/hub/group-create.png" alt="Create group form" width="800" height="400" />
+
+<Image src="/img/hub/group-create.png" alt="Create group form" width="2240" height="920" />
 
 ### Edit Group {/* #edit-group */}
 
@@ -124,7 +128,8 @@ The group detail page shows:
 - **Members**: All users who are members of this group
 - **Accessible Vaults**: Vaults the group has access to
 
-<Image src="/img/hub/group-detail.png" alt="Group detail view" width="1440" height="800" />
+
+<Image src="/img/hub/group-detail.png" alt="Group detail view" width="2880" height="1800" />
 
 ### Manage Group Members {/* #manage-group-members */}
 
@@ -133,10 +138,11 @@ From the group detail page, you can:
 - **Add Members**: Click "Add Member" to search for and add users to the group
 - **Remove Members**: Click the remove button next to a member to remove them from the group
 
-<Image src="/img/hub/group-add-member.png" alt="Add member dialog" width="600" height="500" />
+
+<Image src="/img/hub/group-add-member.png" alt="Add member dialog" width="2880" height="1800" />
 
 :::note
-Subgroups are not supported at this time.
+Subgroups are not supported.
 :::
 
 ## Roles {/* #roles */}
@@ -146,14 +152,10 @@ There are three roles in Cryptomator Hub:
 | Role | Description |
 |------|-------------|
 | **user** | Default role. Can open vaults and manage their own account. |
-| **admin** | Can manage users and groups, view audit logs, and create vaults. |
-| **create-vault** | Allows users to create new vaults. Inherited by the admin role. |
+| **admin** | Can manage users and groups and view audit logs. |
+| **create-vault** | Allows users to create new vaults. |
 
 Roles are assigned when creating or editing a user. The `user` role is assigned by default to all users.
-
-### Create Vault Role {/* #create-vault-role */}
-
-By default, only users with the `admin` role can create vaults. To allow other users to create vaults, assign the `create-vault` role to them when creating or editing the user.
 
 ## User Avatars {/* #user-avatars */}
 
@@ -165,14 +167,6 @@ If no profile picture is set, a generated avatar based on the user's name will b
 
 ## External Identity Management {/* #enterprise-external-iam */}
 
-:::info[Enterprise Feature]
-Connecting external identity and access management (IAM) solutions is available as an Enterprise feature. 
-
-Visit [cryptomator.org](https://cryptomator.org/hub/) for more information about Enterprise features.
-:::
-
-<Image src="/img/hub/access-keycloak-link.png" alt="Accessing Keycloak via Hub" width="1440" height="653" />
-
 Connecting Cryptomator Hub to an external identity manager allows you to:
 
 - Synchronize users and groups from LDAP or Active Directory
@@ -183,6 +177,8 @@ You can access the Keycloak management interface from the admin section of Hub. 
 [creating new users](https://www.keycloak.org/docs/latest/server_admin/index.html#proc-creating-user_server_administration_guide),
 [deleting users](https://www.keycloak.org/docs/latest/server_admin/index.html#proc-deleting-user_server_administration_guide) or
 [managing groups](https://www.keycloak.org/docs/latest/server_admin/index.html#proc-managing-groups_server_administration_guide).
+
+<Image src="/img/hub/access-keycloak-link.png" alt="Accessing Keycloak via Hub" width="2880" height="1520" />
 
 Setting up LDAP synchronization is described in the [Keycloak documentation](https://www.keycloak.org/docs/latest/server_admin/#_ldap).
 For OpenID Connect and SAML, the Keycloak documentation provides [general information](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker).

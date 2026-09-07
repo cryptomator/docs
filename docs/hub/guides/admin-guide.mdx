@@ -1,0 +1,96 @@
+---
+id: admin-guide
+title: Admin Guide
+sidebar_position: 2
+description: Your first day as a Hub administrator — add users and groups, connect your identity provider, enable Emergency Access, and keep an eye on audit logs and license seats.
+---
+
+# Admin Guide
+
+This guide walks you through setting up a fresh Cryptomator Hub instance for your organization in about **20 minutes**.
+
+As a worked example, meet Alice: she administers Hub at the design agency Acme.
+Her instance is up and running, and now she adds her first users and a group, connects the company's identity provider, enables Emergency Access, and checks the audit log and license.
+
+## Before You Start {/* #before-you-start */}
+
+You need:
+
+* A running Hub instance — a local test instance from the [Quick Start](../quick-start.mdx) or a server deployment (managed or selfhosted)
+* An account with the `admin` [role](../user-group-management.mdx#roles), such as the initial admin account created during deployment.
+
+:::tip
+Not keen on hosting an instance yourself? Cryptomator Hub is also available as a [managed service](https://cryptomator.org/hub/managed/?utm_source=docs.cryptomator.org&utm_medium=referral&utm_campaign=admin-guide) with a free 30-day trial period — this guide applies there all the same.
+:::
+
+## Add Users and Groups {/* #add-users-and-groups */}
+
+Since version 2.0, users and groups are managed directly in Hub, via the `Users` and `Groups` entries in the sidebar.
+Alice creates accounts for Bob and Carol, each with username, email, and an initial password.
+She then creates the group *Designers* and adds both as members — sharing vaults with a group scales better than managing individual permissions.
+
+<Image src="/img/hub/user-create.png" alt="Create user form" width="2240" height="2064" />
+
+Bob and Carol can now log in and complete their account setup, as described in the [User Guide](user-guide.mdx#set-up-your-account).
+
+For more details, read [Create User](../user-group-management.mdx#create-user), [Create Group](../user-group-management.mdx#create-group), and [Manage Group Members](../user-group-management.mdx#manage-group-members).
+
+## Connect Your Identity Provider {/* #connect-your-identity-provider */}
+
+Creating users by hand is fine for a handful of people.
+Since Acme already manages its staff in a central directory, Alice instead connects Hub's bundled Keycloak to it, so users log in with their existing credentials and accounts stay in sync.
+
+<Image src="/img/hub/access-keycloak-link.png" alt="Accessing Keycloak via Hub" width="2880" height="1520" />
+
+The `Manage Keycloak` link takes Alice to the Keycloak admin console, where identity providers are configured on the `Identity providers` page:
+
+<Image src="/img/hub/keycloak-identity-providers.png" alt="Identity providers in the Keycloak admin console" width="2880" height="1800" />
+
+Depending on what your organization runs, follow the matching reference section:
+
+* [OpenID Connect](../keycloak.mdx#openid-connect) providers such as Microsoft Entra ID or Google Workspace.
+* [LDAP and Active Directory](../keycloak.mdx#ldap-and-active-directory) for user federation.
+* [Mapping groups to roles](../keycloak.mdx#mapping-groups-to-roles), e.g. to grant an *IT* directory group the `admin` role automatically.
+
+For more details, read [Connecting an External Identity Provider](../keycloak.mdx#connecting-an-external-identity-provider) and [External Identity Management](../user-group-management.mdx#enterprise-external-iam).
+
+## Enable Emergency Access {/* #enable-emergency-access */}
+
+What if Bob leaves Acme and the *Client Projects* vault has no other owner?
+Emergency Access, new in version 2.0, lets a council of trusted users jointly restore access to a vault.
+Alice enables it in the admin area and defines a default council, so every new vault gets Emergency Access conditions during creation.
+For existing vaults, owners set up the council in the vault details.
+
+<Image src="/img/hub/admin-emergency-access.png" alt="Emergency Access" width="2880" height="1800" />
+
+:::info[Enterprise Feature]
+Emergency Access is available as an Enterprise feature.
+Visit [cryptomator.org](https://cryptomator.org/hub/) for more information.
+:::
+
+For more details, read [Emergency Access admin settings](../admin.mdx#emergency-access), [Set Up Emergency Access](../emergency-access.mdx#set-up-emergency-access), and the per-vault [Emergency Access Council](../vault-management.mdx#emergency-access-council).
+
+## Review the Audit Log {/* #review-the-audit-log */}
+
+The next morning, Alice verifies that everything went as intended.
+In the audit log, she filters for vault events and sees the creation of *Client Projects* and the access grants for Carol and the *Designers* group, each with actor and timestamp.
+
+<Image src="/img/hub/auditlogs-overview.png" alt="Audit Logs Table View" width="2880" height="1720" />
+
+For more details, read [Audit Logs](../admin.mdx#audit-logs), [Filtering Audit Logs](../admin.mdx#filtering-audit-logs), and the list of [Event Types](../admin.mdx#event-types).
+
+## Check Your License {/* #check-your-license */}
+
+Finally, Alice opens the license section of the admin area.
+With Bob and Carol having vault access, two seats are in use — a seat is occupied by every user who is assigned to at least one vault.
+The overview shows the used and licensed seats and where to upgrade before the team grows.
+
+<Image src="/img/hub/admin-area-license.png" alt="Administration area" width="2880" height="1800" />
+
+For more details, read [License](../admin.mdx#license), [What Is a Seat?](../admin.mdx#what-is-a-seat), and [Updating Your License](../admin.mdx#updating-your-license).
+
+## Next Steps {/* #next-steps */}
+
+* Set up [backups](../operations.mdx#backup) before real data accumulates.
+* Harden logins with [session timeouts](../keycloak.mdx#session-timeouts) and [access restrictions](../keycloak.mdx#restricting-access-to-hub).
+* Send your team the [User Guide](user-guide.mdx) so they can get started on their own.
