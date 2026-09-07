@@ -1,7 +1,7 @@
 ---
 id: user-group-management
 title: User & Group Management
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # User & Group Management
@@ -39,7 +39,7 @@ To create a new user, click the "Create User" button in the user list. Fill in t
 
 <Image src="/img/hub/user-create.png" alt="Create user form" width="2240" height="2064" />
 
-After creation, the user can log in with their credentials and complete the [account setup](your-account.mdx#account-setup).
+After creation, the user can log in with their credentials and complete the [account setup](../user-guide/your-account.mdx#account-setup).
 
 ### User Details {/* #user-details */}
 
@@ -48,7 +48,7 @@ The user detail page shows comprehensive information about a user:
 - **Groups**: All groups the user is a member of
 - **Accessible Vaults**: Vaults the user has access to (directly or through group membership)
 - **Devices**: All registered devices of the user
-- **Legacy Devices**: Devices registered with older Hub versions (see [Legacy Devices](your-account.mdx#legacy-devices))
+- **Legacy Devices**: Devices registered with older Hub versions (see [Legacy Devices](../user-guide/your-account.mdx#legacy-devices))
 
 
 <Image src="/img/hub/user-detail.png" alt="User detail view" width="2880" height="1800" />
@@ -167,20 +167,6 @@ If no profile picture is set, a generated avatar based on the user's name will b
 
 ## External Identity Management {/* #enterprise-external-iam */}
 
-Connecting Cryptomator Hub to an external identity manager allows you to:
+Instead of managing users and groups directly in Hub, you can connect Cryptomator Hub to an external identity provider (LDAP, Active Directory, OpenID Connect, or SAML) so users authenticate with the credentials they already have.
 
-- Synchronize users and groups from LDAP or Active Directory
-- Delegate authentication via OpenID Connect or SAML
-- Keep your user management centralized in your existing IAM
-
-You can access the Keycloak management interface from the admin section of Hub. There you can perform all user- and group-related tasks, such as
-[creating new users](https://www.keycloak.org/docs/latest/server_admin/index.html#proc-creating-user_server_administration_guide),
-[deleting users](https://www.keycloak.org/docs/latest/server_admin/index.html#proc-deleting-user_server_administration_guide) or
-[managing groups](https://www.keycloak.org/docs/latest/server_admin/index.html#proc-managing-groups_server_administration_guide).
-
-<Image src="/img/hub/access-keycloak-link.png" alt="Accessing Keycloak via Hub" width="2880" height="1520" />
-
-Setting up LDAP synchronization is described in the [Keycloak documentation](https://www.keycloak.org/docs/latest/server_admin/#_ldap).
-For OpenID Connect and SAML, the Keycloak documentation provides [general information](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker).
-
-The [Keycloak](keycloak.mdx) page covers the configuration steps that are specific to Hub, such as [connecting an external identity provider](keycloak.mdx#connecting-an-external-identity-provider), [restricting who may access Hub](keycloak.mdx#restricting-access-to-hub), and [migrating to another identity provider](keycloak.mdx#migrating-to-another-identity-provider).
+See [Identity Provider](keycloak.mdx) for how to connect and manage an external identity provider.

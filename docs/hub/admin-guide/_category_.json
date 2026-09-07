@@ -1,0 +1,8 @@
+{
+  "label": "Admin Guide",
+  "position": 4,
+  "link": {
+    "type": "doc",
+    "id": "hub/admin-guide/quick-start"
+  }
+}

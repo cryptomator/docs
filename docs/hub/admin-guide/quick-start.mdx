@@ -1,11 +1,11 @@
 ---
-id: admin-guide
-title: Admin Guide
-sidebar_position: 2
+id: quick-start
+title: Quick Start
+sidebar_position: 1
 description: Your first day as a Hub administrator — add users and groups, connect your identity provider, enable Emergency Access, and keep an eye on audit logs and license seats.
 ---
 
-# Admin Guide
+# Quick Start
 
 This guide walks you through setting up a fresh Cryptomator Hub instance for your organization in about **20 minutes**.
 
@@ -16,8 +16,8 @@ Her instance is up and running, and now she adds her first users and a group, co
 
 You need:
 
-* A running Hub instance — a local test instance from the [Quick Start](../quick-start.mdx) or a server deployment (managed or selfhosted)
-* An account with the `admin` [role](../user-group-management.mdx#roles), such as the initial admin account created during deployment.
+* A running Hub instance — a local test instance from the [Quick Start](../self-hosting-guide/quick-start.mdx) or a server deployment (managed or selfhosted)
+* An account with the `admin` [role](user-group-management.mdx#roles), such as the initial admin account created during deployment.
 
 :::tip
 Not keen on hosting an instance yourself? Cryptomator Hub is also available as a [managed service](https://cryptomator.org/hub/managed/?utm_source=docs.cryptomator.org&utm_medium=referral&utm_campaign=admin-guide) with a free 30-day trial period — this guide applies there all the same.
@@ -31,9 +31,9 @@ She then creates the group *Designers* and adds both as members — sharing vaul
 
 <Image src="/img/hub/user-create.png" alt="Create user form" width="2240" height="2064" />
 
-Bob and Carol can now log in and complete their account setup, as described in the [User Guide](user-guide.mdx#set-up-your-account).
+Bob and Carol can now log in and complete their account setup, as described in the [User Guide](../user-guide/quick-start.mdx#set-up-your-account).
 
-For more details, read [Create User](../user-group-management.mdx#create-user), [Create Group](../user-group-management.mdx#create-group), and [Manage Group Members](../user-group-management.mdx#manage-group-members).
+For more details, read [Create User](user-group-management.mdx#create-user), [Create Group](user-group-management.mdx#create-group), and [Manage Group Members](user-group-management.mdx#manage-group-members).
 
 ## Connect Your Identity Provider {/* #connect-your-identity-provider */}
 
@@ -48,11 +48,11 @@ The `Manage Keycloak` link takes Alice to the Keycloak admin console, where iden
 
 Depending on what your organization runs, follow the matching reference section:
 
-* [OpenID Connect](../keycloak.mdx#openid-connect) providers such as Microsoft Entra ID or Google Workspace.
-* [LDAP and Active Directory](../keycloak.mdx#ldap-and-active-directory) for user federation.
-* [Mapping groups to roles](../keycloak.mdx#mapping-groups-to-roles), e.g. to grant an *IT* directory group the `admin` role automatically.
+* [OpenID Connect](keycloak.mdx#openid-connect) providers such as Microsoft Entra ID or Google Workspace.
+* [LDAP and Active Directory](keycloak.mdx#ldap-and-active-directory) for user federation.
+* [Mapping groups to roles](keycloak.mdx#mapping-groups-to-roles), e.g. to grant an *IT* directory group the `admin` role automatically.
 
-For more details, read [Connecting an External Identity Provider](../keycloak.mdx#connecting-an-external-identity-provider) and [External Identity Management](../user-group-management.mdx#enterprise-external-iam).
+For more details, read [Connecting an External Identity Provider](keycloak.mdx#connecting-an-external-identity-provider) and [External Identity Management](user-group-management.mdx#enterprise-external-iam).
 
 ## Enable Emergency Access {/* #enable-emergency-access */}
 
@@ -68,7 +68,7 @@ Emergency Access is available as an Enterprise feature.
 Visit [cryptomator.org](https://cryptomator.org/hub/) for more information.
 :::
 
-For more details, read [Emergency Access admin settings](../admin.mdx#emergency-access), [Set Up Emergency Access](../emergency-access.mdx#set-up-emergency-access), and the per-vault [Emergency Access Council](../vault-management.mdx#emergency-access-council).
+For more details, read [Emergency Access admin settings](emergency-access.mdx#admin-settings), [Set Up Emergency Access](emergency-access.mdx#set-up-emergency-access), and the per-vault [Emergency Access Council](../user-guide/vault-management.mdx#emergency-access-council).
 
 ## Review the Audit Log {/* #review-the-audit-log */}
 
@@ -77,7 +77,7 @@ In the audit log, she filters for vault events and sees the creation of *Client 
 
 <Image src="/img/hub/auditlogs-overview.png" alt="Audit Logs Table View" width="2880" height="1720" />
 
-For more details, read [Audit Logs](../admin.mdx#audit-logs), [Filtering Audit Logs](../admin.mdx#filtering-audit-logs), and the list of [Event Types](../admin.mdx#event-types).
+For more details, read [Audit Logs](audit-logs.mdx), [Filtering Audit Logs](audit-logs.mdx#filtering-audit-logs), and the list of [Event Types](audit-logs.mdx#event-types).
 
 ## Check Your License {/* #check-your-license */}
 
@@ -87,10 +87,10 @@ The overview shows the used and licensed seats and where to upgrade before the t
 
 <Image src="/img/hub/admin-area-license.png" alt="Administration area" width="2880" height="1800" />
 
-For more details, read [License](../admin.mdx#license), [What Is a Seat?](../admin.mdx#what-is-a-seat), and [Updating Your License](../admin.mdx#updating-your-license).
+For more details, read [License](license.mdx), [What Is a Seat?](license.mdx#what-is-a-seat), and [Updating Your License](license.mdx#updating-your-license).
 
 ## Next Steps {/* #next-steps */}
 
-* Set up [backups](../operations.mdx#backup) before real data accumulates.
-* Harden logins with [session timeouts](../keycloak.mdx#session-timeouts) and [access restrictions](../keycloak.mdx#restricting-access-to-hub).
-* Send your team the [User Guide](user-guide.mdx) so they can get started on their own.
+* Set up [backups](../self-hosting-guide/operations.mdx#backup) before real data accumulates.
+* Harden logins with [session timeouts](keycloak.mdx#session-timeouts) and [access restrictions](keycloak.mdx#restricting-access-to-hub).
+* Send your team the [User Guide](../user-guide/quick-start.mdx) so they can get started on their own.
