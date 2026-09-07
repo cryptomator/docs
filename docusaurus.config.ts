@@ -120,7 +120,7 @@ const config: Config = {
           },
           {
             from: '/hub/setup/keycloak-administration',
-            to: '/hub/admin-guide/user-group-management',
+            to: '/hub/admin-guide/keycloak',
           },
           {
             from: '/hub/setup',
