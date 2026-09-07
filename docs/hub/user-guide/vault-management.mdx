@@ -1,7 +1,7 @@
 ---
 id: vault-management
 title: Vault Management
-sidebar_position: 6
+sidebar_position: 3
 ---
 
 # Vault Management
@@ -36,7 +36,7 @@ In the `Vault List`, owners can see the Emergency Access status directly via bad
 ## Create a Vault {/* #create-a-vault */}
 
 :::note
-Creating vaults require the `create-vault` role. [Here](user-group-management.mdx#roles) you can read more about roles.
+Creating vaults require the `create-vault` role. [Here](../admin-guide/user-group-management.mdx#roles) you can read more about roles.
 :::
 
 To create a vault in Hub, navigate to the vault list and click `Add` → `Create New` in the top-right corner.
@@ -45,7 +45,7 @@ Fill out the form and continue the process by clicking the `Next` button in the 
 
 <Image src="/img/hub/create-vault.png" alt="Create a vault" width="2880" height="1280" />
 
-If the [Emergency Access](emergency-access.mdx) feature is enabled, the following step appears:
+If the [Emergency Access](../admin-guide/emergency-access.mdx) feature is enabled, the following step appears:
 
 Here, the conditions for Emergency Access are defined for the new vault.
 If the administrator allows custom council selection, you can adjust the default council.
@@ -147,7 +147,7 @@ To show the vault recovery key, click on the `Show Recovery Key` button in the [
 Visit [cryptomator.org](https://cryptomator.org/hub/?utm_source=docs.cryptomator.org&utm_medium=referral&utm_campaign=vault-management) for more information about Enterprise features.
 :::
 
-To configure [Emergency Access](emergency-access.mdx) for a vault, click `Setup Emergency Access Council` in the [vault details](#vault-details). If Emergency Access is already configured but needs correction, click `Fix Emergency Access Council`. This opens a dialog where you define the council members and confirm with `Grant`.
+To configure [Emergency Access](../admin-guide/emergency-access.mdx) for a vault, click `Setup Emergency Access Council` in the [vault details](#vault-details). If Emergency Access is already configured but needs correction, click `Fix Emergency Access Council`. This opens a dialog where you define the council members and confirm with `Grant`.
 
 ### Archive Vault {/* #archive-vault */}
 
@@ -182,7 +182,7 @@ The verification process is logged in the audit log with event type `Signed Iden
 
 `signature still valid` means that the `identity` has still the same key. If the user account gets reset after verification, this message changes to `was valid; signed key changed by now` and the user needs to get verified again.
 
-You can read more details about Web of Trust and how to configure its settings in the [Admin section of Hub](admin.mdx#web-of-trust).
+You can read more details about Web of Trust and how to configure its settings in the [Admin section of Hub](../admin-guide/web-of-trust.mdx).
 
 ## Import a Vault {/* #import-a-vault */}
 

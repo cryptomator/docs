@@ -1,6 +1,6 @@
 ---
 id: introduction
-title: Cryptomator Hub
+title: Introduction
 sidebar_position: 1
 ---
 
@@ -8,26 +8,31 @@ sidebar_position: 1
 
 # Cryptomator Hub
 
-Cryptomator Hub adds *zero-knowledge key management* for teams and organizations to Cryptomator.
-It easily integrates into your existing identity management incl. OpenID Connect, SAML, and LDAP.
-As usual, your favorite cloud service remains your free choice.
+**Cryptomator Hub** adds *zero-knowledge key management* for teams and organizations to Cryptomator, ensuring your confidential
+data stays confidential - without sharing any passwords. It is GDPR-compliant, offers access management and easily integrates
+into your existing identity management incl. OpenID Connect, SAML, and LDAP. As usual, your favorite cloud service remains
+your free choice.
 
-This documentation covers various topics, depending on your role.
-If you are…
+This documentation is organized into three guides, one per role.
+Pick the one that matches what you want to do:
 
-…an **administrator**:
+…if you **use** Hub, start with the [User Guide](user-guide/quick-start.mdx):
 
-* [Quick Start](quick-start.mdx) - how to try Cryptomator Hub on your machine.
-* [Admin Guide](guides/admin-guide.mdx) - a walkthrough of your first day as a Hub administrator.
-* [Self-Hosting Guide](guides/self-hosting-guide.mdx) - a walkthrough from playground to production deployment.
-* [User & Group management](user-group-management.mdx) - how to manage users and groups.
-* [License](admin.mdx#license) - how to manage your Hub license.
-* [Deployment Cookbook](deployment/index.mdx) - how to deploy Cryptomator Hub for your team.
-* [Operations](operations.mdx) - how to back up, restore, and maintain your Hub instance.
+* [Quick Start](user-guide/quick-start.mdx) - a walkthrough from your first login to an unlocked vault.
+* [Your Account](user-guide/your-account.mdx) - how to manage your own account.
+* [Managing Vaults](user-guide/vault-management.mdx) - how to create, share, and recover vaults.
+* [Working with Vaults](user-guide/access-vault.mdx) - how to use Hub vaults with Cryptomator apps to encrypt your data.
 
-…a **user**:
+…if you **administer** Hub, start with the [Admin Guide](admin-guide/quick-start.mdx):
 
-* [User Guide](guides/user-guide.mdx) - a walkthrough from your first login to an unlocked vault.
-* [Your Account](your-account.mdx) - how to manage your own account.
-* [Managing Vaults](vault-management.mdx) - how to manage vaults.
-* [Working with Vaults](access-vault.mdx) - how to use Hub vaults with Cryptomator apps to encrypt your data.
+* [Quick Start](admin-guide/quick-start.mdx) - a walkthrough of your first day as a Hub administrator.
+* [User & Group Management](admin-guide/user-group-management.mdx) - how to manage users and groups.
+* [Identity Provider](admin-guide/keycloak.mdx) - how to connect your existing OpenID Connect, SAML, or LDAP directory.
+* [Emergency Access](admin-guide/emergency-access.mdx) - how a council can restore access to a vault.
+* [License](admin-guide/license.mdx) - how to manage your Hub license.
+
+…if you **host** Hub yourself, start with the [Self-Hosting Guide](self-hosting-guide/quick-start.mdx):
+
+* [Quick Start](self-hosting-guide/quick-start.mdx) - a walkthrough from playground to production deployment.
+* [Deployment Cookbook](self-hosting-guide/deployment/index.mdx) - recipes for Docker Compose, Kubernetes, and Rancher.
+* [Operations](self-hosting-guide/operations.mdx) - how to back up, restore, and maintain your Hub instance.

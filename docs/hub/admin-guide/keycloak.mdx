@@ -1,14 +1,34 @@
 ---
 id: keycloak
-title: Keycloak
-sidebar_position: 12
+title: Identity Provider
+sidebar_position: 3
 ---
 
-# Keycloak
+# Identity Provider
 
 Cryptomator Hub delegates authentication and user management to [Keycloak](https://www.keycloak.org/), an open-source identity and access management solution. Hub ships with a preconfigured realm named `cryptomator` that contains the clients Hub needs and the realm roles `user`, `create-vaults`, and `admin`.
 
 This page describes the Keycloak configuration tasks that are specific to running Hub. For everything else, refer to the [Keycloak documentation](https://www.keycloak.org/documentation).
+
+## External Identity Management {/* #enterprise-external-iam */}
+
+Connecting Cryptomator Hub to an external identity manager allows you to:
+
+- Synchronize users and groups from LDAP or Active Directory
+- Delegate authentication via OpenID Connect or SAML
+- Keep your user management centralized in your existing IAM
+
+You can access the Keycloak management interface from the admin section of Hub. There you can perform all user- and group-related tasks, such as
+[creating new users](https://www.keycloak.org/docs/latest/server_admin/index.html#proc-creating-user_server_administration_guide),
+[deleting users](https://www.keycloak.org/docs/latest/server_admin/index.html#proc-deleting-user_server_administration_guide) or
+[managing groups](https://www.keycloak.org/docs/latest/server_admin/index.html#proc-managing-groups_server_administration_guide).
+
+<Image src="/img/hub/access-keycloak-link.png" alt="Accessing Keycloak via Hub" width="2880" height="1520" />
+
+Setting up LDAP synchronization is described in the [Keycloak documentation](https://www.keycloak.org/docs/latest/server_admin/#_ldap).
+For OpenID Connect and SAML, the Keycloak documentation provides [general information](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker).
+
+The configuration steps specific to Hub are covered below: [connecting an external identity provider](#connecting-an-external-identity-provider), [restricting who may access Hub](#restricting-access-to-hub), and [migrating to another identity provider](#migrating-to-another-identity-provider).
 
 ## Connecting an External Identity Provider {/* #connecting-an-external-identity-provider */}
 

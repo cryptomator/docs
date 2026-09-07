@@ -90,41 +90,61 @@ const config: Config = {
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Hub 2.0 restructure: reference pages moved into the three guides (User/Admin/Self-Hosting)
+          { from: '/hub/your-account', to: '/hub/user-guide/your-account' },
+          { from: '/hub/vault-management', to: '/hub/user-guide/vault-management' },
+          { from: '/hub/access-vault', to: '/hub/user-guide/access-vault' },
+          { from: '/hub/vault-recovery', to: '/hub/user-guide/vault-recovery' },
+          { from: '/hub/guides/user-guide', to: '/hub/user-guide/quick-start' },
+          { from: '/hub/user-group-management', to: '/hub/admin-guide/user-group-management' },
+          { from: '/hub/keycloak', to: '/hub/admin-guide/keycloak' },
+          { from: '/hub/emergency-access', to: '/hub/admin-guide/emergency-access' },
+          // /hub/admin was split into License / Audit Logs / Web of Trust / Emergency Access;
+          // a page redirect can't carry the old #anchors, so it lands on the Admin Guide entry point.
+          { from: '/hub/admin', to: '/hub/admin-guide/quick-start' },
+          { from: '/hub/guides/admin-guide', to: '/hub/admin-guide/quick-start' },
+          { from: '/hub/quick-start', to: '/hub/self-hosting-guide/quick-start' },
+          { from: '/hub/operations', to: '/hub/self-hosting-guide/operations' },
+          { from: '/hub/deployment', to: '/hub/self-hosting-guide/deployment' },
+          { from: '/hub/deployment/compose', to: '/hub/self-hosting-guide/deployment/compose' },
+          { from: '/hub/deployment/kubernetes', to: '/hub/self-hosting-guide/deployment/kubernetes' },
+          { from: '/hub/deployment/rancher', to: '/hub/self-hosting-guide/deployment/rancher' },
+          { from: '/hub/guides/self-hosting-guide', to: '/hub/self-hosting-guide/quick-start#going-to-production' },
           {
             from: '/hub/setup/requirements',
-            to: '/hub/deployment/#hardware-requirements',
+            to: '/hub/self-hosting-guide/deployment/#hardware-requirements',
           },
           {
             from: '/hub/setup/billing',
-            to: '/hub/admin/#license',
+            to: '/hub/admin-guide/license',
           },
           {
             from: '/hub/setup/keycloak-administration',
-            to: '/hub/user-group-management',
+            to: '/hub/admin-guide/keycloak',
           },
           {
             from: '/hub/setup',
-            to: '/hub/deployment',
+            to: '/hub/self-hosting-guide/deployment',
           },
           {
             from: '/hub/access-vault/unlocking-a-vault/4.-vault-unlocked',
-            to: '/hub/access-vault/#vault-unlocked',
+            to: '/hub/user-guide/access-vault/#vault-unlocked',
           },
           {
             from: '/hub/access-vault/unlocking-a-vault/3.-add-device',
-            to: '/hub/access-vault/#register-device',
+            to: '/hub/user-guide/access-vault/#register-device',
           },
           {
             from: '/hub/access-vault/unlocking-a-vault/2.-authenticate',
-            to: '/hub/access-vault/#authenticate',
+            to: '/hub/user-guide/access-vault/#authenticate',
           },
           {
             from: '/hub/access-vault/unlocking-a-vault/1.-click-unlock',
-            to: '/hub/access-vault/#click-unlock',
+            to: '/hub/user-guide/access-vault/#click-unlock',
           },
           {
             from: '/hub/license',
-            to: '/hub/admin/#license',
+            to: '/hub/admin-guide/license',
           },
           {
             from: '/desktop/vault-mounting',
