@@ -1,0 +1,69 @@
+---
+title: Kubernetes
+sidebar_position: 2
+description: Install the Helm chart with the Helm CLI.
+---
+
+# Kubernetes
+
+The Helm chart `oci://ghcr.io/cryptomator/charts/cryptomator-hub` deploys Hub together with an optional Keycloak and PostgreSQL. Passwords you don't set are generated on install and stored in Kubernetes Secrets. All values are documented in the chart's [`values.yaml`](https://github.com/cryptomator/hub/blob/develop/chart/values.yaml) and validated against a schema.
+
+Using Rancher? The same chart can be installed through its UI, see [Rancher](rancher.mdx).
+
+## Prerequisites {/* #kubernetes-prerequisites */}
+
+* A Kubernetes cluster, version 1.27 or newer.
+* A **Traefik** ingress controller (bundled with K3s, for example). nginx is supported as well, see [Configuration](#kubernetes-configuration); the examples below assume Traefik.
+* A default StorageClass; the bundled PostgreSQL needs one `ReadWriteOnce` volume.
+* DNS records for the two hostnames pointing at the ingress controller.
+* For TLS: [cert-manager](https://cert-manager.io/) with a `ClusterIssuer`, or an existing TLS secret. See [Configuration](#kubernetes-configuration) for alternatives.
+* `kubectl` and Helm 3.8 or newer (OCI support).
+
+## Install {/* #kubernetes-install */}
+
+```bash
+helm install hub oci://ghcr.io/cryptomator/charts/cryptomator-hub --version 2.0.0 \
+  --namespace cryptomator --create-namespace \
+  --set urls.hub.public=https://hub.example.com \
+  --set urls.kc.public=https://kc.example.com \
+  --set ingress.controller=traefik \
+  --set ingress.certificate.clusterIssuer=letsencrypt
+```
+
+Helm prints the service names and the commands to retrieve the generated passwords. Wait until all pods are ready; Keycloak needs a minute on first start to import Hub's realm:
+
+```bash
+kubectl get pods -n cryptomator -w
+```
+
+Then retrieve the two admin passwords:
+
+```bash
+# Hub admin (realm user `admin`; the password must be changed on first login)
+kubectl get secret -n cryptomator hub-secrets-hub -o jsonpath='{.data.hub_admin_password}' | base64 -d && echo
+# Keycloak bootstrap admin (`admin`)
+kubectl get secret -n cryptomator hub-secrets-kc -o jsonpath='{.data.kc_admin_password}' | base64 -d && echo
+```
+
+Open `https://hub.example.com`, sign in as `admin`, set a new password, and enter your license. Users and groups are managed in Keycloak at `https://kc.example.com`; Hub syncs them every 5 minutes (`hub.config.keycloakSyncerPeriod`).
+
+## Configuration {/* #kubernetes-configuration */}
+
+You can find a reference table of all settings alongside the chart in [the project's GitHub repository](https://github.com/cryptomator/hub/tree/2.0.0/deploy/helm/prod).
+
+:::danger[Never expose service ports]
+Leave `hub.service.type`, `keycloak.service.type`, and `postgres.service.type` at `ClusterIP`. Setting them to `NodePort` or `LoadBalancer` exposes unencrypted logins, tokens, and the database to the network. The ingress controller is the only entry point; if you need to inspect a service, use `kubectl port-forward` instead.
+:::
+
+## Upgrading and Uninstalling {/* #kubernetes-upgrading */}
+
+[Back up the database](../operations.mdx#backup) first, then:
+
+```bash
+helm upgrade hub oci://ghcr.io/cryptomator/charts/cryptomator-hub --version <new version> \
+  --namespace cryptomator --reuse-values
+```
+
+Hub applies its schema migrations at start; generated passwords are re-read from the existing Secrets, so they stay stable across upgrades.
+
+`helm uninstall hub -n cryptomator` removes the workloads and Secrets but keeps the PVC `data-hub-pg-0`; delete it explicitly if you want the data gone.

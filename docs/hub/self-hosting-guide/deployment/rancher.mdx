@@ -1,0 +1,34 @@
+---
+title: Rancher
+sidebar_position: 1
+description: Install the Helm chart through the Rancher UI.
+---
+
+# Rancher
+
+Rancher installs the same Helm chart as the [Kubernetes](kubernetes.mdx) path, but through a guided form instead of the Helm CLI. The chart ships a `questions.yaml`, so the form asks only for what you have to decide; everything else keeps its default.
+
+## Prerequisites {/* #rancher-prerequisites */}
+
+* Rancher 2.9 or newer (required for OCI chart repositories).
+* Traefik or Nginx as ingress controller and a way to obtain TLS certificates.
+* A default StorageClass
+
+## Install {/* #rancher-install */}
+
+1. Add the chart repository once: go to *Apps → Repositories → Create*, choose the OCI type, and enter `oci://ghcr.io/cryptomator/charts`.
+1. Go to *Apps → Charts*, select *Cryptomator Hub*, and click *Install*.
+1. Click *Install* and wait until all workloads are active. Keycloak needs a minute on first start to import Hub's realm.
+
+:::tip[Advanced Configuration]
+Everything the form does not ask for is available in the *Edit YAML* view, see the [reference table](https://github.com/cryptomator/hub/tree/2.0.0/deploy/helm/prod).
+:::
+
+Generated passwords appear under *Storage → Secrets* in the release namespace: `hub-secrets-hub` holds the Hub admin password, `hub-secrets-kc` the Keycloak bootstrap admin password, `hub-secrets-pg` the database passwords.
+
+Open the Hub URL, sign in as `admin`, set a new password, and enter your license.
+
+
+## Upgrading {/* #rancher-upgrading */}
+
+[Back up the database](../operations.mdx#backup) first. Then go to *Apps → Installed Apps*, select the release, click *Upgrade*, and choose the new chart version. Your values are kept; generated passwords stay stable across upgrades.
