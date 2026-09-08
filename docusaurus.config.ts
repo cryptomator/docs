@@ -95,21 +95,18 @@ const config: Config = {
           { from: '/hub/vault-management', to: '/hub/user-guide/vault-management' },
           { from: '/hub/access-vault', to: '/hub/user-guide/access-vault' },
           { from: '/hub/vault-recovery', to: '/hub/user-guide/vault-recovery' },
-          { from: '/hub/guides/user-guide', to: '/hub/user-guide/quick-start' },
           { from: '/hub/user-group-management', to: '/hub/admin-guide/user-group-management' },
           { from: '/hub/keycloak', to: '/hub/admin-guide/keycloak' },
           { from: '/hub/emergency-access', to: '/hub/admin-guide/emergency-access' },
           // /hub/admin was split into License / Audit Logs / Web of Trust / Emergency Access;
           // a page redirect can't carry the old #anchors, so it lands on the Admin Guide entry point.
-          { from: '/hub/admin', to: '/hub/admin-guide/quick-start' },
-          { from: '/hub/guides/admin-guide', to: '/hub/admin-guide/quick-start' },
+          { from: '/hub/admin', to: '/hub/admin-guide' },
           { from: '/hub/quick-start', to: '/hub/self-hosting-guide/quick-start' },
           { from: '/hub/operations', to: '/hub/self-hosting-guide/operations' },
           { from: '/hub/deployment', to: '/hub/self-hosting-guide/deployment' },
           { from: '/hub/deployment/compose', to: '/hub/self-hosting-guide/deployment/compose' },
           { from: '/hub/deployment/kubernetes', to: '/hub/self-hosting-guide/deployment/kubernetes' },
           { from: '/hub/deployment/rancher', to: '/hub/self-hosting-guide/deployment/rancher' },
-          { from: '/hub/guides/self-hosting-guide', to: '/hub/self-hosting-guide/quick-start#going-to-production' },
           {
             from: '/hub/setup/requirements',
             to: '/hub/self-hosting-guide/deployment/#hardware-requirements',
