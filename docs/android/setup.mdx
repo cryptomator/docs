@@ -8,7 +8,8 @@ sidebar_position: 1
 
 You can get Cryptomator for Android on:
 
-* [Google Play Store](https://play.google.com/store/apps/details?id=org.cryptomator)
+* [Google Play Store (Freemium)](https://play.google.com/store/apps/details?id=org.cryptomator.freemium)
+* [Google Play Store (Full Version)](https://play.google.com/store/apps/details?id=org.cryptomator)
 * [APK Store](https://cryptomator.org/android/)
 * [Cryptomator F-Droid repository](https://static.cryptomator.org/android/fdroid/repo?fingerprint=F7C3EC3B0D588D3CB52983E9EB1A7421C93D4339A286398E71D7B651E8D8ECDD)
 * [Main F-Droid repository](https://f-droid.org/en/packages/org.cryptomator.lite)
@@ -17,7 +18,7 @@ You can get Cryptomator for Android on:
 No matter which variant of the app you choose: The key functionality of Cryptomator stays the same.
 
 The variants only differ in terms of the [supported Cloud Services](/docs/misc/supported-cloud-services.mdx), the way they are downloaded and the way a license is acquired.
-If you have access to the *Google Play Store* on your device, **we recommend using the [Google Play Store variant](#google-play-store) of Cryptomator.**
+If you have access to the *Google Play Store* on your device, **we recommend using the [Google Play Store (Freemium) variant](#google-play-store-freemium) of Cryptomator.**
 
 Otherwise, please keep reading.
 
@@ -25,7 +26,11 @@ Otherwise, please keep reading.
 
 While all variants of the Cryptomator for Android app have the same key functionality, you should make sure to pick the perfect variant for you:
 
-Most users will want to use the [Google Play Store](#google-play-store) or the [APK Store](#apk-store) as installation type. Both variants have access to all [supported Cloud Services](/docs/misc/supported-cloud-services.mdx) and allow for maximum flexibility. While the *Google Play Store variant* can be purchased and downloaded via its *Google Play Store* page, the *APK Store variant* and the accompanying license must be obtained via our website.
+Except for the [Google Play Store (Full Version) variant](#google-play-store-full-version), every variant is available for free and gives you read-only access to your vaults. To gain write access, you can unlock the full version with an in-app purchase or a license key. You can also try out the full version free for 30 days.
+
+If you use [Cryptomator Hub](/docs/hub/introduction.mdx), vaults of a Hub with an active license stay fully writable in all variant without an in-app purchase or a license key.
+
+Most users will want to use the [Google Play Store](#google-play-store-freemium) or the [APK Store](#apk-store) as installation type. Both have access to all [supported Cloud Services](/docs/misc/supported-cloud-services.mdx) and allow for maximum flexibility. The *Google Play Store* offers two apps with identical features that differ only in how you pay: the [Freemium variant](#google-play-store-freemium) is free to download and lets you try the full version for 30 days before choosing a yearly subscription or a one-time lifetime license, while the [Full Version variant](#google-play-store-full-version) is bought once up front. The *APK Store variant* and the accompanying license must be obtained via our website.
 
 The [Cryptomator F-Droid repo variant](#cryptomator-f-droid-repository) and [Main F-Droid repo variant](#main-f-droid-repository) both **don't** support Google Drive as Cloud Service because Google Drive requires proprietary dependencies which doesn’t fit the spirit of F-Droid. Additionally the *Main F-Droid repo variant* **doesn’t** support **any** Cloud Services that require an API key.
 
@@ -34,20 +39,42 @@ Both can be downloaded from their corresponding F-Droid repository and require a
 The *APK Store*, *F-Droid variants* and *Accrescent* of Cryptomator were created to serve users who do not have the *Google Play Store* installed on their Android device or do not want their purchases to go through Google.
 
 :::tip
-If you have access to the *Google Play Store* on your device, **we recommend using the [Google Play Store variant](#google-play-store) of Cryptomator**
+If you have access to the *Google Play Store* on your device, **we recommend using the [Google Play Store (Freemium) variant](#google-play-store-freemium) of Cryptomator**
 for the best user experience and maximum flexibility.
 :::
 
 To learn more about the supported Cloud Services, please see [Supported Cloud Services](/docs/misc/supported-cloud-services.mdx).
 
-## Google Play Store {/* #google-play-store */}
+## Google Play Store (Freemium) {/* #google-play-store-freemium */}
 
 :::note
-You can buy and download the *Google Play Store variant* of Cryptomator here:
-[Google Play Store](https://play.google.com/store/apps/details?id=org.cryptomator&hl=en)
+You can download the *Freemium variant* of Cryptomator here:
+[Google Play Store (Freemium)](https://play.google.com/store/apps/details?id=org.cryptomator.freemium)
 :::
 
-If you have installed Cryptomator via the *Google Play Store,* you will receive updates as usual via the *Google Play Store.*
+To unlock the full version, you can choose between:
+
+* a **yearly subscription**, which grants full access for as long as it is active and can be cancelled anytime via *Google Play,* or
+* a one-time **lifetime license**, which grants permanent full access.
+
+Both options unlock the exact same features and are tied to your Google account, so you can transfer them to another device via *Restore Purchase.* From the app's settings you can manage your subscription or upgrade it to a lifetime license at any time.
+
+:::warning
+Unlike the *Full Version variant* of Cryptomator, the full version unlocked inside the *Freemium variant* **can't** be shared using the [Google Play Family Library](https://support.google.com/googleplay/answer/7007852?hl=en), because *Google* only allows paid apps to be shared with family members, not in-app purchases.
+
+If you want to share Cryptomator with your family, use the [Full Version variant](#google-play-store-full-version) or one of the variants that are unlocked with a license key instead. For more details, see [Google Play does not know I bought the app](https://community.cryptomator.org/t/google-play-does-not-know-i-bought-the-app/17762/3).
+:::
+
+Like the [Main F-Droid repository variant](#main-f-droid-repository), this variant has its own package name: `org.cryptomator.freemium`. It is therefore installed next to the other variants instead of replacing them, and switching between it and another variant requires to setup the app again.
+
+## Google Play Store (Full Version) {/* #google-play-store-full-version */}
+
+:::note
+You can buy and download the *Full Version variant* of Cryptomator here:
+[Google Play Store (Full Version)](https://play.google.com/store/apps/details?id=org.cryptomator&hl=en)
+:::
+
+This is the classic paid app: you purchase it once before installing and have full access immediately, with no trial or subscription. It is the right choice if you prefer a single up-front payment.
 
 After buying the app using the *Google Play Store,* it can be used with any number of devices that you have linked to the google account from your purchase. Furthermore it supports the "Google Play Family Library" function which means that the app can be used by up to 5 people in a family without having to buy it again. The conditions and how to create a “Google Play Family” can be found here: [Google Play Family Library](https://support.google.com/googleplay/answer/7007852?hl=en)
 
@@ -99,7 +126,7 @@ You can download the *Main F-Droid repository variant* of Cryptomator here:
 
 The *Main F-Droid repository variant* can be installed directly from the [Main F-Droid repository](https://f-droid.org/en/packages/org.cryptomator.lite). Regarding the license key, the same applies as with the [Cryptomator F-Droid repository variant](#cryptomator-f-droid-repository).
 
-Unlike all other variants of Cryptomator for Android, this variant has its own package name: `org.cryptomator.lite`. It means that you cannot, intentionally or unintentionally, simply switch between this and the other variants. It requires to setup the app again. The reason we decided to do this is that other Cryptomator variants already exist in some popular F-Droid repositories, and if we hadn’t decided to do this, there could have been an unwanted variant switch.
+Like the [Google Play Store (Freemium) variant](#google-play-store-freemium), this variant has its own package name: `org.cryptomator.lite`. It means that you cannot, intentionally or unintentionally, simply switch between this and the other variants. It requires to setup the app again. The reason we decided to do this is that other Cryptomator variants already exist in some popular F-Droid repositories, and if we hadn’t decided to do this, there could have been an unwanted variant switch.
 
 ## Accrescent {/* #accrescent */}
 
@@ -123,7 +150,7 @@ Requires Android 8.0 or later.
 
 The timing of the update depends on your installed variant:
 
-* *Google Play Store:* Updates are reviewed by Google, so it may take a few days before the update is available.
+* *Google Play Store (Freemium &amp; Full Version):* Updates are reviewed by Google, so it may take a few days before the update is available.
 * *APK Store:* Updates are available as they are released.
 * *Cryptomator F-Droid Repo:* Updates are available as they are released.
 * *Main F-Droid Repo:* Updates are available as soon as the F-Droid maintainers have built the application, which can take a few days.
