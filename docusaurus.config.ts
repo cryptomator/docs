@@ -66,7 +66,7 @@ const config: Config = {
         'data-website-id': process.env.NODE_ENV === 'development' || process.env.SITE_URL
           ? 'cdd42f46-583d-4463-9ab2-8adcfe989c21' // Local development / Staging
           : '2df416f9-7a9c-4e58-9a45-7106f7e0a139', // Production
-        integrity: 'sha384-FeSgFWhRpNmUWqmtRLZpDSRTuxgovbVqlyM0OaJpq2IanhF2u3xjYziXsyXR9Kg/',
+        integrity: 'sha384-ZMxgpYfO/phGz4GiYTIZhcauuGKTb2onmOB5gsiigjmBR38DGAmIna5J1Y/dM/13',
         crossorigin: 'anonymous',
         defer: 'defer',
       },
