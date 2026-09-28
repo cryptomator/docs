@@ -16,6 +16,10 @@ on:
 env:
   SITE_URL: ${{ inputs.site-url || 'https://docs.staging.cryptomator.org'}}
 
+permissions:
+  contents: read # Required for checkout
+  pages: read # Required for actions/configure-pages
+
 jobs:
   build:
     name: Build Site
