@@ -9,6 +9,9 @@ jobs:
   # BUILD
   build:
     name: Build site
+    permissions:
+      contents: read # Required for checkout
+      pages: read # Required for actions/configure-pages
     uses: ./.github/workflows/build.yml
     with:
       site-url: ${{ github.ref == 'refs/heads/main' && 'https://docs.cryptomator.org' || 'https://docs.staging.cryptomator.org' }}
@@ -47,6 +50,7 @@ jobs:
   deploy-staging:
     if: github.ref == 'refs/heads/develop'
     name: Deploy Staging to GitHub Pages
+    permissions: {}
     runs-on: ubuntu-latest
     needs: [build]
     steps:
