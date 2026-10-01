@@ -6,7 +6,7 @@ description: Install the Helm chart with the Helm CLI.
 
 # Kubernetes
 
-The Helm chart `oci://ghcr.io/cryptomator/charts/cryptomator-hub` deploys Hub together with an optional Keycloak and PostgreSQL. Passwords you don't set are generated on install and stored in Kubernetes Secrets. All values are documented in the chart's [`values.yaml`](https://github.com/cryptomator/hub/blob/develop/chart/values.yaml) and validated against a schema.
+The Helm chart `oci://ghcr.io/cryptomator/charts/cryptomator-hub` deploys Hub together with an optional Keycloak and PostgreSQL. Passwords you don't set are generated on install and stored in Kubernetes Secrets. All values are documented in the chart's [`values.yaml`](https://github.com/cryptomator/hub/blob/main/chart/values.yaml) and validated against a schema.
 
 Using Rancher? The same chart can be installed through its UI, see [Rancher](rancher.mdx).
 
@@ -49,7 +49,7 @@ Open `https://hub.example.com`, sign in as `admin`, set a new password, and ente
 
 ## Configuration {/* #kubernetes-configuration */}
 
-You can find a reference table of all settings alongside the chart in [the project's GitHub repository](https://github.com/cryptomator/hub/tree/2.0.0/deploy/helm/prod).
+You can find a reference table of all settings alongside the chart in [the project's GitHub repository](https://github.com/cryptomator/hub/tree/main/deploy/helm/prod).
 
 :::danger[Never expose service ports]
 Leave `hub.service.type`, `keycloak.service.type`, and `postgres.service.type` at `ClusterIP`. Setting them to `NodePort` or `LoadBalancer` exposes unencrypted logins, tokens, and the database to the network. The ingress controller is the only entry point; if you need to inspect a service, use `kubectl port-forward` instead.

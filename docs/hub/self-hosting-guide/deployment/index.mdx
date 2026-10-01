@@ -18,7 +18,7 @@ Whichever recipe you follow, decide on these up front:
 
 * **Public URLs.** Hub and Keycloak each need one, either as two hostnames (`https://hub.example.com`, `https://kc.example.com`) or as two paths on one host (`https://example.com/hub`, `https://example.com/kc`). Create the DNS records before you deploy.
 * **TLS termination.** Hub, Keycloak, and PostgreSQL speak plain HTTP and plain PostgreSQL protocol. Their ports must never be published directly; the only component listening on a public interface is your TLS-terminating reverse proxy or ingress controller.
-* **Bundled or existing services.** Every recipe can run Keycloak and PostgreSQL for you, or connect to instances you already operate, e.g. your organization's SSO. See [example](https://github.com/cryptomator/hub/tree/2.0.0/deploy/helm/existing-keycloak).
+* **Bundled or existing services.** Every recipe can run Keycloak and PostgreSQL for you, or connect to instances you already operate, e.g. your organization's SSO. See [example](https://github.com/cryptomator/hub/tree/main/deploy/helm/existing-keycloak).
 
 :::important
 Keycloak creates Hub's realm, including the redirect URIs derived from your public URLs, only on its **first** start. Decide on the final URLs before deploying. Changing them later means editing the `cryptomatorhub` client in the Keycloak admin console (*Clients → cryptomatorhub → Valid redirect URIs*) in addition to updating the deployment. Otherwise, login fails with `Invalid parameter: redirect_uri`.
