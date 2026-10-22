@@ -1,0 +1,50 @@
+---
+id: restoring-files-from-backup
+title: Restoring Files from a Backup
+sidebar_position: 8
+---
+
+# Restoring Files from a Backup
+
+Cryptomator encrypts not only file names but also the directory structure of your vault (see [Encrypted File Names](/docs/desktop/encrypted-file-names.mdx)).
+In a backup of the vault storage location, you therefore can't tell which encrypted file belongs to which cleartext file, especially if it sits deep in a subdirectory.
+
+There are two ways to restore a file or folder:
+
+1. [Open the backup as a second vault](#open-backup-as-vault) - Recommended. Works at any nesting depth and also for files and folders that have already been deleted from the vault.
+2. [Restore a single encrypted file](#restore-single-encrypted-file) - Use this if the file still exists in the vault with the same name and in the same folder as at the time of the backup, you only need an older version of it, and your backup tool can restore individual files.
+
+Both methods require Cryptomator for Windows, macOS, or Linux.
+
+## Open the Backup as a Second Vault {/* #open-backup-as-vault */}
+
+1. Restore the **complete** vault folder from the backup to a separate location. It must contain the `d` folder and the `vault.cryptomator` and/or `masterkey.cryptomator` file.
+   Do not restore it inside the existing vault folder or inside a cloud-synced folder.
+2. In Cryptomator, click the plus `+` button, choose [`Open Existing Vault…`](/docs/desktop/adding-vaults.mdx#open-an-existing-vault), and select the `vault.cryptomator` file of the restored copy. If only a `masterkey.cryptomator` file exists, select that instead.
+   The copy appears as an additional vault next to your original one.
+3. Unlock the copy.
+   For a password-based vault, use the password that was valid at the time of the backup.
+   For a [Cryptomator Hub](/docs/hub/introduction.mdx) vault, [unlock it through Hub](/docs/hub/user-guide/access-vault.mdx#unlocking-a-vault) as usual.
+   Unlock your original vault as well.
+4. In the unlocked copy, navigate to the file or folder you want to restore and copy it into your original vault.
+5. Lock the copy and [remove it from the vault list](/docs/desktop/vault-management.mdx#remove-vaults) by right-clicking it and choosing `Remove…`.
+   This only removes the list entry and doesn't delete any encrypted files.
+   You can then delete the restored vault folder manually.
+
+## Restore a Single Encrypted File {/* #restore-single-encrypted-file */}
+
+This method only works if the file still exists in the vault with the same name and in the same folder as at the time of the backup.
+If the file was renamed or moved to a different folder since the backup, its encrypted path has changed, so [open the backup as a second vault](#open-backup-as-vault) instead.
+
+1. Unlock the vault and use [`Locate Encrypted File`](/docs/desktop/encrypted-file-names.mdx#locate-encrypted-file) on the file you want to restore.
+   Note the path of the encrypted file shown in the file manager.
+2. Lock the vault.
+3. With your backup tool, restore exactly that encrypted file to exactly the same path, overwriting the current one.
+   If the file ends up anywhere else, the vault won't recognize it, because its name is encrypted using the ID of its parent directory.
+4. Unlock the vault again.
+
+:::note
+If you use `Locate Encrypted File` on a folder, the file manager shows the folder's content directory under `d/`.
+It only contains the files directly inside that folder.
+Subfolders are stored as links (`dir.c9r`) to other directories under `d/`, so to restore a folder with subfolders, [open the backup as a second vault](#open-backup-as-vault).
+:::
