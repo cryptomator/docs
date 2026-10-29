@@ -48,43 +48,48 @@ We recommend read access for all users, **write access only for system/device ad
 
 ## File Permissions on Windows {/* #file-permissions-on-windows */}
 
-Since Cryptomator 1.20.0, the admin configuration is **only loaded on Windows if it cannot be edited by standard users**. Cryptomator checks the following requirements on every start and ignores the admin configuration if any of them is not met:
+Since Cryptomator 1.19.5, the admin configuration is **only loaded on Windows if it cannot be edited by standard users**. Cryptomator checks the following requirements on every start and ignores the admin configuration if any of them is not met:
 
 * `config.properties`, its directory and all parent directories up to the drive root are owned by `SYSTEM`, `Administrators` or `TrustedInstaller`.
 * No other user or group has permissions to modify the file (meaning write, append, delete, change permissions, take ownership) or to delete or replace one of the directories (delete, delete subfolders and files, change permissions, take ownership). Permissions to create new files in a directory are fine.
 * The path does not contain junctions or symbolic links.
 
-If the admin configuration is ignored, the application log contains a warning starting with `Ignoring admin config`, followed by the reason.
+If the admin configuration is ignored, the application log contains a warning starting with `Ignoring admin config`. The warning logged right before it names the concrete cause, e.g. the path and its untrusted owner, the modifying rights granted to an untrusted principal, or the link a path element resolves to.
 
-During installation (including repair and upgrade) the directoy `C:\ProgramData\Cryptomator` is set up and, if no admin config exists, places an empty `config.properties` with correct permissions inside it. 
+During installation (including repair and upgrade) the installer sets up the directory `C:\ProgramData\Cryptomator` and, if no admin config exists, places an empty `config.properties` with correct permissions inside it.
 
-An existing `config.properties` is left untouched, **including its owner and permissions**. To make an existing config trusted, run the following commands in an elevated command prompt:
+An existing `config.properties` is left untouched, **including its owner and permissions**. To replace it with one the installer creates, proceed as follows with elevated privileges:
+
+1. Rename `C:\ProgramData\Cryptomator\config.properties`, e.g. to `config.properties.old`.
+2. Repair the installation, e.g. by running the Cryptomator installer again and choosing *Repair*. This secures the directory and places a new, empty `config.properties` with correct permissions inside it.
+3. Copy the entries you need from the renamed file into the new `config.properties` and delete the renamed file afterwards.
 
 :::warning
-Before running these commands on an existing `config.properties`, review its content for unexpected values, especially `cryptomator.pluginDir`.
+Before copying entries, review the content of the renamed file for unexpected values, especially `cryptomator.pluginDir`.
 :::
 
-```batch
-icacls "C:\ProgramData\Cryptomator" /setowner *S-1-5-32-544 /L
-icacls "C:\ProgramData\Cryptomator" /reset /L
-icacls "C:\ProgramData\Cryptomator" /inheritance:r /grant:r *S-1-5-18:(OI)(CI)F *S-1-5-32-544:(OI)(CI)F *S-1-5-32-545:(OI)(CI)RX /L
-icacls "C:\ProgramData\Cryptomator\config.properties" /setowner *S-1-5-32-544 /L
-icacls "C:\ProgramData\Cryptomator\config.properties" /reset /L
+For verification, run the following commands in PowerShell:
+
+```powershell
+(Get-Acl "C:\ProgramData\Cryptomator").Sddl
+(Get-Acl "C:\ProgramData\Cryptomator\config.properties").Sddl
 ```
 
-They secure the directory like the installer does and set `Administrators` as owner of the file and remove all explicit permissions, so that only the permissions inherited from the directory remain.
+Each command prints owner and permissions in [SDDL](https://learn.microsoft.com/en-us/windows/win32/secauthz/security-descriptor-definition-language) form. For a configuration created by the installer, the output is:
 
-For verification, run the following commands: 
-
-```batch
-icacls "C:\ProgramData\Cryptomator"
-icacls "C:\ProgramData\Cryptomator\config.properties"
-dir /q "C:\ProgramData\Cryptomator"
 ```
-The output of `icacls` must only contain the three entries granted above, without `(I)` markers. `dir /q` must list `BUILTIN\Administrators` (or its localized name) as owner of `config.properties` and of the `.` entry, which represents the directory itself:
+O:BAG:SYD:PAI(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;BU)
+O:SYG:SYD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)
+```
 
+`SY` stands for `SYSTEM`, `BA` for `Administrators` and `BU` for `Users`; `TrustedInstaller` has no abbreviation and appears as its full SID. `FA` grants full access, `0x1200a9` read and execute. Both outputs must meet the following conditions:
 
-Files created by elevated processes, such as deployment tools running as `SYSTEM` or an elevated administrator shell, are owned by `Administrators` or `SYSTEM` and inherit the directory permissions, so they are trusted without further steps as long as they are created after the installation.
+* The owner (`O:`) is `SY`, `BA` or `S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464` (`TrustedInstaller`).
+* The permissions after `D:` consist of exactly three entries, one each for `SY`, `BA` and `BU` (order may differ).
+* The directory's permissions contain the `P` flag (`D:PAI`).
+* The file's entries carry the `ID` flag.
+
+A deployment tool that creates the admin config must set owner and permissions accordingly.
 
 ## Configurable Properties {/* #configurable-properties */}
 
