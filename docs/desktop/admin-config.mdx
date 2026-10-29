@@ -82,14 +82,14 @@ O:BAG:SYD:PAI(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;BU)
 O:SYG:SYD:AI(A;ID;0x1200a9;;;BU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)
 ```
 
-`SY` stands for `SYSTEM`, `BA` for `Administrators` and `BU` for `Users`; `TrustedInstaller` has no abbreviation and appears as its full SID. `FA` grants full access, `0x1200a9` read and execute. Both outputs must meet the following conditions:
+`SY` stands for `SYSTEM`, `BA` for `Administrators` and `BU` for `Users`; `TrustedInstaller` has no abbreviation and appears as its full SID. `FA` grants full access, `0x1200a9` read and execute. The installer-generated defaults have the following characteristics:
 
 * The owner (`O:`) is `SY`, `BA` or `S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464` (`TrustedInstaller`).
 * The permissions after `D:` consist of exactly three entries, one each for `SY`, `BA` and `BU` (order may differ).
 * The directory's permissions contain the `P` flag (`D:PAI`).
 * The file's entries carry the `ID` flag.
 
-A deployment tool that creates the admin config must set owner and permissions accordingly.
+A deployment tool that creates the admin config must meet the ownership, access and link restrictions described above; it does not need to reproduce the installer's ACLs exactly.
 
 ## Configurable Properties {/* #configurable-properties */}
 
