@@ -4,6 +4,8 @@ on:
   repository_dispatch:
     types: [desktop-release]
 
+permissions: {}
+
 defaults:
   run:
     shell: bash
@@ -23,6 +25,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: true # needed for git push below
       - name: Create new branch
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
