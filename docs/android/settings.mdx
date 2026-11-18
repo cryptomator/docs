@@ -61,7 +61,7 @@ Whenever another app obscures Cryptomator, it could intercept the input done to 
 For security reasons, Cryptomator is disabled by default when obscured.
 The Android documentation contains [some more details](https://developer.android.com/reference/android/view/View.html#Security).
 
-Starting from version 1.3.0, this protection can be disabled in the settings. We rather recommend to use the app without a blue light filter because this is more secure.
+This protection can be disabled in the settings. We rather recommend to use the app without a blue light filter because this is more secure.
 
 If you want to disable protection, the blue light filter or any app obscuring Cryptomator has to be disabled one time.
 Afterwards, the settings can be opened and the option "Disable app when obscured" can be disabled. And then the relevant apps can be re-enabled again.
@@ -82,13 +82,13 @@ Android provides the possibility to prevent the system and other apps from doing
 This feature is very important because it prevents other apps from reading data across the screen.
 
 This feature is enabled for all our views.
-For some devices, e.g. a Chromebook with a second display or to create a screenshot and disable it again, we made this option since the 1.3.9 configurable.
+For some devices, e.g. a Chromebook with a second display or to create a screenshot and disable it again, we made this option configurable.
 
 Read more: [FLAG*SECURE](https://developer.android.com/reference/android/view/Display.html#FLAG*SECURE)
 
 ### Show Vaults in the Files App {/* #show-vaults-in-the-files-app */}
 
-Introduced in version 3.0.0, this setting lists your vaults in the Files app of Android and in the system file picker, so other apps can open and save files in your vaults. Locked vaults get unlocked when opened. This setting is enabled by default.
+This setting lists your vaults in the Files app of Android and in the system file picker, so other apps can open and save files in your vaults. Locked vaults get unlocked when opened. This setting is enabled by default.
 
 If you disable it, your vaults are hidden from the Files app and all access other apps were given to files in your vaults is removed.
 
@@ -173,7 +173,7 @@ Which pictures will be tracked, depends on the Android version on your phone:
 
 Cryptomator keeps the folder contents of your vaults and a copy of each opened file on the device. This way, folders and files that have been opened before show up right away, both in Cryptomator and in the Files app. The copies of opened files are stored decrypted in Cryptomator's private app storage. Other apps only get access to a file when you open it with them. Both are kept when a vault gets locked. Apps that still have a file open can keep working with it, and their changes are uploaded after the next unlock. Everything else can only be accessed after the vault has been unlocked again.
 
-Starting with version 3.0.0, the cache has no size or age limit. A cached copy is removed when its file is deleted, when the vault is removed from Cryptomator, or when you clear the cache.
+The cache has no size or age limit. A cached copy is removed when its file is deleted, when the vault is removed from Cryptomator, or when you clear the cache.
 
 ### Clear Cache {/* #clear-cache */}
 
