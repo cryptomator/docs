@@ -171,7 +171,7 @@ Which pictures will be tracked, depends on the Android version on your phone:
 
 ## Cache {/* #cache */}
 
-Cryptomator keeps the folder contents of your vaults and a copy of each opened file on the device. This way, folders and files that have been opened before show up right away, both in Cryptomator and in the Files app. The copies of opened files are stored decrypted in Cryptomator's private app storage, which other apps can't access. Both are kept when a vault gets locked, but can only be accessed after it has been unlocked again.
+Cryptomator keeps the folder contents of your vaults and a copy of each opened file on the device. This way, folders and files that have been opened before show up right away, both in Cryptomator and in the Files app. The copies of opened files are stored decrypted in Cryptomator's private app storage. Other apps only get access to a file when you open it with them. Both are kept when a vault gets locked. Apps that still have a file open can keep working with it, and their changes are uploaded after the next unlock. Everything else can only be accessed after the vault has been unlocked again.
 
 Starting with version 3.0.0, the cache has no size or age limit. A cached copy is removed when its file is deleted, when the vault is removed from Cryptomator, or when you clear the cache.
 
