@@ -54,14 +54,14 @@ All of the possibilities will result in the locked vault.
 </MobileGrid>
 
 :::note
-The auto-lock timeout specified in the settings will lock the vault if Cryptomator is in background. Furthermore if not changed in settings, the vault gets locked if the screen turns off.
+The auto-lock timeout specified in the settings locks the vault once it hasn't been used for the chosen time. Access by other apps through the [Files app](#access-vault-from-other-apps) also counts as use. Furthermore if not changed in settings, the vault gets locked if the screen turns off. For more information, see [Automatic Locking](settings.mdx#automatic-locking).
 :::
 
 ## View and Edit File {/* #view-and-edit-file */}
 
 Start the view and edit process by clicking on a file.
-Finish the editing or viewing using the back button of the device until you're back in Cryptomator.
-If the content has changed, the upload process starts.
+The file opens in the app of your choice, which saves its changes directly to the vault.
+You don't have to return to Cryptomator: as soon as the app saves the file, the upload starts in the background.
 
 <MobileGrid>
   <Image src="/img/android/edit-file.gif" alt="How to edit a file with Android" width="540" height="1110" />
@@ -194,6 +194,62 @@ Then the encryption and upload starts.
   <Image src="/img/android/share-with-cm-3-uploading.png" alt="How to share a file or folder with Android" width="1080" height="2220" />
   <Image src="/img/android/share-with-cm-4-finish.png" alt="How to share a file or folder with Android" width="1080" height="2220" />
 </MobileGrid>
+
+## Access Vault from Other Apps {/* #access-vault-from-other-apps */}
+
+Your vaults show up in the Files app of Android and in the system file picker.
+Other apps can open, save, create, rename, move, and delete files in a vault directly, without exporting or sharing them first.
+
+To open a vault in the Files app, open the navigation menu and select the entry *Cryptomator* that shows the name of your vault ①.
+Every vault has its own entry.
+The same entries appear whenever another app asks you to choose a file to open or a location to save to.
+
+<MobileGrid>
+  <Image src="/img/android/files-app-0-vaults.png" alt="Vaults in the Files app of Android" width="810" height="1800" />
+</MobileGrid>
+
+If the vault is locked, the Files app asks you to sign in to Cryptomator.
+Tapping `SIGN IN` ① starts the usual unlock process of Cryptomator with your password or fingerprint.
+
+<MobileGrid>
+  <Image src="/img/android/files-app-1-locked.png" alt="How to unlock a vault in the Files app of Android" width="810" height="1800" />
+  <Image src="/img/android/files-app-2-unlock.png" alt="How to unlock a vault in the Files app of Android" width="1080" height="2400" />
+</MobileGrid>
+
+After unlocking, the Files app shows the content of the vault.
+
+<MobileGrid>
+  <Image src="/img/android/files-app-3-unlocked.png" alt="Unlocked vault in the Files app of Android" width="1080" height="2400" />
+</MobileGrid>
+
+Cryptomator's own file browser and the Files app work on the same data, so both always show the same state.
+To hide your vaults from the Files app, use the setting [Show Vaults in the Files App](settings.mdx#show-vaults-in-the-files-app).
+
+:::note
+Changing files in a vault requires write access, the same as in the app itself.
+Without the full version, you have read-only access: you can still open files from the Files app, but other apps can't save, create, rename, move, or delete them.
+Vaults of a Hub with an active license stay fully writable.
+For more information, see [Differences Between Variants and How to Choose](setup.mdx#differences-between-variants-and-how-to-choose).
+:::
+
+### Uploads and Conflicts {/* #uploads-and-conflicts */}
+
+When an app saves a file, Cryptomator encrypts it and uploads it in the background.
+If the file has been changed in the cloud in the meantime, for example on another device, Cryptomator doesn't overwrite it.
+Instead, the save is uploaded as a conflict copy named like `name (ABCDE).ext` next to the original file.
+The same applies if you create or upload a file with a name that already exists.
+
+If a vault gets locked while an app still has a file open, the changes are kept on the device and uploaded after the next unlock.
+
+### Failed Changes and Uploads {/* #failed-changes-and-uploads */}
+
+Creating, renaming, moving, and deleting show up in Cryptomator right away.
+If the cloud rejects such a change, Cryptomator reverts it and shows the dialog *Change to … failed*.
+
+If an upload fails, Cryptomator doesn't retry it automatically:
+
+* In the Files app, the folder shows the message *An upload in this folder failed. Pull down to retry.* Pull down to retry the upload.
+* In Cryptomator, the file shows the message *Upload failed. Tap to retry.* Tap the file to retry the upload.
 
 ## Search in Folder {/* #search-in-folder */}
 
